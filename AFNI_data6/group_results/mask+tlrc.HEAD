@@ -1,0 +1,111 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 3230
+'[dglen@gollum.local: Wed Nov  5 11:15:44 2008] ===================================\n[dglen@gollum.local: Wed Nov  5 11:15:44 2008] === History of inputs to 3dcalc ===\n[dglen@gollum.local: Wed Nov  5 11:15:44 2008] === Input a:\n[dglen@gollum.local: Wed Nov  5 11:15:44 2008] [dglen@gollum.local: Wed Nov  5 11:14:52 2008] 3dWarp -mni2tta -prefix TT_avg152T2+tlrc_skull -gridset TT_avg152T1+tlrc. avg152T2.nii\n[dglen@gollum.local: Wed Nov  5 11:15:44 2008] === Input b:\n[dglen@gollum.local: Wed Nov  5 11:15:44 2008] [ziad@eomer.nimh.nih.gov: Thu Oct 12 16:57:01 2006] ===================================\n[ziad@eomer.nimh.nih.gov: Thu Oct 12 16:57:01 2006] === History of inputs to 3dcalc ===\n[ziad@eomer.nimh.nih.gov: Thu Oct 12 16:57:01 2006] === Input a:\n[ziad@eomer.nimh.nih.gov: Thu Oct 12 16:57:01 2006] [ziad@eomer.nimh.nih.gov: Thu Oct 12 16:57:01 2006] 3dcopy /Users/ziad/Programs/matlab/spm2/canonical/avg152T1.mnc /Users/ziad/AFNI_Templates_Atlases/SPM_MNI_AVG_TEMPLATES/Post_Oct0606/MNI_sk_avg152T1\n[ziad@eomer.nimh.nih.gov: Thu Oct 12 16:57:01 2006] 3drefit -view +tlrc MNI_sk_avg152T1+orig.HEAD\n[ziad@eomer.nimh.nih.gov: Thu Oct 12 16:57:01 2006] === Input b:\n[ziad@eomer.nimh.nih.gov: Thu Oct 12 16:57:01 2006] [ziad@eomer.nimh.nih.gov: Wed Oct 11 13:50:11 2006] ===================================\n[ziad@eomer.nimh.nih.gov: Wed Oct 11 13:50:11 2006] === History of inputs to 3dcalc ===\n[ziad@eomer.nimh.nih.gov: Wed Oct 11 13:50:11 2006] === Input a:\n[ziad@eomer.nimh.nih.gov: Wed Oct 11 13:50:11 2006] [ziad@eomer.nimh.nih.gov: Wed Oct 11 11:13:23 2006] 3dcopy avg152T1.mnc /Users/ziad/AFNI_Templates_Atlases/TT_Avg_Templates/Post_Oct0606/MNI_sk_avg152T1\n[ziad@eomer.nimh.nih.gov: Wed Oct 11 11:13:23 2006] 3drefit -view +tlrc MNI_sk_avg152T1+orig.HEAD\n[ziad@eomer.nimh.nih.gov: Wed Oct 11 13:50:11 2006] === Input b:\n[ziad@eomer.nimh.nih.gov: Wed Oct 11 13:50:11 2006] [ziad@eomer.nimh.nih.gov: Wed Oct 11 13:22:27 2006] 3dSkullStrip -input avg152T1_mni+tlrc -prefix tt3 -shrink_fac 0.99 -shrink_fac_bot_lim 0.55 -o_ply tt3.ply -debug 1 -visual -interactive\n[ziad@eomer.nimh.nih.gov: Wed Oct 11 13:50:11 2006] ===================================\n[ziad@eomer.nimh.nih.gov: Wed Oct 11 13:50:11 2006] 3dcalc -a MNI_sk_avg152T1+tlrc. -b tt3+tlrc. -expr 'a*step(b)' -prefix T1ns3\n[ziad@eomer.nimh.nih.gov: Wed Oct 11 13:53:08 2006] Drawing plugin COPY: Fill->Data Type->Func\n[ziad@eomer.nimh.nih.gov: Thu Oct 12 16:57:01 2006] ===================================\n[ziad@eomer.nimh.nih.gov: Thu Oct 12 16:57:01 2006] 3dcalc -a MNI_sk_avg152T1+tlrc -b avg152T1_mni_ns+tlrc -expr 'a*step(b)' -prefix MNI_avg152T1\n[ziad@eomer.nimh.nih.gov: Thu Oct 12 16:57:03 2006] 3dWarp -mni2tta -prefix TT_avg152T1 MNI_avg152T1+tlrc\n[dglen@gollum.local: Wed Nov  5 11:15:44 2008] ===================================\n[dglen@gollum.local: Wed Nov  5 11:15:44 2008] 3dcalc -a TT_avg152T2+tlrc_skull+tlrc. -b TT_avg152T1+tlrc. -expr 'a*step(b)' -prefix TT_avg152T2\n[rickr@manwe.nimh.nih.gov: Tue Apr  6 09:47:40 2010] 3dcalc -a TT_avg152T2+tlrc. -expr 'step(a)' -datum short -prefix mask222\n[rickr@manwe.nimh.nih.gov: Tue Apr  6 09:49:33 2010] 3dresample -input mask222+tlrc -master OLSQ.FT.betas+tlrc -prefix mask~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_sxhREBGygtptagIsbVInDA~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Tue Apr  6 09:49:33 2010~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 2 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 3 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+            -79            -79            -64
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              2              2              2
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              2              0              0            -79              0
+              2              0            -79              0              0
+              2            -64
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              2              0              0            -79              0
+              2              0            -79              0              0
+              2            -64
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0              1
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 80 95 75 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 1
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 3
+'#0~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~

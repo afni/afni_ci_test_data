@@ -1,0 +1,11 @@
+{
+    "itemtype": "VOL",
+    "itemid": "fstat",
+    "blockid": "vstat",
+    "blockid_hov": "statistics vols",
+    "title": "Check: statistics vols",
+    "text": [
+        "olay: stats.FT (stat 'Full_Fstat')",
+        "thr : stats.FT (stat 'Full_Fstat')"
+    ]
+}

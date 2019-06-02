@@ -1,0 +1,268 @@
+<html>
+<title>Unix commands (Unix programs and tcsh shell commands)</title>
+<body>
+
+<center>
+<h2> Unix commands </h2>
+<h3> (Unix programs and tcsh shell commands) </h3>
+</center> <pre>
+<!-- =========================== Shell commands =========================== -->
+<a name="shell_commands"></a>
+<font size=+2>Shell commands</font>   <font color='red'>(get help from the shell <b>man</b> page, e.g. 'man tcsh' or 'man bash')</font>
+<a name="sc_cd"></a>
+<font color='blue'><b>cd</b> - change directories </font>
+
+   Examples:
+
+      cd
+      cd $HOME
+      cd suma_demo
+      cd AFNI_data6/FT_analysis
+      cd ~username
+      cd /absolute/path/to/some/directory
+      cd relative/path/to/some/directory
+      cd ../../some/other/dir
+
+   The 'cd' command is used to change directories.  Without any parameters,
+   the shell will change to the user's home directory ($HOME).  Otherwise,
+   it will change to the single specified directory.  
+
+   Note that since '..' is the parent directory, including such entries will
+   travel up the directory tree.
+
+   It is a good idea to follow a 'cd' command with 'ls' to see what is there.
+
+   <font color='green'><b>for more help, see 'man tcsh'</b></font>
+
+
+<a name="sc_echo"></a>
+<font color='blue'><b>echo</b> - echo text to the terminal window</font>
+
+   Examples:
+
+      echo hello there
+      echo "this section performs volume registration"
+      set my_var = 7
+      echo "the value of my_var = $my_var"
+
+   The echo command displays the given text on the terminal window.  This is
+   often used to show the user what is happening or to prompt for a response.
+   There are more devious uses, of course...
+
+   <font color='green'><b>for more help, see 'man tcsh'</b></font>
+
+
+<a name="sc_set"></a>
+<font color='blue'><b>set</b> - assing a value to a variable (tcsh)</font>
+
+   Examples:
+
+      set
+      set value = 7
+      set new_val = "some number, like seven"
+      echo $new_val
+      set list_of_vals = ( 3 1 4 one five )
+      echo $list_of_vals
+      echo $list_of_vals[3]
+      set path = ( $path ~/abin )
+
+   The set command assigns a value to a variable (or multiple values to 
+   multiple variables).  Without any options, all set variables are shown.
+
+   If a value has spaces in it, it should be contained in quotes.  If a list
+   of values is desired, parentheses '()' should be used for the assignment,
+   while indivisual access is done via square brackets '[]'.
+
+   Note: a single 'set' command can be used to set many variables, but such a
+         use is not recommended (as it is error prone).
+
+   Note: 'set' is for setting shell variables, which do not survive to child
+         shells.  To survive to a child shell, use envirionment variables.  A
+         child shell would be created when a new shell is started, such as when
+         running a script.
+
+            setenv DYLD_FALLBACK_LIBRARY_PATH $HOME/abin
+
+         See <a href="unix_commands.html#sc_setenv">setenv</a>.
+
+   bash: uses '=' assignment to set variables, which can be exported to the
+         environment via export.  Lists are separated by ':', not space.
+
+            value=7
+            list_of_vals=3:1:4:one:five
+            export list_of_vals
+            export DYLD_FALLBACK_LIBRARY_PATH=$HOME/abin
+
+   <font color='green'><b>for more help, see 'man tcsh'</b></font>
+   See also <a href="unix_commands.html#sc_setenv">setenv</a>.
+   See also <a href="unix_commands.html#sc_unset">unset</a>.
+
+
+<a name="sc_setenv"></a>
+<font color='blue'><b>setenv</b> - set an environment variable</font>
+
+   Examples:
+
+      setenv MY_ENV_VAR "some value"
+      setenv PATH ${PATH}:$HOME/abin
+      setenv DYLD_FALLBACK_LIBRARY_PATH $HOME/abin
+
+   The setenv command works like 'set', except that if a child shell is started
+   (such as when running a script), the environment variables are preserved.
+   Note that environment variables are generally in all caps by convention, to
+   visually distinguish them from regular shell variables.
+
+   Lists are assigned using the bash-like syntax of ':' delimited elements,
+   rather than with '()' and space delimited elements as 'set' uses.  When a
+   list is added to, as with the $PATH example, the variable should be within
+   '{}', so that the ':' does not look like a modifier (i.e. using ${PATH}
+   rather than just $PATH).
+
+   bash: 'export' a currently set variable, or add export to an assignment.
+
+        name="Maria Buttersworth"
+        export name
+        export name="Maria Buttersworth"
+        export DYLD_FALLBACK_LIBRARY_PATH=$HOME/abin
+
+   <font color='green'><b>for more help, see 'man tcsh'</b></font>
+   See also <a href="unix_commands.html#sc_set">set</a>.
+   See also <a href="unix_commands.html#sc_unsetenv">unsetenv</a>.
+
+
+<!-- =========================== Unix commands =========================== -->
+<a name="Unix_commands"></a>
+<font size=+2>Unix commands</font>   <font color='red'>(get help from individual <b>man</b> pages)</font>
+<a name="uc_cat"></a>
+<font color='blue'><b>cat</b> - display file contents in terminal window</font>
+
+   Examples:
+
+      cat AFNI_data6/FT_analysis/s01.ap.simple
+      cat here are four files
+      cat here are four files | wc -l
+
+   The cat command, short for catenate, is meant to dump all files on the
+   command line to the terminal window.
+
+   <font color='green'><b>for more help, see 'man cat'</b></font>
+
+<a name="uc_jobs"></a>
+<font color='blue'><b>jobs</b> - list processes started from current shell</font>
+
+   Examples:
+
+      jobs              - probably shows nothing
+
+   See the example from ctrl-z: <a href="../misc/unix_commands.html#char_ctrl_z">help for ctrl-z</a>
+
+   The 'jobs' command lists processes that have been started from the current
+   shell (the current terminal window, probably) that are either suspended or
+   running in the background.  Processes are suspended via ctrl-z, and can then
+   be put into the background using the 'bg' command (or by using &amp; in the
+   first place).
+
+   <font color='green'><b>for more help, see 'man jobs'</b></font>
+
+   Note that 'jobs' is an internal command (to tcsh or bash, say), so the
+   actual description might come from 'man tcsh', 'man bash' or a Unix book.
+
+<a name="uc_ls">
+</a><font color='blue'><b>ls</b> - list directory contents</font>
+
+   Examples:
+
+      ls
+      ls $HOME
+      ls AFNI_data6/afni
+      ls AFNI_data6/afni AFNI_data6/FT_analysis/FT ~
+
+      ls -al
+      ls -ltr
+      ls -ltr ~
+      ls -lSr dir.with.big.files
+
+   The 'ls' command lists the contents of either the current directory or the
+   directories listed on the command line.  For files listed on the command
+   line, it just lists them.
+
+   Multiple directories may be listed, in which case each directory is shows
+   one by one.
+
+   Options:
+
+      -a  : list all files/directories, including those starting with '.'
+      -l  : use the long format, which includes:
+            type, permissions, ownership, size, date (may vary per OS)
+      -t  : sort by time (modification time)
+      -r  : reverse sort order
+      -S  : sort by size of file (e.g. 'ls -lSr')
+
+   <font color='green'><b>for more help, see 'man ls'</b></font>
+
+<a name="uc_pwd"></a>
+<font color='blue'><b>pwd</b> - show present working directory</font>
+
+   Examples:
+
+      pwd
+
+   The pwd command just shows the present working directory.
+
+   <font color='green'><b>for more help, see 'man pwd'</b></font>
+
+<!-- ======================== special characters ======================== -->
+<a name="Special_characters"></a>
+<font size=+2>Special characters and keystrokes</font>   <font color='red'>(get extra help from a Unix book)</font>
+<a name="char_ctrl_c"></a>
+</a><font color='blue'><b>ctrl-c</b> - terminate a running process</font>
+
+   Example of usage:
+
+      1. run 'ccalc'
+         (the prompt is now waiting for an input expression to evaluate)
+      2. type 3+5 and hit &lt;Enter&gt;
+         (it should show the result: Z = 8)
+      3. terminate the program with ctrl-c
+         (the prompt should now be back)
+
+   <a href="http://afni.nimh.nih.gov/pub/dist/doc/program_help/ccalc.html">help for ccalc</a>
+
+   The ctrl-c (while holding the control key down, press c) keystroke is used
+   to terminate the foreground process in the current shell (by sending it a
+   SIGINT signal).
+ 
+   This might be useful when running a shell script that would take a while to
+   complete.  Maybe you decide to make a change, or error messages start 
+   coming out.  If that script is running in the foreground, entering ctrl-c
+   should terminate it.
+
+<a name="char_ctrl_z"></a>
+</a><font color='blue'><b>ctrl-z</b> - suspend a running process</font>
+
+   Example of usage:
+
+      ccalc
+      3+5               - should show the result Z = 8
+      ctrl-z            - process 'Suspended', prompt should be back
+      ls                - works, can type other commands
+      jobs              - shows that 'ccalc' is still suspended
+      fg                - put 'ccalc' back in the foreground
+      3-4               - should show the result Z = -1
+      quit              - quit ccalc program
+
+   <a href="http://afni.nimh.nih.gov/pub/dist/doc/program_help/ccalc.html">help for ccalc</a>
+   <a href="../misc/unix_commands.html#uc_jobs">help for jobs</a>
+
+   The ctrl-c (while holding the control key down, press c) keystroke is used
+   to terminate the foreground process in the current shell (by sending it a
+   SIGINT signal).
+ 
+   This might be useful when running a shell script that would take a while to
+   complete.  Maybe you decide to make a change, or error messages start 
+   coming out.  If that script is running in the foreground, entering ctrl-c
+   should terminate it.
+
+</pre>
+
+</body/></html>

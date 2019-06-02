@@ -1,0 +1,33 @@
+      ------- single subject processing : subject FT ------
+
+These description files can be used as a guide to review the analysis methods
+for processing single subject data.  While afni_proc.py is used to generate the
+processing script, the important things are to understand the script (which one
+could write by hand) and the resulting data (from each processing step).
+
+Commands are shown following '% ' prompts.
+
+These are text files.  If you want pretty pictures, please review the class
+handout.
+
+Start by reading the first 8 pages of the handout, at least.  This document
+covers the class work (looking at the files and data).  The experiment design
+and background on afni_proc.py are not covered here.
+
+Recall that the afni_proc.py processing script will:
+
+   1. set some variables
+   2. create a results directory
+   3. copy all input to the results directory
+   4. do the processing
+
+So the results directory can be deleted without losing any original data.
+
+-----
+
+This tutorial was written based on the processing scripts from afni_proc.py 
+version 2.33 (see "afni_proc.py -ver").  More recent updates to afni_proc.py 
+will not be reflected (unless I get sufficient hate-mail).
+
+- Rick Reynolds
+  July, 2010

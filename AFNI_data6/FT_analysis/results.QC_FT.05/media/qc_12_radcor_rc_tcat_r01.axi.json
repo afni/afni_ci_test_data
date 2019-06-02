@@ -1,0 +1,13 @@
+{
+    "itemtype": "VOL",
+    "itemid": "rc_tcat",
+    "blockid": "radcor",
+    "blockid_hov": "@radial_correlate vols",
+    "title": "Check: extent of local correlation",
+    "text": [
+        "@radial_correlate check for: radcor.pb00.tcat",
+        "   ulay: vol[0] of each EPI run",
+        "   SHOW_PBAR:qc_12_radcor_rc_tcat_r01.pbar.json"
+    ],
+    "subtext": "olay: radcor.20.r01.corr"
+}

@@ -1,0 +1,20 @@
+This directory was created basically to take the option:
+   -regress_run_clustsim yes
+out of the s05.ap.uber script.  While that option is not
+really needed, it is nice to have since we are talking
+about FWE correction a lot.
+
+This directory contains:
+
+   README                       - this file
+
+   s05.ap.uber                  - afni_proc.py command used to generate this
+   proc.FT                      - resulting proc script (from AP command)
+   output.proc.FT               - text output from running the proc script
+
+   blur_est.FT.1D               - blur estimation used for cluster simulation
+   full_mask.FT+tlrc.*          - mask to limit cluster simulations
+   files_ClustSim               - output clustsim files
+   3dClustSim.ACF.cmd           - command to put cluster info into stats dset
+                                  (see its use in the proc script)
+

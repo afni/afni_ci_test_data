@@ -1,0 +1,158 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 340
+'[rickr@manwe.nimh.nih.gov: Thu Mar 18 16:48:03 2010] 3dcopy anat2.nii anat2\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 16:48:21 2010] 3dvolreg -base anat+orig -prefix second_anat anat2+orig\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 16:48:52 2010] 3dvolreg did: -Fourier -clipit -rotate 0.2064I -0.7695R 0.0259A -ashift 1.2259S -0.0839L -0.4619P\n~
+
+type = string-attribute
+name = VOLREG_INPUT_IDCODE
+count = 27
+'AFN_jKXOMHEPpxyqDRftWKK5tg~
+
+type = string-attribute
+name = VOLREG_INPUT_NAME
+count = 18
+'./anat2+orig.HEAD~
+
+type  = float-attribute
+name  = VOLREG_CENTER_OLD
+count = 3
+              0      -17.50705      -2.725952
+
+type = string-attribute
+name = VOLREG_BASE_IDCODE
+count = 27
+'AFN_vYY9ETE-fvnbRC8sGO7IRA~
+
+type = string-attribute
+name = VOLREG_BASE_NAME
+count = 17
+'./anat+orig.HEAD~
+
+type  = float-attribute
+name  = VOLREG_CENTER_BASE
+count = 3
+              0      -17.50705      -2.725952
+
+type = integer-attribute
+name = VOLREG_ROTCOM_NUM
+count = 1
+ 1
+
+type = string-attribute
+name = VOLREG_ROTCOM_000000
+count = 67
+'-rotate 0.2064I -0.7695R 0.0259A -ashift 1.2259S -0.0839L -0.4619P~
+
+type  = float-attribute
+name  = VOLREG_MATVEC_000000
+count = 12
+      0.9999934    -0.00360887   0.0004513219    -0.08388834    0.003602484
+      0.9999033     0.01342958     -0.4619003  -0.0004997439    -0.01342786
+      0.9999097       1.225896
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_gAUWQz9Zp0T2taMfTberlw~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Thu Mar 18 16:48:21 2010~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 0 11 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 3 5 1
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+      -137.0383       116.8053             87
+
+type  = float-attribute
+name  = DELTA
+count = 3
+         0.9375        -0.9375             -1
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              0              0             -1             87         0.9375
+              0              0      -137.0383              0        -0.9375
+              0       116.8053
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              0              0             -1             87         0.9375
+              0              0      -137.0383              0        -0.9375
+              0       116.8053
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0           4241
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 256 256 175 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 1
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 3
+'#0~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~

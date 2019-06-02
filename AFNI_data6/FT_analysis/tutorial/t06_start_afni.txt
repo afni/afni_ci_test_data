@@ -1,0 +1,61 @@
+
+Open the afni GUI (graphical user interface) in the results directory.
+
+We are not quite ready to look at the results, but since we are moving our
+attention to the results directory, it seems a conceptually good time to start
+afni and refer to it later.
+
+We should still be sitting in the FT_analysis directory.  Verify this with the
+'pwd' command (it should output something like .../AFNI_data6/FT_analysis).
+
+      % pwd
+
+      % cd FT.results
+      % afni &
+
+Recall that the '&' after the 'afni' command puts afni in the background.
+That means we can still run commands (like 'ls') in that terminal window, even
+though afni is now running.  Recall also that if 'afni' is started in the
+foreground (i.e. without the '&'), that it can be be put in the background by
+using ctrl-z, followed by 'bg'.
+
+In that case:
+
+   The ctrl-z keystroke suspends afni and gives the terminal back to the user.
+   Note that the afni window is not currently responsive to button presses
+   (though they may be stored for later).  Running the 'bg' command tells the
+   shell to let afni continue to run but in the background, again, leaving the
+   terminal open for more commands.
+
+   Note that once 'bg' is entered, afni may apply the button presses that were
+   made while it was suspended.
+
+----
+
+How will we tend to look at the data in afni?
+
+   At each processing block, we will look at "before" and "after" pictures of
+   the EPI data.  We may care about the images, the time series or both.  So
+   along the top half of the screen open axial Image and Graph windows.  This
+   is done on the top half of the screen to save the bottom half for another
+   set of windows (an afni controller and Image and Graph windows).
+
+   Note: this is also done to save screen space in class (since laptops do
+         not have so much.  Of course, it is nicer to open more windows.
+
+   Load run 1 of the initial EPI data and as before, jump to xyz coordinate
+   (19.3 78 -5.7).
+
+        - change Underlay to pb00.FT.r01.tcat
+        - open Axial Image and Graph windows (along top of display)
+        - in the Axial image window, right-click, "Jump to (xyz)"
+        - enter the coordinates 19.3 78 -5.7 and click Set
+
+        - in the Graph window type 'A' to Autoscale (or Opt->Scale->AUTO)
+
+          --> the terminal window should show the resulting output:
+
+                ++ Graph Viewer: Autoscale forced ON
+
+
+We will come back to afni later...

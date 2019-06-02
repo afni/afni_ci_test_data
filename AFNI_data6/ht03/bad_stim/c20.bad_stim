@@ -1,0 +1,13 @@
+3dDeconvolve				\
+	-nodata				\
+	-nfirst 0			\
+	-nlast 19			\
+	-polort 1			\
+	-num_stimts 2			\
+	-stim_file 1 bad_stim1.1D	\
+	-stim_file 2 bad_stim2.1D	\
+	-stim_minlag 1 2		\
+	-stim_maxlag 1 3		\
+	-stim_minlag 2 2		\
+	-stim_maxlag 2 3		\
+	-xout

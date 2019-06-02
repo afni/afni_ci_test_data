@@ -1,0 +1,3 @@
+\rm -f epi_r1_fitts* epi_r1_func* epi_r1_reg+orig*  \
+       epi_r1_Xmat* 3dDeconvolve.err epi_r1_mot.1D
+

@@ -1,0 +1,126 @@
+# 1 group of subjects (13) 
+# 10 basis functions characterizing the BOLD response
+# needs to: 1) identify regions that have significant BOLD
+# response overall; 2) account for temporal correlation
+# across time points
+
+3dMVM -prefix output.MVM -jobs 2          \
+      -bsVars 1                 \
+      -mVar Time                    \
+      -mvE4                 \
+      -num_glt 8                \
+      -gltLabel 1 time0 -gltCode 1 'Time : 1*Diff0' \
+      -gltLabel 2 time1 -gltCode 2 'Time : 1*Diff1' \
+      -gltLabel 3 time2 -gltCode 3 'Time : 1*Diff2' \
+      -gltLabel 4 time3 -gltCode 4 'Time : 1*Diff3' \
+      -gltLabel 5 time4 -gltCode 5 'Time : 1*Diff4' \
+      -gltLabel 6 time5 -gltCode 6 'Time : 1*Diff5' \
+      -gltLabel 7 time6 -gltCode 7 'Time : 1*Diff6' \
+      -gltLabel 8 time7 -gltCode 8 'Time : 1*Diff7' \
+      -dataTable                      \
+Subj   Time  order InputFile          \
+c101   Diff0 0 data/c101time0+tlrc \
+c101   Diff1 1 data/c101time1+tlrc \
+c101   Diff2 2 data/c101time2+tlrc \
+c101   Diff3 3 data/c101time3+tlrc \
+c101   Diff4 4 data/c101time4+tlrc \
+c101   Diff5 5 data/c101time5+tlrc \
+c101   Diff6 6 data/c101time6+tlrc \
+c101   Diff7 7 data/c101time7+tlrc \
+c103   Diff0 0 data/c103time0+tlrc \
+c103   Diff1 1 data/c103time1+tlrc \
+c103   Diff2 2 data/c103time2+tlrc \
+c103   Diff3 3 data/c103time3+tlrc \
+c103   Diff4 4 data/c103time4+tlrc \
+c103   Diff5 5 data/c103time5+tlrc \
+c103   Diff6 6 data/c103time6+tlrc \
+c103   Diff7 7 data/c103time7+tlrc \
+c104   Diff0 0 data/c104time0+tlrc \
+c104   Diff1 1 data/c104time1+tlrc \
+c104   Diff2 2 data/c104time2+tlrc \
+c104   Diff3 3 data/c104time3+tlrc \
+c104   Diff4 4 data/c104time4+tlrc \
+c104   Diff5 5 data/c104time5+tlrc \
+c104   Diff6 6 data/c104time6+tlrc \
+c104   Diff7 7 data/c104time7+tlrc \
+c105   Diff0 0 data/c105time0+tlrc \
+c105   Diff1 1 data/c105time1+tlrc \
+c105   Diff2 2 data/c105time2+tlrc \
+c105   Diff3 3 data/c105time3+tlrc \
+c105   Diff4 4 data/c105time4+tlrc \
+c105   Diff5 5 data/c105time5+tlrc \
+c105   Diff6 6 data/c105time6+tlrc \
+c105   Diff7 7 data/c105time7+tlrc \
+c112   Diff0 0 data/c112time0+tlrc \
+c112   Diff1 1 data/c112time1+tlrc \
+c112   Diff2 2 data/c112time2+tlrc \
+c112   Diff3 3 data/c112time3+tlrc \
+c112   Diff4 4 data/c112time4+tlrc \
+c112   Diff5 5 data/c112time5+tlrc \
+c112   Diff6 6 data/c112time6+tlrc \
+c112   Diff7 7 data/c112time7+tlrc \
+c113   Diff0 0 data/c113time0+tlrc \
+c113   Diff1 1 data/c113time1+tlrc \
+c113   Diff2 2 data/c113time2+tlrc \
+c113   Diff3 3 data/c113time3+tlrc \
+c113   Diff4 4 data/c113time4+tlrc \
+c113   Diff5 5 data/c113time5+tlrc \
+c113   Diff6 6 data/c113time6+tlrc \
+c113   Diff7 7 data/c113time7+tlrc \
+c114   Diff0 0 data/c114time0+tlrc \
+c114   Diff1 1 data/c114time1+tlrc \
+c114   Diff2 2 data/c114time2+tlrc \
+c114   Diff3 3 data/c114time3+tlrc \
+c114   Diff4 4 data/c114time4+tlrc \
+c114   Diff5 5 data/c114time5+tlrc \
+c114   Diff6 6 data/c114time6+tlrc \
+c114   Diff7 7 data/c114time7+tlrc \
+c119   Diff0 0 data/c119time0+tlrc \
+c119   Diff1 1 data/c119time1+tlrc \
+c119   Diff2 2 data/c119time2+tlrc \
+c119   Diff3 3 data/c119time3+tlrc \
+c119   Diff4 4 data/c119time4+tlrc \
+c119   Diff5 5 data/c119time5+tlrc \
+c119   Diff6 6 data/c119time6+tlrc \
+c119   Diff7 7 data/c119time7+tlrc \
+c120   Diff0 0 data/c120time0+tlrc \
+c120   Diff1 1 data/c120time1+tlrc \
+c120   Diff2 2 data/c120time2+tlrc \
+c120   Diff3 3 data/c120time3+tlrc \
+c120   Diff4 4 data/c120time4+tlrc \
+c120   Diff5 5 data/c120time5+tlrc \
+c120   Diff6 6 data/c120time6+tlrc \
+c120   Diff7 7 data/c120time7+tlrc \
+c124   Diff0 0 data/c124time0+tlrc \
+c124   Diff1 1 data/c124time1+tlrc \
+c124   Diff2 2 data/c124time2+tlrc \
+c124   Diff3 3 data/c124time3+tlrc \
+c124   Diff4 4 data/c124time4+tlrc \
+c124   Diff5 5 data/c124time5+tlrc \
+c124   Diff6 6 data/c124time6+tlrc \
+c124   Diff7 7 data/c124time7+tlrc \
+c125   Diff0 0 data/c125time0+tlrc \
+c125   Diff1 1 data/c125time1+tlrc \
+c125   Diff2 2 data/c125time2+tlrc \
+c125   Diff3 3 data/c125time3+tlrc \
+c125   Diff4 4 data/c125time4+tlrc \
+c125   Diff5 5 data/c125time5+tlrc \
+c125   Diff6 6 data/c125time6+tlrc \
+c125   Diff7 7 data/c125time7+tlrc \
+c126   Diff0 0 data/c126time0+tlrc \
+c126   Diff1 1 data/c126time1+tlrc \
+c126   Diff2 2 data/c126time2+tlrc \
+c126   Diff3 3 data/c126time3+tlrc \
+c126   Diff4 4 data/c126time4+tlrc \
+c126   Diff5 5 data/c126time5+tlrc \
+c126   Diff6 6 data/c126time6+tlrc \
+c126   Diff7 7 data/c126time7+tlrc \
+c127   Diff0 0 data/c127time0+tlrc \
+c127   Diff1 1 data/c127time1+tlrc \
+c127   Diff2 2 data/c127time2+tlrc \
+c127   Diff3 3 data/c127time3+tlrc \
+c127   Diff4 4 data/c127time4+tlrc \
+c127   Diff5 5 data/c127time5+tlrc \
+c127   Diff6 6 data/c127time6+tlrc \
+c127   Diff7 7 data/c127time7+tlrc
+

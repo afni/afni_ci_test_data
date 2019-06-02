@@ -1,0 +1,62 @@
+#!/bin/tcsh
+
+# ----------------------------------------------------------------------
+# run uber_subject as would be done in class (see afni16_start_to_finish.pdf)
+# 
+# notes:
+#   - this was generated automatically by uber_subject.py with changes:
+#      - top_dir was added for portability across directory trees
+#      - the epi and stim inputs were tightened ($top_dir and wildcards)
+#      - gui_choice was added to allow running without PyQt4 installed
+#
+#   - to run with GUI: set gui_choice = ""
+#   - for no GUI     : set gui_choice = "-no_gui -save_ap_command cmd.ap.uber"
+#
+#     (this saves the afni_proc.py command in $HOME/$subj_dir/cmd.ap.uber)
+# ----------------------------------------------------------------------
+
+set gui_choice = "-no_gui -save_ap_command cmd.ap.uber"
+set subj_dir   = .
+set process    = 1
+
+uber_subject.py                                                               \
+    $gui_choice                                                               \
+    -cvar subj_dir $subj_dir                                                  \
+    -svar anat FT/FT_anat+orig.HEAD                                  \
+    -svar compute_fitts yes                                                   \
+    -svar epi FT/FT_epi_r[123]+orig.HEAD                             \
+    -svar gid horses                                                          \
+    -svar gltsym 'vis -aud' '0.5*vis +0.5*aud'                                \
+    -svar gltsym_label V-A mean.VA                                            \
+    -svar regress_jobs 2                                                      \
+    -svar run_clustsim no                                                     \
+    -svar sid FT                                                              \
+    -svar stim FT/AV1_vis.txt FT/AV2_aud.txt                \
+    -svar stim_basis 'BLOCK(20,1)' 'BLOCK(20,1)'                              \
+    -svar stim_label vis aud                                                  \
+    -svar tcat_nfirst 2                                                       \
+    -svar volreg_base MIN_OUTLIER
+
+
+# if process, actually run the analysis
+if ( $process ) then
+   echo ""
+   echo cd $subj_dir
+   cd $subj_dir
+   echo ""
+   sleep 2
+
+   echo 'CREATING PROC SCRIPT:  tcsh -x cmd.ap.uber'
+   echo ""
+   sleep 3
+   tcsh -x cmd.ap.uber |& tee out.cmd.ap.uber
+   if ( $status ) then
+      exit 1
+   endif
+
+   echo ""
+   echo 'RUNNING ANALYSIS:  tcsh -xef proc.FT |& tee output.proc.FT'
+   echo ""
+   sleep 5
+   tcsh -xef proc.FT |& tee output.proc.FT
+endif

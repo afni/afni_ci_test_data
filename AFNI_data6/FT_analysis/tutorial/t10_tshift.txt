@@ -1,0 +1,209 @@
+
+Processing block: tshift
+
+In this step each time series is resampled (in time) to shift the timing so
+that it is as if all data were acquired at the beginning of each TR.
+
+Background:
+
+   At the scanner, the data was acquired as axial slices in an interleaved
+   manner, starting with slice 0.  All even slices were acquired first, then
+   all odd slices, i.e. the slice order is:
+
+        0, 2, 4, ..., 32,  1, 3, 5, ..., 31  (33 total slices)
+
+   To verify the slice times, look for "Time-offsets per slice" in the output
+   of 3dinfo on the current dataset.  Note that slice timing is only shown when
+   the -VERB option is used.
+
+        % 3dinfo -VERB pb00.FT.r01.tcat+orig | less
+
+   Or be sneaky and just output the line with the word "offsets":
+
+        % 3dinfo -VERB pb00.FT.r01.tcat+orig | grep offsets
+
+   The offsets for slices 0, 1, 2, 3, ..., 32 are:
+
+      0.000 1.030 0.061 1.091 0.121 1.152 0.182 1.212 0.242 1.273 0.303
+      1.333 0.364 1.394 0.424 1.455 0.485 1.515 0.545 1.576 0.606 1.636
+      0.667 1.697 0.727 1.758 0.788 1.818 0.848 1.879 0.909 1.939 0.970
+
+   Note that since there are 33 slices, each slice is acquired over a period
+   of 0.060606 (=2.0/33) seconds.  So the TR of 2.0 seconds is divided into 33
+   slice times.
+
+   To make those times more explicit:
+		
+        time    slice #    acquisition order
+        -----   -------    ----------------------------------------------
+	0.000	   0       first slice acquired
+	1.030	   1            17th, just after slice #32, after 1/2 TR
+	0.061	   2       second acquired (0.0606 after first)
+	1.091	   3            18th, 0.0606 seconds after slice #1
+	0.121	   4       third (0.0606 after second)
+          .        .        .
+          .        .        .
+          .        .        .
+	0.909     30       15th
+	1.939     31            33rd, last (0.0606 before start of next TR)
+	0.970     32       16th, just before 1/2 TR
+
+   So slice 0 is acquired at time t=0.0, slice 2 is at t=0.0607, slice 4 is
+   at t=0.121, etc.  The last even slice (32) is acquired at time t=0.9696
+   (note that 0.9696 = 16*0.060606).  Next comes slice #1, 0.0607 seconds later
+   at t=1.030, etc.  The final slice of the volume (#31) is acquired at time
+   t=1.9393, just before the end of the TR (0.0606 seconds before).
+
+Using the afni GUI (graphical user interface):
+
+   Verify the times in the afni GUI.  First, make sure we are looking at the
+   same thing.
+
+        - have Axial Image and Axial Graph windows open
+
+   Then look at the very first slice acquired.
+
+        - in main window or Graph window, go to TR index #0 (first volume)
+          (so set Index to 0 in upper left corner of main afni window)
+        - in the Axial Image window, go slice #0 (via the bottom slider bar)
+
+   We are now looking at axial slice #0, the most inferior slice of TR #0.
+   This is the very first slice acquired in the run (ignoring the deleted
+   pre-steady state TRs).
+
+   ** Again, to be sure we are all in the same place, go to ijk indices
+      48 73 0.
+
+        - right-click in the image window and jump-to-ijk (not xyz)
+        - enter the indices in the popup box: 48 73 0 (and hit Set)
+
+   Note (some of) the information in the bottom of the graph window:
+
+        IJK indices (on the left) are: 48 73 0
+
+           These are the matrix indices of the 3D volume (recall that the EPI
+           volumes are 80 voxels x 80 voxels x 33 voxels/slices, as shown by
+           the 3dinfo output, for example).  So 48 is the x-index (running
+           from 0 to 79), 73 is the y-index (again, in [0,79]) and 0 is the
+           z-index (or slice number).
+
+        Grid: 50
+
+           The vertical (yellow) grid has one bar every 50 TRs.  This can be
+           changed under Opt->Grid->choose.  The color can be changed under
+           Opt->Colors->Grid (try orange for example).
+
+        #  0:149
+
+           Shows the volume index range in this underlay dataset.  Since there
+           are 150 EPI volumes, the indices go from 0 to 149.
+
+           Recall that since we are at time index 0 and slice index 0, this is
+           the first slice acquired in the current run.
+
+   Note the text "index=0 value=978 at 0".  The index is the time index of the
+   plotted time series, and should match the "Index" in the main afni window.
+   Note the red dot at the begging of the time series in the middle graph (the 
+   center voxel of the 3x3 window).  The red dot is at the far left, matching
+   the time index.
+
+   The value of 978 is the MRI value of the current voxel at TR#0.  Except for
+   the large motion spike around TR #42, it is clear that this voxel's data
+   hovers around a value of 1000 throughout the run.
+
+   Lastly is the "at 0".  That is the time, in seconds, that this voxel value
+   was acquired (and applies to the whole slice).  If you click around in the
+   axial image window, note that the "at 0" never changes.
+
+----
+
+   Now put the mouse cursor in the middle of the graph window and the use the
+   keyboard arrow keys to go forward and backward in time (across TR indices).
+   Starting at time t=0 (the "at 0") and moving right, we see time jumping by
+   2 seconds.  This slice was acquired at the beginning of each TR, so going
+   through times shows slices acquired at times 0, 2, 4, ..., in seconds.
+
+   Go back to time t=0.
+
+   Now change to slice #2 (via the blue slider bar in the axial image window).
+   This slice shows "at 0.060606".  Scrolling through time (arrow keys in graph
+   window) shows this slice acquired 0.060606 seconds into each TR with times
+   of 0.060606, 2.060606, 4.0600606, etc.
+
+   Go back to time t=0 and change to axial slice #1.
+
+   Here the time shows 1.0303, half a TR later.  Recall the slice timing from
+   above.
+
+----------------------------
+
+Now that we understand the slice timing, go back to the proc.FT script and see
+what is done.  The script commands are:
+
+        # time shift data so all slice timing is the same 
+        foreach run ( $runs )
+            3dTshift -tzero 0 -quintic -prefix pb01.$subj.r$run.tshift \
+                     pb00.$subj.r$run.tcat+orig
+        end
+
+As the comment states, the goal is to resample each voxel time series so that
+it is as if each volume was acquired at the beginning of each TR.  That way the 
+slice timing will accurately match the stimulus timing.
+
+For each run, 3dTshift is applied with:
+
+        -tzero 0        : resample time series to the beginning of each TR
+        -quintic        : use 5th degree polynomial to resample time series
+        -prefix ...     : specify name of the output dataset
+
+The input is dataset pb00.$subj.r$run.tcat+orig, the 'tcat' results from
+processing block 00.  The output will be pb01.$subj.r$run.tshift, processing
+block 01 output for 'tshift'.
+
+-----
+
+Verify this in the afni GUI.
+
+   Open a second afni controller.
+
+        - in the main afni GUI, press "New" to open a new controller
+
+          Note that on the left side of the title bar it shows that this is
+          controller B (there is a "[B]" on the far upper-left).  Compare that
+          to [A] in the previous controller.
+
+        - using controller [B], open Axial Image and Graph windows, to match
+          those of controller [A]
+
+        - move the 3 new windows from [B] directly below the corresponding
+          windows from controller [A]
+
+          Note that there is an [A] in all of the old windows and a [B] in all
+          of the new ones, to make it clear which windows goes with which
+          controller.
+
+   In controller [B], set the underlay to be the output from run 1 of 3dTshift.
+
+        - in [B] change Underlay to pb01.FT.r01.tshift
+
+   Again, let's get back to the same starting place.  But slice 0 is not so
+   interesting since the timing does not need to be fixed there (slice 0 was
+   already acquired at the beginning of each TR).  It is the other slices that
+   will be adjusted.
+
+   So let's be sure of the dataset and jump to the original voxel of interest
+   (xyz coordinates 19.3 78 -5.7).
+
+   The underlay for the top windows (from controller [A]) should be the input
+   to 3dTshift for run 1: pb00.FT.r01.tcat+orig, the time index should be 0,
+   and the xyz coordinates should be 19.3 78 -5.7.
+
+        - jump-to-xyz: 19.3 78 -5.7
+
+   Here we see the different.  In controller [A] above, the slice was acquired
+   0.121212 seconds into each TR (note the "index=0 value=1098 at 0.121212" in
+   the top graph window).  In [B], that slice was acquired at time 0.  Across
+   TRs, we can see the slice (4) was acquired at t = 0, 2, 4, 6, etc.
+
+   So that is the result of running "3dTshift -tzero 0 ...", all slices (and
+   therefore voxels) have acquisition timing of 0, 2, 4, 6, etc.

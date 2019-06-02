@@ -1,0 +1,4 @@
+#!/bin/tcsh
+# cleanup output from s1 script.
+
+\rm -fr proc.SUBJ output.proc.SUBJ SUBJ.results

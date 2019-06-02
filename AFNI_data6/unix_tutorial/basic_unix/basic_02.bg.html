@@ -1,0 +1,124 @@
+<html><body>
+
+<pre>
+
+
+Basic Unix 2. Shifting a process between the foreground and the background
+
+   A foreground process is one that occupies your shell (terminal window),
+   meaning that any new commands that are typed have no effect until the
+   previous command is finished.  This is as we might expect, but can be
+   confusing when we run long lasting programs, such as the 'afni' GUI.
+
+
+   Commands and descriptions:
+
+        afni    : AFNI program: the main GUI for viewing volume data
+        ctrl-z  : keystroke: suspend the foreground process
+        bg      : put the recently suspended process in the background
+        &amp;       : run a program in the background to begin with
+
+   <a href="http://afni.nimh.nih.gov/pub/dist/doc/program_help//afni.html">help for afni</a>
+   help for ctrl-z: not ready
+   help for bg:     not ready
+   help for &amp;:     not ready
+
+
+   A. Go to the AFNI_data6/afni directory and run afni.
+
+        <font style="background-color: yellow" color="blue"> cd AFNI_data6/afni    </font>
+        <font style="background-color: yellow" color="blue"> afni                  </font>
+</font>
+      As was seen earlier, there are many AFNI datasets in this directory.
+      When the afni GUI is opened, it shows us something.  But this is about
+      Unix, so we do not care what it shows.
+
+
+   B. Try to type commands in the original terminal window.
+
+      Locate the terminal window from which 'afni' was launched.  Try to
+      enter some commands into it.
+
+        <font style="background-color: yellow" color="blue"> &lt;Enter&gt;         </font>
+        <font style="background-color: yellow" color="blue"> &lt;Enter&gt;         </font>
+        <font style="background-color: yellow" color="blue"> ls                    </font>
+        <font style="background-color: yellow" color="blue"> pwd                   </font>
+        <font style="background-color: yellow" color="blue"> &lt;Enter&gt;         </font>
+</font>
+      We get no prompt and the commands have no effect.
+
+      That is because the 'afni' program is running in the foreground of the
+      terminal shell.  The shell is occupied by afni.
+
+
+   C. Suspend afni.
+
+      In the terminal window, hold the ctrl key and press 'z'.
+
+        <font style="background-color: yellow" color="blue"> ctrl-z                </font>
+</font>
+      The terminal window shows 'Suspended'.  That refers to afni program,
+      meaning that afni is no longer running, but the terminal is available.
+
+
+   D. Repeat of B: try to type commands in the terminal window.
+
+        <font style="background-color: yellow" color="blue"> &lt;Enter&gt;         </font>
+        <font style="background-color: yellow" color="blue"> &lt;Enter&gt;         </font>
+        <font style="background-color: yellow" color="blue"> ls                    </font>
+        <font style="background-color: yellow" color="blue"> pwd                   </font>
+</font>
+      This time the commands work.  The afni program is no long occupying our
+      terminal shell.  A prompt may or may not show up when suspending afni,
+      so we started off with a couple of Enter key strokes, just to see a
+      prompt.
+
+
+   E. Try to use the afni GUI.
+
+      Move the afni windows around, possibly over other afni windows.
+
+      The windows basically get erased, in that they are not re-drawn by the
+      window manager.  This shows us that 'afni' is no longer running (since
+      it was suspended).
+
+
+   F. Put afni into the background, then try to use it again.
+
+      Find the terminal window again and type the 'bg' command (for background).
+      Watch the afni GUI while this is done.
+
+        <font style="background-color: yellow" color="blue"> bg                    </font>
+</font>
+      Notice that afni started running again, as soon as the 'bg' command was
+      entered.  Also, notice that we can still enter commands into the terminal
+      window.  So not only is afni running, but we have access to the shell.
+
+   G. Be efficient.  Run 'afni' in the backgrond to begin with.  Then ctrl-z
+      and 'bg' would not be needed.
+
+      Start by closing the current afni GUI.  Press the red 'done' button
+      twice to close afni (twice within 5 seconds).
+
+      Then start afni, putting the &amp; character after the command.
+
+        <font style="background-color: yellow" color="blue"> afni &amp;            </font>
+</font>
+      Now afni is in the background to begin with.  We can use afni and we can
+      type commands in the terminal window.
+
+
+
+<font color="green">Comment(s):
+
+   c1. After starting some program, it can be suspended and put into the
+       background by using first ctrl-z and then the bg command.
+
+   c2. A program can be put directly into the background using '&amp;'.
+
+   c3. If a program terminates quickly, such as 'ls', we do not really care.
+</font>
+
+</pre>
+
+</body></html>

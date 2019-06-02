@@ -1,0 +1,12 @@
+{
+    "itemtype": "1D",
+    "itemid": "enormoutlr",
+    "blockid": "mot",
+    "blockid_hov": "motion and outliers",
+    "title": "Check: motion and outliers",
+    "text": [
+        "Motion Euclidean norm (enorm) and outlier fraction",
+        "with limit and combined censoring"
+    ],
+    "subtext": "censored vols (1%): 41..44,265,266"
+}

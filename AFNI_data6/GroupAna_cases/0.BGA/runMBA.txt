@@ -1,0 +1,2 @@
+MBA -prefix res_MBA  -chains 4 -iterations 1000 \
+-dataTable data.txt

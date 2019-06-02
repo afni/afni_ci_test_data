@@ -1,0 +1,63 @@
+
+Processing block: blur
+
+In this step each volume is blurred with a 4 mm FWHM (full width at half max)
+Gaussian kernel.
+
+Background:
+
+   There are 2 main reasons for blurring.  One is to reduce noise, by averaging
+   across neighbors (with hopefully the same noise structure).  The other is to
+   slightly expand statistically significant regions, so that there is better
+   overlap of results in group space.  Since there is often reasonably large
+   anatomical and functional variance across subjects (for example, there is
+   typically ~10 mm of variability at the edge of the brain), 2 subjects might
+   not overlap (well, if at all) in an activation area, even though it is the
+   "same" area in some sense.
+
+   There may not be a great gain in a large blur.  If the activation regions
+   are fairly large, they should overlap fairly to begin with, especially with
+   a small blur.  If the regions are small, a large blur could actually destroy
+   the pattern (since non-active voxels are blurred into the active ones).
+
+   So regardless of the size of activation, it seems to make sense not to blur
+   too much.  We might suggest 0-8 mm, depending on many things (6 is common,
+   4 is the default, and some are starting to use 0 or non-gaussian blurs).
+
+   Also, the more blur in the data, the larger clusters will need to be when
+   using AlphaSim and clustering for a multiple-comparison correction.
+
+   Also, keep in mind that there is typically some blur in the data right out
+   of the scanner, depending on the scanner.
+
+The proc.FT script:
+
+      # blur each volume of each run
+      foreach run ( $runs )
+          3dmerge -1blur_fwhm 4.0 -doall -prefix pb03.$subj.r$run.blur \
+                  pb02.$subj.r$run.volreg+orig
+      end
+
+   For each run, blur each volume by a 4.0 mm FWHM gaussian kernel.  Options:
+
+        -1blur_fwhm 4.0         : 4.0 mm, FWHM kernel
+        -doall                  : blur all sub-bricks
+        -prefix pb03...         : specify output dataset prefix
+        pb02...volreg           : the input dataset (last item on line)
+
+
+View the results in the afni GUI:
+
+   At this point, controller [A] (the windows across the top of the screen)
+   should be showing dataset pb02.FT.r01.volreg+orig and controller [B] should
+   be showing pb01.FT.r01.tshift.  The coordinates should be (19.3 78 -5.7).
+
+   So switch the underlay of controller [B] on the bottom to the blur output.
+
+        - [B] : switch underlay to pb03.FT.r01.blur
+
+   Besides the image being blurry, take a look at the time series.  What jumps
+   out a bit that each of the times series looks less noisy than before (in the
+   volreg dataset of controller [A], above).  The BOLD responses in the blur
+   dataset are more clear than those in the volreg dataset.
+

@@ -1,0 +1,9 @@
+
+# create and execute the processing script for one run of data
+# (remove the first 2 TRs - before magnetization steady state)
+
+afni_proc.py -dsets epi_r1+orig -copy_anat anat+orig    \
+             -tcat_remove_first_trs 2                   \
+             -regress_stim_times quick.r1_times.txt     \
+             -regress_basis 'BLOCK(20,1)'               \
+             -execute

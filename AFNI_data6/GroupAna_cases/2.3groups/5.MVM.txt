@@ -1,0 +1,46 @@
+# 3 genetypic groups: Val/Val (12), Val/Met (10), Met/Met (9)
+# Unequal number of subjects across groups
+# 1 effect estimate per subject
+
+3dMVM -prefix output.3grps.MVM -jobs 2 \
+-bsVars 'grp*FD'  \
+-qVars 'FD'           \
+-num_glt 5          \
+-gltLabel 1 VV-VM -gltCode  1 'grp : 1*VV -1*VM'             \
+-gltLabel 2 VV-MM -gltCode  2 'grp : 1*VV -1*MM'            \
+-gltLabel 3 FD -gltCode  3 'FD :'                                         \
+-gltLabel 4 FD_VV-VM -gltCode  4 'grp : 1*VV -1*VM FD :'   \
+-gltLabel 5 FD_VV-MM -gltCode 5 'grp : 1*VV -1*MM FD :'   \
+-dataTable \
+Subj grp  FD InputFile \
+as  VV -2.32602372  data/as+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+cg  VV  -0.79621543  data/cg+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+cm  VV -1.04992156  data/cm+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+db  VV  0.70120598  data/db+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+dh  VV  1.41997232  data/dh+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+dt  VV  0.57412410  data/dt+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+gm  VV -1.56879473  data/gm+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+hb  VV  1.35729994  data/hb+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+js  VV 1.74694736   data/js+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+kb  VV -0.46773627  data/kb+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+mg  VV -1.22670239  data/mg+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+ph  VV  0.40017779  data/ph+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+pl  VM  0.13541749  data/pl+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+ro  VM  0.77639415  data/ro+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+te  VM -1.52535369  data/te+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+tf  VM  0.07146561  data/tf+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+zy  VM  0.34202618  data/zy+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+ee  VM -1.21934711  data/ee+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+jl  VM 0.72929671   data/jl+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+jp  VM  0.59833382  data/jp+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+kc  VM -0.32704120  data/kc+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+rb  VM -0.08196986  data/rb+tlrc'[HO_resvnr_mvn#0_Coef]'    \
+aw  MM  0.05113690  data/aw+tlrc'[HO_resvnr_mvn#0_Coef]'     \
+fc  MM  0.25386459  data/fc+tlrc'[HO_resvnr_mvn#0_Coef]'     \
+jd  MM -0.20233621  data/jd+tlrc'[HO_resvnr_mvn#0_Coef]'     \
+jh  MM  0.73231335  data/jh+tlrc'[HO_resvnr_mvn#0_Coef]'     \
+nb  MM  0.22467647  data/nb+tlrc'[HO_resvnr_mvn#0_Coef]'     \
+ps  MM  1.16128779  data/ps+tlrc'[HO_resvnr_mvn#0_Coef]'     \
+sh  MM  1.14941175  data/sh+tlrc'[HO_resvnr_mvn#0_Coef]'     \
+sk  MM -0.30844963  data/sk+tlrc'[HO_resvnr_mvn#0_Coef]'     \
+yj  MM -1.32546053  data/yj+tlrc'[HO_resvnr_mvn#0_Coef]'    

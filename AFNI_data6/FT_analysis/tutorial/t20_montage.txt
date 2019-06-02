@@ -1,0 +1,80 @@
+
+View clustered results using a montage.
+
+Background:
+
+   We have thresholded and clustered the data.  Now display an axial montage,
+   creating an image that is often nice for publication.  The goal is to show
+   activation across the entire (or portion of the) brain, but in one image.
+
+===========================================================================
+
+View the results in the afni GUI.
+
+   Set the underlay to be the anatomy and the overlay (both OLay and Thr) to be
+   the V-A contrast t-statistic.  Use the default clustering (20 voxels) for 
+   this example, and view the data from the same voxel at (52, 3.6, 12).
+
+   The current settings should be:
+        Ulay:   FT_anat+orig
+        Olay:   stats.FT+orig   sub-brick 8 (V-A t-stat)
+        Thr:                    sub-brick 8 (V-A t-stat)
+
+        threshold = 7.0
+        clusterize (default 20 voxels)
+        jump-to-xyz: 52 3.6 12
+
+   ---------------------------------------------------------------------------
+   Note that we just selected an image that we like.  With any input data, the
+   montage steps could be performed.  Just preferably start with a pretty
+   picture being displayed and the crosshairs at a useful coordinate.
+   ---------------------------------------------------------------------------
+
+   In the axial image window, open a montage of 3x4 images, spaced every 4
+   slices.
+
+        - Axial window: click "Mont" (next to Done on the bottom)
+        - select Across=3, Down=4, Spacing=4
+        - Axial montage control: set Border=2, Color=dk-blue
+        - Draw
+
+   Note the crosshairs still on the current slice.  For a better idea of which
+   slices are being displayed, look at either the sagittal or corolal windows.
+   Notice there are now 12 green horizontal lines representing the 12 slices
+   being shown in the axial montage.
+
+   Some additional features:
+
+   1. View only the single crosshair in the sagittal and coronal image windows.
+      Note that they can be turned off all together.  In the upper left corner
+      of the main controller window, change the Xhairs value from Multi to 
+      either Single or Off.
+
+        - main controller: Xhairs: Multi -> Single
+
+   2. Get rid of the blue border between images, just to see the difference.
+
+        - Axial montage control: set Border=0, Color=none (either is enough)
+        - Draw
+
+   3. Save and view the image as axial_montage.jpg.  First change the save
+      format from ppm to jpg, then save the image.  After that, view the image,
+      just to be sure it looks as expected.  To view, either use some other
+      image viewer or AFNI's aiv program (AFNI image viewer).
+
+        - axial image: right-click on "Sav1.ppm"
+        - change from Save.ppm to Save.jpg (for JPEG) (and Set)
+        - axial iamge: left-click on Sav1.jpg
+        - specify the prefix: axial_montage (and Set)
+
+      There should have been a message on afni's terminal window about writing
+      image to file axial_montage.jpg.  View the image, just to be sure.
+
+        - command line: aiv axial_montage.jpg
+
+   4. Get rid of image decorations and buttons in the Axial montage.
+
+        - right-click in Axial image -> Image display
+
+      Note that it is a toggle, and is re-displayed the same way.
+

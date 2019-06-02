@@ -1,0 +1,14 @@
+
+todo:
+   - getting betas (and maybe t-stats) to standard space
+        - keep it simple, send the whole stats dataset...
+        - 4 cases: @auto or manual, @ volreg or after processing
+   - continue on with some group analysis (see AFNI_data6/group_results)
+        - 3dANOVA2
+        - 3dMEMA (maybe just V-A)
+
+done:
+   2010-07-28 : everything up through t16, understanding the X-matrix
+   2010-11-16 : added t17 through t20 (view results through post regress)
+   2011-03-08 : added t20_montage.txt (renamed post regress to t21)
+

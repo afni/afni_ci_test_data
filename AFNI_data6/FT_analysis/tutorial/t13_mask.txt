@@ -1,0 +1,158 @@
+
+Processing block: mask
+
+Here a simple EPI mask is created using 3dAutomask.  A temporary mask is
+created for each run, then the union is taken to create the final result.
+
+This mask is not actually applied to the data, though it might be used for
+masks involving correction for multiple comparisons.
+
+
+Background:
+
+   Masking is not necessary at the single subject level, unless one plans to do
+   a single subject analysis.  But even in that case, it may be preferable to
+   analyze the full volume before masking.
+
+   Masking is important at the group level, particularly when using clustering
+   to correct for multiple comparisons.  But if masking is done at the single
+   subject level, then when doing a group ANOVA for instance, only those voxels
+   common to all subjects should get results.  The effect is that the group
+   mask should be the intersection of all of the single subject masks, which
+   tends to result in a loss of many voxels "of interest", where they fall just
+   outside the mask for some subject(s).
+
+   Another important reason not to mask until the group analysis is that it is
+   actually good to verify whether there are any artifacts (strong results
+   outside the brain).  If there are results outside the brain, it is important
+   to understand where they came from and whether something needs correcting.
+
+   It may be nicest to create a group mask based on the group anatomy, e.g. the
+   Talairach template (anatomical or EPI).
+
+
+The proc.FT script:
+
+   First run 3dAutomask for each run, dilating by 1 voxel.
+
+      foreach run ( $runs )
+          3dAutomask -dilate 1 -prefix rm.mask_r$run pb03.$subj.r$run.blur+orig
+      end
+
+   Then get the mean and compute the union.  A voxel is part of the final mask
+   if it is part of the mask from any run.  So if the mean is anything greater
+   than 0 at some voxel, then that voxel is part of the union.
+
+      3dMean -datum short -prefix rm.mean rm.mask*.HEAD
+      3dcalc -a rm.mean+orig -expr 'ispositive(a-0)' -prefix full_mask.$subj
+
+   While subtracting 0 does nothing in the (a-0) computation, it is there as a
+   reminder that one could put in other values.  For example (a-0.999) would
+   serve to take the intersection, while (a-0.499) would mean to include voxels
+   which are included in at least half of the masks.
+
+   The result is dataset 'full_mask.FT+orig'.
+
+
+View the results in the afni GUI:
+
+   Leave the blur output alone for now in controller [B], but set the overlay
+   of controller [A] to the EPI mask.  The underlay in controller [A] should
+   still be the run 1 volreg dataset.
+
+        - [A] : set OverLay to full_mask.FT
+        - [A] : temporarily open Sagittal and Coronal Images
+        - click around the images and view the overlay
+        - lower any Image window's overlay opacity to let the underlay show
+          through better (the opacity is controlled by the up/down arrows next
+          to the 9 (and above 'z')
+
+   The opacity here refers to the overlay, while we imagine the underlay is
+   beneath the overlay.
+
+   Being opaque means one cannot see through it.  A wall might be opaque, a
+   window might be transparent, our skin is somewhere in between.  In the Image
+   controller, a higher value means more opaque.  The maximum and default is 9
+   (90% opaque, 10% transparent), the minimum value is 1 (10% opaque, 90%
+   transparent).  So with a lower opacity, we see more through the overlay,
+   meaning we see more of the underlay beneath.
+
+   At any rate, the mask looks great, and we might be inclined to just move on.
+   But the real test is to view the EPI mask on top of the anatomical underlay,
+   instead of the EPI underlay.
+
+        - [A] : set Underlay to FT_anat
+
+   Even as we jump around here, the mask looks pretty good.  But let us focus
+   briefly at xyz coordinates (51, -32, -6).
+
+        - [A] image window: right-click and "Jump to (xyz)": 51 -32 -6
+
+   Again, this mask looks pretty good, but looking in the axial window for
+   example, it might seem that the EPI is shifted a little to the right
+   (depending on whether left=Left in your image window).  And in the coronal
+   and axial windows, it looks like we have lost some of the temporal lobes
+   (which is very common, this case is relatively good).
+
+   EPI signal dropout is very common in the temporal lobes due to the nasal
+   cavity.  Any large open space may degrade the surrounding signal.
+
+   Just to be sure, briefly switch the overlay to the volreg dataset.
+
+        - [A] : set Overlay to pb02.FT.r01.volreg
+
+   Clearly the EPI coverage does not seem to extend to the bottom of those
+   lobes.  Again, we see that the alignment is decent, but recall that we have
+   done nothing to forcibly align the EPI to the anatomy.  In this script, we
+   are relying on the subject not moving much between the EPI an anatomical
+   acquisitions.  Switch back to the volreg and mask datasets, and jump back to
+   our "favorite" voxel coordinates.
+
+        - [A] : set OverLay to full_mask.FT
+        - [A] : set Underlay to pb02.FT.r01.volreg
+        - [A] : close the sagittal and coronal Image windows
+        - [A] : Jump to (xyz): 19.3 78 -5.7
+
+Advanced:
+
+   The 'mask' processing block in the advanced script 'proc.FT.align' does much
+   more.  Aside from create the EPI mask, it creates the subject's anatomical
+   mask and a group mask.
+
+        full_mask.$subj         : the EPI automask
+        mask_anat.$subj         : mask created from skull-stripped anatomy
+        mask_group              : mask created from anatomical template
+   
+   Note that all masks are created at the resolution of the EPI data (after
+   the volreg processing block, meaning after any warp to align with the anat
+   and/or warp to standard space).
+
+   An informational step is done of computing some overlap measures between
+   the anatomical and EPI masks.  The script shows a 3dABoverlap command:
+
+        3dABoverlap -no_automask full_mask.$subj+tlrc mask_anat.$subj+tlrc \
+            |& tee out.mask_overlap.txt
+
+   This outputs many numbers, but the one we most care about is "%(A \ B)",
+   which shows the percentage of mask A voxels that are not in mask B.  That
+   result is 10.4192, meaning 10% of the EPI mask voxels (full_mask) are
+   outside of the anatomical mask (mask_anat).
+
+   Why would any EPI voxels be outside the anatomical mask?  Is 10% okay?
+
+   This result is quite reasonable.  There are 2 main reasons to have EPI mask
+   voxels outside the anatomical mask.
+
+        1. CSF (cerebral spinal fluid) actually has high intensity in EPI data.
+           And since there is some CSF outside the brain (and not just in the
+           folds), there should be some bright EPI voxels outside the brain.
+
+        2. The EPI mask was made with a single dilation (3dAutomask -dilate 1).
+           So we have intentionally made the mask a little bigger.
+
+   If that %(A \ B) value were very large, we would suspect that the alignment
+   step between the EPI and anat might have failed.
+
+   Again, note that the alignment step does not take place in the simple script
+   (proc.FT), but does in the advanced script (proc.FT.align).
+

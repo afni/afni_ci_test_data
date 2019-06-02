@@ -1,0 +1,121 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 1365
+'[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:17:59 2010] 3dDeconvolve -input pb04.FT.r01.scale+orig.HEAD pb04.FT.r02.scale+orig.HEAD pb04.FT.r03.scale+orig.HEAD -polort 3 -num_stimts 8 -stim_times 1 stimuli/AV1_vis.txt 'BLOCK(20,1)' -stim_label 1 Vrel -stim_times 2 stimuli/AV2_aud.txt 'BLOCK(20,1)' -stim_label 2 Arel -stim_file 3 'dfile.rall.1D[0]' -stim_base 3 -stim_label 3 roll -stim_file 4 'dfile.rall.1D[1]' -stim_base 4 -stim_label 4 pitch -stim_file 5 'dfile.rall.1D[2]' -stim_base 5 -stim_label 5 yaw -stim_file 6 'dfile.rall.1D[3]' -stim_base 6 -stim_label 6 dS -stim_file 7 'dfile.rall.1D[4]' -stim_base 7 -stim_label 7 dL -stim_file 8 'dfile.rall.1D[5]' -stim_base 8 -stim_label 8 dP -gltsym 'SYM: Vrel -Arel' -fout -tout -x1D X.xmat.1D -xjpeg X.jpg -fitts fitts.FT -errts errts.FT -bucket stats.FT\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:17:59 2010] Output prefix: stats.FT\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 16:07:34 2010] 3dbucket -prefix func_slim 'stats.FT+orig[0,1,2,4,5,7,8]'\n[christip@varda.nimh.nih.gov: Mon Mar 22 11:50:16 2010] 3dbucket -prefic func_fullF 'func_slim+orig.[0]'\n[christip@varda.nimh.nih.gov: Mon Mar 22 13:34:53 2010] adwarp.c -apar anat+tlrc -dpar func_fullF+orig. -dxyz 3\n[rickr@manwe.nimh.nih.gov: Fri Mar 26 09:33:34 2010] 3dresample -master /home/rickr/abin/TT_N27+tlrc -input func_fullF+tlrc -prefix func_fullF_1mm~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_FUNC~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_fjKmMjDiXN2cAffGJWwelQ~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Fri Mar 26 09:33:34 2010~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 11 1 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 3 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+            -80            -80            -65
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              1              1              1
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              1              0              0            -80              0
+              1              0            -80              0              0
+              1            -65
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              1              0              0            -80              0
+              1              0            -80              0              0
+              1            -65
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0       745.7785
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 161 191 151 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 1
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+     0.02841061
+
+type = string-attribute
+name = BRICK_LABS
+count = 11
+'Full_Fstat~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type  = float-attribute
+name  = BRICK_STATAUX
+count = 5
+              0              4              2              2            430
+
+type = string-attribute
+name = BRICK_STATSYM
+count = 13
+'Ftest(2,430)~
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~

@@ -1,0 +1,128 @@
+
+Processing block: regress - viewing EPI data at various locations
+
+Background:
+
+   Now that we have seen where the results are significant for Vrel, Arel and
+   even the contrast V-A, let us view this in relation to the EPI time series
+   data.
+
+   Recall that the input to 3dDeconvolve is the scaled EPI data (pb04.*.scale),
+   or catenated in the single dataset, all_runs.  Since each voxel was scaled
+   over each run so that the mean became 100, we can view the EPI data as a
+   percentage of the mean.
+
+   Recall that at this voxel we have:
+              Vrel beta = 2.325
+              Arel beta = 3.403
+              V-A contr = -1.08  (2.325 - 3.403)
+
+   So the magnitude of the BOLD response for Vrel is 2.3 (percent change above
+   baseline), but the Arel response was 3.4 percent above baseline.
+
+===========================================================================
+
+View the EPI time series in the afni GUI:
+
+   Leave controller [A] as it is along the top of the screen, and view the EPI
+   data with controller [B] along the bottom.  Set the Underlay dataset to be
+   all_runs, and open an image and graph window.  We don't care too much about
+   the image window, since the scaled EPI data has lost anatomical contrast.
+   The controllers will lock once we jump to a new location.
+
+        - in controller [B], set Underlay to all_runs
+        - [B] open axial image and graph windows, close all others (from [B])
+        - [B] axial image: jump-to-xyz 52 3.6 12
+        - [B] graph image: hit 'A' for autoscale (or Opt->scale->AUTO)
+              note that this is a toggle button, the message on the terminal
+              window should read: ++ Graph Viewer: Autoscale forced ON
+              (so if it is now OFF, toggle it back on)
+
+   For now, focus on just one time series.
+
+        - [B] graph image: hit 'm' a couple of times, widen the window
+
+   The BOLD response pattern should be clear here.
+
+   --------------------
+
+   Note the run breaks.
+
+   There are 3 runs of 150 TRs each.  Make this clear in the graph window.
+
+        - [B] graph image: Opt->Grid->Choose, and set to 150
+        - [B] graph image: Opt->Colors->Grid: set to yellow-orange
+
+   Supporting our choice of run breaks, we see that the BOLD responses seem to
+   die off and start again at the run breaks.
+
+   --------------------
+
+   Display the ideal curve (regressor) for the Vrel stimulus class.
+
+        - [B] graph image: FIM->Pick Ideal: set to ideal_Vrel.1D
+
+   Recall that afni_proc.py used 1dcat to extract this from column 12 of the
+   X-matrix via the command:
+
+        % 1dcat X.xmat.1D'[12]' > ideal_Vrel.1D
+
+   At each stimulus time in stimuli/AV1_vis.txt, 3dDeconvolve put down our
+   requested basis function, 'BLOCK(20,1)', forming column 12 of the X-matrix
+   (after columns 0-11, the 12 polynomial baseline regressors).  For run 1, the
+   times were 60, 90, etc.  We see the first bump in the ideal regressor start
+   60 seconds (TR index 30) into the first run.
+
+   So in the EPI data, it is clear which responses were from the Vrel stimulus
+   class, while the others were from the Arel class.
+
+   --------------------
+
+   Display the model fit time series on top of the data.
+
+   Start the Dataset #N plugin as a Double Plot, and plot the fitts data in
+   blue over the scaled data (still in black).
+
+        - [B] graph image: Opt->Tran 1D: set to Dataset #N
+        - Dataset #N window: set Input #1 to be fitts.FT
+        - Dataset #N window: set the Color for Input #1 to be dk-blue
+        - Dataset #N window: Set (either Keep or Close)
+
+   There are a few things to note here.
+
+      1. The blue fitts curve is smoother than the black EPI curve.
+
+         Remember that the fitts curve is a linear sum of our regressors, which
+         include a cubic polynomial (per run), 2 BOLD response regressors (Vrel
+         and Arel) and 6 motion curves.  In this model, only the motion will
+         appear noisy, while the polort and BLOCK() regressors are smooth.  So
+         the noisier the fitts data, the bigger the effect of motion at the
+         given voxel.
+ 
+      2. Note the heights of the BOLD responses in the fitts data.  In the
+         fitts data, the heights of all Vrel responses are the same (that is
+         our assumption in the regression), as are the the responses of Arel.
+         It is sometimes hard to see, including the polort and especially the
+         motion, but the response heights do appear the same.
+
+      3. Note that the heights of the Arel responses look higher than those of
+         the Vrel.  The first 2 responses of the first run are Arel, and they
+         are higher than the next 3 responses which are Vrel.
+
+         Recall again that at this voxel (xyz 52 3.6 12), the Arel beta is 3.4
+         while the Vrel beta is only 2.3 (percent).  So at this voxel the V-A
+         contrast is -1.08, because the response to Arel was bigger than the
+         response to Vrel.
+
+         This makes sense since this part of the brain responds to audio, while
+         the visual area is in the posterior (we can see positive contrast
+         values at the bottom of the axial image, for example).
+
+      4. Again, note that the EPI and fitts values hover around 100, which is
+         the mean of every run.
+
+      5. By following the bottoms of the responses, one can get a sense of the
+         polort baseline.  In some cases it is fairly steady, in other cases it
+         is clearly higher degree than even quadratic (so it is good that we
+         used a cubic polynomial to model it).
+

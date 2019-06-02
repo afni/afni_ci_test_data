@@ -1,0 +1,150 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 1082
+'[rickr@manwe.nimh.nih.gov: Mon Mar  8 18:11:54 2010] 3dDeconvolve -input pb04.GF.align.r01.scale+tlrc.HEAD pb04.GF.align.r02.scale+tlrc.HEAD pb04.GF.align.r03.scale+tlrc.HEAD -censor motion_GF.align_censor.1D -polort 3 -num_stimts 8 -stim_times 1 stimuli/AV1_vis.txt 'BLOCK(20,1)' -stim_label 1 Vrel -stim_times 2 stimuli/AV2_aud.txt 'BLOCK(20,1)' -stim_label 2 Arel -stim_file 3 'dfile.rall.1D[0]' -stim_base 3 -stim_label 3 roll -stim_file 4 'dfile.rall.1D[1]' -stim_base 4 -stim_label 4 pitch -stim_file 5 'dfile.rall.1D[2]' -stim_base 5 -stim_label 5 yaw -stim_file 6 'dfile.rall.1D[3]' -stim_base 6 -stim_label 6 dS -stim_file 7 'dfile.rall.1D[4]' -stim_base 7 -stim_label 7 dL -stim_file 8 'dfile.rall.1D[5]' -stim_base 8 -stim_label 8 dP -jobs 6 -gltsym 'SYM: Vrel -Arel' -fout -tout -x1D X.xmat.1D -xjpeg X.jpg -fitts fitts.GF.align -errts errts.GF.align -bucket stats.GF.align\n[rickr@manwe.nimh.nih.gov: Mon Mar  8 18:11:54 2010] Output prefix: stats.GF.align\n[rickr@manwe.nimh.nih.gov: Thu Mar 11 13:43:15 2010] 3dbucket -prefix OLSQ.GF.betas 'stats.GF.align+tlrc[1,4]'~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_FUNC~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_r6touGWtOX_IDkRC_q3B9Q~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Thu Mar 11 13:43:15 2010~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 11 1 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 3 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+            -79            -79            -64
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              2              2              2
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              2              0              0            -79              0
+              2              0            -79              0              0
+              2            -64
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              2              0              0            -79              0
+              2              0            -79              0              0
+              2            -64
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 4
+      -23.46711       31.97683      -31.26104       36.63819
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 2 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 80 95 75 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 2
+ 1 1
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 2
+   0.0009758851    0.001118143
+
+type = string-attribute
+name = BRICK_LABS
+count = 24
+'Vrel#0_Coef~Arel#0_Coef~
+
+type  = float-attribute
+name  = FDRCURVE_000000
+count = 103
+     0.01834735      0.9837846      0.4425553      0.8545055       1.208255
+       1.529288       1.827191       2.109361       2.376644       2.630729
+       2.875711       3.111005       3.337128       3.554562       3.765589
+       3.966477        4.16027       4.346954       4.527658       4.701149
+       4.870008        5.03418       5.193209       5.348044       5.499136
+       5.646436       5.789793       5.929749       6.066255       6.199521
+       6.330188       6.456789       6.581719        6.70375       6.823664
+       6.940475       7.055325       7.168487       7.278877       7.387184
+       7.493565        7.51596       7.515972       7.515984       7.515996
+       7.516007       7.516019        7.51603       7.516043       7.516054
+       7.516066       7.516077       7.516089         7.5161       7.516112
+       7.516124       7.516136       7.516148       7.516159       7.516171
+       7.516183       7.516194       7.516206       7.516218        7.51623
+       7.516241       7.516253       7.516264       7.516276       7.516288
+         7.5163       7.516312       7.516323       7.516335       7.516346
+       7.516358        7.51637       7.516382       7.516394       7.516405
+       7.516417       7.516428        7.51644       7.516452       7.516464
+       7.516476       7.516487       7.516499       7.516511       7.516522
+       7.516534       7.516546       7.516558       7.516569       7.516581
+       7.516592       7.516604       7.516616       7.516628       7.516639
+       7.516651       7.516663       7.517523
+
+type  = float-attribute
+name  = MDFCURVE_000000
+count = 74
+            -15      0.2020986      0.9990019      0.9561857       0.955497
+       0.954912      0.9540807      0.9533504      0.9526363      0.9519614
+      0.9513901      0.9505931      0.9497762      0.9489602      0.9483916
+      0.9474533      0.9466186      0.9457641      0.9449204      0.9440569
+      0.9428647      0.9419543       0.940853      0.9399922      0.9387307
+      0.9375831      0.9362715      0.9351768      0.9337842      0.9325466
+      0.9310319      0.9296826      0.9278811       0.926142      0.9243419
+      0.9224806      0.9199923      0.9177517       0.915203      0.9128814
+      0.9098505      0.9069026       0.903338      0.8995066      0.8954393
+      0.8916817      0.8868138      0.8817928      0.8765058      0.8704802
+      0.8640668      0.8570303      0.8488793      0.8404714      0.8311334
+      0.8195169      0.8064807      0.7918526      0.7748292      0.7559689
+      0.7328653      0.7059572      0.6752026      0.6381513      0.5951748
+      0.5462338      0.4891371      0.4244388      0.3489211      0.2662833
+      0.1783648     0.09759609     0.02773079              0
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~

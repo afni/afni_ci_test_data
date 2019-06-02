@@ -1,0 +1,12 @@
+{
+    "itemtype": "1D",
+    "itemid": "grayplot",
+    "blockid": "regr",
+    "blockid_hov": "regressors",
+    "title": "Check: regressors (combined and individual)",
+    "text": [
+        "Grayplot ('-peelorder') of residuals dset: errts.FT",
+        "Rows ordered by approx voxel geom in mask: mask_epi_anat.FT"
+    ],
+    "subtext": "range: 1.460401 (50%ile of time series |max| vals in mask)"
+}

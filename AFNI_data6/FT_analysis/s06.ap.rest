@@ -1,0 +1,36 @@
+#!/usr/bin/env tcsh
+
+# ------------------------------------------------------------
+# ------------ pretend this is resting state data ------------
+#
+# apply Example 10 from "afni_proc.py -help"
+# ------------------------------------------------------------
+
+set top_dir   = FT
+set subj      = FT.rest
+
+# run afni_proc.py to create a single subject processing script
+afni_proc.py -subj_id $subj                                      \
+        -script proc.$subj -scr_overwrite                        \
+        -blocks despike tshift align tlrc volreg blur mask regress \
+        -copy_anat $top_dir/FT_anat+orig                         \
+        -tcat_remove_first_trs 2                                 \
+        -dsets                                                   \
+            $top_dir/FT_epi_r1+orig.HEAD                         \
+            $top_dir/FT_epi_r2+orig.HEAD                         \
+            $top_dir/FT_epi_r3+orig.HEAD                         \
+        -volreg_align_to MIN_OUTLIER                             \
+        -volreg_align_e2a                                        \
+        -volreg_tlrc_warp                                        \
+        -blur_size 4.0                                           \
+        -mask_segment_anat yes                                   \
+        -mask_segment_erode yes                                  \
+        -regress_motion_per_run                                  \
+        -regress_censor_motion 0.2                               \
+        -regress_censor_outliers 0.1                             \
+        -regress_bandpass 0.01 0.1                               \
+        -regress_apply_mot_types demean deriv                    \
+        -regress_ROI WMe                                         \
+        -regress_run_clustsim no                                 \
+        -regress_est_blur_errts
+

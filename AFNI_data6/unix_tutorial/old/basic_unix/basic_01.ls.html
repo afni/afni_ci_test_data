@@ -1,0 +1,188 @@
+<html><body>
+
+<pre>
+
+Basic Unix 1. Basic commands and the $HOME variable
+
+   <font style="background-color: yellow" color="blue"> As a reminder, commands to type are on a yellow background. </font>
+</font>
+
+   Commands and descriptions:
+
+        cd   : change directories
+        ls   : list directory contents
+               -a : list all files (include those starting with '.')
+               -l : long listing (show file type, ownership, size, date)
+        pwd  : show the Present Working Directory
+        echo : echo given text to the terminal window
+
+   <a href="../misc/unix_commands.html#sc_cd">help for cd</a>
+   <a href="../misc/unix_commands.html#uc_ls">help for ls</a>
+   <a href="../misc/unix_commands.html#uc_pwd">help for pwd</a>
+   <a href="../misc/unix_commands.html#sc_echo">help for echo</a>
+
+
+   A. In a terminal window, go to the $HOME directory.  The 'cd' command
+      (without any arguments) will do this.
+
+      Commands:
+         - go to the $HOME directory
+         - display the present working directory
+         - echo the value of the $HOME variable
+         - list the basic contents of that directory
+
+        <font style="background-color: yellow" color="blue"> cd                    </font>
+        <font style="background-color: yellow" color="blue"> pwd                   </font>
+        <font style="background-color: yellow" color="blue"> echo $HOME            </font>
+        <font style="background-color: yellow" color="blue"> ls                    </font>
+</font>
+      The output for this will vary, since home directories and contents vary.
+
+      There is no output from a 'cd' command (except for perhaps a change in
+      the prompt).  The output from 'pwd' should show the path to the user's
+      home directory (as will the output from 'echo $HOME), while the output
+      from 'ls' should include AFNI_data6.
+
+
+   B. Compare the simple listing of files with the listing of all files and
+      the long-format listing.  Just for fun, try both options.
+
+        <font style="background-color: yellow" color="blue"> ls                    </font>
+        <font style="background-color: yellow" color="blue"> ls -a                 </font>
+        <font style="background-color: yellow" color="blue"> ls -l                 </font>
+</font>
+      The 'ls' command should show the same files and directories as above,
+      including AFNI_data6.
+
+      With the -a option, all files (and directories) are shown, including
+      those starting with a '.' (which includes '.' and '..', the current
+      and parent directories).  There is nothing special about such files,
+      except that they are named starting with '.'.  They are typically
+      configuration files for various programs (such as .afnirc for AFNI
+      programs and .sumarc for SUMA programs).
+
+      The -l option is to show a "long" listing, including permissions,
+      ownership, file size, modification date and the file name.
+
+
+   C. Move into the AFNI_data6/afni director and see what is there.
+
+        <font style="background-color: yellow" color="blue"> cd AFNI_data6/afni    </font>
+        <font style="background-color: yellow" color="blue"> pwd                   </font>
+        <font style="background-color: yellow" color="blue"> ls                    </font>
+        <font style="background-color: yellow" color="blue"> ls -al                </font>
+</font>
+      There are anatomical, EPI, statistical and mask datasets here, along
+      with scripts (text files of commands, such as rall_regress) and stimulus
+      timing files (text files of times in seconds, such as stim_AV1_vis.txt).
+
+      Again, the -al options show all files and using a long format.  Note
+      that the list starts with '.' and '..' at the top.
+
+   D. Change to the current directory, '.'.  This does nothing.
+
+        <font style="background-color: yellow" color="blue"> cd .                  </font>
+        <font style="background-color: yellow" color="blue"> pwd                   </font>
+        <font style="background-color: yellow" color="blue"> ls                    </font>
+        <font style="background-color: yellow" color="blue"> ls -al                </font>
+</font>
+      Since '.' is the current directory, "cd ." says to move to where we 
+      already are.  This is not a practical example, but hopefully makes it
+      clear at least what the '.' represents.
+
+
+   E. Change to the parent directory, '..', going up one level.
+
+        <font style="background-color: yellow" color="blue"> cd ..                 </font>
+        <font style="background-color: yellow" color="blue"> pwd                   </font>
+        <font style="background-color: yellow" color="blue"> ls                    </font>
+        <font style="background-color: yellow" color="blue"> ls -al                </font>
+</font>
+      Since we had been in the AFNI_data6/afni directory, we have now moved
+      into the AFNI_data6 directory.  So among other things, we see that there
+      is an 'afni' directory here, which is where we just came from.
+
+
+   F. Go to the $HOME directory in some different ways.
+
+        <font style="background-color: yellow" color="blue"> pwd                   </font>
+        <font style="background-color: yellow" color="blue"> cd                    </font>
+        <font style="background-color: yellow" color="blue"> pwd                   </font>
+        <font style="background-color: yellow" color="blue"> cd $HOME              </font>
+        <font style="background-color: yellow" color="blue"> pwd                   </font>
+        <font style="background-color: yellow" color="blue"> cd ~                  </font>
+        <font style="background-color: yellow" color="blue"> pwd                   </font>
+</font>
+      The 'pwd' commands are just to verify where we are each time.  But any
+      of the 'cd' will go to the home directory.
+
+      cd        : without any options, cd goes to the home directory
+      cd $HOME  : $HOME means our home directory, so we can go there explicitly
+      cd ~      : the '~' character also means our home directory
+
+
+   G. Understand absolute and relative pathnames.
+
+<font style="background-color: yellow" color="blue">         cd                        </font>
+<font style="background-color: yellow" color="blue">                                   </font>
+<font style="background-color: yellow" color="blue">         ls $HOME                  </font>
+<font style="background-color: yellow" color="blue">         ls                        </font>
+<font style="background-color: yellow" color="blue">         ls .                      </font>
+<font style="background-color: yellow" color="blue">                                   </font>
+<font style="background-color: yellow" color="blue">         ls /home/rickr/AFNI_data6 </font>
+<font style="background-color: yellow" color="blue">         ls $HOME/AFNI_data6       </font>
+<font style="background-color: yellow" color="blue">         ls AFNI_data6             </font>
+<font style="background-color: yellow" color="blue">                                   </font>
+<font style="background-color: yellow" color="blue">         cd /usr                   </font>
+<font style="background-color: yellow" color="blue">         ls $HOME/AFNI_data6       </font>
+<font style="background-color: yellow" color="blue">         ls AFNI_data6             </font>
+</font>
+      An absolute pathname is simply one starting with '/', while a relative
+      pathname does not.  One can find an absolute pathname easily: start at
+      the initial root directory '/', and follow the path downward.  A relative
+      path depends on the starting point, so if that is unknown, it may be hard
+      to find.
+
+      Use 'cd' to start from the $HOME directory.
+
+      Note that 'ls $HOME', 'ls' and 'ls .' have the same output.  They each
+      show the contents of the home directory.  By default, 'ls' shows the
+      current directory, which is exactly what 'ls .' says, only by using '.'
+      as the relative path to the current directory (as opposed to '..' being
+      the relative path to the parent directory).
+
+
+      More interestingly, the second set of 3 commands all show the contents of
+      the AFNI_data6 directory (though the first only works for user 'rickr').
+      Since $HOME evaluates to /home/rickr (or whatever your home directory is),
+      the first 2 examples are identical using absolute paths.  While the third
+      uses a relative path, and relies on being just above AFNI_data6.
+
+      Note that to display the contents of AFNI_data6, the absolute path method
+      will work from anywhere (one can 'cd' to any directory in the filesystem,
+      and 'ls $HOME/AFNI_data6' will still work).  But for the relative path
+      example to work, one must start from the correct location.
+
+
+      The final set of 3 commands simply demonstrates this in one more way.
+      From the /usr directory, 'ls $HOME/AFNI_data6' still works, but
+      'ls AFNI_data6' does not.  Since there is no AFNI_data6 directory under
+      /usr, the following error results:
+
+         AFNI_data6: No such file or directory
+
+
+<font color="green">Comment(s):
+
+   c0. Consider repeating this part of the tutorial.
+
+   c1. Get in the habit of using 'ls' after any 'cd' command, i.e. see what is
+       in any directory that you enter.
+
+   c2. The 'echo' command is mostly used in processing scripts, to inform the
+       user of something.
+</font>
+
+</pre>
+
+</body></html>

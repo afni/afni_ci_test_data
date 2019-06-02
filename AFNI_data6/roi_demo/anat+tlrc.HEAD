@@ -1,0 +1,181 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 5966
+'[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:11 2010] ===================================\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:11 2010] === History of inputs to 3dcalc ===\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:11 2010] === Input a:\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:11 2010] [rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] ===================================\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] === History of inputs to 3dcalc ===\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] === Input a:\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] [rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:45 2010] 3dSkullStrip -input ./anat+orig -prefix anat_ns\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:50 2010] 3dresample -rmode Cu -master __ats_tmp__ref_TT_N27_40pad+tlrc -inset anat_ns+orig -prefix __ats_tmp__resamp_edge_art\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] === Input b:\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] [rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:45 2010] 3dSkullStrip -input ./anat+orig -prefix anat_ns\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:51 2010] 3dcalc -a anat_ns+orig -expr 'step(a)*10000' -prefix __ats_tmp__resamp_step\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:53 2010] 3dresample -rmode Linear -master __ats_tmp__ref_TT_N27_40pad+tlrc -inset __ats_tmp__resamp_step+orig -prefix __ats_tmp__resamp_NN\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] ===================================\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] 3dcalc -a __ats_tmp__resamp_edge_art+tlrc. -b __ats_tmp__resamp_NN+tlrc. -expr 'a*step(b-5000)' -prefix __ats_tmp__resamp\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:55 2010] 3dcalc -a __ats_tmp__resamp+tlrc -expr 'a*step(a--0.000100)*step(5406.000100-a) + 0*step(0-a) + 5406*step(a-5406)' -prefix __ats_tmp___rs_anat\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:57 2010] 3drefit -view +orig __ats_tmp___rs_anat+tlrc.HEAD\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:08 2010] 3dcalc -a __ats_tmp___rs_anat+orig -expr 'step(a)*10000' -prefix __ats_tmp__reg_braintlrcstep\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:10 2010] 3dWarp -matparent __ats_tmp__reg_warpdriveout+orig -linear -prefix __ats_tmp__reg_braintlrcmask __ats_tmp__reg_braintlrcstep+orig\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:11 2010] === Input b:\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:11 2010] [rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] ===================================\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] === History of inputs to 3dcalc ===\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] === Input a:\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] [rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:45 2010] 3dSkullStrip -input ./anat+orig -prefix anat_ns\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:50 2010] 3dresample -rmode Cu -master __ats_tmp__ref_TT_N27_40pad+tlrc -inset anat_ns+orig -prefix __ats_tmp__resamp_edge_art\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] === Input b:\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] [rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:45 2010] 3dSkullStrip -input ./anat+orig -prefix anat_ns\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:51 2010] 3dcalc -a anat_ns+orig -expr 'step(a)*10000' -prefix __ats_tmp__resamp_step\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:53 2010] 3dresample -rmode Linear -master __ats_tmp__ref_TT_N27_40pad+tlrc -inset __ats_tmp__resamp_step+orig -prefix __ats_tmp__resamp_NN\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] ===================================\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:54 2010] 3dcalc -a __ats_tmp__resamp_edge_art+tlrc. -b __ats_tmp__resamp_NN+tlrc. -expr 'a*step(b-5000)' -prefix __ats_tmp__resamp\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:55 2010] 3dcalc -a __ats_tmp__resamp+tlrc -expr 'a*step(a--0.000100)*step(5406.000100-a) + 0*step(0-a) + 5406*step(a-5406)' -prefix __ats_tmp___rs_anat\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:57 2010] 3drefit -view +orig __ats_tmp___rs_anat+tlrc.HEAD\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:25:58 2010] 3dWarpDrive -coarserot -twopass -affine_general -cubic -final quintic -1Dmatrix_save anat_ns.Xaff12.1D -base __ats_tmp__ref_TT_N27_40pad+tlrc -summ anat_ns_WarpDrive.log -prefix __ats_tmp__reg_warpdriveout -input __ats_tmp___rs_anat+orig\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:11 2010] ===================================\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:11 2010] 3dcalc -a __ats_tmp__reg_braintlrcmask+orig -b __ats_tmp__reg_warpdriveout+orig -expr 'step(a-5000)*b' -prefix __ats_tmp___pad40_anat\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:13 2010] 3dZeropad -I -40 -S -40 -A -40 -P -40 -L -40 -R -40 -mm -prefix __ats_tmp___upad40_anat __ats_tmp___pad40_anat+orig\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:13 2010] 3drefit -atrcopy __ats_tmp__reg_warpdriveout+orig WARPDRIVE_INPUT_IDCODE __ats_tmp___upad40_anat+orig\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:13 2010] 3drefit -atrcopy __ats_tmp__reg_warpdriveout+orig WARPDRIVE_INPUT_NAME __ats_tmp___upad40_anat+orig\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:14 2010] 3drefit -atrcopy __ats_tmp__reg_warpdriveout+orig WARPDRIVE_BASE_IDCODE __ats_tmp___upad40_anat+orig\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:14 2010] 3drefit -atrcopy __ats_tmp__reg_warpdriveout+orig WARPDRIVE_MATVEC_FOR_000000 __ats_tmp___upad40_anat+orig\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:14 2010] 3drefit -atrcopy __ats_tmp__reg_warpdriveout+orig WARPDRIVE_MATVEC_INV_000000 __ats_tmp___upad40_anat+orig\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:14 2010] Dataset created via: @auto_tlrc -base TT_N27+tlrc -input anat+orig\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:14 2010] 3drefit -view +tlrc __ats_tmp___upad40_anat+orig.HEAD\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:27:14 2010] 3drefit -wset anat+orig __ats_tmp___upad40_anat+tlrc~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_wBOWHUHqH2Ig4Ph2guqCpA~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Thu Mar 18 14:27:13 2010~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 2 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 3 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+            -80            -80            -65
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              1              1              1
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              1              0              0            -80              0
+              1              0            -80              0              0
+              1            -65
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              1              0              0            -80              0
+              1              0            -80              0              0
+              1            -65
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0           5406
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 161 191 151 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 1
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 3
+'#0~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~
+
+type = string-attribute
+name = WARPDRIVE_INPUT_IDCODE
+count = 27
+'AFN_axBt0ffWGwqMwG16H08CIg~
+
+type = string-attribute
+name = WARPDRIVE_INPUT_NAME
+count = 32
+'./__ats_tmp___rs_anat+orig.HEAD~
+
+type = string-attribute
+name = WARPDRIVE_BASE_IDCODE
+count = 27
+'AFN_khBAQ2-_4ySwkeNat6CEkA~
+
+type  = float-attribute
+name  = WARPDRIVE_MATVEC_FOR_000000
+count = 12
+       1.033472    0.002072608      0.0113767      -2.199143     0.01010701
+       1.113992     0.04053406      -20.60567    -0.01049184    -0.09305103
+       1.039663       10.27924
+
+type  = float-attribute
+name  = WARPDRIVE_MATVEC_INV_000000
+count = 12
+      0.9675323    -0.00267576    -0.01048307       2.180364   -0.009103837
+      0.8947836    -0.03478593       18.77517     0.00894912     0.08005714
+      0.9586309      -8.184687
+
+type = integer-attribute
+name = NOTES_COUNT
+count = 1
+ 1
+
+type = string-attribute
+name = NOTE_NUMBER_001
+count = 67
+'Dataset created via: @auto_tlrc -base TT_N27+tlrc -input anat+orig~
+
+type = string-attribute
+name = NOTE_DATE_001
+count = 25
+'Thu Mar 18 14:27:14 2010~
+
+type = string-attribute
+name = IDCODE_WARP_PARENT
+count = 27
+'AFN_vYY9ETE-fvnbRC8sGO7IRA~
+
+type = string-attribute
+name = WARP_PARENTNAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = WARP_TYPE
+count = 8
+ 0 0 -999 -999 -999
+ -999 -999 -999
+
+type  = float-attribute
+name  = WARP_DATA
+count = 30
+      0.9675323    -0.00267576    -0.01048307   -0.009103837      0.8947836
+    -0.03478593     0.00894912     0.08005714      0.9586309       1.033471
+    0.002072609      0.0113767     0.01010701       1.113992     0.04053406
+    -0.01049184    -0.09305101       1.039663      -2.180364      -18.77517
+       8.184687       2.199143       20.60567      -10.27924           -160
+           -160           -130            160            220            170

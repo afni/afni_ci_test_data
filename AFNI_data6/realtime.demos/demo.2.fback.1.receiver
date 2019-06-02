@@ -1,0 +1,5 @@
+#!/bin/tcsh
+
+realtime_receiver.py -show_data yes	\
+	-show_demo_gui yes -data_choice diff_ratio
+

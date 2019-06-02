@@ -1,0 +1,21 @@
+#!/bin/tcsh
+
+3dMEMA                                                          \
+    -prefix mema_Arel                                           \
+    -mask mask+tlrc                                             \
+    -max_zeros 0.25                                             \
+    -HKtest                                                     \
+    -model_outliers                                             \
+    -jobs 2                                                     \
+    -set Arel                                                   \
+        FP 'REML.FP.bt+tlrc.HEAD[2]' 'REML.FP.bt+tlrc.HEAD[3]'  \
+        FR 'REML.FR.bt+tlrc.HEAD[2]' 'REML.FR.bt+tlrc.HEAD[3]'  \
+        FT 'REML.FT.bt+tlrc.HEAD[2]' 'REML.FT.bt+tlrc.HEAD[3]'  \
+        FV 'REML.FV.bt+tlrc.HEAD[2]' 'REML.FV.bt+tlrc.HEAD[3]'  \
+        FX 'REML.FX.bt+tlrc.HEAD[2]' 'REML.FX.bt+tlrc.HEAD[3]'  \
+        GF 'REML.GF.bt+tlrc.HEAD[2]' 'REML.GF.bt+tlrc.HEAD[3]'  \
+        GG 'REML.GG.bt+tlrc.HEAD[2]' 'REML.GG.bt+tlrc.HEAD[3]'  \
+        GI 'REML.GI.bt+tlrc.HEAD[2]' 'REML.GI.bt+tlrc.HEAD[3]'  \
+        GK 'REML.GK.bt+tlrc.HEAD[2]' 'REML.GK.bt+tlrc.HEAD[3]'  \
+        GM 'REML.GM.bt+tlrc.HEAD[2]' 'REML.GM.bt+tlrc.HEAD[3]'
+

@@ -1,0 +1,142 @@
+#!/usr/bin/tcsh
+
+# ----------------------------------------------------------------------
+# This script creates and combines components of what might be considered
+# in PPI signal (at seed and target locations).  It is based on the main
+# FT_analysis components, and includes additional sinusoidal patterns.
+#
+# - start with arel/vrel for first run, add sinusoidal pattern:
+#     - overall, for arel and vrel periods
+# - seed and targets are sums of:
+#     - vrel  arel  overall_fluctuation   vrel_fluct   arel_fluct
+
+# ----------------------------------------------------------------------
+# labels and corresponding scaling factors per location
+set clabels = ( "ideal vis" "ideal aud" "fluct main" "fluct vis" "fluct aud" )
+set target_flist = ( 11  8 1 4    1   )
+set seed_flist   = (  8 10 1 1.5 -0.3 )
+
+
+# ----------------------------------------------------------------------
+# work in a new directory
+set workdir = ppi.sample.dir
+
+if ( -d $workdir ) then
+   echo "deleting old $workdir ..."
+   \rm -fr $workdir
+endif
+
+mkdir $workdir
+cd $workdir
+
+
+# ----------------------------------------------------------------------
+# set nt = num TRs, and oversample rate
+
+set nt = 150
+set rate = 5
+@ ntup = $rate * $nt
+
+# make sinusoid
+1deval -num $ntup -expr 'sin(t/7)' > sin.1D
+
+
+# ----------------------------------------------------------------------
+# create ideal time series from stimulus timing of class data
+# then upsample and generate unit fluctuations
+3dDeconvolve -nodata $nt 2 -polort -1 -num_stimts 1              \
+             -stim_times 1 '1D: 60 90 120 180 240' 'BLOCK(20,1)' \
+             -x1D ideal_vis.1D >& /dev/null
+3dDeconvolve -nodata $nt 2 -polort -1 -num_stimts 1              \
+             -stim_times 1 '1D: 0 30 150 210 270' 'BLOCK(20,1)'  \
+             -x1D ideal_aud.1D >& /dev/null
+rm *XtXinv*
+
+foreach lab ( aud vis )
+   1dUpsample -1 $rate ideal_$lab.1D > up.ideal.$lab.1D
+
+   1deval -a up.ideal.$lab.1D -expr 'ispositive(a)' > pos.$lab.1D
+   1deval -a pos.$lab.1D -b sin.1D -expr 'a*b' > up.fluct.$lab.1D
+end
+
+
+# ----------------------------------------------------------------------
+# combine the components
+
+# ideals then fluctuations
+# (visual main, audio main, main fluct, visual fluct, audio fluct)
+set labels = ( ivis iaud wave fvis faud )
+set isets = ( up.ideal.vis.1D up.ideal.aud.1D \
+              sin.1D up.fluct.vis.1D up.fluct.aud.1D )
+
+set olab = seed
+set FL = ( $seed_flist )
+# note the resulting PPI beta (diff between fluctation betas)
+set sdiff = `ccalc $FL[4] - $FL[5]`
+
+# the following lines are duplicated for the target
+foreach ind ( `count -digits 1 1 5` )
+   1deval -a $isets[$ind] -expr "a*$FL[$ind]" > offset.$olab.$labels[$ind].1D
+end
+1deval -a offset.$olab.$labels[1].1D -b offset.$olab.$labels[2].1D \
+       -c offset.$olab.$labels[3].1D -d offset.$olab.$labels[4].1D \
+       -e offset.$olab.$labels[5].1D                               \
+       -expr a+b+c+d+e > final.$olab.1D
+
+# ~same for target
+set olab = target
+set FL = ( $target_flist )
+set tdiff = `ccalc $FL[4] - $FL[5]`
+foreach ind ( `count -digits 1 1 5` )
+   1deval -a $isets[$ind] -expr "a*$FL[$ind]" > offset.$olab.$labels[$ind].1D
+end
+1deval -a offset.$olab.$labels[1].1D -b offset.$olab.$labels[2].1D \
+       -c offset.$olab.$labels[3].1D -d offset.$olab.$labels[4].1D \
+       -e offset.$olab.$labels[5].1D                               \
+       -expr a+b+c+d+e > final.$olab.1D
+
+
+# ----------------------------------------------------------------------
+# show the results
+
+set iset1 = up.ideal.vis.1D
+set iset2 = up.ideal.aud.1D
+set iset3 = sin.1D
+set iset4 = up.fluct.vis.1D
+set iset5 = up.fluct.aud.1D
+
+# plot ideals and fluctuations, and applied final time series
+1dplot -wintitle "ideals, main and task flucts, applied"           \
+       -sepscl up.ideal.{vis,aud}.1D sin.1D final.{seed,target}.1D \
+       >& /dev/null &
+
+# plot components of applied time series
+# (throw text output away)
+1dplot -wintitle "seed: ideal and fluct components" \
+       offset.seed.{ivis,iaud,wave,fvis,faud}.1D >& /dev/null &
+1dplot -wintitle "target: ideal and fluct components" \
+       offset.target.{ivis,iaud,wave,fvis,faud}.1D >& /dev/null &
+
+set label = seed
+set llist = ( $seed_flist )
+set diff = $sdiff
+# these lines are duplicated for target
+echo ""
+echo "diff @ $label   : $diff"
+foreach ind ( 1 2 3 4 5 )
+   echo "   contribution from $clabels[$ind] : $llist[$ind]"
+end
+
+set label = target
+set llist = ( $target_flist )
+set diff = $tdiff
+echo ""
+echo "diff @ $label   : $diff"
+foreach ind ( 1 2 3 4 5 )
+   echo "   contribution from $clabels[$ind] : $llist[$ind]"
+end
+
+echo ""
+echo "==> PPI contrast magnitude "
+echo ""
+

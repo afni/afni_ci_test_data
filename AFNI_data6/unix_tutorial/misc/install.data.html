@@ -1,0 +1,149 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4. Installing AFNI_data6 (sample class data) &mdash; unix tutorial 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="unix tutorial 0.1 documentation" href="../index.html" />
+    <link rel="next" title="1. Basic Unix : setup" href="../basic/basic_00.install.html" />
+    <link rel="prev" title="3. Installing AFNI (software)" href="install.afni.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../basic/basic_00.install.html" title="1. Basic Unix : setup"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="install.afni.html" title="3. Installing AFNI (software)"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">unix tutorial 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="installing-afni-data6-sample-class-data">
+<span id="u-misc-installing-data"></span><h1>4. Installing AFNI_data6 (sample class data)<a class="headerlink" href="#installing-afni-data6-sample-class-data" title="Permalink to this headline">¶</a></h1>
+<p>In a typical AFNI bootcamp, the AFNI_data6 directory will be put under the $HOME directory.</p>
+<p>The following commands will download it and place it in the $HOME directory:</p>
+<div class="highlight-python"><pre>cd
+curl -O http://afni.nimh.nih.gov/pub/dist/edu/data/AFNI_data6.tgz
+tar xfz AFNI_data6.tgz</pre>
+</div>
+<p>The output might look like:</p>
+<div class="figure">
+<img alt="../_images/basic_0C_ID.jpg" src="../_images/basic_0C_ID.jpg" />
+</div>
+<p>Data installation is part of setting up a computer for an AFNI bootcamp.  For full details, see: <a class="reference external" href="http://afni.nimh.nih.gov/pub/dist/HOWTO/howto/ht00_inst/html/class_setup.html">howto: class setup</a></p>
+<div class="section" id="a-simple-test">
+<h2>4.1. A simple test<a class="headerlink" href="#a-simple-test" title="Permalink to this headline">¶</a></h2>
+<p>Make sure that AFNI_data6 is installed via the &#8216;ls&#8217; command:</p>
+<div class="highlight-python"><pre>ls AFNI_data6</pre>
+</div>
+<p>The result should show the contents of that directory, such as:</p>
+<blockquote>
+<div><ul class="simple">
+<li>the afni directory</li>
+<li>the FT_analysis directory</li>
+<li>the unix_tutorial directory (which contains this tutorial)</li>
+<li>history.txt</li>
+</ul>
+</div></blockquote>
+<div class="figure">
+<img alt="../_images/misc_ID_0_ls.jpg" src="../_images/misc_ID_0_ls.jpg" />
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">4. Installing AFNI_data6 (sample class data)</a><ul>
+<li><a class="reference internal" href="#a-simple-test">4.1. A simple test</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="install.afni.html"
+                        title="previous chapter">3. Installing AFNI (software)</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../basic/basic_00.install.html"
+                        title="next chapter">1. Basic Unix : setup</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/misc/install.data.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../basic/basic_00.install.html" title="1. Basic Unix : setup"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="install.afni.html" title="3. Installing AFNI (software)"
+             >previous</a> |</li>
+        <li><a href="../index.html">unix tutorial 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, rick reynolds.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

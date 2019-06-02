@@ -1,0 +1,7 @@
+BayesianGroupAna.py -dataTable ToMI.txt \
+-y zscore \
+-x total \
+-prefix RBA \
+-chains 4 -iterations 1000 \
+-RData
+

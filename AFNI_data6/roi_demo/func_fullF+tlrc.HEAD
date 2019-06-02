@@ -1,0 +1,157 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 1217
+'[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:17:59 2010] 3dDeconvolve -input pb04.FT.r01.scale+orig.HEAD pb04.FT.r02.scale+orig.HEAD pb04.FT.r03.scale+orig.HEAD -polort 3 -num_stimts 8 -stim_times 1 stimuli/AV1_vis.txt 'BLOCK(20,1)' -stim_label 1 Vrel -stim_times 2 stimuli/AV2_aud.txt 'BLOCK(20,1)' -stim_label 2 Arel -stim_file 3 'dfile.rall.1D[0]' -stim_base 3 -stim_label 3 roll -stim_file 4 'dfile.rall.1D[1]' -stim_base 4 -stim_label 4 pitch -stim_file 5 'dfile.rall.1D[2]' -stim_base 5 -stim_label 5 yaw -stim_file 6 'dfile.rall.1D[3]' -stim_base 6 -stim_label 6 dS -stim_file 7 'dfile.rall.1D[4]' -stim_base 7 -stim_label 7 dL -stim_file 8 'dfile.rall.1D[5]' -stim_base 8 -stim_label 8 dP -gltsym 'SYM: Vrel -Arel' -fout -tout -x1D X.xmat.1D -xjpeg X.jpg -fitts fitts.FT -errts errts.FT -bucket stats.FT\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 14:17:59 2010] Output prefix: stats.FT\n[rickr@manwe.nimh.nih.gov: Thu Mar 18 16:07:34 2010] 3dbucket -prefix func_slim 'stats.FT+orig[0,1,2,4,5,7,8]'\n[christip@varda.nimh.nih.gov: Mon Mar 22 11:50:16 2010] 3dbucket -prefic func_fullF 'func_slim+orig.[0]'\n[christip@varda.nimh.nih.gov: Mon Mar 22 13:34:53 2010] adwarp.c -apar anat+tlrc -dpar func_fullF+orig. -dxyz 3~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_FUNC~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'XYZ_zkVyk9gnhI3XiC_LqFaVMA~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Mon Mar 22 13:34:53 2010~
+
+type = string-attribute
+name = IDCODE_ANAT_PARENT
+count = 27
+'AFN_wBOWHUHqH2Ig4Ph2guqCpA~
+
+type = string-attribute
+name = IDCODE_WARP_PARENT
+count = 27
+'XYZ_53C3cM5V5N22AVAGtLV8hA~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 11 1 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 20
+'zyxt@Talairach View~
+
+type = string-attribute
+name = WARP_PARENTNAME
+count = 5
+'zyxt~
+
+type = string-attribute
+name = ANATOMY_PARENTNAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 3 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+          -79.5          -79.5          -63.5
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              3              3              3
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              3              0              0          -79.5              0
+              3              0          -79.5              0              0
+              3          -63.5
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              3              0              0          -79.5              0
+              3              0          -79.5              0              0
+              3          -63.5
+
+type = integer-attribute
+name = WARP_TYPE
+count = 8
+ 0 0 -999 -999 -999
+ -999 -999 -999
+
+type  = float-attribute
+name  = WARP_DATA
+count = 30
+      0.9675323    -0.00267576    -0.01048307   -0.009103837      0.8947836
+    -0.03478593     0.00894912     0.08005714      0.9586309       1.033472
+    0.002072609      0.0113767     0.01010701       1.113992     0.04053407
+    -0.01049184    -0.09305101       1.039663      -2.180364      -18.77517
+       8.184687       2.199143       20.60567      -10.27924           -160
+           -160           -130            160            220            170
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0       930.9305
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 54 64 50 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 1
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+     0.02841061
+
+type = string-attribute
+name = BRICK_LABS
+count = 11
+'Full_Fstat~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type  = float-attribute
+name  = BRICK_STATAUX
+count = 5
+              0              4              2              2            430
+
+type = string-attribute
+name = BRICK_STATSYM
+count = 13
+'Ftest(2,430)~
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'MSB_FIRST~

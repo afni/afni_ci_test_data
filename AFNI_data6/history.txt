@@ -1,0 +1,62 @@
+24 May 2019 [ptaylor]: updated FT_analysis/results.QC_FT.05
+29 Apr 2019 [rickr]: added afni/AV_r1.make_reg.tcsh
+15 Mar 2019 [ptaylor]: added FT_analysis/results.QC_FT.05 tree
+20 Dec 2018 [rickr]: slight mod to @stim_analyze_modern
+21 Nov 2018 [rwcox]: added FT_analysis/Qwarp tree
+17 Oct 2018 [rickr]: re-add FT_white.nii, FT_vent.nii
+12 Oct 2018 [rickr/ptaylor]: updated FT/SUMA with current FreeSurfer 6 output
+12 Oct 2018 [ptaylor]: updated 0.BGA scripts
+29 Jun 2018 [gangc]: added 0.BGA and updated 2.3groups
+05 Jun 2018 [rickr]: minor updates to FT_analysis scripts
+09 May 2018 [rickr]: added ht03/@stim_analyze_modern
+09 Jan 2018 [rickr]: added results.clustsim.05 to replace s05 clustsim
+10 Oct 2017 [rickr]: updated FT_analysis scripts for local execution
+24 Aug 2017 [rickr]: PPI scripts are now based on FT_analysis/s05.ap.uber
+18 Jul 2017 [rickr]: added mask.auto.nii.gz to afni dir
+06 May 2017 [rickr]: fixed rstart in cmd.ppi.2.make.regs for diff run lens
+06 Mar 2017 [rickr]: updated FT_white.nii w/out 16 (brain stem)
+30 Dec 2016 [rickr]: applied updated FS reordering
+   - removed FT_analysis/FT/SUMA/*rank*
+   - ran do_suma_fs_renum.tcsh to create new segmentation datasets
+26 Oct 2016 [rickr]: updated FT_analysis/s06,s16 - removed CSFe
+03 Oct 2016 [rickr]: removed _rank from s07.ap.rest.11
+22 Aug 2016 [rickr]: updated proc scripts and PPI examples
+   - added PPI/run.ppi.example.txt, ppi.sample.dir
+   - updated FT_analysis/s1* by re-running s0* with current afni_proc.py
+29 Mar 2016 [rickr]: s4.3dMEMA.V-A is no longer valid
+01 Mar 2016 [rickr]: regenerated ClustSim tables in func_slim+orig
+19 Jan 2016 [rickr]: added group_results/s7.3dANOVA3
+16 Oct 2015 [rickr]: added FT_analysis/PPI directory, with PPI scripts
+10 Sep 2015 [rickr]: updated FT_analysis tree
+   - created modern FT/SUMA directory
+   - updated s03.ap.surface and corresponding s13.proc.FT.surf
+   - updated s05.ap.uber and corresponding s15.proc.FT.uber
+     (renamed s15.proc.FT to s15.proc.FT.uber)
+   - added s06.ap.rest, s07.ap.rest.11, s16.proc.FT.rest, s17.proc.FT.rest.11
+24 Aug 2015 [rickr]: FT_analysis/s04.cmd.usubj now processes data
+21 Apr 2015 [rickr]: updated FT_analysis/s1* proc scripts
+   - s11.proc.FT, s12.proc.FT.align, s13.proc.FT.surf, s15.proc.FT
+19 Mar 2015 [rickr]: enhanced unix_tutorial
+10 Feb 2015 [rickr]: added scripts group_results/s[56].ttest.*
+22 Sep 2014 [gangc]: updates to GroupAna_cases
+29 Jul 2014 [rickr]: fixed line continuation in quick.s1.afni_proc
+21 May 2014 [gangc]: changes to GroupAna_cases tree
+14 May 2014 [gangc]: added GroupAna_cases tree
+01 Nov 2013 [rickr]: updated FT_analysis scripts
+   - command scripts: s04.cmd.usubj and s05.ap.uber
+   - added: s11.proc.FT, s12.proc.FT.align, s13.proc.FT.surf, s15.proc.FT
+30 Sep 2013 [rickr]: unix_tutorial updates, including using suma for &/bg
+13 Feb 2013 [rickr]:
+   - added unix_tutorial directory, including index.html
+     and sub-dirs basic_unix and misc
+   - updated the FT_analysis/s1* proc scripts with current afni_proc.py
+15 Jan 2013 [rickr]:
+   - added afni/mask.left.vis.aud+orig
+   - created realtime.demos and demo.2.fback.*
+   - mv demo.realtime.run1 realtime.demos/demo.1.run1
+
+data generously donated from:
+   Nath, A.R., Beauchamp, M.S., 2011.
+   Dynamic changes in superior temporal sulcus connectivity during
+      perception of noisy audiovisual speech.
+   J. Neurosci. 31 (5), 1704–1714 

@@ -1,0 +1,8 @@
+{
+    "itemtype": "DAT",
+    "itemid": "df",
+    "blockid": "regr",
+    "blockid_hov": "regressors",
+    "title": "Check: regressors (combined and individual)",
+    "text": "Summary of degrees of freedom (DF) usage from processing"
+}

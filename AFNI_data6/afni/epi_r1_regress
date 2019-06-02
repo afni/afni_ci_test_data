@@ -1,0 +1,23 @@
+
+# Register dataset, saving motion parameters
+ 
+3dvolreg -base 3                  \
+         -verb                    \
+         -prefix epi_r1_reg       \
+         -1Dfile epi_r1_mot.1D    \
+         epi_r1+orig
+ 
+# Simple regression via stim_times
+ 
+3dDeconvolve                                    \
+    -input epi_r1_reg+orig                      \
+    -nfirst     2                               \
+    -num_stimts 1                               \
+    -stim_times 1 epi_r1_times.txt 'BLOCK(20)'  \
+    -stim_label 1 AllStim                       \
+    -tout                                       \
+    -bucket epi_r1_func                         \
+    -fitts  epi_r1_fitts                        \
+    -xjpeg epi_r1_Xmat.jpg                      \
+    -x1D epi_r1_Xmat.x1D
+

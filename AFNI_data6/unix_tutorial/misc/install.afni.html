@@ -1,0 +1,141 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>3. Installing AFNI (software) &mdash; unix tutorial 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="unix tutorial 0.1 documentation" href="../index.html" />
+    <link rel="next" title="4. Installing AFNI_data6 (sample class data)" href="install.data.html" />
+    <link rel="prev" title="2. Opening a Terminal" href="background.1.terminal.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="install.data.html" title="4. Installing AFNI_data6 (sample class data)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="background.1.terminal.html" title="2. Opening a Terminal"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">unix tutorial 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="installing-afni-software">
+<span id="u-misc-installing-afni"></span><h1>3. Installing AFNI (software)<a class="headerlink" href="#installing-afni-software" title="Permalink to this headline">¶</a></h1>
+<p>To install AFNI, please see <a class="reference external" href="http://afni.nimh.nih.gov/pub/dist/HOWTO/howto/ht00_inst/html/index.html">HowTo #0</a> for descriptions and details.</p>
+<p>For help with installation difficulties, please search or post to the <a class="reference external" href="http://afni.nimh.nih.gov/afni/community/board">AFNI Message Board</a></p>
+<p>If you are somewhat confident, consider this quick example for a modern Linux system:</p>
+<div class="highlight-python"><pre>curl -O http://afni.nimh.nih.gov/pub/dist/tgz/linux_openmp_64.tgz
+tar xfz linux_openmp_64.tgz
+mv linux_openmp_64 ~/abin
+echo 'set path = ( $path $HOME/abin )' &gt;&gt; ~/.cshrc
+source ~/.cshrc</pre>
+</div>
+<p>Alternatively, consider this quick example for a general system:</p>
+<div class="highlight-python"><pre>curl -O http://afni.nimh.nih.gov/pub/dist/bin/linux_openmp_64/@update.afni.binaries
+tcsh @update.afni.binaries -defaults
+echo 'set path = ( $path $HOME/abin )' &gt;&gt; ~/.cshrc
+source ~/.csrhc</pre>
+</div>
+<p>To update an existing AFNI installation, consider simply:</p>
+<div class="highlight-python"><pre>@update.afni.binaries -defaults</pre>
+</div>
+<p>After this is done, it may be necessary to open a new terminal window.</p>
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<ul class="last simple">
+<li><a class="reference external" href="http://afni.nimh.nih.gov/pub/dist/doc/program_help/&#64;update.afni.binaries.html">&#64;update.afni.binaries -help</a></li>
+<li><a class="reference external" href="http://afni.nimh.nih.gov/pub/dist/HOWTO/howto/ht00_inst/html/index.html">HowTo #0 - main page</a></li>
+<li><a class="reference external" href="http://afni.nimh.nih.gov/pub/dist/HOWTO/howto/ht00_inst/html/linux_inst_basic.html">HowTo #0 - Linux install</a></li>
+<li><a class="reference external" href="http://afni.nimh.nih.gov/pub/dist/HOWTO/howto/ht00_inst/html/mac_10.78.html">HowTo #0 - Mac install</a></li>
+<li><a class="reference external" href="http://afni.nimh.nih.gov/pub/dist/HOWTO/howto/ht00_inst/html/class_setup.html">AFNI bootcamp class setup</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="background.1.terminal.html"
+                        title="previous chapter">2. Opening a Terminal</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="install.data.html"
+                        title="next chapter">4. Installing AFNI_data6 (sample class data)</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/misc/install.afni.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="install.data.html" title="4. Installing AFNI_data6 (sample class data)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="background.1.terminal.html" title="2. Opening a Terminal"
+             >previous</a> |</li>
+        <li><a href="../index.html">unix tutorial 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, rick reynolds.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

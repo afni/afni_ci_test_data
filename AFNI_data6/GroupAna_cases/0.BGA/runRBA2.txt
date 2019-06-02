@@ -1,0 +1,3 @@
+RBA -prefix outRBA -PDP 7 3 -chains 4 -Y zscore -Subj subject -ROI ROI \
+-iterations 1000 -model '1+total' -qVars 'total' -EOI 'total' -dataTable ToMI.txt
+

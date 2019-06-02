@@ -1,0 +1,8 @@
+
+# from the random order stim files, make ideal reference functions
+
+set echo
+
+waver -GAM -dt 1.0 -input RSF.stim.001.1.1D > wav.hrf.001.1.1D
+waver -GAM -dt 1.0 -input RSF.stim.001.2.1D > wav.hrf.001.2.1D
+waver -GAM -dt 1.0 -input RSF.stim.001.3.1D > wav.hrf.001.3.1D

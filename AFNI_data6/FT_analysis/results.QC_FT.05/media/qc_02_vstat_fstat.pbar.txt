@@ -1,0 +1,8 @@
+itemtype     :: CBAR
+cbar         :: "Plasma"
+pbar_fname   :: "qc_02_vstat_fstat.pbar.jpg"
+pbar_bot     :: "0"
+pbar_top     :: "273.308289"
+pbar_comm    :: "99%ile in mask"
+vthr         :: "25.428448"
+vthr_comm    :: "90%ile in mask, alpha+boxed on"

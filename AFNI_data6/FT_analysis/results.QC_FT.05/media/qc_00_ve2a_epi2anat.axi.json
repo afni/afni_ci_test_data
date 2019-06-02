@@ -1,0 +1,11 @@
+{
+    "itemtype": "VOL",
+    "itemid": "epi2anat",
+    "blockid": "ve2a",
+    "blockid_hov": "vol alignment (EPI-anat)",
+    "title": "Check: vol alignment (EPI-anat)",
+    "text": [
+        "ulay: anat_final.FT (anat)",
+        "olay: final_epi_vr_base_min_outlier (EPI edges)"
+    ]
+}

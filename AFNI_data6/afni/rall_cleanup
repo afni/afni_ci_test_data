@@ -1,0 +1,6 @@
+
+# delete results from running rall_regress
+
+\rm -f rall_fitts+orig.* rall_func+orig.*
+\rm -f rall_X.xmat.1D rall_X.jpg rall_func.REML_cmd 3dDeconvolve.err
+\rm -f rall_{func,fitts}_REML*.{HEAD,BRIK}

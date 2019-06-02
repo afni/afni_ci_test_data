@@ -1,0 +1,11 @@
+subject  toe_gap
+FP       11.4
+FR       12.8
+FT       10.3
+FV       16.1
+FX       12.4
+GF       14.9
+GG       16.4
+GI       11.8
+GK       10.6
+GM       13.2

@@ -1,0 +1,35 @@
+
+------ Sample scripts for nonlinear warping and using afni_proc.py ------
+
+The files in this directory give you examples of how to run afni_proc.py
+with nonlinear spatial warping to MNI space.
+
+FT_anat+orig.*  = FT subject T1-weighted anatomical dataset
+anat_warped     = Directory with results from script s00.warper
+                  -- nonlinearly warped anatomical dataset and the
+                     warp transformation computed by 3dQwarp
+s00.warper      = Script to run @SSwarper to transform the subject's
+                    dataset to MNI space and save the warp dataset
+                    for later use in afni_proc.py
+s05.ap.Awarp    = Script to run afni_proc.py with affine warping
+                    to MNI space -- does not need output of s00.warper
+s05.ap.Qwarp    = Script to run afni_proc.py with nonlinear warping
+                    to MNI space -- requires the output of s00.warper
+
+The output from s00.warper is stored in sub-directory anat_warped/
+which the script creates. This data is supplied with the AFNI class
+data so that you don't have to run this script. If you want to run
+the script, you should delete the existing output first:
+  \rm -rf anat_warped/
+  tcsh s00.warper |& tee s00.warper.out
+
+The analysis scripts can be run with these commands:
+  tcsh s05.ap.Awarp |& tee s05.ap.Awarp.out
+  tcsh s05.ap.Qwarp |& tee s05.ap.Qwarp.out
+The analysis results from these scripts go into sub-directories named
+  FT.results.Awarp/  and  FT.results.Qwarp/
+The results are not dramatically different - the purpose of using
+nonlinear warping is to give better alignment between subjects, and
+in this example there is only one subject. The purpose of this
+example directory is to show you how to setup analyses that us
+nonlinear warping.

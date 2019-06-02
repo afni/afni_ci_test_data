@@ -1,0 +1,8 @@
+{
+    "itemtype": "VOL",
+    "itemid": "fstat",
+    "blockid": "vstat",
+    "blockid_hov": "statistics vols",
+    "title": "Check: statistics vols",
+    "subtext": "SHOW_PBAR:qc_02_vstat_fstat.pbar.json"
+}

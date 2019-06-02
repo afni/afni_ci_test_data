@@ -1,0 +1,27 @@
+#!/bin/tcsh
+
+# analyzing data on the surface
+# - the -blocks option is the default for surface analysis, but is provided
+#   for clarity, including the 'surf' block after volreg
+# - adding -surf_anat and -surf_spec turns this into a surface analysis command
+
+afni_proc.py -subj_id FT.surf                                    \
+        -blocks tshift align volreg surf blur scale regress      \
+        -copy_anat FT/FT_anat+orig                               \
+        -dsets FT/FT_epi_r?+orig.HEAD                            \
+        -surf_anat FT/SUMA/FT_SurfVol.nii                        \
+        -surf_spec FT/SUMA/std.60.FT_?h.spec                     \
+        -tcat_remove_first_trs 2                                 \
+        -volreg_align_to MIN_OUTLIER                             \
+        -volreg_align_e2a                                        \
+        -blur_size 6                                             \
+        -regress_stim_times FT/AV1_vis.txt FT/AV2_aud.txt        \
+        -regress_stim_labels vis aud                             \
+        -regress_basis 'BLOCK(20,1)'                             \
+        -regress_motion_per_run                                  \
+        -regress_censor_motion 0.3                               \
+        -regress_opts_3dD                                        \
+            -jobs 2                                              \
+            -gltsym 'SYM: vis -aud' -glt_label 1 V-A
+
+

@@ -1,0 +1,18 @@
+
+# now evaluate the stimulus timings
+
+3dDeconvolve				\
+    -nodata				\
+    -nfirst 4				\
+    -nlast 299				\
+    -polort 1				\
+    -num_stimts 3			\
+    -stim_file 1 "wav.hrf.001.1.1D"	\
+    -stim_label 1 "stim_A"		\
+    -stim_file 2 "wav.hrf.001.2.1D"	\
+    -stim_label 2 "stim_B"		\
+    -stim_file 3 "wav.hrf.001.3.1D"	\
+    -stim_label 3 "stim_C"		\
+    -glt 1 contrasts/contrast_AB	\
+    -glt 1 contrasts/contrast_AC	\
+    -glt 1 contrasts/contrast_BC

@@ -1,0 +1,32 @@
+
+Processing auto block: tcat
+
+This is the last step to copy input data into the results directory.  The
+3dTcat program is used to copy the EPI data into the results directory, while
+removing the first TRs from every run (according to the afni_proc.py option,
+-tcat_remove_first_trs).  This is done even if no TRs are being removed.
+
+In this example, the first 2 TRs are removed (TR indices 0 and 1).
+
+      3dTcat -prefix $output_dir/pb00.$subj.r01.tcat FT/FT_epi_r1+orig'[2..$]'
+      3dTcat -prefix $output_dir/pb00.$subj.r02.tcat FT/FT_epi_r2+orig'[2..$]'
+      3dTcat -prefix $output_dir/pb00.$subj.r03.tcat FT/FT_epi_r3+orig'[2..$]'
+
+So data is copied from TR #2 until the last TR.  Consider the first input
+"FT/FT_epi_r1+orig'[2..$]'".  The dataset is found under the FT directory as
+FT/FT_epi_r1+orig.  It has 152 sub-bricks (indices 0..151).  Skipping the first
+two could be done with '[2..151]', but '$' is used for convenience to mean the
+last sub-brick.
+
+The output dataset is put in the results directory ($output_dir) as dataset
+pb00.$subj.r01.tcat.  The EPI datasets are copied as names r01, r02 and r03,
+regardless of the input names.
+
+----------------------------------------
+
+Now that all data has been copied into the results directory, it is time to
+enter that directory and process the data.  The final line of the 'tcat'
+processing block is to enter the results directory.
+
+      cd $output_dir
+

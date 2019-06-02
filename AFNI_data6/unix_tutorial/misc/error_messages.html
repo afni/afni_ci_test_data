@@ -1,0 +1,204 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2. Error messages &mdash; unix tutorial 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="unix tutorial 0.1 documentation" href="../index.html" />
+    <link rel="prev" title="1. Unix and shell commands" href="unix_commands.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="unix_commands.html" title="1. Unix and shell commands"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">unix tutorial 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="error-messages">
+<span id="u-misc-error-messages"></span><h1>2. Error messages<a class="headerlink" href="#error-messages" title="Permalink to this headline">¶</a></h1>
+<p>Errors are often a little confusing, so here are some common <tt class="docutils literal"><span class="pre">Unix</span></tt> and
+<tt class="docutils literal"><span class="pre">AFNI</span></tt> error messages, along with what they might imply.</p>
+<div class="section" id="unix-error-messages">
+<span id="u-misc-unix-errors"></span><h2>2.1. Unix error messages<a class="headerlink" href="#unix-error-messages" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="command-not-found">
+<span id="u-mu-err-cmd-not-found"></span><h3>2.1.1. Command not found.<a class="headerlink" href="#command-not-found" title="Permalink to this headline">¶</a></h3>
+<p>There are many ways one could accidentally get this error.  It means the shell
+does not know of a command or program by the given name.</p>
+<blockquote>
+<div><ol class="arabic" start="0">
+<li><p class="first">having a typo in the command name</p>
+</li>
+<li><p class="first">the <tt class="docutils literal"><span class="pre">$PATH</span></tt> is not properly configureds, so the shell does not know
+about a given program</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">rehash</span></tt> is needed - a <em>new</em> program is in a <tt class="docutils literal"><span class="pre">$PATH</span></tt> directory,
+but the t-shell does not know about it (it is not in the hash table)</p>
+</li>
+<li><p class="first">incorrect use of <tt class="docutils literal"><span class="pre">\</span></tt> characters at the end of some line(s)</p>
+<p>The problem is on the line <em>before</em> the one mentioned in the error.</p>
+<p>Line continuation <tt class="docutils literal"><span class="pre">\</span></tt> characters must be the final character on a
+given line, followed by a Unix newline character.  Any misuse of it
+at the end of a line means the the will terminate the current command
+on that line, as well as consider any subsequent line the start of a
+new command.  For example:</p>
+<div class="highlight-python"><pre>3dDeconvolve -input rall_vr+orig \
+   -concat concat_file.txt
+   -num_stimts 8                 \
+   ...</pre>
+</div>
+<ol class="loweralpha">
+<li><p class="first">That leads to early termination of the <tt class="docutils literal"><span class="pre">3dDeconvolve</span></tt> command,
+which would make it fail (with or without error, depending on the
+options actually getting passed).</p>
+</li>
+<li><p class="first">It would lead to a the shell viewing <tt class="docutils literal"><span class="pre">-num_stimts</span> <span class="pre">8</span></tt> as the start
+of a new command, resulting in the error:</p>
+<div class="highlight-python"><pre>-stim_times: Command not found.</pre>
+</div>
+</li>
+</ol>
+<p>Note that spaces or tabs after any final <tt class="docutils literal"><span class="pre">\</span></tt> would also break the
+line coninuation interpretation, but they are difficult to see.</p>
+<p>Also, non-Unix newline characters can be problematic.</p>
+<p>For help with such things, consider <tt class="docutils literal"><span class="pre">file_tool</span></tt>, e.g.:</p>
+<div class="highlight-python"><pre>file_tool -test -infile my_script.txt</pre>
+</div>
+<div class="admonition-see-also admonition seealso">
+<p class="first admonition-title">See also</p>
+<p class="last"><a class="reference external" href="http://afni.nimh.nih.gov/pub/dist/doc/program_help/file_tool.html">file_tool -help</a></p>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="undefined-variable">
+<span id="u-mu-err-undefined-var"></span><h3>2.1.2. Undefined variable.<a class="headerlink" href="#undefined-variable" title="Permalink to this headline">¶</a></h3>
+<p>This error means no variable exists by the given name.</p>
+<blockquote>
+<div><ol class="arabic simple" start="0">
+<li>maybe there is a typo in the variable name</li>
+<li>maybe the script author forgot to set the variable</li>
+<li>maybe the variable was set in a child shell and does not exist
+in this context (or even in a different terminal window shell)</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="others-todo">
+<span id="u-mu-err-todo"></span><h3>2.1.3. others - todo<a class="headerlink" href="#others-todo" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul class="simple">
+<li>No match.</li>
+<li>ls: ...: No such file or directory</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="afni-error-messages">
+<span id="u-misc-afni-errors"></span><h2>2.2. AFNI error messages<a class="headerlink" href="#afni-error-messages" title="Permalink to this headline">¶</a></h2>
+<p>These are error messages that are specific to <tt class="docutils literal"><span class="pre">AFNI</span></tt> programs.</p>
+<div class="section" id="afni-fails-to-open-dataset">
+<span id="u-ma-err-no-open"></span><h3>2.2.1. afni fails to open dataset<a class="headerlink" href="#afni-fails-to-open-dataset" title="Permalink to this headline">¶</a></h3>
+<p>Some <tt class="docutils literal"><span class="pre">AFNI</span></tt> program failed to open or read a dataset.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">2. Error messages</a><ul>
+<li><a class="reference internal" href="#unix-error-messages">2.1. Unix error messages</a><ul>
+<li><a class="reference internal" href="#command-not-found">2.1.1. Command not found.</a></li>
+<li><a class="reference internal" href="#undefined-variable">2.1.2. Undefined variable.</a></li>
+<li><a class="reference internal" href="#others-todo">2.1.3. others - todo</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#afni-error-messages">2.2. AFNI error messages</a><ul>
+<li><a class="reference internal" href="#afni-fails-to-open-dataset">2.2.1. afni fails to open dataset</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="unix_commands.html"
+                        title="previous chapter">1. Unix and shell commands</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/misc/error_messages.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="unix_commands.html" title="1. Unix and shell commands"
+             >previous</a> |</li>
+        <li><a href="../index.html">unix tutorial 0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, rick reynolds.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+
+3dDeconvolve -input rall_vr+orig                                     \
+    -concat '1D: 0 150 300'                                          \
+    -polort 1                                                        \
+    -num_stimts 8                                                    \
+    -stim_times 1 stim_AV1_vis.txt 'BLOCK(20,1)' -stim_label 1 Vrel  \
+    -stim_times 2 stim_AV2_aud.txt 'BLOCK(20,1)' -stim_label 2 Arel  \
+    -stim_file 3 motion.1D'[0]' -stim_base 3 -stim_label 3 roll      \
+    -stim_file 4 motion.1D'[1]' -stim_base 4 -stim_label 4 pitch     \
+    -stim_file 5 motion.1D'[2]' -stim_base 5 -stim_label 5 yaw       \
+    -stim_file 6 motion.1D'[3]' -stim_base 6 -stim_label 6 dS        \
+    -stim_file 7 motion.1D'[4]' -stim_base 7 -stim_label 7 dL        \
+    -stim_file 8 motion.1D'[5]' -stim_base 8 -stim_label 8 dP        \
+    -gltsym 'SYM: Vrel -Arel' -glt_label 1 V-A                       \
+    -tout -x1D rall_X.xmat.1D -xjpeg rall_X.jpg                      \
+    -fitts rall_fitts -bucket rall_func                              \
+    -jobs 2

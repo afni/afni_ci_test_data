@@ -1,0 +1,38 @@
+<ATLAS
+  atlas_name="aparc+aseg"
+  dset_name="aparc+aseg.nii"
+  template_space="ORIG"
+  description="My Atlas"
+  comment="Created from /data/NIMH_SSCC/ptaylor/test_fs_bootcamp3/FT/SUMA with:&#x0a;    @MakeLabelTable -replace -atlasize_labeled_dset aparc+aseg.nii" />
+<ATLAS
+  atlas_name="aparc+aseg_rank"
+  dset_name="aparc+aseg_rank.nii"
+  template_space="ORIG"
+  description="My Atlas"
+  comment="Created from /data/NIMH_SSCC/ptaylor/test_fs_bootcamp3/FT/SUMA with:&#x0a;    @MakeLabelTable -replace -atlasize_labeled_dset aparc+aseg_rank.nii" />
+<ATLAS
+  atlas_name="aparc.a2009s+aseg"
+  dset_name="aparc.a2009s+aseg.nii"
+  template_space="ORIG"
+  description="My Atlas"
+  comment="Created from /data/NIMH_SSCC/ptaylor/test_fs_bootcamp3/FT/SUMA with:&#x0a;    @MakeLabelTable -replace -atlasize_labeled_dset aparc.a2009s+aseg.nii" />
+<ATLAS
+  atlas_name="aparc.a2009s+aseg_rank"
+  dset_name="aparc.a2009s+aseg_rank.nii"
+  template_space="ORIG"
+  description="My Atlas"
+  comment="Created from /data/NIMH_SSCC/ptaylor/test_fs_bootcamp3/FT/SUMA with:&#x0a;    @MakeLabelTable -replace -atlasize_labeled_dset aparc.a2009s+aseg_rank.nii" />
+<ATLAS
+  atlas_name="aseg"
+  dset_name="aseg.nii"
+  template_space="ORIG"
+  description="My Atlas"
+  comment="Created from /data/NIMH_SSCC/ptaylor/test_fs_bootcamp3/FT/SUMA with:&#x0a;    @MakeLabelTable -replace -atlasize_labeled_dset aseg.nii" />
+<ATLAS
+ atlas_name="aseg_rank"
+ dset_name="aseg_rank.nii"
+ template_space="ORIG"
+ description="My Atlas"
+ comment="Created from /data/NIMH_SSCC/ptaylor/test_fs_bootcamp3/FT/SUMA with:
+    @MakeLabelTable -replace -atlasize_labeled_dset aseg_rank.nii"
+></ATLAS>

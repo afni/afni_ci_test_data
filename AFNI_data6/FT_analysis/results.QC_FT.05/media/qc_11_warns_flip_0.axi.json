@@ -1,0 +1,11 @@
+{
+    "itemtype": "VOL",
+    "itemid": "flip",
+    "blockid": "warns",
+    "blockid_hov": "all warnings from processing",
+    "title": "Check: all warnings from processing",
+    "subtext": [
+        "ulay: FT_anat_al_junk (original anat, better match)",
+        "olay: vr_base_min_outlier_ts_rs_ns (EPI edges)"
+    ]
+}

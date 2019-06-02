@@ -1,0 +1,9 @@
+{
+    "itemtype": "WARN",
+    "itemid": "xmat",
+    "blockid": "warns",
+    "blockid_hov": "all warnings from processing",
+    "title": "Check: all warnings from processing",
+    "text": "Regression matrix correlation warnings",
+    "warn_level": "mild"
+}

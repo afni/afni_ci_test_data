@@ -1,0 +1,52 @@
+
+"Class Work" (currently starting on slide 9)
+
+All the data and scripts for single subject analysis are under the FT_analysis
+directory.  Go there and look at the contents of that directory and of FT.
+
+% cd AFNI_data6/FT_analysis
+% ls -l
+
+Scripts s01.ap.simple and s02.ap.align contain afni_proc.py commands for
+processing the same data.  The 'simple' script is used in class, while the
+more advanced 'align' script is a better example of what to do in general.
+The advanced one would take too long to cover in class, but will be covered
+to some degree in this tutorial.
+
+Scripts s11.proc.FT and s12.proc.FT.align would come from executing scripts
+s01 and s02 (i.e. they are the resulting 'proc' scripts).  They will not be
+mentioned again.
+
+The original subject data is under FT (EPI, anat, stim timing).  Looking at
+the contents of that directory shows:
+
+------------------------------
+
+% ls -l FT
+
+These are all of the input files to provide to afni_proc.py: the 2 stimulus
+timing files, an anatomical dataset and 3 EPI runs.
+
+    AV1_vis.txt, AV2_aud.txt : timing files for the 2 stim classes
+    FT_anat+orig/acpc/tlrc   : the anatomical dataset, the acpc and tlrc
+                               files can be ignored
+    FT_epi_r1/2/3+orig       : the 3 runs of EPI data
+
+------------------------------
+
+Consider the contents of the visual-reliable timing file.
+
+% cat FT/AV1_vis.txt
+
+ 60 90 120 180 240
+ 120 150 180 210 270
+ 0 60 120 150 240
+
+This shows the stimulus times for the 3 runs (1 row per run).  Each time
+is an onset time, in seconds, from the start of the run.  Notice that there
+is a stimulus starting at the very beginning of run 3 (time t=0.0 seconds).
+
+Each of these stimuli lasted 20 seconds, which is not encoded in this file.
+The duration is encoded in the basis function that we provide to afni_proc.py
+(which then appears in the 3dDeconvolve command).  
+

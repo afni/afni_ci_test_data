@@ -1,0 +1,121 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 5
+'none~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_FUNC~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'XYZ_1LR1LjusRO0U68mrecgqxA~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Thu Jan 24 13:19:11 2013~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 11 1 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 3 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+          -13.6      -30.89999            -18
+
+type  = float-attribute
+name  = DELTA
+count = 3
+            1.7            1.7            3.5
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+            1.7              0              0          -13.6              0
+            1.7              0      -30.89999              0              0
+            3.5            -18
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+            1.7              0              0          -13.6              0
+            1.7              0      -30.89999              0              0
+            3.5            -18
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+     -0.6087055       2.188441
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 3 3 3 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 1
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+   6.678796e-05
+
+type = string-attribute
+name = BRICK_LABS
+count = 8
+'Cxt+S#2~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 5
+'TLRC~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 0
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~

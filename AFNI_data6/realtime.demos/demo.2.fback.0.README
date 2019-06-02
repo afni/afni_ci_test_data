@@ -1,0 +1,17 @@
+
+In order to run this "feedback" demo (demo.2.fback),
+consider using 3 terminal windows so that you can see
+all output independently (from the receiver, from afni,
+and from the data feeding program).
+
+In terminal A: ./demo.2.fback.1.receiver
+(and leave this running).
+
+Then in terminal B: ./demo.2.fback.2.afni
+(this can also be left running).
+
+Then in terminal C: ./demo.2.fback.3.feedme
+(this can be run multiple times to repeat the demo).
+
+R Reynolds   16 Jan 2013 
+ 

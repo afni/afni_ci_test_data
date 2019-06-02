@@ -1,0 +1,8 @@
+#!/bin/tcsh
+
+
+if ( -f anova.VA+tlrc.HEAD || -f mema_V-A_paired+tlrc.HEAD ) then
+    echo "++ removing group_results output"
+    \rm -f anova.* mema_*.BRIK mema_*.HEAD out.s?.* stat.[56]*
+endif
+

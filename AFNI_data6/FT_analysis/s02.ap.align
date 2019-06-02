@@ -1,0 +1,28 @@
+#!/bin/tcsh
+
+# a currently standard example of the command, but not through uber_subject.py
+
+set sid  = FT                   # subject to process
+set subj = $sid.align           # subject ID for result (align case)
+
+afni_proc.py -subj_id $subj                     \
+        -dsets $sid/${sid}_epi_r?+orig.HEAD     \
+        -do_block tlrc align                    \
+        -copy_anat $sid/${sid}_anat+orig        \
+        -tcat_remove_first_trs 2                \
+        -blur_in_mask yes                       \
+        -volreg_align_to MIN_OUTLIER            \
+        -volreg_tlrc_warp                       \
+        -volreg_align_e2a                       \
+        -regress_stim_times $sid/AV*.txt        \
+        -regress_stim_labels Vrel Arel          \
+        -regress_basis 'BLOCK(20,1)'            \
+        -regress_make_ideal_sum sum_ideal.1D    \
+        -regress_censor_motion 0.3              \
+        -regress_opts_3dD                       \
+            -jobs 2                             \
+            -gltsym 'SYM: Vrel -Arel'           \
+            -glt_label 1 V-A                    \
+        -regress_reml_exec                      \
+        -regress_est_blur_epits                 \
+        -regress_est_blur_errts

@@ -1,0 +1,106 @@
+
+Review the afni_proc.py command.  Display the command file in a terminal
+window.  Also consider opening the file in an editor or using less.
+
+% cat s01.ap.simple
+
+      ---------------------------------------------
+      #!/bin/tcsh
+
+      afni_proc.py -subj_id FT                \
+              -dsets FT/FT_epi_r?+orig.HEAD   \
+              -copy_anat FT/FT_anat+orig      \
+              -tcat_remove_first_trs 2        \
+              -regress_stim_times FT/AV*.txt  \
+              -regress_stim_labels Vrel Arel  \
+              -regress_basis 'BLOCK(20,1)'    \
+              -regress_opts_3dD               \
+                  -gltsym 'SYM: Vrel -Arel'   \
+                  -glt_label 1 V-A            \
+              -regress_est_blur_errts
+      ---------------------------------------------
+
+option: -subj_id FT
+
+   This subject ID will be used as part of the output directory name (default
+   is subject_ID.results), as well as part of any important file name, created
+   by the processing script.
+
+option: -dsets FT/FT_epi_r?+orig.HEAD
+
+   This lists the EPI datasets to be processed.  Note that they can be listed
+   fully as AFNI datasets:
+
+      (a)  -dsets FT/FT_epi_r1+orig FT/FT_epi_r2+orig FT/FT_epi_r3+orig
+
+   or fully as files (e.g. with a .HEAD or .BRIK suffix):
+
+      (b)  -dsets FT/FT_epi_r1+orig.HEAD FT/FT_epi_r2+orig.HEAD    \
+                  FT/FT_epi_r3+orig.HEAD
+
+   Since the option in the example uses the '?' wildcard character to match a
+   single character,  The -dsets option in the command is equivalent to giving
+   the full .HEAD file names as example (b) shows.  When using wildcards, the
+   expression must expand into complete file names (so the suffix is needed).
+
+   ** If there were a spelling mistake when using wildcards, the error message
+      from the shell (not from afni_proc.py) will be "No match".
+
+   ** To test whether the names are correct (when using wildcards), try to list
+      the files using the 'ls' command, or maybe 'echo'.
+
+        works:  ls -l FT/FT_epi_r?+orig.HEAD
+        error:  ls -l FT/FT_epi_run?+orig.HEAD
+
+   Cut and paste these commands and verify the expected output.
+
+   ** Keep in mind that when using wildcards, the files will appear in 
+      alphabetical order.  That must match the run order.  For example, a
+      file called epi_r9+orig.HEAD would come _after_ epi_r10+orig.HEAD,
+      which presumably not be desired.  That is why zero-padding files is
+      important, i.e. using epi_r09+orig.HEAD, instead.
+
+option: -copy_anat FT/FT_anat+orig
+
+   Specify the anatomical dataset to be copied into the results directory.
+
+option: -tcat_remove_first_trs 2
+
+   Request to remove the first 2 TRs from each run.  Note that this may affect
+   the stimulus timing files.  If the scanner started at time t=0 seconds and
+   the TR is 2.5 seconds, then removing 2 TRs means the stimulus times will be
+   off by 5 seconds.  The timing files should be adjusted, if necessary.
+
+option: -regress_stim_times FT/AV*.txt
+
+   Using a wildcard expression, provide the stimulus timing file names.
+   Keep in mind
+
+   Test that 2 files are seen:
+
+        % ls FT/AV*.txt
+
+option: -regress_stim_labels Vrel Arel
+
+   This option is to provide labels that match the stimulus timing files
+   given in the previous option.  Be sure that if wildcards are used above,
+   the order matches what is expected.  That is why the files start with AV1
+   and AV2, so that the order is clear and alphabetical.
+
+   So files FT/AV1_vis.txt FT/AV2_aud.txt match labels Vrel and Arel (the
+   visual-reliable and audio-reliable stimulus classes).
+   
+option: -regress_basis 'BLOCK(20,1)'
+
+   This is where the fact that each stimulus lasted 20 seconds is applied.
+
+   We know from file FT/AV1_vis.txt that the first visual-reliable stimulus
+   occurred 60 seconds into run 1.  Using this basis function, we are telling
+   3dDeconvolve that the stimulus lasted from time t=60 to time t=80, and that
+   we want this 20 second boxcar function convolved with an incomplete gamma
+   function to become (part of) the ideal response function lasting from t=60
+   to t=95 (until 15 seconds after the end of the stimulus).
+
+   We will review the ideal response functions later, after they are generated
+   by 3dDeconvolve.
+

@@ -1,0 +1,32 @@
+#!/bin/tcsh
+
+## This script warps the FT subject anatomy to MNI space,
+##  for later use in afni_proc.py
+
+# Set the subject ID here
+
+set sub = FT
+
+# This is the input subject T1-weighted anatomical dataset
+
+set anat_dset = ${sub}_anat+orig.HEAD
+
+# If it does not exist, complain and quit
+
+if( ! -f $anat_dset )then
+  echo "** ERROR: cannot find dataset $anat_dset"
+  exit 1
+endif
+
+# Carry out the warping with the @SSwarper script.
+# The base dataset will be found in the AFNI binaries
+#  directory - often $HOME/abin
+# The results will be stored in directory anat_warped,
+#  which @SSwarper will create if it does not exist now.
+
+@SSwarper -input $anat_dset  \
+          -subid $sub        \
+          -odir  anat_warped \
+          -base  MNI152_2009_template_SSW.nii.gz
+
+exit 0

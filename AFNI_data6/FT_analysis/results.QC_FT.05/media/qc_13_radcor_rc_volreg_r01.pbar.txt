@@ -1,0 +1,8 @@
+itemtype     :: CBAR
+cbar         :: "Reds_and_Blues_Inv"
+pbar_fname   :: "qc_13_radcor_rc_volreg_r01.pbar.jpg"
+pbar_bot     :: "-0.7"
+pbar_top     :: "0.7"
+pbar_comm    :: ""
+vthr         :: "0.4"
+vthr_comm    :: "alpha on"

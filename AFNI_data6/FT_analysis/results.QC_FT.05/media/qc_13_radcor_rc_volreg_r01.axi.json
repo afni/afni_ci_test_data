@@ -1,0 +1,13 @@
+{
+    "itemtype": "VOL",
+    "itemid": "rc_volreg",
+    "blockid": "radcor",
+    "blockid_hov": "@radial_correlate vols",
+    "title": "Check: extent of local correlation",
+    "text": [
+        "@radial_correlate check for: radcor.pb02.volreg",
+        "   ulay: vol[0] of each EPI run",
+        "   SHOW_PBAR:qc_13_radcor_rc_volreg_r01.pbar.json"
+    ],
+    "subtext": "olay: radcor.20.r01.corr"
+}

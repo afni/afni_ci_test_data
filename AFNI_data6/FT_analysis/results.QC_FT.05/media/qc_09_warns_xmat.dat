@@ -1,0 +1,7 @@
+
+Warnings regarding Correlation Matrix: X.xmat.1D
+
+  severity   correlation   cosine  regressor pair
+  --------   -----------   ------  ----------------------------------------
+  medium:      -0.612       0.000  (12 vs. 13)  vis#0  vs.  aud#0
+

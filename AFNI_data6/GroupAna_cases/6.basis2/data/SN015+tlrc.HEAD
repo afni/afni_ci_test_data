@@ -1,0 +1,159 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 5
+'none~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_FUNC~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'XYZ_1S1-smGBoazRhLFxIJEwqA~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Fri Feb 22 18:14:55 2013~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 11 1 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 3 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+           31.5           37.5           20.5
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              3              3              3
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              3              0              0           31.5              0
+              3              0           37.5              0              0
+              3           20.5
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              3              0              0           31.5              0
+              3              0           37.5              0              0
+              3           20.5
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 48
+     0.05429919      0.1932637      0.3760773       1.664469     -0.1707535
+     0.03270556      -2.302247      0.2967891      -0.109479      0.1382099
+      -1.414561       1.328245     -0.1401573     0.02361772       -1.69857
+      0.2391387    -0.08125288      0.1584123     -0.8065264       1.157568
+    -0.05544341      0.1243004     -0.5604584       1.080531     -0.1793418
+      0.1011165      -1.216582      0.9718404      -0.135772      0.1054375
+      -1.293545      0.8451002     -0.1926403      0.1040523      -1.586923
+        1.05995     -0.2336383      0.0606101       -1.67822      0.7295277
+    -0.09496791    0.006418296      -1.173424     0.05518591     0.05429919
+      0.1932637      0.3760773       1.664469
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 24 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 3 3 3 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 24
+ 3 3 3 3 3
+ 3 3 3 3 3
+ 3 3 3 3 3
+ 3 3 3 3 3
+ 3 3 3 3
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 24
+              0              0              0              0              0
+              0              0              0              0              0
+              0              0              0              0              0
+              0              0              0              0              0
+              0              0              0              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 708
+'Full_R^2~Full_Fstat~tent10.SN015V1.verbal.a#0_Coef~tent10.SN015V1.verbal.a#0_Tstat~tent10.SN015V1.verbal.a#1_Coef~tent10.SN015V1.verbal.a#1_Tstat~tent10.SN015V1.verbal.a#2_Coef~tent10.SN015V1.verbal.a#2_Tstat~tent10.SN015V1.verbal.a#3_Coef~tent10.SN015V1.verbal.a#3_Tstat~tent10.SN015V1.verbal.a#4_Coef~tent10.SN015V1.verbal.a#4_Tstat~tent10.SN015V1.verbal.a#5_Coef~tent10.SN015V1.verbal.a#5_Tstat~tent10.SN015V1.verbal.a#6_Coef~tent10.SN015V1.verbal.a#6_Tstat~tent10.SN015V1.verbal.a#7_Coef~tent10.SN015V1.verbal.a#7_Tstat~tent10.SN015V1.verbal.a#8_Coef~tent10.SN015V1.verbal.a#8_Tstat~tent10.SN015V1.verbal.a#9_Coef~tent10.SN015V1.verbal.a#9_Tstat~tent10.SN015V1.verbal.a_R^2~tent10.SN015V1.verbal.a_Fstat~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 24
+'~~~~~~~~~~~~~~~~~~~~~~~~
+
+type  = float-attribute
+name  = BRICK_STATAUX
+count = 60
+              0              7              2              5           33.5
+              1              4              2             10             67
+              3              3              1             67              5
+              3              1             67              7              3
+              1             67              9              3              1
+             67             11              3              1             67
+             13              3              1             67             15
+              3              1             67             17              3
+              1             67             19              3              1
+             67             21              3              1             67
+             22              7              2              5           33.5
+             23              4              2             10             67
+
+type = string-attribute
+name = BRICK_STATSYM
+count = 202
+'Beta(5,33.5);Ftest(10,67);none;Ttest(67);none;Ttest(67);none;Ttest(67);none;Ttest(67);none;Ttest(67);none;Ttest(67);none;Ttest(67);none;Ttest(67);none;Ttest(67);none;Ttest(67);Beta(5,33.5);Ftest(10,67)~
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 5
+'TLRC~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 0
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~

@@ -1,0 +1,146 @@
+
+Processing block: scale
+
+Here the time series of each voxel and for each run is scaled by the mean of
+that run.  The result is that the mean of each voxel time series is 100 across
+each run.
+
+Background:
+
+   For each run:
+      for each voxel:
+         - compute the mean of the time series
+         - scale the time series so that the new mean is 100
+
+   Scaling the data is helpful for basically one reason, to be able to compare
+   beta weights (in various ways).
+
+   An assumption is that fluctuations in the BOLD signal (what we try to model
+   using regression on the FMRI signal) are proportional to the magnitude of
+   the (baseline) signal.  Scaling the EPI signals (or possibly post-regression
+   betas) allows for comparison of betas both across space within a single
+   subject volume or across subjects (or scanners or studies).
+
+
+Example:
+
+   At one voxel the mean EPI magnitude is 1000, going from 980 at the baseline
+   to 1030 as a peak response.  This is a difference of 50.
+
+   At another voxel the mean EPI magnitude is 500, going from a baseline of 495
+   to 520 as a peak response.  This is a difference of 25.
+
+   Conclusion: these both show a peak at 5% above baseline, and should get the
+   same beta weight.
+
+
+But is this the percent of the mean or of the baseline?
+
+   The 5% is the percent OF the mean, RELATIVE to the baseline (in this case,
+   above the baseline).
+
+   In the first case, the mean, baseline and peak of 1000, 980 and 1030 are all
+   scaled so that the new mean is 100.  That is to say, divide them all by 10.
+   So the new mean, baseline and peak are 100, 98 and 103 (so 103 is 5% above
+   the baseline of 98).
+
+   In the second case, the values of 500, 495 and 520 are also scaled so that
+   the mean (at that voxel) is 100.  In this case it means to divide by 5 (or
+   multiply by 0.2).  So the new mean, baseline and peak are 100, 99 and 104.
+   Here the peak of 104 is 5% above the baseline of 99.
+
+   But importantly, 5% of what?  It is 5% of the mean.
+
+Shouldn't we scale to a constant baseline?
+
+   Scaling so that the baseline is 100 might be preferable, but the difference
+   is tiny.  In the first case the average baseline is 980.  Multiplying by
+   100/980 (instead of 100/1000) yields a baseline of 100 (of course) and a
+   peak of 105.1, showing a 5.1% signal change.
+
+   The difference between 5% and 5.1% is the same as the 2% (2% of 5 is 0.1) as
+   the difference between the baseline of 980 and the mean of 1000.
+
+   The point is that there is little difference between scaling by the mean and
+   scaling by the baseline.  Scaling by the baseline is certainly possible, if
+   the user wishes.
+
+----------------------------------------------------------------------
+
+The proc.FT script:
+
+      foreach run ( $runs )
+          3dTstat -prefix rm.mean_r$run pb03.$subj.r$run.blur+orig
+          3dcalc -a pb03.$subj.r$run.blur+orig -b rm.mean_r$run+orig \
+                 -expr 'min(200, a/b*100)*step(a)*step(b)'           \
+                 -prefix pb04.$subj.r$run.scale
+      end
+
+   For each run, compute the mean of that run using 3dTstat.  The result is in
+   dataset rm.mean_r$run, as specified with the -prefix option.  Then use
+   3dcalc to scale the data as follows:
+
+      1. define dataset 'a' as the blur dataset, pb03.$subj.r$run.blur+orig
+         (for each run)
+
+      2. define dataset 'b' as the mean for that run
+
+      3. compute the scaled dataset according to:
+
+            -expr 'min(200, a/b*100)*step(a)*step(b)'
+
+         a/b*100: this is the base expression - divide each value by the mean
+                  for the given run, then multiply by 100 (so the new mean is
+                  100).
+
+         min(200, SCALE): this is used to make sure there are no large scaled
+                  values.  A value of 200 would mean a 100% signal change 
+                  above the mean, which should certainly not happen within the
+                  brain.
+
+                  This is done because output data is stored as 2-byte integers
+                  (usually), and a large maximum value (which is surely not in
+                  in the brain) destroys the numerical resolution of the data.
+
+         step(a): truncate negative values to zero.  Negatives might arise from
+                  a mask, blur or warping operation (such as EPI to anat or to
+                  tlrc space).
+         step(b): truncate negative mean values to zero.
+
+   These scaled datasets are the inputs to the regression analysis.
+
+----------------------------------------------------------------------
+
+View the results in the afni GUI:
+
+   At this point, controller [A] (the windows across the top of the screen)
+   should be showing dataset pb02.FT.r01.volreg+orig and controller [B] should
+   be showing pb01.FT.r01.blur.  The coordinates should be (19.3 78 -5.7).
+
+   So switch the underlay of controller [A] on the top to the scale output.
+
+        - [A] : switch underlay to pb03.FT.r01.scale
+
+   The image now looks horrible, with most of the anatomical contrast washed
+   out.  This is expected though, because we just scaled the data so that the
+   mean at every voxel (across the run) is 100.
+
+   Compare the graph windows between the blur data of controller [B] and the
+   scale data of controller [A].  The scaled time series look identical to the
+   blurred one.  Again, this is expected.  At each voxel, the entire run was
+   scaled by the same constant, so the shape of the curve does not change, only
+   the magnitude.
+
+   So note that while the auto-scaled range of the graph window goes from 1037
+   to 1092 (depending on the size of the graph window, the number of graphs
+   displayed, etc.) for the blur data, the range is 97 to 102 (approximately)
+   for the scale data.
+
+   A right-click in the center of the graph window shows, among other things,
+   a mean of 1064 for the blur data and 100 (99.9999 in my case) for the scale
+   data.
+
+   Again, scaling should not change the shape of the curve at all, it should
+   just change the magnitudes in to values that are more meaningful (as
+   percentages of the mean).
+

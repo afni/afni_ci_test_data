@@ -1,0 +1,28 @@
+#!/bin/tcsh
+
+# demo real-time data acquisition and motion detection with afni
+
+# use environment variables in lieu of running the RT Options plugin
+setenv AFNI_REALTIME_Registration       3D:_realtime
+setenv AFNI_REALTIME_Graph              Realtime
+
+# set outdir = afni
+set outdir = run1.afni
+
+if ( ! -d $outdir ) mkdir $outdir
+cd $outdir
+
+afni -rt &
+cd ..           # return to starting directory
+
+
+
+sleep 5
+
+echo ""
+echo ""
+echo ready to run Dimon
+echo -n press enter to proceed...
+set stuff = $<
+
+Dimon -rt -pause 400 -infile_prefix ../EPI_run1/8HRBRAIN -quit

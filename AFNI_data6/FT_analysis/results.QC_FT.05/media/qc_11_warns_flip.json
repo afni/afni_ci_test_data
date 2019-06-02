@@ -1,0 +1,9 @@
+{
+    "itemtype": "WARN",
+    "itemid": "flip",
+    "blockid": "warns",
+    "blockid_hov": "all warnings from processing",
+    "title": "Check: all warnings from processing",
+    "text": "Left-right flip check warnings",
+    "warn_level": "none"
+}

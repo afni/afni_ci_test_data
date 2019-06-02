@@ -1,0 +1,7 @@
+
+# create random order stim files
+
+RSFgen -nt 300 -num_stimts 3               \
+       -nreps 1 50 -nreps 2 50 -nreps 3 50 \
+       -seed 1234568 -prefix RSF.stim.001.
+

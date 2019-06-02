@@ -1,0 +1,133 @@
+HANDS-ON EXAMPLES FOR ROI DEMO
+---------------------------------
+---------------------------------
+
+	cd AFNI_data6/roi_demo
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+3dresample:
+RESAMPLE ROI MASK FROM HIGH RES TO LOW RESOLUTION
+
+(1)	3dresample -master rall_vr+orig -prefix anat_roi_resam \
+		   -inset anat_roi+orig -rmode NN
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+3dmaskave:
+USE THE RESAMPLED MASK ON A 3D+TIME DATASET  TO COMPUTE A MEAN VALUE FOR THE
+VOXELS THAT FALL WITHIN THE MASK AT EACH TIMEPOINT (124 TIMEPTS IN THIS E.G.)
+
+(2a)	3dmaskave -mask anat_roi_resam+orig -q rall_vr+orig > epi_avg.1D
+
+	
+(2b)	1dplot -yaxis 1000:1200:2:1 epi_avg.1D
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+3dmaskdump:
+USE THE RESAMPLED MASK ON A FUNCTIONAL DATASET.  IN THIS E.G., WE ARE SELECTING
+A SPECIFIC SUB-BRICK IN OUR FUNC DSET (e.g., SUB-BRICK #2, T-VALUES FOR "VISUALLY 
+RELIABLE" (Vrel) STIMULi) AND 'DUMPING' ONLY THE T-STATS FOR 'Vrel' FOR THE VOXELS 
+THAT FALL WITHIN THE ROI MASK
+
+(3a)	3dmaskdump -noijk -mask anat_roi_resam+orig 'func_slim+orig[2]' \
+		   > Vrel-tstats.txt
+
+
+(3b)	more Vrel-tstats.txt
+
+
+NOTE: YOU CAN DO THIS WITH MORE THAN 1 SUB-BRICK AT A TIME. E.G.,
+
+      
+(3c)    3dmaskdump -noijk -mask anat_roi_resam+orig	         \
+		   'func_slim+orig[1,2]' > Vrel_beta_t.txt
+
+(3d)	more Vrel_beta_t.txt
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+3dROIstats:
+COMPUTE A MEAN FOR VOXELS IN AN ROI MASK.  CAN BE ANAT ROI OR FUNC ROI.
+DIFFERENT FROM 3DMASKAVE
+	  - WITH 3dmaskave, IF YOU HAVE A MASK WITH >1 ROI IN IT, THIS PROGRAM
+	    WILL COLLAPSE THOSE ROIS AND COMPUTE ONE GRAND MEAN.
+	  - WITH 3dROIstats,IF YOU HAVE A MASKE WITH >1 ROI IN IT, THIS PROGRAM
+	    WILL COMPUTE INVIDIDUAL MEANS FOR EACH ROI.
+
+	 
+(4)	3dROIstats -mask 3rois+orig  func_slim+orig.'[0]'
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+CREATE A FUNCTIONAL ROI MASK, USING A FUNC DATASET AS OUR GUIDE (RATHER THAN
+AN ANATOMICAL UNDERLAY)
+
+YOU MUST OPEN THE FUNC DSET, SELECT THE SUB-BRICK OF INTEREST, SET A THRESHOLD 
+(TO KEEP ONLY THE CLUSTERS THAT SURVIVE THE THRESHOLD) & DECIDE HOW BIG YOU
+WANT THOSE FUNC CLUSTERS TO BE.
+
+3dclust:     
+3DCLUST SHOWS YOU A LIST OF CLUSTERS THAT SURVIVE THE CRITERIA YOU'VE SET
+	      -1clip sets threshold the user selects, e.g.,   F>=99, 
+	      rmm=1 (voxels have to touch to be part of the cluster), 
+	      vmul 200 (1x1x1x200=200))
+
+(5a)	3dclust -dxyz=1 -1clip 99  1.0  200 func_slim+orig.'[0]'
+
+
+
+3dmerge:
+3DMERGE CREATES AN AFNI DATASET OF THE CLUSTERS THAT HAVE SURVIVED THE
+CRITERIA YOU'VE SET
+
+(5b)	 3dmerge -prefix func_roi  -dxyz=1 -1clip 99 -1clust_order 1 200 \
+		 func_slim+orig.'[0]'
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+whereami:
+CREATE AN ROI DATASET USING VARIOUS ATLASES AVAILABLE WITH THE AFNI PROGRAM whereami
+(BUT FIRST CREATE A CLUSTER WITH 3DCLUST AND SAVE IT AS A 1D (TXT) FILE):
+
+(6)	3dclust -dxyz=1 -1clip 99 1 200 func_fullF+tlrc > clusts.1D
+	
+	whereami -coord_file clusts.1D'[1,2,3]' -tab | less
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+whereami:
+EXTRACT ROIS FOR VARIOUS ATLAS REGIONS USING SYMBOLIC NOTATION
+
+(7)	whereami -mask_atlas_region TT_Daemon:left:amy
+		
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+whereami:
+REPORT ON THE OVERLAP OF ROIS WITH ATLAS-DEFINED REGIONS
+
+(8)	whereami -omask anat_roi+tlrc
+
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+
+more on ROIs:
+SPECIFY ATLAS-BASED ROI MASKS DIRECTLY LIKE THIS:
+
+(9a)	3dmaskave -mask TT_Daemon:left:hippocampus func_fullF_1mm+tlrc
+
+(9b)	3dcalc -a 'CA_N27_ML::hippo' -b 'func_fullF_1mm+tlrc' \
+	       -expr '(step(a)*b)' -prefix nice_roi
+
+(9c)	3dcalc -a 'TT_Daemon::amygdala' -b 'CA_N27_ML::amygdala' \
+	       -expr 'step(a)+2*step(b)' -prefix compare.maps
+	       

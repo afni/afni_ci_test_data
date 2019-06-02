@@ -1,0 +1,55 @@
+
+The process script has now been created by running the afni_proc.py command.
+Recall that running 's01.ap.simple' created 'proc.FT', and that proc.FT is the
+script to perform single subject analysis of FT's data.
+
+Recall also that afni_proc.py suggested how to run the script:
+
+        tcsh -xef proc.FT |& tee output.proc.FT
+
+Execute that command:
+
+% tcsh -xef proc.FT |& tee output.proc.FT
+
+Note that it can be executed via cut-and-paste.  On a Linux system, use the
+left mouse button to highlight the command, then use the right button to paste
+it into the the terminal window.  On a mac, again highlight with the left mouse 
+button, then use apple-c (copy) and apple-v (vomit? paste?) to paste the text
+into the terminal window.
+
+---------------------------------------------------------------------------
+
+Once the command is started, a few things should happen:
+
+1. Script output should start appearing in the terminal window.
+
+   Notice that the actual commands appear as well, not just the output.  For
+   example, consider these AFNI commands in the script.
+
+        3dcopy FT/FT_anat+orig FT.results/FT_anat
+        ...
+        3dToutcount -automask -fraction pb00.FT.r01.tcat+orig
+
+   They appear because of the '-x' option to 'tcsh', above.
+
+2. The script output should be written to the file output.proc.FT.
+
+   Open another terminal window and go to the same 'AFNI_data6/FT_analysis'
+   directory, and type "ls -l".  The output.proc.FT file will be see, and will
+   grow as the processing continues.  Again, this text file contains the same
+   output that is displayed on the terminal window.
+
+3. The output directory 'FT.results' is created.
+
+   Another new entry in the current directory is 'FT.results'.  That is where
+   all of the input files are copied to, and where all of the processing is
+   done.  That directory can be deleted without concern of losing any original
+   data.
+
+The script should take 1-10 minutes, depending on the computer being used.
+
+Note that the input directory FT contains about 200 MB of data.  The results
+directory ends up containing about 1.5 GB of data (or 1500 MB), and so is 7.5
+times the original size.  That is because each pre-processing step duplicates
+the data size, as do the all_runs, fitts and errts datasets.
+

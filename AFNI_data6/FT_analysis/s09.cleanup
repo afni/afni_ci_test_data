@@ -1,0 +1,41 @@
+#!/bin/tcsh
+
+set subj = FT
+
+set nrm = 0
+
+if ( -f proc.$subj ) then
+    echo "++ removing output from proc.$subj ..."
+    echo rm -fr proc.$subj output.proc.$subj $subj.results
+    echo ""
+    \rm -fr proc.$subj output.proc.$subj $subj.results
+    @ nrm += 1
+endif
+
+if ( -f proc.$subj.align ) then
+    echo "++ removing output from proc.$subj.align ..."
+    echo rm -fr proc.$subj.align output.proc.$subj.align $subj.align.results
+    echo
+    \rm -fr proc.$subj.align output.proc.$subj.align $subj.align.results
+    @ nrm += 1
+endif
+
+if ( -f proc.$subj.surf ) then
+    echo "++ removing surface output from proc.$subj.surf ..."
+    echo rm -fr proc.$subj.surf output.proc.$subj.surf $subj.surf.results
+    echo ""
+    \rm -fr proc.$subj.surf output.proc.$subj.surf $subj.surf.results
+    @ nrm += 1
+endif
+
+if ( -d subject_results ) then
+    echo "++ removing subject_results tree ..."
+    echo rm -fr subject_results
+    echo
+    \rm -fr subject_results
+    @ nrm += 1
+endif
+
+if ( $nrm == 0 ) then
+   echo "nothing to remove"
+endif

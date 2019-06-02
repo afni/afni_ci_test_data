@@ -1,0 +1,49 @@
+# 1 within-subject factor - condition (2 levels - House and Face)
+# 1 within-subject quantitative variable (RT)
+# LME accounts for within-subject variability in RT effect: each
+# subject may deviate from the group RT effect 
+
+3dLME -prefix output.LME.ranslp -jobs 2    \
+      -model 'cond*RT'                     \
+      -qVars RT                            \
+      -qVarCenters 0                       \
+      -ranEff '~1+RT'                      \
+      -SS_type 3                           \
+      -num_glt 3                           \
+      -gltLabel 1 'House-Face'             \
+      -gltCode  1 'cond : 1*House -1*Face' \
+      -gltLabel 2 'Face-House'             \
+      -gltCode  2 'cond : 1*Face -1*House' \
+      -gltLabel 3 'RTeff'                  \
+      -gltCode  3 'RT : '                  \
+      -dataTable                           \
+Subj cond     RT        InputFile          \
+s1    House   0.446463419   data/S01.House+tlrc \
+s2    House  -1.033732299   data/S02.House+tlrc \
+s3    House  -0.727451058   data/S03.House+tlrc \
+s4    House   0.226732807   data/S04.House+tlrc \
+s5    House   1.005688462   data/S05.House+tlrc \
+s6    House  -1.081343325   data/S06.House+tlrc \
+s7    House  -1.286076192   data/S07.House+tlrc \
+s8    House  -1.640459294   data/S08.House+tlrc \
+s9    House   0.725476031   data/S09.House+tlrc \
+s10   House   1.768119328   data/S10.House+tlrc \
+s11   House  -0.345635716   data/S11.House+tlrc \
+s12   House   1.360398788   data/S12.House+tlrc \
+s13   House   0.454862157   data/S13.House+tlrc \
+s14   House   0.209826257   data/S14.House+tlrc \
+s1    Face    0.026471995   data/S01.Face+tlrc  \
+s2    Face   -1.251554107   data/S02.Face+tlrc  \
+s3    Face   -0.580036850   data/S03.Face+tlrc  \
+s4    Face    0.610893252   data/S04.Face+tlrc  \
+s5    Face    0.720622215   data/S05.Face+tlrc  \
+s6    Face    0.527178561   data/S06.Face+tlrc  \
+s7    Face   -1.185400414   data/S07.Face+tlrc  \
+s8    Face   -1.657256769   data/S08.Face+tlrc  \
+s9    Face   -0.000687559   data/S09.Face+tlrc  \
+s10   Face    1.679169060   data/S10.Face+tlrc  \
+s11   Face   -0.853922960   data/S11.Face+tlrc  \
+s12   Face    1.219965349   data/S12.Face+tlrc  \
+s13   Face   -0.036845761   data/S13.Face+tlrc  \
+s14   Face    0.698534625   data/S14.Face+tlrc
+

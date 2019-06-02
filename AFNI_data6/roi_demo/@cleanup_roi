@@ -1,0 +1,17 @@
+rm -f anat_roi_resam+orig.*
+
+rm -f epi_avg.1D
+
+rm -f Vrel-tstats.txt
+
+rm -f Vrel_beta_t.txt
+
+rm -f func_roi+orig*
+
+rm -f clusts.1D
+
+rm -f TT_Daemon.amy.l+tlrc*
+
+rm -f nice_roi+tlrc*
+
+rm -f compare.maps+tlrc*

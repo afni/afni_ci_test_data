@@ -1,0 +1,5 @@
+#!/bin/tcsh
+# Convert stimulus coding into timing
+
+make_stim_times.py -prefix stim -nt 300 -tr 2 -nruns 1 \
+-files RSFstim.1.1D RSFstim.2.1D RSFstim.3.1D 	

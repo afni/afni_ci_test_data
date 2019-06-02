@@ -1,0 +1,167 @@
+
+Processing auto block: outcount
+
+As a quality check on the EPI data, outliers are detected.
+
+What is an outlier?
+
+   At each voxel, the data is detrended using the default polynomial degree
+   based on the duration of the (first) run.  For that voxel time series, any
+   value that is too far from the trend is considered an outlier, where "too
+   far" is defined as being too many MAD (mean absolute deviations).
+
+   The number of MAD that defines "too far" depends on N (the number of TRs
+   in the dataset).  By default the limit L is defined by:
+
+        L = qginv(0.001/N) * sqrt(PI/2) * MAD
+
+   Note that for typical numbers of TRs per run, 50 <= N <= 500, we have
+   5.15*MAD <= L <= 5.78*MAD.  So the limit will typically be approximately
+   5.5*MAD away from the trend.
+
+What does 3dToutcount output?
+
+   Since outliers are essentially attributed to some TRs from a voxel time
+   series we can accumulate them over either space or time.  And since we are
+   interested in TRs where something odd is happening, it makes sense to count
+   the number of outlier voxels at each TR (added up over space).
+
+   Therefore the output of 3dToutcount is a single time series of outlier
+   counts per TR.  At each TR, the default output is the number of voxels that
+   have outlier values at that time.  For example, if there is a big motion or
+   if the scanner gets bright for a single TR, that TR will be an outlier for
+   many voxels.  So the outcount value will be large for that TR, signaling
+   that one should scrutinize the data.
+
+   However afni_proc.py uses the -fraction option to 3dToutcount, so that the
+   output is no longer a voxel count, but is that count divided by the number
+   of voxels in the computed automask.  The output values are now fractions of
+   the brain mask, values between 0 and 1, inclusive.
+
+What about dataset pb01.FT.r01.tshift+orig?
+
+   With this data N = 150, so L = 5.46*MAD.  The mean MAD value within the
+   automask of pb01.FT.r01.tshift+orig is 16.7.  So on average, a voxel value
+   is an outlier if it differs from the trend by approximately 91 (MRI units).
+   
+Back to the script...
+
+   In this case, the data is detrended with 3rd order Legendre polynomials
+   (according to the '-polort 3' and '-legendre' options).
+
+        foreach run ( $runs )
+            3dToutcount -automask -fraction -polort 3 -legendre \
+                        pb00.$subj.r$run.tcat+orig > outcount_r$run.1D
+        end
+        cat outcount_r??.1D > outcount.rall.1D
+
+   For each run, 3dToutcount computes the outlier fraction per TR.  Output is
+   redirected to a text file (outcount_r01.1D, for run 1) instead of going to
+   the terminal window.  After outlier files are created for all 3 runs, they
+   are catenated into a single file 3 runs long, outcount.rall.1D.
+
+   So outcount.rall.1D is 450 lines long (3*150), with values between 0 and 1.
+   
+----
+
+First, just quickly look at this text file to see what it really is.
+
+      % less outcount.rall.1D
+
+It is a simple time series text file.  We might note a larger number around
+line 43.  Perhaps a better way to view the data is to plot it.
+
+Plot this time series and note which TRs might be worth investigating.
+
+      % 1dplot outcount.rall.1D
+
+Notable features:
+
+   - There is a huge spike before TR 50 with a value of almost 0.45.  That
+     means 45% of the voxels had outliers at that TR!  We should certainly
+     take a look at what happens at that point in scanning, but recall the
+     large nodding motion at what is now TR 42.  So it is expected.
+
+   - The second larges spike seems just less than 0.1 and is around TR 270.
+
+   - There are a few lower spikes around TRs 75, 300 and 425.  It is a good
+     idea to take a look around these TRs and see if anything seems odd.  We
+     should quickly get a feel for what sorts of numbers are worth worrying
+     about (after looking at the results for a few subjects).
+
+----
+
+Without counting lines in the text file, how do we determine the exact TRs to
+look at?
+
+   Take the 2 spikes with values above 0.05, for example.  We can use the
+   program 1deval (like 3dcalc) to compute which TRs are above 0.05.  Pipe the
+   output through less to view it more easily (so 450 lines do not just scroll
+   by).
+
+      % 1deval -a outcount.rall.1D -expr 'step(a-0.05)' | less
+
+   Hmmm, that not much help.  It is really long and just shows 0's and 1's.
+   Make the numbers more useful.  Instead of getting 0 and 1, output 0 or 't',
+   where 't' is the time index.  Note that the time index is an automatic
+   variable one can use in 1deval or 3dcalc.
+
+      % 1deval -a outcount.rall.1D -expr 't*step(a-0.05)' | less
+
+   Aha.  Now we can scroll through and actually see the value 42, and farther
+   down see the value 266.  But still, all of those 0's are irritating.  Get
+   rid of them by removing any output that contains a space followed by a 0.
+   We will not need to use the 'less' program for this output.
+
+      % 1deval -a outcount.rall.1D -expr 't*step(a-0.05)' | grep -v ' 0'
+
+   Fantastic.  We see only 42 and 266 now.  So the previous command is a good
+   way to list all the TRs above some threshold.
+
+----
+
+We can see and recall the nodding motion that happens at TR 42 in the first
+run.  So what happens at TR 266?
+
+   First, decide where TR 266 is.  Since each run now has 150 TRs (after we
+   removed the first 2 of each run), TR 266 must be TR 116 from run #2.  So
+   in afni, change underlay to run 2 (pb01.FT.r02.tshift) and evaluate what
+   happens around TR 116.
+
+      - change Underlay to run 2: pb00.FT.r02.tcat
+      - open a sagittal image (temporarily)
+      - for speed, type in "116" for the Index in the main afni controller
+      - in the Graph window, use the left and right arrows (or < and >) to
+        move back and forth around time index 116
+      - stare at the sagittal image while doing this
+
+   Again, there seems to be some motion, possibly a swallow.  Note that this
+   type of motion can be harder (or impossible) to correct via registration
+   because the center of the brain may move more than the edges (i.e. it is
+   not just a rigid body motion).
+
+   We should recall to review what happens to this TR during the volume
+   registration block.
+
+
+Advanced:
+
+   Note that afni_proc.py can use this file for automatic outlier censoring by
+   applying -regress_censor_outliers, if the user wishes.  For example, if one
+   wanted to censor any TRs at which more than 7% of the voxels were outliers,
+   one could draw a line through y=0.07 in the outcount.rall.1D graph.  Any TR
+   where the graph goes above the line is censored out.
+
+   This could be accomplished with the afni_proc.py option:
+
+        -regress_censor_outliers 0.07
+
+   To get a graphical view of this, add the y=0.07 line to the previous plot.
+
+   So plot 2 time series, one just a sequence of 0.07 values, the other the
+   outcount file.  One could make a file of all 0.07 values using 1deval via
+   "1deval -num 450 -expr 0.07", for example.  But it is even easier to use
+   the '1D: ...' format to provide the data right on the command line.
+
+      % 1dplot -one '1D: 450@0.07' outcount.rall.1D
+

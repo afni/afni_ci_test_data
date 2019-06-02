@@ -1,0 +1,19 @@
+#!/bin/tcsh
+
+# work from the sample data directory
+cd ../afni
+
+set episet  = epi_r1+orig
+set maskset = mask.left.vis.aud+orig
+
+plugout_drive -com "SETENV AFNI_REALTIME_Mask_Dset $maskset" -quit
+
+rtfeedme                                                                      \
+  -drive 'DRIVE_AFNI OPEN_WINDOW axialimage geom=285x285+3+533'             \
+  -drive 'DRIVE_AFNI OPEN_WINDOW axialgraph keypress=A geom=570x440+868+47' \
+  -drive 'DRIVE_AFNI SET_SUBBRICKS 0 1 1'                 \
+  -drive 'DRIVE_AFNI SET_DICOM_XYZ 52 4 12'               \
+  -drive 'DRIVE_AFNI SET_FUNC_RANGE 0.9'                  \
+  -drive 'DRIVE_AFNI SET_THRESHNEW 0.4'                   \
+  -dt 400 -3D $episet
+

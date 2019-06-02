@@ -1,0 +1,9 @@
+{
+    "itemtype": "1D",
+    "itemid": "ideal",
+    "blockid": "regr",
+    "blockid_hov": "regressors",
+    "title": "Check: regressors (combined and individual)",
+    "text": "Sum of regressors of interest (in sum_ideal.1D) and combined censoring",
+    "subtext": "censored vols (1%): 41..44,265,266"
+}

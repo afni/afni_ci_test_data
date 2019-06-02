@@ -1,0 +1,167 @@
+
+Processing block: regress
+
+This is the main step in the single subject analysis - regressing the data
+against our model.
+
+Background:
+
+   Our regression model is made of a few simple parts:
+
+      1. a polynomial baseline, meant to account for the mean of the scan
+         and for slow baseline drifts
+
+      2. responses to stimuli of interest
+
+      3. motion parameters, meant to account for residual motion effects that
+         3dvolreg cannot perfectly correct
+
+----------------------------------------------------------------------
+
+The proc.FT script:
+
+      3dDeconvolve -input pb04.$subj.r??.scale+orig.HEAD                   \
+          -polort 3                                                        \
+          -num_stimts 8                                                    \
+          -stim_times 1 stimuli/AV1_vis.txt 'BLOCK(20,1)'                  \
+          -stim_label 1 Vrel                                               \
+          -stim_times 2 stimuli/AV2_aud.txt 'BLOCK(20,1)'                  \
+          -stim_label 2 Arel                                               \
+          -stim_file 3 dfile.rall.1D'[0]' -stim_base 3 -stim_label 3 roll  \
+          -stim_file 4 dfile.rall.1D'[1]' -stim_base 4 -stim_label 4 pitch \
+          -stim_file 5 dfile.rall.1D'[2]' -stim_base 5 -stim_label 5 yaw   \
+          -stim_file 6 dfile.rall.1D'[3]' -stim_base 6 -stim_label 6 dS    \
+          -stim_file 7 dfile.rall.1D'[4]' -stim_base 7 -stim_label 7 dL    \
+          -stim_file 8 dfile.rall.1D'[5]' -stim_base 8 -stim_label 8 dP    \
+          -gltsym 'SYM: Vrel -Arel'                                        \
+          -glt_label 1 V-A                                                 \
+          -fout -tout -x1D X.xmat.1D -xjpeg X.jpg                          \
+          -fitts fitts.$subj                                               \
+          -errts errts.$subj                                               \
+          -bucket stats.$subj
+
+   The input to 3dDeconvolve is the list of 'scale' datasets.  Note that the
+   -input option is given pb04.$subj.r??.scale+orig.HEAD as its parameter.
+   This wildcard expression (the '??' characters mean exactly 2 characters as
+   a match pattern) matches any files that start with pb04.$subj, followed by
+   'r' and any 2 characters (numbers in our case), and with a trailing suffix
+   of '.scale+orig.HEAD'.
+
+   Test this on the command line in 2 ways, using the 'echo' command and the
+   'ls' command:
+
+        set subj = FT
+
+        echo pb04.$subj.r??.scale+orig.HEAD
+        ls -l pb04.$subj.r??.scale+orig.HEAD
+
+   We first make sure that the $subj variable is set as it is in the script.
+   The 'echo' command lists the files on one line, while 'ls' shows one file
+   per line.
+
+   Remember that since we are using wildcards to match filenames, we must 
+   provide details for a complete filename match (i.e. including either .HEAD
+   or .BRIK).  If the inputs were listed as pb04.$subj.r??.scale+orig, there
+   would be a "No match" error since the shell would not find any files that
+   match our pattern.
+
+   Note that it is as if we listed all 3 runs on the command line:
+
+        3dDeconvolve -input pb04.FT.r01.scale+orig.HEAD \
+                            pb04.FT.r02.scale+orig.HEAD \
+                            pb04.FT.r03.scale+orig.HEAD \
+                     ...
+
+   Providing 3dDeconvolve with 3 datasets tells the program that there are 3
+   runs, with the number of TRs in each run contained in that input dataset.
+   If we had contatenated them into one dataset, we would need to add the
+   -concat option to tell 3dDeconvolve where the run breaks occur.
+
+    ---
+
+    The next 2 pairs of options specifies regressors of interest.  The first
+    pair is for the 'visual-reliable' stimulus class.
+
+        -stim_times 1 stimuli/AV1_vis.txt 'BLOCK(20,1)' \
+        -stim_label 1 Vrel
+
+    This tells 3dDeconvolve that at each time in stimuli/AV1_vis.txt, there
+    should be a BOLD response to a 20 second stimulus.  Each convolved BOLD
+    response would last for approximately 35 seconds.
+
+ ** Please see the next file in the tutorial for details on understanding the
+    X-matrix, and how it is created from the inputs to 3dDeconvolve.
+
+    ---
+
+    The next 6 lines of options are to specify the motion parameters.  Since
+    volume registration (3dvolreg) cannot possibly correct the subject motion,
+    it is important to still account for motion in the regression.  Voxel time
+    series should not show significance for a regressor of interest if the
+    similarity to that regressor is based on motion.  These regressors are
+    included as a precaution.
+
+    Advanced:
+ 
+        Note that it is a good idea to censor any TRs with significant motion.
+        Recall from the 'volreg' section that a motion_${subj}_enorm.1D file
+        was created to show per-TR motion as a single time series.
+ 
+        If the user applies -regress_censor_motion (as is done in s02.ap.align,
+        the more advanced afni_proc.py command), then 1d_tool.py will be used
+        to create a censor file just before 3dDeconvolve.  See the 'regress'
+        block in the advanced script (s12.proc.FT.align) for details.
+
+    Following the regressors we have the single GLT (general linear test)
+    specification that we told afni_proc.py to pass on to 3dDeconvolve.
+
+        -gltsym 'SYM: Vrel -Arel'       \
+        -glt_label 1 V-A                \
+
+    The symbolic contrast is the visual beta minus the audio beta, and is given
+    label V-A.
+
+    The last options are as follows:
+
+        -fout -tout -x1D X.xmat.1D -xjpeg X.jpg                          \
+        -fitts fitts.$subj                                               \
+        -errts errts.$subj                                               \
+        -bucket stats.$subj
+
+    The -fout and -tout options tell 3dDeconvolve to output F-stats and t-stats
+    when appropriate.
+
+    The -x1D option specifies the name of the file to write the X-matrix to in
+    text form, while -xjpeg specifies a name to write the image version to.
+    Both files represent the X-matrix, but they give different perspectives.
+
+    The last 3 options are for output datasets.  The -fitts dataset is shows
+    the model fit to the data as well as possible.  The -errts dataset is the
+    error time series data, or residuals.  It equals the input minus the fitts.
+    The final option, -bucket, specifies where 3dDeconvolve should write all of
+    the beta weights and statistical volumes to.
+
+----------------------------------------------------------------------
+
+ ** At this point it might be a good idea to review the next tutorial file on
+    the X-matrix.  That will help understand the data output from 3dDeconvolve
+    which will be reviewed in the remainder of this file.
+
+    The order is a little thrown off, but it seemed like a good idea to cover
+    the X-matrix in a single file.
+
+----------------------------------------------------------------------
+
+View the results in the afni GUI:
+
+   At this point, controller [A] (the windows across the top of the screen)
+   should be showing dataset pb02.FT.r01.scale+orig and controller [B] should
+   be showing pb01.FT.r01.blur.  The coordinates should be (19.3 78 -5.7).
+
+   First, let us just find some results.  Close controller B.
+
+        - [B] : done, done
+
+
+   more to come ...      28 July, 2010
+

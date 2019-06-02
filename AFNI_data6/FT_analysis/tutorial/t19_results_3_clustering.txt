@@ -1,0 +1,130 @@
+
+Processing block: regress - viewing the results - clustering
+
+Background:
+
+   Clustering is useful for many reasons, and the clustering interface of the
+   afni GUI is very handy and fun to use.  Things one can do:
+
+        - create a list of clusters based on the voxels surviving the threshold
+          and minimum cluster size
+        - show size and coordinates (peak or center of mass) for each cluster
+        - show a very approximate corrected p-value for each cluster
+        - display the corresponding 3dclust command in the terminal window
+        - save the cluster output to a text file
+        - save the cluster regions to an ROI (like 3dmerge -1clust_order)
+        - jump to peak (OLay value) or center of mass within each cluster
+        - show where the cluster exists by having those voxels flash off and on
+        - plot the averages of some dataset sub-bricks over the cluster voxels
+          (or plot the median, first principle component or histogram)
+        - save the plot to an image file
+
+===========================================================================
+
+Clusterize the results in the afni GUI:
+
+   Leave the time series in controller [B] as it is.  Use controller [A] along
+   the top of the screen to clusterize the voxels based on the V-A t-stat.
+   The underlay (for controller [A]) should still be FT_anat, the overlay
+   should still be stats.FT, and the overlay sub-bricks should still be #7 and
+   #8 for the V-A magnitude and t-stat, respectively.
+
+   We should still be at xyz coordinates 52, 3.6, 12, with a threshold at 7.0
+   and a color range of 5 (autoRange is off).
+
+   So clusters will be formed of contiguous voxels with a t-stat above 7.0.
+   Use the Clusterize tool with the defaults, clustering voxels that share a
+   voxel face, and requiring at least 20 voxels in a cluster.  Before applying
+   any clustering, look at the axial window and note a few "stray" voxels that
+   are colored.  Some of those will disappear.
+
+        - controller [A], click the blue Clusterize button (upper right corner)
+        - clusterize menu: use defaults (NN = 1, Voxels = 20), click Set
+
+   Now the dataset is clusterized.  The only difference from before is that any
+   voxels that are not part of a cluster of at least 20 voxels are no longer
+   colored.  "Clear" the clustering and re-cluster to watch some voxels lose
+   their color.
+
+   --------------------
+
+   Next, open the cluster report window.  This provides information and tools
+   regarding the clusters, as noted above (in "Background").
+
+        - controller [A] click "Rpt" (for report, under Clusterize button)
+
+   In the report window, there should be 5 clusters listed, all having at least
+   20 voxels.  The clusters are listed in order of size, in voxel counts.  The
+   report lists:
+
+        cluster index, ##: size index, 1 = largest cluster, etc.
+        Size:              size in voxels, largest is 169
+        xyz, coords:       coordinates of peak, or center of mass
+                             (choose between peak and CMass in upper-left)
+        Alpha:             approximate corrected p-value for cluster
+
+    One by one, jump to each cluster peak, and make the cluster flash.  Note
+    that jumping is not necessary for flashing.
+
+        - Cluster Report [A] : "Jump", "Flash" on each of the 5 clusters
+
+    Watch the time series in the open Graph window from controller [B] as well.
+    At some voxels the Arel responses will be bigger, at some the Vrel will be.
+    At some voxels the motion will be more apparent in the fitts.
+
+    Note that since the OLay sub-brick is #7, the magnitude of Vrel - Arel
+    betas, the "peak" locations that we jump to have large beta weights.  Look
+    for the most "significant" voxels by changing the OLay sub-brick to #8, the
+    V-A t-stat.
+
+        - controller [A], set OLay to sub-brick #8,  V-A_GLT#0_Tstat
+
+    Now "Jump" though the new peaks, again looking at the time series graph
+    window.  It may not be obvious, but finding the peak t-stat may result in
+    locating less noisy voxels, while finding the peak contrast may result in
+    locating voxels with bigger beta weights (though maybe less significant).
+
+   --------------------
+
+   Look at some plots.
+
+   Jump back to cluster #3 (where the audio response is bigger than the visual
+   response), just to pick a spot.  Plot the average time series here.
+
+        - Cluster Report [A], #3 : Plot
+
+   And nothing happens.
+
+   We need to choose a time series to plot.  While controller [B] may have two
+   displayed, afni does not know or assume what a person might want to see.
+   Plot the all_runs dataset over clusters #1 and #3.
+
+        - Cluster Report [A] : "Choose Aux Dataset" -> all_runs
+        - Cluster Report [A], #1 : Plot
+        - Cluster Report [A], #3 : Plot
+
+   Widen and align these 2 graph images above one another.  First notice that
+   these signals are cleaner (less "noisy") than at most voxels.  That is
+   because they are averages of 169 and 81 voxels, respectively, and noise
+   tends to cancel out (or so we hope, at least if it is "white" noise).
+
+   Notice also that the mean time series for cluster #1 is very weak in the
+   first part of run 1 before seeing the 3 big peaks of the Arel responses,
+   while in cluster #3, there are 2 very strong responses at first.  It is
+   apparent that in the visual area, the responses to the audio stimuli are
+   relatively weak, while in the audio area, the responses to visual stimuli
+   are still pretty strong.
+
+   Recall the both Vrel and Arel come with both audio and visual elements, each
+   having one degraded (but still present).  So in these clusters, degrading
+   the visual stimuli had a much bigger effect than degrading the audio stimuli.
+
+   To "cheat" to some degree, plot the fitts data, instead of the raw EPI data.
+
+        - Cluster Report [A] : "Choose Aux Dataset" -> fitts
+        - Cluster Report [A], #1 : Plot
+        - Cluster Report [A], #3 : Plot
+
+   Again, the same points hold, but the signals are much cleaner yet, as now
+   the "noise" is not just averaged, but excluded altogether (except for noise
+   parameters in the model, such as motion).

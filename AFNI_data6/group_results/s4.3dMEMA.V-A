@@ -1,0 +1,8 @@
+#!/bin/tcsh
+
+
+# ****   To perform a paired test with 3dMEMA, input the
+#        original contrast and t-stat for each subject from
+#        the original regression.
+
+

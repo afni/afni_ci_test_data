@@ -1,0 +1,16 @@
+#!/bin/tcsh
+
+# - creates the most basic processing script, still in +orig space
+# - currently, the tutorial correponds to the resulting proc script
+
+afni_proc.py -subj_id FT                \
+        -dsets FT/FT_epi_r?+orig.HEAD   \
+        -copy_anat FT/FT_anat+orig      \
+        -tcat_remove_first_trs 2        \
+        -regress_stim_times FT/AV*.txt  \
+        -regress_stim_labels Vrel Arel  \
+        -regress_basis 'BLOCK(20,1)'    \
+        -regress_est_blur_errts         \
+        -regress_opts_3dD               \
+            -gltsym 'SYM: Vrel -Arel'   \
+            -glt_label 1 V-A

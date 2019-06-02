@@ -1,0 +1,132 @@
+
+Now execute the afni_proc.py command in the s01.ap.simple script.
+Execute it with with './s01.ap.simple' or 'tcsh s01.ap.simple'.
+
+% ./s01.ap.simple
+
+   -----------------------------------------------------------------
+   ** warning: removing first 2 TRs from beginning of each run
+      --> the stimulus timing files must reflect the removal of these TRs
+   -- tcat: reps is now 150
+   -- volreg: base/sub indices are 0, 2
+   ++ updating polort to 3, from run len 300.0 s
+   ** masking EPI is no longer the default
+      (see 'MASKING NOTE' from the -help for details)
+
+   --> script is file: proc.FT
+       consider the script execution command: 
+
+         tcsh -xef proc.FT |& tee output.proc.FT
+   -----------------------------------------------------------------
+
+Review each message.  Note that anything starting with '**' is particularly
+important, so be sure to understand what is shown.
+
+message: ** warning: removing first 2 TRs from beginning of each run
+            --> the stimulus timing files must reflect the removal of these TRs
+
+   Such a warning is shown anytime TRs are deleted from the beginning of each
+   run.  Recall using the afni_proc.py option '-tcat_remove_first_trs 2',
+   telling it to remove the first 2 TRs from each run.  Removal of 2 TRs may
+   affect the stimulus timing files.
+
+   Some scanners ignore the TRs prior to magnetization steady state, starting
+   the presentation stimulus softer afterward.  In such a case, the timing
+   should not need adjusting.
+
+   More commonly, the stimulus presentation software is started when the first
+   volume is acquired, prior to the magnetization reaching a steady state.  In
+   this case, the original timing of AV1_vis might have been this for run 1:
+
+        64.0 94.0 124.0 184.0 240.0
+
+   And so assuming 2 TRs will be removed, the times would need adjusting by 4
+   seconds, to:
+
+        60 90 120 180 240
+
+   Note that timing_tool.py is a program that could subtract 4 seconds from
+   each stimulus time to create the appropriate AV1_vis.txt file.
+
+        timing_tool.py -timing old_visual_times.txt -add_offset -4  \
+                       -write_timing AV1_vis.txt
+
+message: -- tcat: reps is now 150
+
+   The '--' and '++' lines are just informational (the '++' usually mean that
+   something has been computed or created).
+
+   Since 2 TRs were removed from each run, the total TRs per run have changed
+   from 152 to 150.  This is just a visual reminder.
+
+message: -- volreg: base/sub indices are 0, 2
+
+   The afni_proc.py command in s01.ap.simple has no option to specify which EPI
+   volume should be used as the EPI alignment base.  Therefore the default is
+   applied: the third volume of the first run.  The message confirms it, though
+   it uses 0-based indices.
+
+message: ++ updating polort to 3, from run len 300.0 s
+
+   Since there are now 150 TRs per run and the TR is 2s, each run lasts 300 s.
+   That determines the default polynomial order for modeling the baseline in
+   3dDeconvolve.  Unless the user specifies the order, afni_proc.py will use
+   the same method that 3dDeconvolve would use with "-polort A" (telling it
+   to choose automatically).  That default is
+
+        1 + floor(duration/150 sec)
+
+   Note that 300 is the cutoff between polort 2 and 3 (299.9999 would lead
+   to a polort of 2, for example).
+
+message: ** masking EPI is no longer the default
+            (see 'MASKING NOTE' from the -help for details)
+
+   This message gets the '**' because it is a change from the way afni_proc.py
+   previously worked.
+
+   In the past, the default was to use 3dAutomask to mask out non-brain voxels
+   in the EPI datasets.  That is no longer done or recommended.  It is now
+   recommended to mask the data only in group space.
+
+   See the output of "afni_proc.py -help" for details, under "MASKING NOTE".
+
+
+message: --> script is file: proc.FT
+
+   This states that afni_proc.py created the output script 'proc.FT'.  The 
+   name of the script (unless the user specifies one) is proc.SUBJECT_ID.
+   Given the '-subj_id FT' option applied in the afni_proc.py command, the
+   script name comes out as 'proc.FT'.
+
+   Verify the script's existence in a few different ways:
+
+        % ls                    # look at new file list
+        % ls -l                 # or in long format
+        % wc proc.FT            # how many lines/words/characters are there
+        % cat proc.FT           # dump file to terminal window
+        % less proc.FT          # view file in paging command
+        % gedit proc.FT         # or maybe view with an editor
+
+message: consider the script execution command: 
+
+           tcsh -xef proc.FT |& tee output.proc.FT
+
+   This suggests how one might run the processing script.  Since the text is
+   in tcsh syntax, it must be run with the 'tcsh' command.  Options -xef are
+   used to:
+
+        -x : echo commands to terminal before executing them
+        -e : terminate script when encountering any error
+        -f : do not process user's ~/.cshrc file
+
+   Via '|&' all output (stdout and stderr) is sent (piped) to the 'tee'
+   program, which sends the same output:
+
+        1. back to the terminal window (so the user can monitor the progress)
+        2. to the specified text file 'output.proc.FT' (which can be read
+           later, or sent to someone else)
+
+   See "afni_proc.py -help" under the section "SCRIPT EXECUTION NOTE" for
+   more details.
+

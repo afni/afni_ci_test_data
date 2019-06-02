@@ -1,0 +1,118 @@
+
+Check on/review a few things here:
+
+1. recall what input datasets were passed to the afni_proc.py
+2. note what files are populating the results directory
+3. look at the original input data in afni, to recall points of interest
+4. close afni
+
+---------------------------------------------------------------------------
+
+1. Recall that all of the input came from the FT directory, including the 2
+   stimulus timing files, an anatomical dataset and 3 EPI datasets.
+
+   % ls FT
+
+      AV1_vis.txt, AV2_aud.txt     : stimulus timing files
+      FT_anat+orig                 : anatomical dataset
+      FT_epi_r1+orig               : EPI run 1
+      FT_epi_r2+orig               : EPI run 2
+      FT_epi_r3+orig               : EPI run 3
+
+   Recall also that each AFNI dataset consists of 2 files, a .HEAD text file
+   that describes the data (location, grid, orientation, description, etc.),
+   and a .BRIK file which contains the raw data.
+
+
+2. Note what files are populating the "results" directory.
+
+   % ls FT.results
+
+   Files will be added to this directory as processing proceeds.  The very last
+   files to be written are blur_est.FT.1D (with residual blur estimations) and
+   @epi_review.FT (a script to quickly review the original data).
+
+   Most importantly, note the format of the pre-processed EPI datasets.  For
+   example, consider the .BRIK files for only run 1:
+
+        pb00.FT.r01.tcat+orig.BRIK
+        pb01.FT.r01.tshift+orig.BRIK
+        pb02.FT.r01.volreg+orig.BRIK
+        pb03.FT.r01.blur+orig.BRIK
+        pb04.FT.r01.scale+orig.BRIK
+
+   These are named starting with 'pbNN', where NN is the index of the given
+   processing block.  So 'tcat' is processing block 00, 'tshift' is block 01,
+   then 'volreg', 'blur' and finally 'scale', the last pre-processing step
+   before regression.  The center part of the name is the subject ID, followed
+   by the run number.  For example, consider pb02.FT.r01.volreg:
+
+        pb02    : processing block index 02
+        FT      : subject ID
+        r01     : run #1
+        volreg  : pb02 is the volume registration processing block
+
+   These names were chosen to be descriptive and alphabetical (in terms of
+   processing order).
+
+
+3. Start afni in the FT directory and take a quick look at the original data.
+
+   % afni FT
+
+   A. Open up each image window (axial, sagittal, coronal), set the underlay
+      to be FT_anat and the overlay to be FT_epi_r1. and make a few notes:
+
+        - The alignment is not perfect, but it is pretty good.  Recall that CSF
+          makes the EPI brightest.  So the red parts of the EPI should overlay
+          the ventricles, etc.
+
+        - The coverage of the EPI is much smaller than that of the anat, though
+          it covers most of the brain (but only part of the cerebellum).
+
+        - There is not much EPI signal dropout within the brain.
+
+   B. Turn off the overlay and choose FT_epi_r1 as the under lay.
+      Open an axial graph window.
+      Jump to xyz coordinates "19.3 78 -5.7", to be sure of what is seen.
+      Close the Coronal window to save screen space.
+      In the graph window, type an 'A' for auto-scaling (or Opt->Scale->AUTO).
+
+      To jump to those xyz coordinates:
+
+        - put the mouse in an image window
+        - right-click and select "Jump to (xyz)"
+        - type (or copy-and-paste) 19.3 78 -5.7 as xyz coordinates
+        - hit Set
+
+      A few things are apparent when looking at the Axial Graph window:
+
+        - Some anatomical detail can be seen, even though this is EPI data.
+
+        - Typical values seem to be between 1000 and 2000.
+
+        - The first first TRs are very high in magnitude.  So those are the
+          pre-steady state TRs which will be removed in the processing script.
+
+        - There is a spike around index 44.  Moving to that index (using the
+          '>' key in the graph window) and watching the sagittal image, it
+          becomes clear that is due to a subject head motion.  Nodding motions
+          are the most common.
+
+          The motion should be taken care of by 3dvolreg and by using the
+          motion parameters as regressors of no interest.
+
+          ** A large motion like this should really be censored.  Note the
+             "-regress_censor_motion 0.3" option applied in the more advanced
+             afni_proc.py script, s02.ap.align .
+
+        - This voxel shows a clear up and down pattern that we expect means
+          there was a response to our stimuli.
+
+4. Close afni.  We will run it again from the results directory.
+
+   Advanced: Of course it is not necessary to close afni.  One could 'read' in 
+             the new results directory (perhaps once processing has finished)
+             and then 'switch' to it, or even tell afni to read both the FT
+             and FT.results directories to begin with.
+   

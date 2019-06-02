@@ -1,0 +1,16 @@
+#!/bin/tcsh
+
+set model = GAM   # toggle btw GAM and 'TENT(0,12,7)': pre-fixed or whatever fits?
+
+3dDeconvolve -nodata 300 2                      \
+        -nfirst 4 -nlast 299 -polort 2          \
+        -num_stimts 3                           \
+        -stim_times 1 "stim.01.1D"   "$model"   \
+        -stim_label 1 "stimA"                   \
+        -stim_times 2 "stim.02.1D"   "$model"   \
+        -stim_label 2 "stimB"                   \
+        -stim_times 3 "stim.03.1D"   "$model"   \
+        -stim_label 3 "stimC"                   \
+        -gltsym "SYM: stimA -stimB"             \
+        -gltsym "SYM: stimA -stimC"             \
+        -gltsym "SYM: stimB -stimC" 

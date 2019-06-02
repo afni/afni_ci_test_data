@@ -1,0 +1,127 @@
+#!/bin/tcsh
+# search for most efficient event-related design
+
+# TOGGLE the following 2 model parameters
+set model       = GAM			# toggle btw GAM and TENT: pre-fixed or whatever fits?
+set eff         = SUM      		# toggle btw SUM and MAX: summing the normalized std dev or minimax?
+
+# experiment parameters
+set ts          = 300			# length of timeseries
+set stim        =   3			# number of input stimuli
+set num_on      =  50			# time points per stimulus (between 0 and $ts/3)
+
+# execution parameters
+set iterations  = 100			# number of iterations
+set seed        = 2483907		# initial random seed
+set outdir      = Results		# move all output files to this directory
+set TR          = 2        		# TR Length in seconds
+set ignore      = 4        		# number of TRs ignored at the beginning of the run
+set show        = 10       		# number of designs in a descendent order of efficiency
+
+# directories to store intermediate files
+set outdir      = ${outdir}_${model}_$eff
+set LCfile      = $outdir/LC
+if ("$model" == "TENT") set model = ${model}'(0,12,7)'
+
+
+# ------------------------------------------------------------
+
+# make sure $outdir exists
+
+if ( ! -d $outdir ) then
+    mkdir $outdir
+    if ( $status ) then
+	echo "failure, cannot create output directory, $outdir"
+	exit
+    endif
+endif
+
+# create empty LC file
+echo -n "" > $LCfile
+
+echo ""
+echo -n "Running iteration: 000"
+
+# ------------------------------------------------------------
+# run the test many times
+
+foreach iter (`count -digits 3 1 $iterations`)
+
+	# make some other random seed
+
+	@ seed = $seed + 1
+
+	# create random order stim files
+
+	RSFgen -nt ${ts}        \
+	    -num_stimts ${stim} \
+	    -nreps 1 ${num_on}  \
+	    -nreps 2 ${num_on}  \
+	    -nreps 3 ${num_on}  \
+	    -seed ${seed}       \
+	    -prefix RSFstim${iter}. >& /dev/null
+
+   # convert stimulus coding into timing files
+
+   make_stim_times.py -files RSFstim${iter}.1.1D RSFstim${iter}.2.1D RSFstim${iter}.3.1D 	\
+   -prefix stim${iter} 										\
+   -nt 300 											\
+   -tr ${TR} 											\
+   -nruns 1
+
+	# now evaluate the stimulus timings
+
+	3dDeconvolve					\
+	    -nodata	${ts} $TR 			\
+	    -nfirst $ignore				\
+	    -nlast 299					\
+	    -polort 2					\
+	    -num_stimts ${stim}				\
+	    -stim_times 1 "stim${iter}.01.1D" "$model"	\
+	    -stim_label 1 "stimA"			\
+	    -stim_times 2 "stim${iter}.02.1D" "$model"	\
+	    -stim_label 2 "stimB"			\
+	    -stim_times 3 "stim${iter}.03.1D" "$model"	\
+	    -stim_label 3 "stimC"			\
+	    -gltsym "SYM: stimA -stimB" 		\
+	    -gltsym "SYM: stimA -stimC" 		\
+	    -gltsym "SYM: stimB -stimC" 		\
+		>& Eff${iter}
+
+	set nums = ( `awk -F= '/LC/ {print $2}' Eff${iter}` )
+	
+	if ("$eff" == "SUM") then
+
+	# save the sum of the 3 normalized std dev
+	set num_sum = `ccalc -eval "$nums[1] + $nums[2] + $nums[3]"`
+	
+	echo -n "$num_sum = $nums[1] + $nums[2] + $nums[3] : " >> $LCfile
+        echo    "iteration $iter, seed $seed"          >> $LCfile
+
+	endif	  
+	
+	if ("$eff" == "MAX") then
+
+	# get the max of the 3 normalized std dev
+   	set imax = `ccalc -form int -eval "argmax($nums[1],$nums[2],$nums[3])"`
+   	set max = $nums[$imax]
+			
+	echo -n "$max = max($nums[1], $nums[2], $nums[3]) " >> $LCfile
+        echo    "iteration $iter, seed $seed"                  >> $LCfile
+
+	endif	 
+
+
+	mv RSFstim*.1D stim*.1D Eff* nodata*.x1D $outdir
+
+	echo -n "...$iter"
+end
+
+echo ""
+echo "Done, results are in '$outdir', LC sums are in '$LCfile'"
+echo ""
+echo "The most 10 efficient designs are (in descending order):"
+echo ""
+sort $LCfile | head -$show
+echo ""
+
