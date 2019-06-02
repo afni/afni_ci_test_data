@@ -1,0 +1,4 @@
+[submodule "ds000002"]
+	path = ds000002
+	url = http://datasets.datalad.org/openfmri/ds000002/.git
+	datalad-id = d0e8cec2-7df4-11e6-8c5a-002590f97d84
