@@ -1,0 +1,3 @@
+# 3dAllineate parameters:
+# x-shift  y-shift  z-shift  z-angle  x-angle  y-angle  x-scale  y-scale  z-scale  y/x-shear  z/x-shear  z/y-shear 
+ -0.997808 -0.801366 -0.716654 0.519751 -1.999670 1.875091 0.976031 0.987577 0.949452 0.002384 -0.040754 0.001895
