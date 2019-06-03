@@ -1,0 +1,147 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 758
+'[root@gollum.nimh.nih.gov: Fri Mar 12 18:01:59 2010] 3dcopy /Volumes/elrond/share/data/fcon_1000/alldata/3.0T/anat_sub49134.nii.gz anat_sub49134\n[root@gollum.nimh.nih.gov: Fri Mar 12 18:01:59 2010] 3drefit -deoblique anat_sub49134+orig\n[root@gollum.nimh.nih.gov: Fri Mar 12 18:02:00 2010] 3drefit -dxorigin -6.715660 -dyorigin 31.384201 -dzorigin 4.849400 ./anat_sub49134+orig\n[root@gollum.nimh.nih.gov: Fri Mar 12 18:02:01 2010] adwarp.c -apar anat_sub49134+tlrc.HEAD -dpar anat_sub49134+orig -force -dxyz 1 -resam Cu\n[rwcox@MH02001842MACDT: Thu Aug 16 10:40:28 2018] {AFNI_18.2.10:CoxPrivate_icc} 3dAllineate -base ../data/MNIx+tlrc -source ../data/T1vol_SS+tlrc -prefix ./ALvol_OMP_NO -1Dparam_save ./ALparam_OMP_NO.1D -verb -fineblur 2 -hel -twopass~
+
+type  = float-attribute
+name  = ALLINEATE_MATVEC_B2S_000000
+count = 12
+       1.003171   0.0004410352   -0.002515288      0.5022888   0.0005142015
+       1.003308  -0.0007670847     -0.5644302   0.0006041765   0.0007917423
+       1.001689     -0.4653931
+
+type  = float-attribute
+name  = ALLINEATE_MATVEC_S2B_000000
+count = 12
+      0.9968379  -0.0004401661     0.00250277     -0.4997842  -0.0005113449
+      0.9967026   0.0007619821      0.5631806  -0.0006008464  -0.0007875355
+      0.9983116      0.4644646
+
+type = string-attribute
+name = ALLINEATE_WARP_TYPE
+count = 15
+'affine_general~
+
+type  = float-attribute
+name  = ALLINEATE_PARAMS_000000
+count = 12
+       0.502285     -0.5644302     -0.4653931     0.02529907    -0.04366875
+      0.1436596       1.003174       1.003308       1.001688   0.0009541884
+   -0.001901008   2.793223e-05
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'COX_uyn-ZUQrXRtVpm3c5i1qFQ~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Thu Aug 16 10:40:28 2018~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 11 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 1 2 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+           90.5          126.5          -72.5
+
+type  = float-attribute
+name  = DELTA
+count = 3
+             -1             -1              1
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+             -1              0              0           90.5              0
+             -1              0          126.5              0              0
+              1          -72.5
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+             -1              0              0           90.5              0
+             -1              0          126.5              0              0
+              1          -72.5
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+            -53            756
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 182 218 182 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 1
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 3
+'#0~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 5
+'TLRC~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 0
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~
