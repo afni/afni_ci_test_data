@@ -1,0 +1,121 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 1881
+'[ZSS@: Tue Apr  8 10:47:27 2014] ===================================\n[ZSS: Tue Apr  8 10:47:27 2014] === History of inputs to 3dcalc ===\n[ZSS: Tue Apr  8 10:47:27 2014] === Input a:\n[ZSS: Tue Apr  8 10:47:27 2014] [ZSS@: Tue Apr  8 10:40:36 2014] 3dDespike -NEW -nomask -prefix pb01.FATCAT.r01.despike pb00.FATCAT.r01.tcat+orig\n[ZSS: Tue Apr  8 10:40:46 2014] 3dTshift -tzero 0 -quintic -prefix pb02.FATCAT.r01.tshift pb01.FATCAT.r01.despike+orig\n[ZSS: Tue Apr  8 10:46:22 2014] 3dAllineate -base mprage_ns+orig -input pb02.FATCAT.r01.tshift+orig -1Dmatrix_apply mat.r01.warp.aff12.1D -mast_dxyz 3 -prefix rm.epi.nomask.r01\n[ZSS: Tue Apr  8 10:47:27 2014] === Input b:\n[ZSS: Tue Apr  8 10:47:27 2014] [ZSS@: Tue Apr  8 10:40:36 2014] 3dDespike -NEW -nomask -prefix pb01.FATCAT.r01.despike pb00.FATCAT.r01.tcat+orig\n[ZSS: Tue Apr  8 10:40:46 2014] 3dTshift -tzero 0 -quintic -prefix pb02.FATCAT.r01.tshift pb01.FATCAT.r01.despike+orig\n[ZSS: Tue Apr  8 10:46:20 2014] 3dcalc -a pb02.FATCAT.r01.tshift+orig -expr 1 -prefix rm.epi.all1\n[ZSS: Tue Apr  8 10:46:55 2014] 3dAllineate -base mprage_ns+orig -input rm.epi.all1+orig -1Dmatrix_apply mat.r01.warp.aff12.1D -mast_dxyz 3 -final NN -quiet -prefix rm.epi.1.r01\n[ZSS: Tue Apr  8 10:47:27 2014] 3dTstat -min -prefix rm.epi.min.r01 rm.epi.1.r01+orig\n[ZSS: Tue Apr  8 10:47:27 2014] 3dcopy rm.epi.min.r01+orig mask_epi_extents\n[ZSS: Tue Apr  8 10:47:27 2014] ===================================\n[ZSS: Tue Apr  8 10:47:27 2014] 3dcalc -a rm.epi.nomask.r01+orig -b mask_epi_extents+orig -expr 'a*b' -prefix pb03.FATCAT.r01.volreg\n[ZSS: Tue Apr  8 10:47:35 2014] 3dAutomask -dilate 1 -prefix rm.mask_r01 pb03.FATCAT.r01.volreg+orig\n[ZSS: Tue Apr  8 10:47:36 2014] 3dcopy rm.mask_r01+orig full_mask.FATCAT\n[ZSS: Tue Apr  8 13:55:45 2014] 3dcopy Data/FATCAT_DEMO/AP/FATCAT.results/full_mask.FATCAT+orig. ./Data/FATCAT_DEMO/~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_FUNC~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'XYZ_KxLrxDdEhoEj43hJM35i-Q~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Tue Apr  8 13:55:45 2014~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 0 0 1 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 2 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+      -93.90087       85.52789      -180.7682
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              3             -3              3
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              3              0              0      -93.90087              0
+             -3              0       85.52789              0              0
+              3      -180.7682
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              3              0              0      -93.90087              0
+             -3              0       85.52789              0              0
+              3      -180.7682
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0              1
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 64 85 85 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 0
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 5
+'ORIG~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 0
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~
+
+type = string-attribute
+name = BRICK_LABS
+count = 3
+'#0~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~

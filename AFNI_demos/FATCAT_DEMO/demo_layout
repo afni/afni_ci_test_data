@@ -1,0 +1,6 @@
+
+***LAYOUT
+  A geom=+324+71
+  A.axialimage geom=307x391+3+499 ifrac=0.8
+  A.sagittalimage geom=324x370+311+499 ifrac=0.8
+  A.coronalimage geom=287x419+703+509 ifrac=0.8

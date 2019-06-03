@@ -1,0 +1,7 @@
+<TRACK_opts
+  Thresh_FA="0.2"
+  Thresh_ANG="60.000000"
+  Thresh_Len="20.000000"
+  Nseed_X="1"
+  Nseed_Y="1"
+  Nseed_Z="1" />
