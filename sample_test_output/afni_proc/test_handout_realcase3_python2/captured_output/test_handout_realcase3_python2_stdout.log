@@ -1,0 +1,23 @@
+-- will use min outlier volume as motion base
+-- tcat: reps is now 152
+++ updating polort to 3, from run len 304.0 s
+-- volreg: using base dset vr_base_min_outlier+orig
+++ volreg: applying volreg/epi2anat/tlrc xforms to isotropic 2.5 mm tlrc voxels
+-- applying anat warps to 1 dataset(s): FT_anat
+** failed to find tlrc_base 'TT_N27+tlrc' for group mask
+-- have 1 ROI dict entries ...
+-- no 3dClustSim (since no blur estimation)
+** will not run QC html program, apqc_make_tcsh.py
+   (missing: Xvfb)
+
+-- using default: will not apply EPI Automask
+   (see 'MASKING NOTE' from the -help for details)
+
+--> script is file: proc.FT
+
+    to execute via tcsh:
+         tcsh -xef proc.FT |& tee output.proc.FT
+
+    to execute via bash:
+         tcsh -xef proc.FT 2>&1 | tee output.proc.FT
+
