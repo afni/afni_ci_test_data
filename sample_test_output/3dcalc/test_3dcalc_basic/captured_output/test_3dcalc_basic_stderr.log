@@ -1,0 +1,4 @@
+++ 3dcalc: AFNI version=AFNI_19.1.10 (May 22 2019) [64-bit]
+++ Authored by: A cast of thousands
+[7m*+ WARNING:[0m dataset 'b'=./afni_ci_test_data/mini_data/anat_3mm_no_skull_zero_padded.nii.gz grid mismatch with ./afni_ci_test_data/mini_data/anat_3mm.nii.gz
+++ Output dataset ./output_of_tests/output_2019_06_04_022517/3dcalc/test_3dcalc_basic/outside_brain.nii.gz

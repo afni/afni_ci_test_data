@@ -1,0 +1,13 @@
+++ 3dClustSim: AFNI version=AFNI_19.1.10 (May 22 2019) [64-bit]
+++ Authored by: RW Cox and BD Ward
+++ Kernel function radius = 9.23 mm
+++ ACF(0.70,3.00,3.00) => FWHM=6.39 => 16x8x4 pads to 24x16x16
+ + Kernel image dimensions 11 x 7 x 7
+++ 176 voxels in BALL mask (34.4% of total)
+++ Startup clock time = 0.0 s
+++ Using 2 OpenMP threads
+Simulating:0123456789.0123456789.0123456789.0123456789.0123456789.!
+++ Clock time now = 20.0 s
+[7m*+ WARNING:[0m pthr=0.000700 ; desired alpha=0.100000 -- but max simulated alpha=0.082900]
+[7m*+ WARNING:[0m pthr=0.000700 ; desired alpha=0.090000 -- but max simulated alpha=0.082900]
+ +        [further messages about alpha are suppressed]

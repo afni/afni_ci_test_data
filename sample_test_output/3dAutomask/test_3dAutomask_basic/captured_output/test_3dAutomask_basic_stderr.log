@@ -1,0 +1,28 @@
+++ 3dAutomask: AFNI version=AFNI_19.1.10 (May 22 2019) [64-bit]
+++ Authored by: Emperor Zhark
+++ Loading dataset ./afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz
+++ Forming automask
+ + Fixed clip level = 1276.897217
+ + Used gradual clip level = 1251.489014 .. 1296.792358
+ + Number voxels above clip level = 58854
+ + Clustering voxels ...
+ + Largest cluster has 58849 voxels
+ + Clustering voxels ...
+ + Largest cluster has 58094 voxels
+ + Filled  1871 voxels in small holes; now have 59965 voxels
+ + Filled    21 voxels in large holes; now have 59986 voxels
+ + Clustering voxels ...
+ + Largest cluster has 59980 voxels
+ + Clustering non-brain voxels ...
+ + Clustering voxels ...
+ + Largest cluster has 77333 voxels
+ + Mask now has 60283 voxels
+++ 60283 voxels in the mask [out of 137616: 43.81%]
+++ first   0 x-planes are zero [from A]
+++ last    0 x-planes are zero [from P]
+++ first   0 y-planes are zero [from S]
+++ last    0 y-planes are zero [from I]
+++ first   1 z-planes are zero [from L]
+++ last    0 z-planes are zero [from R]
+++ Output dataset output_of_tests/output_2019_06_04_022517/3dAutomask/test_3dAutomask_basic/masked_image.nii.gz
+++ CPU time = 0.000000 sec

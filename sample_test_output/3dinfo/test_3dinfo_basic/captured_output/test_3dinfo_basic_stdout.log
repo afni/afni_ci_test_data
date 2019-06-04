@@ -1,0 +1,28 @@
+
+Dataset File:    ./afni_ci_test_data/mini_data/anat_3mm.nii.gz
+Identifier Code: AFN_Nc4oIUIx8skram3ffNHDLA  Creation Date: Sun Jun  2 13:58:07 2019
+Template Space:  ORIG
+Dataset Type:    Anat Bucket (-abuc)
+Byte Order:      LSB_FIRST {assumed} [this CPU native = LSB_FIRST]
+Storage Mode:    NIFTI
+Storage Space:   623,700 (624 thousand) bytes
+Geometry String: "MATRIX(0,0,-3,77.5,3,0,0,-131.507,0,-3,0,101.2428):77,75,54"
+Data Axes Tilt:  Plumb
+Data Axes Orientation:
+  first  (x) = Anterior-to-Posterior
+  second (y) = Superior-to-Inferior
+  third  (z) = Left-to-Right   [-orient ASL]
+R-to-L extent:   -81.500 [R] -to-    77.500 [L] -step-     3.000 mm [ 54 voxels]
+A-to-P extent:  -131.507 [A] -to-    96.493 [P] -step-     3.000 mm [ 77 voxels]
+I-to-S extent:  -120.757 [I] -to-   101.243 [S] -step-     3.000 mm [ 75 voxels]
+Number of values stored at each pixel = 1
+  -- At sub-brick #0 '#0' datum type is short:            0 to          3469
+
+----- HISTORY -----
+[rickr@manwe.nimh.nih.gov: Thu Mar 18 16:48:03 2010] 3dcopy anat2.nii anat2
+[rickr@manwe.nimh.nih.gov: Thu Mar 18 16:48:21 2010] 3dvolreg -base anat+orig -prefix second_anat anat2+orig
+[rickr@manwe.nimh.nih.gov: Thu Mar 18 16:48:52 2010] 3dvolreg did: -Fourier -clipit -rotate 0.2064I -0.7695R 0.0259A -ashift 1.2259S -0.0839L -0.4619P
+
+[rodgersleejg@MH02131978MACLT: Sun Jun  2 13:58:06 2019] {AFNI_19.0.08:macos_10.12_local} 3dAutobox -input AFNI_data6/afni/second_anat+orig.BRIK -prefix mini_data/cropped.nii.gz
+[rodgersleejg@MH02131978MACLT: Sun Jun  2 13:58:07 2019] {AFNI_19.0.08:macos_10.12_local} 3dresample -dxyz 3 3 3 -input mini_data/cropped.nii.gz -prefix mini_data/anat_3mm.nii.gz
+

@@ -1,0 +1,34 @@
+++ 3dAllineate: AFNI version=AFNI_19.1.10 (May 22 2019) [64-bit]
+++ Authored by: Zhark the Registrator
+[7m*+ WARNING:[0m limited 2 to 0.666
+[7m*+ WARNING:[0m Cost 'ls' or 'lpc' or 'lpa' ==> turning '-autoweight' on
+          If you DO NOT want this to happen, then use one
+          of '-autobox' or '-automask' or '-noauto'.
+[7m*+ WARNING:[0m '-source_automask' is strongly recommended when using -lpc or -lpa
+++ Source dataset: ./afni_ci_test_data/AFNI_data6/afni/epi_r1+orig.HEAD
+++ Base dataset:   ./afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz
+++ Loading datasets
+++ 64077 voxels in source_automask+0
+++ Zero-pad: xbot=8 xtop=8
+++ Zero-pad: ybot=8 ytop=8
+++ Zero-pad: zbot=8 ztop=8
+++ Computing -autobox
+++ 121312 voxels [39.1%] in weight mask
+++ Number of points for matching = 24262
+++ Local correlation: blok type = 'RHDD(11.07)'
+++ master dataset for output = base
+++ OpenMP thread count = 1
+++ ======= Allineation of 1 sub-bricks using Local Pearson Correlation Signed =======
+++ *** Coarse pass begins ***
+++ *** Fine pass begins ***
+ + Final fine fit Parameters:
+       x-shift= -0.9997   y-shift= -0.9997   z-shift= -0.8923  ...  enorm=  1.6718 mm
+       z-angle=  1.7285   x-angle= -1.9999   y-angle=  1.5495  ...  total=  3.0486 deg
+       x-scale=  0.9933   y-scale=  1.0037   z-scale=  0.9503  ...  vol3D=  0.9474 = base bigger than source
+     y/x-shear= -0.0056 z/x-shear= -0.0362 z/y-shear= -0.0031
+++ Output dataset output_of_tests/output_2019_06_04_022517/3dAllineate/test_3dAllineate_basic_python3/aligned_with_omp.nii.gz
+++ Wrote -1Dparam_save output_of_tests/output_2019_06_04_022517/3dAllineate/test_3dAllineate_basic_python3/aligned_with_omp.1D
+++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 109.2
+++ ###########################################################
+++ #   Please check results visually for alignment quality   #
+++ ###########################################################
