@@ -1,4 +1,4 @@
-
-config annex.largefiles=largerthan=10kb or (include=*.nii.gz or include=*.tgz or include=*.tar.gz or include=*.dcm )
+config annex.largefiles='largerthan=10kb'
 metadata/aggregate* annex.largefiles=nothing
 metadata/objects/** annex.largefiles=(anything)
+
