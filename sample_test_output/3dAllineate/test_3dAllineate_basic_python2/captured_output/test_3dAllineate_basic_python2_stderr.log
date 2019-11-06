@@ -26,9 +26,9 @@
        z-angle=  1.7285   x-angle= -1.9999   y-angle=  1.5495  ...  total=  3.0486 deg
        x-scale=  0.9933   y-scale=  1.0037   z-scale=  0.9503  ...  vol3D=  0.9474 = base bigger than source
      y/x-shear= -0.0056 z/x-shear= -0.0362 z/y-shear= -0.0031
-++ Output dataset output_of_tests/output_2019_11_06_183555/3dAllineate/test_3dAllineate_basic_python3/aligned_with_omp.nii.gz
-++ Wrote -1Dparam_save output_of_tests/output_2019_11_06_183555/3dAllineate/test_3dAllineate_basic_python3/aligned_with_omp.1D
-++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 99.1
+++ Output dataset output_of_tests/output_2019_11_06_183555/3dAllineate/test_3dAllineate_basic_python2/aligned_with_omp.nii.gz
+++ Wrote -1Dparam_save output_of_tests/output_2019_11_06_183555/3dAllineate/test_3dAllineate_basic_python2/aligned_with_omp.1D
+++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 104.4
 ++ ###########################################################
 ++ #   Please check results visually for alignment quality   #
 ++ ###########################################################
