@@ -1,3 +1,4 @@
+++ Program version: 2.2
 ++ Have read in data.
 ++ Have organized the data internally.
 ++ Maximum bvalue appears to be: 1.00000
@@ -40,5 +41,5 @@
    Number of diffusion weighted  vec/mats: 30
 ++ Keeping all vec/mats.
 ++ Output dims to be: 31 x 3
-++ DONE with grad/matr. Check output file 'output_of_tests/output_2019_06_04_022517/1dDW_Grad_o_Mat++/test_1dDW_Grad_o_Mat__plus____plus___basic/GRADS_30.dat'
+++ DONE with grad/matr. Check output file 'output_of_tests/output_2019_11_06_192729/1dDW_Grad_o_Mat++/test_1dDW_Grad_o_Mat__plus____plus___basic/GRADS_30.dat'
 
