@@ -1,0 +1,29 @@
+This README document is the method to update the Eickhoff-Zilles atlases and is intended for use by the developers of AFNI and not for use by AFNI users.The following steps need to be applied. This method was originally applied in May 2011 and modified slightly in August 2012 for version 1.8 of the anatomy toolbox.
+
+1. Download anatomy toolbox and install.
+
+http://www.fz-juelich.de/inm/inm-1/EN/Forschung/_docs/SPMAnatomyToolbox/SPMAnatomyToolbox_node.html
+
+2. In Matlab, edit CA_EZ_Prep_genx.m, included with the AFNI matlab directory, to the current toolbox directory and the current version and run the program. The program generates niml files for each atlas from the .mat files used by se_note.m. These files contain the names of structures and index values for each structure.
+
+3. Run the tcsh script, CA_EZ_atlas.csh, to use the niml files and the atlas datasets to create AFNI datasets with the appropriate atlas point lists in the headers and dataset spaces. The script is available in the current atlases directory on the afni server. Best to tee this script execution to a log and check for errors and warnings to be sure everything proceeded well.
+
+4. After checking that the new datasets look okay in afni with overlay and underlay labels, copy the atlas datasets to the afni server:
+
+cp MNIa_caez_mpm_18+tlrc.* /Volumes/elrond/pub/dist/atlases/current/
+cp TT_caez_mpm_18+tlrc.* /Volumes/elrond/pub/dist/atlases/current/ 
+
+There are some more details given at the end of the CA_EZ_atlas.csh script that are echoed to the screen to remind us.
+
+4. Update the AFNI_ATLAS_SPACES.niml file to have the atlases point to the new file names and citation references and check in with cvs distribution.
+
+Note I have also added another script to check for unused indices in the NIML file and the dataset. A "vals" file is generated that just has the simplified intensity and value pairs by the CA_EZ_atlas.csh script. This is an example of its use:
+
+   tcsh scan_niml_vals.csh MNIa_caez_mpm_18+tlrc mpmvals.1D
+
+Other checks are to look at spaces of the output datasets with
+
+    3dinfo -prefix -space -av_space *.HEAD
+
+All the Eickhoff_Zilles atlases are in TT_N27 space with tlrc views.
+

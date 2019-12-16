@@ -1,0 +1,1815 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 2178
+'[rwcox@hurin.nimh.nih.gov: Mon Aug 20 08:48:02 2001] 3dbucket -prefix TTatlas uu3+tlrc uu5+tlrc\n[rwcox@hurin.nimh.nih.gov: Mon Aug 20 08:48:50 2001] Talairach Daemon database provided by Jack Lancaster and Peter Fox of RIC-UTHSCSA\n[dglen@ndsl-lfmi-kocha.nih.gov: Thu Sep  9 14:00:34 2010] 3drefit -space TLRC /Users/dglen/abin/TT_EPI+tlrc.HEAD /Users/dglen/abin/TT_N27+tlrc.HEAD /Users/dglen/abin/TT_N27_CA_EZ_MPM+tlrc.HEAD /Users/dglen/abin/TT_N27_CA_EZ_PMaps+tlrc.HEAD /Users/dglen/abin/TT_N27_EZ_LR+tlrc.HEAD /Users/dglen/abin/TT_N27_EZ_ML+tlrc.HEAD /Users/dglen/abin/TT_avg152T1+tlrc.HEAD /Users/dglen/abin/TT_avg152T2+tlrc.HEAD /Users/dglen/abin/TT_icbm452+tlrc.HEAD /Users/dglen/abin/TTatlas+tlrc.HEAD\n[dglen@ndsl-lfmi-kocha.nih.gov: Thu Sep  9 18:14:56 2010] 3drefit -cmap INT_CMAP TTatlas+tlrc. TT_N27_CA_EZ_MPM+tlrc.HEAD TT_N27_CA_EZ_PMaps+tlrc.HEAD TT_N27_EZ_LR+tlrc.HEAD TT_N27_EZ_ML+tlrc.HEAD\n[dglen@gollum.nimh.nih.gov: Thu Sep 23 18:55:21 2010] 3drefit -labeltable /Users/dglen/ttlabeltable.txt.niml.lt TTatlas+tlrc.\n[dglen@gollum.nimh.nih.gov: Wed Nov  3 14:32:50 2010] 3dcalc -a TTatlas+tlrc -RAI -expr 'a+200*step(x*a)' -datum short -nscale -prefix TTatlas_left200\n[dglen@gollum.nimh.nih.gov: Wed Nov  3 14:37:23 2010] 3dbucket -prefix TT_l200_0 'TTatlas_left200+tlrc.[0]'\n[dglen@gollum.nimh.nih.gov: Wed Nov  3 14:38:40 2010] Drawing plugin COPY: Fill->Data\n[dglen@gollum.nimh.nih.gov: Wed Nov  3 14:44:24 2010] Drawing plugin COPY: Fill->Data\n[dglen@gollum.nimh.nih.gov: Wed Nov  3 14:46:25 2010] 3dbucket -prefix TTatlas_2010 TT_l200_0_ACPCCC+tlrc. TT_l200_1+tlrc.\n[dglen@gollum.nimh.nih.gov: Tue Nov 30 17:55:47 2010] 3dcalc -a TTatlas_2010+tlrc -expr 'a+200*equals(x,0)*step(a-3)' -prefix TTatlas_2010_2\n[dglen@gollum.nimh.nih.gov: Tue Nov 30 17:55:59 2010] 3drefit -cmap INT_CMAP TTatlas_2010_2+tlrc\n[dglen@gollum.nimh.nih.gov: Tue Nov 30 18:01:54 2010] 3dcopy TTatlas_2010_2+tlrc. TTatlas_2010_master\n[dglen@gollum.nimh.nih.gov: Tue Nov 30 18:02:01 2010] 3drefit -cmap INT_CMAP TTatlas_2010_master+tlrc.\n[dglen@gollum.nimh.nih.gov: Tue Nov 30 18:02:06 2010] 3drefit -atrstring ATLAS_LABEL_TABLE file:TT_atlas.niml TTatlas_2010_master+tlrc.~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_FUNC~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_2h0pzs7qHnyK7neAjKeLbA~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Tue Nov 30 18:01:54 2010~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 11 1 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 3 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+            -80            -80            -55
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              1              1              1
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              1              0              0            -80              0
+              1              0            -80              0              0
+              1            -55
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              1              0              0            -80              0
+              1              0            -80              0              0
+              1            -55
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 4
+              0            277              0            351
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 2 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 161 191 141 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 2
+ 1 1
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 2
+              0              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 14
+'uu3[0]~uu5[0]~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 2
+'~~
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 5
+'TLRC~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 1
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~
+
+type = string-attribute
+name = ATLAS_LABEL_TABLE
+count = 36605
+'<atlas_point_list
+  ni_form="ni_group" >
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Anterior Commissure"
+  VAL="1"
+  OKEY="0"
+  GYoAR="0"
+  COG=" 0.000000 -1.000000 -1.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Posterior Commissure"
+  VAL="2"
+  OKEY="0"
+  GYoAR="0"
+  COG=" 0.000000 23.000000 0.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Corpus Callosum"
+  VAL="3"
+  OKEY="0"
+  GYoAR="0"
+  COG=" 0.000000 7.000000 21.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Hippocampus"
+  VAL="268"
+  OKEY="268"
+  GYoAR="4"
+  COG=" 30.000000 24.000000 -9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Hippocampus"
+  VAL="68"
+  OKEY="68"
+  GYoAR="4"
+  COG=" -30.000000 24.000000 -9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Amygdala"
+  VAL="271"
+  OKEY="271"
+  GYoAR="4"
+  COG=" 23.000000 5.000000 -15.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Amygdala"
+  VAL="71"
+  OKEY="71"
+  GYoAR="4"
+  COG=" -23.000000 5.000000 -15.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Posterior Cingulate"
+  VAL="220"
+  OKEY="220"
+  GYoAR="2"
+  COG=" 10.000000 54.000000 14.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Posterior Cingulate"
+  VAL="20"
+  OKEY="20"
+  GYoAR="2"
+  COG=" -10.000000 54.000000 14.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Anterior Cingulate"
+  VAL="221"
+  OKEY="221"
+  GYoAR="2"
+  COG=" 8.000000 -32.000000 7.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Anterior Cingulate"
+  VAL="21"
+  OKEY="21"
+  GYoAR="2"
+  COG=" -8.000000 -32.000000 7.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Subcallosal Gyrus"
+  VAL="222"
+  OKEY="222"
+  GYoAR="2"
+  COG=" 11.000000 -11.000000 -12.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Subcallosal Gyrus"
+  VAL="22"
+  OKEY="22"
+  GYoAR="2"
+  COG=" -11.000000 -11.000000 -12.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Transverse Temporal Gyrus"
+  VAL="224"
+  OKEY="224"
+  GYoAR="2"
+  COG=" 50.000000 22.000000 12.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Transverse Temporal Gyrus"
+  VAL="24"
+  OKEY="24"
+  GYoAR="2"
+  COG=" -50.000000 22.000000 12.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Uncus"
+  VAL="225"
+  OKEY="225"
+  GYoAR="2"
+  COG=" 25.000000 2.000000 -28.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Uncus"
+  VAL="25"
+  OKEY="25"
+  GYoAR="2"
+  COG=" -25.000000 2.000000 -28.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Rectal Gyrus"
+  VAL="226"
+  OKEY="226"
+  GYoAR="2"
+  COG=" 7.000000 -30.000000 -23.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Rectal Gyrus"
+  VAL="26"
+  OKEY="26"
+  GYoAR="2"
+  COG=" -7.000000 -30.000000 -23.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Fusiform Gyrus"
+  VAL="227"
+  OKEY="227"
+  GYoAR="2"
+  COG=" 40.000000 48.000000 -16.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Fusiform Gyrus"
+  VAL="27"
+  OKEY="27"
+  GYoAR="2"
+  COG=" -40.000000 48.000000 -16.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Inferior Occipital Gyrus"
+  VAL="228"
+  OKEY="228"
+  GYoAR="2"
+  COG=" 35.000000 86.000000 -7.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Inferior Occipital Gyrus"
+  VAL="28"
+  OKEY="28"
+  GYoAR="2"
+  COG=" -35.000000 86.000000 -7.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Inferior Temporal Gyrus"
+  VAL="229"
+  OKEY="229"
+  GYoAR="2"
+  COG=" 56.000000 39.000000 -13.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Inferior Temporal Gyrus"
+  VAL="29"
+  OKEY="29"
+  GYoAR="2"
+  COG=" -56.000000 39.000000 -13.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Insula"
+  VAL="230"
+  OKEY="230"
+  GYoAR="2"
+  COG=" 39.000000 7.000000 9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Insula"
+  VAL="30"
+  OKEY="30"
+  GYoAR="2"
+  COG=" -39.000000 7.000000 9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Parahippocampal Gyrus"
+  VAL="231"
+  OKEY="231"
+  GYoAR="2"
+  COG=" 25.000000 25.000000 -12.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Parahippocampal Gyrus"
+  VAL="31"
+  OKEY="31"
+  GYoAR="2"
+  COG=" -25.000000 25.000000 -12.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Lingual Gyrus"
+  VAL="232"
+  OKEY="232"
+  GYoAR="2"
+  COG=" 14.000000 78.000000 -3.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Lingual Gyrus"
+  VAL="32"
+  OKEY="32"
+  GYoAR="2"
+  COG=" -14.000000 78.000000 -3.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Middle Occipital Gyrus"
+  VAL="233"
+  OKEY="233"
+  GYoAR="2"
+  COG=" 35.000000 83.000000 9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Middle Occipital Gyrus"
+  VAL="33"
+  OKEY="33"
+  GYoAR="2"
+  COG=" -35.000000 83.000000 9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Orbital Gyrus"
+  VAL="234"
+  OKEY="234"
+  GYoAR="2"
+  COG=" 11.000000 -39.000000 -25.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Orbital Gyrus"
+  VAL="34"
+  OKEY="34"
+  GYoAR="2"
+  COG=" -11.000000 -39.000000 -25.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Middle Temporal Gyrus"
+  VAL="235"
+  OKEY="235"
+  GYoAR="2"
+  COG=" 52.000000 39.000000 0.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Middle Temporal Gyrus"
+  VAL="35"
+  OKEY="35"
+  GYoAR="2"
+  COG=" -52.000000 39.000000 0.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Superior Temporal Gyrus"
+  VAL="236"
+  OKEY="236"
+  GYoAR="2"
+  COG=" 51.000000 17.000000 0.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Superior Temporal Gyrus"
+  VAL="36"
+  OKEY="36"
+  GYoAR="2"
+  COG=" -51.000000 17.000000 0.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Superior Occipital Gyrus"
+  VAL="237"
+  OKEY="237"
+  GYoAR="2"
+  COG=" 37.000000 82.000000 27.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Superior Occipital Gyrus"
+  VAL="37"
+  OKEY="37"
+  GYoAR="2"
+  COG=" -37.000000 82.000000 27.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Inferior Frontal Gyrus"
+  VAL="239"
+  OKEY="239"
+  GYoAR="2"
+  COG=" 44.000000 -24.000000 2.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Inferior Frontal Gyrus"
+  VAL="39"
+  OKEY="39"
+  GYoAR="2"
+  COG=" -44.000000 -24.000000 2.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Cuneus"
+  VAL="240"
+  OKEY="240"
+  GYoAR="2"
+  COG=" 13.000000 83.000000 18.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Cuneus"
+  VAL="40"
+  OKEY="40"
+  GYoAR="2"
+  COG=" -13.000000 83.000000 18.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Angular Gyrus"
+  VAL="241"
+  OKEY="241"
+  GYoAR="2"
+  COG=" 45.000000 64.000000 33.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Angular Gyrus"
+  VAL="41"
+  OKEY="41"
+  GYoAR="2"
+  COG=" -45.000000 64.000000 33.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Supramarginal Gyrus"
+  VAL="242"
+  OKEY="242"
+  GYoAR="2"
+  COG=" 51.000000 48.000000 31.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Supramarginal Gyrus"
+  VAL="42"
+  OKEY="42"
+  GYoAR="2"
+  COG=" -51.000000 48.000000 31.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Cingulate Gyrus"
+  VAL="243"
+  OKEY="243"
+  GYoAR="2"
+  COG=" 10.000000 11.000000 34.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Cingulate Gyrus"
+  VAL="43"
+  OKEY="43"
+  GYoAR="2"
+  COG=" -10.000000 11.000000 34.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Inferior Parietal Lobule"
+  VAL="244"
+  OKEY="244"
+  GYoAR="2"
+  COG=" 48.000000 41.000000 39.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Inferior Parietal Lobule"
+  VAL="44"
+  OKEY="44"
+  GYoAR="2"
+  COG=" -48.000000 41.000000 39.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Precuneus"
+  VAL="245"
+  OKEY="245"
+  GYoAR="2"
+  COG=" 14.000000 61.000000 41.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Precuneus"
+  VAL="45"
+  OKEY="45"
+  GYoAR="2"
+  COG=" -14.000000 61.000000 41.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Superior Parietal Lobule"
+  VAL="246"
+  OKEY="246"
+  GYoAR="2"
+  COG=" 27.000000 59.000000 53.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Superior Parietal Lobule"
+  VAL="46"
+  OKEY="46"
+  GYoAR="2"
+  COG=" -27.000000 59.000000 53.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Middle Frontal Gyrus"
+  VAL="247"
+  OKEY="247"
+  GYoAR="2"
+  COG=" 37.000000 -29.000000 26.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Middle Frontal Gyrus"
+  VAL="47"
+  OKEY="47"
+  GYoAR="2"
+  COG=" -37.000000 -29.000000 26.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Paracentral Lobule"
+  VAL="248"
+  OKEY="248"
+  GYoAR="2"
+  COG=" 7.000000 32.000000 53.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Paracentral Lobule"
+  VAL="48"
+  OKEY="48"
+  GYoAR="2"
+  COG=" -7.000000 32.000000 53.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Postcentral Gyrus"
+  VAL="249"
+  OKEY="249"
+  GYoAR="2"
+  COG=" 43.000000 25.000000 43.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Postcentral Gyrus"
+  VAL="49"
+  OKEY="49"
+  GYoAR="2"
+  COG=" -43.000000 25.000000 43.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Precentral Gyrus"
+  VAL="250"
+  OKEY="250"
+  GYoAR="2"
+  COG=" 44.000000 8.000000 38.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Precentral Gyrus"
+  VAL="50"
+  OKEY="50"
+  GYoAR="2"
+  COG=" -44.000000 8.000000 38.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Superior Frontal Gyrus"
+  VAL="251"
+  OKEY="251"
+  GYoAR="2"
+  COG=" 19.000000 -40.000000 27.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Superior Frontal Gyrus"
+  VAL="51"
+  OKEY="51"
+  GYoAR="2"
+  COG=" -19.000000 -40.000000 27.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Medial Frontal Gyrus"
+  VAL="252"
+  OKEY="252"
+  GYoAR="2"
+  COG=" 9.000000 -24.000000 35.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Medial Frontal Gyrus"
+  VAL="52"
+  OKEY="52"
+  GYoAR="2"
+  COG=" -9.000000 -24.000000 35.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Lentiform Nucleus"
+  VAL="270"
+  OKEY="270"
+  GYoAR="2"
+  COG=" 22.000000 1.000000 2.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Lentiform Nucleus"
+  VAL="70"
+  OKEY="70"
+  GYoAR="2"
+  COG=" -22.000000 1.000000 2.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Hypothalamus"
+  VAL="272"
+  OKEY="272"
+  GYoAR="4"
+  COG=" 4.000000 3.000000 -9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Hypothalamus"
+  VAL="72"
+  OKEY="72"
+  GYoAR="4"
+  COG=" -4.000000 3.000000 -9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Red Nucleus"
+  VAL="273"
+  OKEY="273"
+  GYoAR="4"
+  COG=" 5.000000 19.000000 -4.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Red Nucleus"
+  VAL="73"
+  OKEY="73"
+  GYoAR="4"
+  COG=" -5.000000 19.000000 -4.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Substantia Nigra"
+  VAL="274"
+  OKEY="274"
+  GYoAR="4"
+  COG=" 11.000000 18.000000 -7.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Substantia Nigra"
+  VAL="74"
+  OKEY="74"
+  GYoAR="4"
+  COG=" -11.000000 18.000000 -7.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Claustrum"
+  VAL="275"
+  OKEY="275"
+  GYoAR="2"
+  COG=" 32.000000 1.000000 5.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Claustrum"
+  VAL="75"
+  OKEY="75"
+  GYoAR="2"
+  COG=" -32.000000 1.000000 5.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Thalamus"
+  VAL="276"
+  OKEY="276"
+  GYoAR="2"
+  COG=" 12.000000 19.000000 8.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Thalamus"
+  VAL="76"
+  OKEY="76"
+  GYoAR="2"
+  COG=" -12.000000 19.000000 8.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Caudate"
+  VAL="277"
+  OKEY="277"
+  GYoAR="2"
+  COG=" 11.000000 -7.000000 9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Caudate"
+  VAL="77"
+  OKEY="77"
+  GYoAR="2"
+  COG=" -11.000000 -7.000000 9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Caudate Tail"
+  VAL="324"
+  OKEY="324"
+  GYoAR="4"
+  COG=" 27.000000 35.000000 9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Caudate Tail"
+  VAL="124"
+  OKEY="124"
+  GYoAR="4"
+  COG=" -27.000000 35.000000 9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Caudate Body"
+  VAL="325"
+  OKEY="325"
+  GYoAR="4"
+  COG=" 12.000000 -6.000000 14.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Caudate Body"
+  VAL="125"
+  OKEY="125"
+  GYoAR="4"
+  COG=" -12.000000 -6.000000 14.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Caudate Head"
+  VAL="326"
+  OKEY="326"
+  GYoAR="4"
+  COG=" 9.000000 -13.000000 0.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Caudate Head"
+  VAL="126"
+  OKEY="126"
+  GYoAR="4"
+  COG=" -9.000000 -13.000000 0.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Ventral Anterior Nucleus"
+  VAL="328"
+  OKEY="328"
+  GYoAR="4"
+  COG=" 11.000000 6.000000 9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Ventral Anterior Nucleus"
+  VAL="128"
+  OKEY="128"
+  GYoAR="4"
+  COG=" -11.000000 6.000000 9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Ventral Posterior Medial Nucleus"
+  VAL="329"
+  OKEY="329"
+  GYoAR="4"
+  COG=" 15.000000 20.000000 4.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Ventral Posterior Medial Nucleus"
+  VAL="129"
+  OKEY="129"
+  GYoAR="4"
+  COG=" -15.000000 20.000000 4.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Ventral Posterior Lateral Nucleus"
+  VAL="330"
+  OKEY="330"
+  GYoAR="4"
+  COG=" 18.000000 19.000000 5.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Ventral Posterior Lateral Nucleus"
+  VAL="130"
+  OKEY="130"
+  GYoAR="4"
+  COG=" -18.000000 19.000000 5.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Medial Dorsal Nucleus"
+  VAL="331"
+  OKEY="331"
+  GYoAR="4"
+  COG=" 6.000000 16.000000 8.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Medial Dorsal Nucleus"
+  VAL="131"
+  OKEY="131"
+  GYoAR="4"
+  COG=" -6.000000 16.000000 8.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Lateral Dorsal Nucleus"
+  VAL="332"
+  OKEY="332"
+  GYoAR="4"
+  COG=" 12.000000 20.000000 16.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Lateral Dorsal Nucleus"
+  VAL="132"
+  OKEY="132"
+  GYoAR="4"
+  COG=" -12.000000 20.000000 16.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Pulvinar"
+  VAL="333"
+  OKEY="333"
+  GYoAR="4"
+  COG=" 16.000000 27.000000 8.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Pulvinar"
+  VAL="133"
+  OKEY="133"
+  GYoAR="4"
+  COG=" -16.000000 27.000000 8.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Lateral Posterior Nucleus"
+  VAL="334"
+  OKEY="334"
+  GYoAR="4"
+  COG=" 17.000000 20.000000 14.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Lateral Posterior Nucleus"
+  VAL="134"
+  OKEY="134"
+  GYoAR="4"
+  COG=" -17.000000 20.000000 14.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Ventral Lateral Nucleus"
+  VAL="335"
+  OKEY="335"
+  GYoAR="4"
+  COG=" 14.000000 12.000000 9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Ventral Lateral Nucleus"
+  VAL="135"
+  OKEY="135"
+  GYoAR="4"
+  COG=" -14.000000 12.000000 9.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Midline Nucleus"
+  VAL="336"
+  OKEY="336"
+  GYoAR="4"
+  COG=" 7.000000 18.000000 16.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Midline Nucleus"
+  VAL="136"
+  OKEY="136"
+  GYoAR="4"
+  COG=" -7.000000 18.000000 16.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Anterior Nucleus"
+  VAL="337"
+  OKEY="337"
+  GYoAR="4"
+  COG=" 8.000000 8.000000 12.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Anterior Nucleus"
+  VAL="137"
+  OKEY="137"
+  GYoAR="4"
+  COG=" -8.000000 8.000000 12.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Mammillary Body"
+  VAL="338"
+  OKEY="338"
+  GYoAR="4"
+  COG=" 11.000000 20.000000 2.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Mammillary Body"
+  VAL="138"
+  OKEY="138"
+  GYoAR="4"
+  COG=" -11.000000 20.000000 2.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Medial Globus Pallidus"
+  VAL="344"
+  OKEY="344"
+  GYoAR="4"
+  COG=" 15.000000 4.000000 -2.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Medial Globus Pallidus"
+  VAL="144"
+  OKEY="144"
+  GYoAR="4"
+  COG=" -15.000000 4.000000 -2.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Lateral Globus Pallidus"
+  VAL="345"
+  OKEY="345"
+  GYoAR="4"
+  COG=" 20.000000 5.000000 0.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Lateral Globus Pallidus"
+  VAL="145"
+  OKEY="145"
+  GYoAR="4"
+  COG=" -20.000000 5.000000 0.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Putamen"
+  VAL="351"
+  OKEY="351"
+  GYoAR="4"
+  COG=" 24.000000 0.000000 3.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Putamen"
+  VAL="151"
+  OKEY="151"
+  GYoAR="4"
+  COG=" -24.000000 0.000000 3.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Nucleus Accumbens"
+  VAL="346"
+  OKEY="346"
+  GYoAR="4"
+  COG=" 12.000000 -8.000000 -8.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Nucleus Accumbens"
+  VAL="146"
+  OKEY="146"
+  GYoAR="4"
+  COG=" -12.000000 -8.000000 -8.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Medial Geniculum Body"
+  VAL="347"
+  OKEY="347"
+  GYoAR="4"
+  COG=" 17.000000 24.000000 -2.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Medial Geniculum Body"
+  VAL="147"
+  OKEY="147"
+  GYoAR="4"
+  COG=" -17.000000 24.000000 -2.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Lateral Geniculum Body"
+  VAL="348"
+  OKEY="348"
+  GYoAR="4"
+  COG=" 22.000000 24.000000 -1.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Lateral Geniculum Body"
+  VAL="148"
+  OKEY="148"
+  GYoAR="4"
+  COG=" -22.000000 24.000000 -1.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Subthalamic Nucleus"
+  VAL="349"
+  OKEY="349"
+  GYoAR="4"
+  COG=" 10.000000 13.000000 -3.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Subthalamic Nucleus"
+  VAL="149"
+  OKEY="149"
+  GYoAR="4"
+  COG=" -10.000000 13.000000 -3.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 1"
+  VAL="281"
+  OKEY="281"
+  GYoAR="4"
+  COG=" 53.000000 19.000000 50.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 1"
+  VAL="81"
+  OKEY="81"
+  GYoAR="4"
+  COG=" -53.000000 19.000000 50.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 2"
+  VAL="282"
+  OKEY="282"
+  GYoAR="4"
+  COG=" 49.000000 26.000000 43.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 2"
+  VAL="82"
+  OKEY="82"
+  GYoAR="4"
+  COG=" -49.000000 26.000000 43.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 3"
+  VAL="283"
+  OKEY="283"
+  GYoAR="4"
+  COG=" 39.000000 23.000000 50.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 3"
+  VAL="83"
+  OKEY="83"
+  GYoAR="4"
+  COG=" -39.000000 23.000000 50.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 4"
+  VAL="284"
+  OKEY="284"
+  GYoAR="4"
+  COG=" 39.000000 18.000000 49.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 4"
+  VAL="84"
+  OKEY="84"
+  GYoAR="4"
+  COG=" -39.000000 18.000000 49.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 5"
+  VAL="285"
+  OKEY="285"
+  GYoAR="4"
+  COG=" 16.000000 40.000000 57.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 5"
+  VAL="85"
+  OKEY="85"
+  GYoAR="4"
+  COG=" -16.000000 40.000000 57.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 6"
+  VAL="286"
+  OKEY="286"
+  GYoAR="4"
+  COG=" 29.000000 0.000000 50.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 6"
+  VAL="86"
+  OKEY="86"
+  GYoAR="4"
+  COG=" -29.000000 0.000000 50.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 7"
+  VAL="287"
+  OKEY="287"
+  GYoAR="4"
+  COG=" 16.000000 60.000000 48.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 7"
+  VAL="87"
+  OKEY="87"
+  GYoAR="4"
+  COG=" -16.000000 60.000000 48.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 8"
+  VAL="288"
+  OKEY="288"
+  GYoAR="4"
+  COG=" 24.000000 -30.000000 44.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 8"
+  VAL="88"
+  OKEY="88"
+  GYoAR="4"
+  COG=" -24.000000 -30.000000 44.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 9"
+  VAL="289"
+  OKEY="289"
+  GYoAR="4"
+  COG=" 32.000000 -33.000000 30.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 9"
+  VAL="89"
+  OKEY="89"
+  GYoAR="4"
+  COG=" -32.000000 -33.000000 30.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 10"
+  VAL="290"
+  OKEY="290"
+  GYoAR="4"
+  COG=" 24.000000 -56.000000 6.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 10"
+  VAL="90"
+  OKEY="90"
+  GYoAR="4"
+  COG=" -24.000000 -56.000000 6.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 11"
+  VAL="291"
+  OKEY="291"
+  GYoAR="4"
+  COG=" 17.000000 -43.000000 -18.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 11"
+  VAL="91"
+  OKEY="91"
+  GYoAR="4"
+  COG=" -17.000000 -43.000000 -18.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 13"
+  VAL="293"
+  OKEY="293"
+  GYoAR="4"
+  COG=" 39.000000 4.000000 8.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 13"
+  VAL="93"
+  OKEY="93"
+  GYoAR="4"
+  COG=" -39.000000 4.000000 8.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 17"
+  VAL="294"
+  OKEY="294"
+  GYoAR="4"
+  COG=" 10.000000 88.000000 5.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 17"
+  VAL="94"
+  OKEY="94"
+  GYoAR="4"
+  COG=" -10.000000 88.000000 5.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 18"
+  VAL="295"
+  OKEY="295"
+  GYoAR="4"
+  COG=" 19.000000 85.000000 4.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 18"
+  VAL="95"
+  OKEY="95"
+  GYoAR="4"
+  COG=" -19.000000 85.000000 4.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 19"
+  VAL="296"
+  OKEY="296"
+  GYoAR="4"
+  COG=" 34.000000 80.000000 18.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 19"
+  VAL="96"
+  OKEY="96"
+  GYoAR="4"
+  COG=" -34.000000 80.000000 18.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 20"
+  VAL="297"
+  OKEY="297"
+  GYoAR="4"
+  COG=" 47.000000 21.000000 -23.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 20"
+  VAL="97"
+  OKEY="97"
+  GYoAR="4"
+  COG=" -47.000000 21.000000 -23.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 21"
+  VAL="298"
+  OKEY="298"
+  GYoAR="4"
+  COG=" 58.000000 18.000000 -10.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 21"
+  VAL="98"
+  OKEY="98"
+  GYoAR="4"
+  COG=" -58.000000 18.000000 -10.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 22"
+  VAL="299"
+  OKEY="299"
+  GYoAR="4"
+  COG=" 57.000000 23.000000 5.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 22"
+  VAL="99"
+  OKEY="99"
+  GYoAR="4"
+  COG=" -57.000000 23.000000 5.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 23"
+  VAL="300"
+  OKEY="300"
+  GYoAR="4"
+  COG=" 4.000000 37.000000 24.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 23"
+  VAL="100"
+  OKEY="100"
+  GYoAR="4"
+  COG=" -4.000000 37.000000 24.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 24"
+  VAL="301"
+  OKEY="301"
+  GYoAR="4"
+  COG=" 6.000000 -6.000000 30.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 24"
+  VAL="101"
+  OKEY="101"
+  GYoAR="4"
+  COG=" -6.000000 -6.000000 30.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 25"
+  VAL="302"
+  OKEY="302"
+  GYoAR="4"
+  COG=" 6.000000 -15.000000 -13.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 25"
+  VAL="102"
+  OKEY="102"
+  GYoAR="4"
+  COG=" -6.000000 -15.000000 -13.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 27"
+  VAL="303"
+  OKEY="303"
+  GYoAR="4"
+  COG=" 15.000000 35.000000 0.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 27"
+  VAL="103"
+  OKEY="103"
+  GYoAR="4"
+  COG=" -15.000000 35.000000 0.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 28"
+  VAL="304"
+  OKEY="304"
+  GYoAR="4"
+  COG=" 22.000000 -2.000000 -24.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 28"
+  VAL="104"
+  OKEY="104"
+  GYoAR="4"
+  COG=" -22.000000 -2.000000 -24.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 29"
+  VAL="305"
+  OKEY="305"
+  GYoAR="4"
+  COG=" 6.000000 48.000000 11.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 29"
+  VAL="105"
+  OKEY="105"
+  GYoAR="4"
+  COG=" -6.000000 48.000000 11.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 30"
+  VAL="306"
+  OKEY="306"
+  GYoAR="4"
+  COG=" 13.000000 62.000000 10.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 30"
+  VAL="106"
+  OKEY="106"
+  GYoAR="4"
+  COG=" -13.000000 62.000000 10.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 31"
+  VAL="307"
+  OKEY="307"
+  GYoAR="4"
+  COG=" 9.000000 47.000000 32.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 31"
+  VAL="107"
+  OKEY="107"
+  GYoAR="4"
+  COG=" -9.000000 47.000000 32.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 32"
+  VAL="308"
+  OKEY="308"
+  GYoAR="4"
+  COG=" 8.000000 -24.000000 30.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 32"
+  VAL="108"
+  OKEY="108"
+  GYoAR="4"
+  COG=" -8.000000 -24.000000 30.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 33"
+  VAL="309"
+  OKEY="309"
+  GYoAR="4"
+  COG=" 5.000000 -12.000000 24.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 33"
+  VAL="109"
+  OKEY="109"
+  GYoAR="4"
+  COG=" -5.000000 -12.000000 24.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 34"
+  VAL="310"
+  OKEY="310"
+  GYoAR="4"
+  COG=" 18.000000 0.000000 -16.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 34"
+  VAL="110"
+  OKEY="110"
+  GYoAR="4"
+  COG=" -18.000000 0.000000 -16.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 35"
+  VAL="311"
+  OKEY="311"
+  GYoAR="4"
+  COG=" 23.000000 25.000000 -15.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 35"
+  VAL="111"
+  OKEY="111"
+  GYoAR="4"
+  COG=" -23.000000 25.000000 -15.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 36"
+  VAL="312"
+  OKEY="312"
+  GYoAR="4"
+  COG=" 33.000000 33.000000 -15.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 36"
+  VAL="112"
+  OKEY="112"
+  GYoAR="4"
+  COG=" -33.000000 33.000000 -15.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 37"
+  VAL="313"
+  OKEY="313"
+  GYoAR="4"
+  COG=" 48.000000 55.000000 -7.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 37"
+  VAL="113"
+  OKEY="113"
+  GYoAR="4"
+  COG=" -48.000000 55.000000 -7.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 38"
+  VAL="314"
+  OKEY="314"
+  GYoAR="4"
+  COG=" 41.000000 -12.000000 -23.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 38"
+  VAL="114"
+  OKEY="114"
+  GYoAR="4"
+  COG=" -41.000000 -12.000000 -23.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 39"
+  VAL="315"
+  OKEY="315"
+  GYoAR="4"
+  COG=" 48.000000 64.000000 28.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 39"
+  VAL="115"
+  OKEY="115"
+  GYoAR="4"
+  COG=" -48.000000 64.000000 28.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 40"
+  VAL="316"
+  OKEY="316"
+  GYoAR="4"
+  COG=" 51.000000 40.000000 38.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 40"
+  VAL="116"
+  OKEY="116"
+  GYoAR="4"
+  COG=" -51.000000 40.000000 38.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 41"
+  VAL="317"
+  OKEY="317"
+  GYoAR="4"
+  COG=" 47.000000 26.000000 11.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 41"
+  VAL="117"
+  OKEY="117"
+  GYoAR="4"
+  COG=" -47.000000 26.000000 11.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 42"
+  VAL="318"
+  OKEY="318"
+  GYoAR="4"
+  COG=" 63.000000 22.000000 12.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 42"
+  VAL="118"
+  OKEY="118"
+  GYoAR="4"
+  COG=" -63.000000 22.000000 12.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 43"
+  VAL="319"
+  OKEY="319"
+  GYoAR="4"
+  COG=" 58.000000 10.000000 16.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 43"
+  VAL="119"
+  OKEY="119"
+  GYoAR="4"
+  COG=" -58.000000 10.000000 16.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 44"
+  VAL="320"
+  OKEY="320"
+  GYoAR="4"
+  COG=" 53.000000 -11.000000 12.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 44"
+  VAL="120"
+  OKEY="120"
+  GYoAR="4"
+  COG=" -53.000000 -11.000000 12.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 45"
+  VAL="321"
+  OKEY="321"
+  GYoAR="4"
+  COG=" 54.000000 -23.000000 10.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 45"
+  VAL="121"
+  OKEY="121"
+  GYoAR="4"
+  COG=" -54.000000 -23.000000 10.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 46"
+  VAL="322"
+  OKEY="322"
+  GYoAR="4"
+  COG=" 50.000000 -38.000000 16.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 46"
+  VAL="122"
+  OKEY="122"
+  GYoAR="4"
+  COG=" -50.000000 -38.000000 16.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Brodmann area 47"
+  VAL="323"
+  OKEY="323"
+  GYoAR="4"
+  COG=" 38.000000 -24.000000 -11.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brodmann area 47"
+  VAL="123"
+  OKEY="123"
+  GYoAR="4"
+  COG=" -38.000000 -24.000000 -11.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Uvula of Vermis"
+  VAL="253"
+  OKEY="253"
+  GYoAR="2"
+  COG=" 2.000000 65.000000 -32.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Uvula of Vermis"
+  VAL="53"
+  OKEY="53"
+  GYoAR="2"
+  COG=" -2.000000 65.000000 -32.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Pyramis of Vermis"
+  VAL="254"
+  OKEY="254"
+  GYoAR="2"
+  COG=" 2.000000 73.000000 -28.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Pyramis of Vermis"
+  VAL="54"
+  OKEY="54"
+  GYoAR="2"
+  COG=" -2.000000 73.000000 -28.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Tuber of Vermis"
+  VAL="255"
+  OKEY="255"
+  GYoAR="2"
+  COG=" 2.000000 71.000000 -24.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Tuber of Vermis"
+  VAL="55"
+  OKEY="55"
+  GYoAR="2"
+  COG=" -2.000000 71.000000 -24.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Declive of Vermis"
+  VAL="256"
+  OKEY="256"
+  GYoAR="2"
+  COG=" 2.000000 72.000000 -17.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Declive of Vermis"
+  VAL="56"
+  OKEY="56"
+  GYoAR="2"
+  COG=" -2.000000 72.000000 -17.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Culmen of Vermis"
+  VAL="257"
+  OKEY="257"
+  GYoAR="2"
+  COG=" 3.000000 63.000000 -3.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Culmen of Vermis"
+  VAL="57"
+  OKEY="57"
+  GYoAR="2"
+  COG=" -3.000000 63.000000 -3.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Cerebellar Tonsil"
+  VAL="258"
+  OKEY="258"
+  GYoAR="2"
+  COG=" 28.000000 51.000000 -36.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Cerebellar Tonsil"
+  VAL="58"
+  OKEY="58"
+  GYoAR="2"
+  COG=" -28.000000 51.000000 -36.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Inferior Semi-Lunar Lobule"
+  VAL="259"
+  OKEY="259"
+  GYoAR="2"
+  COG=" 29.000000 71.000000 -38.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Inferior Semi-Lunar Lobule"
+  VAL="59"
+  OKEY="59"
+  GYoAR="2"
+  COG=" -29.000000 71.000000 -38.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Fastigium"
+  VAL="260"
+  OKEY="260"
+  GYoAR="2"
+  COG=" 7.000000 54.000000 -20.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Fastigium"
+  VAL="60"
+  OKEY="60"
+  GYoAR="2"
+  COG=" -7.000000 54.000000 -20.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Nodule"
+  VAL="261"
+  OKEY="261"
+  GYoAR="2"
+  COG=" 7.000000 55.000000 -27.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Nodule"
+  VAL="61"
+  OKEY="61"
+  GYoAR="2"
+  COG=" -7.000000 55.000000 -27.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Uvula"
+  VAL="262"
+  OKEY="262"
+  GYoAR="2"
+  COG=" 21.000000 76.000000 -26.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Uvula"
+  VAL="62"
+  OKEY="62"
+  GYoAR="2"
+  COG=" -21.000000 76.000000 -26.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Pyramis"
+  VAL="263"
+  OKEY="263"
+  GYoAR="2"
+  COG=" 27.000000 74.000000 -30.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Pyramis"
+  VAL="63"
+  OKEY="63"
+  GYoAR="2"
+  COG=" -27.000000 74.000000 -30.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Culmen"
+  VAL="266"
+  OKEY="266"
+  GYoAR="2"
+  COG=" 20.000000 46.000000 -16.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Culmen"
+  VAL="66"
+  OKEY="66"
+  GYoAR="2"
+  COG=" -20.000000 46.000000 -16.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Declive"
+  VAL="265"
+  OKEY="265"
+  GYoAR="2"
+  COG=" 26.000000 69.000000 -17.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Declive"
+  VAL="65"
+  OKEY="65"
+  GYoAR="2"
+  COG=" -26.000000 69.000000 -17.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Dentate"
+  VAL="327"
+  OKEY="327"
+  GYoAR="4"
+  COG=" 14.000000 54.000000 -23.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Dentate"
+  VAL="127"
+  OKEY="127"
+  GYoAR="4"
+  COG=" -14.000000 54.000000 -23.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Tuber"
+  VAL="264"
+  OKEY="264"
+  GYoAR="2"
+  COG=" 44.000000 71.000000 -27.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Tuber"
+  VAL="64"
+  OKEY="64"
+  GYoAR="2"
+  COG=" -44.000000 71.000000 -27.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left  Cerebellar Lingual"
+  VAL="267"
+  OKEY="267"
+  GYoAR="2"
+  COG=" 4.000000 45.000000 -13.000000" />
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Cerebellar Lingual"
+  VAL="67"
+  OKEY="67"
+  GYoAR="2"
+  COG=" -4.000000 45.000000 -13.000000" />
+</atlas_point_list>~
