@@ -1,0 +1,171 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 6313
+'[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:22 2014] ===================================\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:22 2014] === History of inputs to 3dcalc ===\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:22 2014] === Input a:\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:22 2014] [dglen@gollum.nimh.nih.gov: Wed Sep 17 17:48:10 2014] ===================================\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:48:10 2014] === History of inputs to 3dcalc ===\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:48:10 2014] === Input a:\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:48:10 2014] [dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] ===================================\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] === History of inputs to 3dcalc ===\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] === Input a:\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] === Input b:\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] ===================================\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] 3dcalc -a mni_icbm152_t1_tal_nlin_asym_09c.nii -b mni_icbm152_t1_tal_nlin_asym_09c_mask.nii -expr 'a*step(b)*255/97.66312' -datum byte -nscale -prefix MNI152_T1_2009c\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:48:08 2014] 3dresample -rmode Cu -master __ats_tmp__ref_TT_N27_40pad+tlrc -inset MNI152_T1_2009c+tlrc -prefix ./__ats_tmp__resamp_edge_art\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:48:10 2014] === Input b:\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:48:10 2014] [dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] ===================================\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] === History of inputs to 3dcalc ===\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] === Input a:\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] === Input b:\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] ===================================\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] 3dcalc -a mni_icbm152_t1_tal_nlin_asym_09c.nii -b mni_icbm152_t1_tal_nlin_asym_09c_mask.nii -expr 'a*step(b)*255/97.66312' -datum byte -nscale -prefix MNI152_T1_2009c\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:48:09 2014] 3dcalc -a MNI152_T1_2009c+tlrc -expr 'step(a)*10000' -prefix ./__ats_tmp__resamp_step\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:48:10 2014] 3dresample -rmode Linear -master __ats_tmp__ref_TT_N27_40pad+tlrc -inset __ats_tmp__resamp_step+tlrc -prefix ./__ats_tmp__resamp_NN\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:48:10 2014] ===================================\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:48:10 2014] 3dcalc -a __ats_tmp__resamp_edge_art+tlrc. -b __ats_tmp__resamp_NN+tlrc. -expr 'a*step(b-5000)' -prefix ./__ats_tmp__resamp\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:48:11 2014] 3dcalc -a __ats_tmp__resamp+tlrc -expr 'a*step(a--0.000100)*step(255.000100-a) + 0*step(0-a) + 255*step(a-255)' -prefix __ats_tmp___rs_MNI152_T1_2009c\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:19 2014] 3dcalc -a __ats_tmp___rs_MNI152_T1_2009c+tlrc -expr 'step(a)*10000' -prefix ./__ats_tmp__reg_braintlrcstep\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:22 2014] 3dWarp -matparent __ats_tmp__reg_warpdriveout+tlrc -gridset __ats_tmp___pad40_MNI152_T1_2009c_TTN27+tlrc -linear -prefix ./__ats_tmp__reg_braintlrcmask __ats_tmp__reg_braintlrcstep+tlrc\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:22 2014] === Input b:\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:22 2014] [dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] ===================================\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] === History of inputs to 3dcalc ===\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] === Input a:\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] === Input b:\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] ===================================\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:37:45 2014] 3dcalc -a mni_icbm152_t1_tal_nlin_asym_09c.nii -b mni_icbm152_t1_tal_nlin_asym_09c_mask.nii -expr 'a*step(b)*255/97.66312' -datum byte -nscale -prefix MNI152_T1_2009c\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:19 2014] 3dWarp -matvec_out2in MNI152_T1_2009c_TTN27.Xat.1D -linear -prefix ./__ats_tmp___pad40_MNI152_T1_2009c_TTN27 -gridset __ats_tmp__gridout+tlrc MNI152_T1_2009c+tlrc.\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:22 2014] ===================================\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:22 2014] 3dcalc -a __ats_tmp__reg_braintlrcmask+tlrc -b __ats_tmp___pad40_MNI152_T1_2009c_TTN27.skl+tlrc -expr 'step(a-5000)*b' -prefix ./__ats_tmp___pad40_MNI152_T1_2009c_TTN27+tlrc\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:23 2014] 3drefit -atrcopy __ats_tmp___pad40_MNI152_T1_2009c_TTN27.skl+tlrc WARPDRIVE_MATVEC_FOR_000000 __ats_tmp___pad40_MNI152_T1_2009c_TTN27+tlrc\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:23 2014] 3drefit -atrcopy __ats_tmp___pad40_MNI152_T1_2009c_TTN27.skl+tlrc WARPDRIVE_MATVEC_FOR_000000 __ats_tmp___pad40_MNI152_T1_2009c_TTN27+tlrc\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:23 2014] 3drefit -atrcopy __ats_tmp___pad40_MNI152_T1_2009c_TTN27.skl+tlrc WARPDRIVE_MATVEC_INV_000000 __ats_tmp___pad40_MNI152_T1_2009c_TTN27+tlrc\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:23 2014] 3dZeropad -I -40 -S -40 -A -40 -P -40 -L -40 -R -40 -mm -prefix ./__ats_tmp___upad40_MNI152_T1_2009c_TTN27 __ats_tmp___pad40_MNI152_T1_2009c_TTN27+tlrc\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:23 2014] 3drefit -atrcopy __ats_tmp___pad40_MNI152_T1_2009c_TTN27+tlrc WARPDRIVE_MATVEC_FOR_000000 __ats_tmp___upad40_MNI152_T1_2009c_TTN27+tlrc\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:23 2014] 3drefit -atrcopy __ats_tmp___pad40_MNI152_T1_2009c_TTN27+tlrc WARPDRIVE_MATVEC_FOR_000000 __ats_tmp___upad40_MNI152_T1_2009c_TTN27+tlrc\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:23 2014] 3drefit -atrcopy __ats_tmp___pad40_MNI152_T1_2009c_TTN27+tlrc WARPDRIVE_MATVEC_INV_000000 __ats_tmp___upad40_MNI152_T1_2009c_TTN27+tlrc\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:23 2014] 3drefit -space TT_N27 __ats_tmp___upad40_MNI152_T1_2009c_TTN27+tlrc\n[dglen@gollum.nimh.nih.gov: Wed Sep 17 17:49:23 2014] Dataset created via: @auto_tlrc -base TT_N27+tlrc -suffix _TTN27 -no_ss -input MNI152_T1_2009c+tlrc.~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_0QTpmoq6UKtjlUyX5ZswdQ~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Wed Sep 17 17:49:23 2014~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 2 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 3 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+            -80            -80            -65
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              1              1              1
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              1              0              0            -80              0
+              1              0            -80              0              0
+              1            -65
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              1              0              0            -80              0
+              1              0            -80              0              0
+              1            -65
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0            251
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 161 191 151 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 0
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 3
+'#0~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 7
+'TT_N27~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 0
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~
+
+type  = float-attribute
+name  = WARPDRIVE_MATVEC_FOR_000000
+count = 12
+        1.07726    -0.00861218    -0.00948256        1.20896      0.0223923
+        1.08467      -0.112086      -0.648037    -0.00802416      0.0843936
+        1.16677          -3.97
+
+type  = float-attribute
+name  = WARPDRIVE_MATVEC_INV_000000
+count = 12
+       0.928202    0.006732575    0.008190439       -1.08528    -0.01836521
+      0.9149663     0.08774717      0.9634911    0.007711844     -0.0661341
+      0.8507764       3.325402
+
+type = string-attribute
+name = WARP_PARENTNAME
+count = 8
+'Not_Set~
+
+type = integer-attribute
+name = WARP_TYPE
+count = 8
+ 0 0 -999 -999 -999
+ -999 -999 -999
+
+type  = float-attribute
+name  = WARP_DATA
+count = 30
+       0.928202    0.006732575    0.008190439    -0.01836521      0.9149663
+     0.08774717    0.007711844     -0.0661341      0.8507764        1.07726
+   -0.008612181   -0.009482561     0.02239231        1.08467      -0.112086
+   -0.008024162     0.08439362        1.16677        1.08528     -0.9634911
+      -3.325402       -1.20896       0.648037       3.970001           -160
+           -160           -130            160            220            170
+
+type = integer-attribute
+name = NOTES_COUNT
+count = 1
+ 1
+
+type = string-attribute
+name = NOTE_NUMBER_001
+count = 101
+'Dataset created via: @auto_tlrc -base TT_N27+tlrc -suffix _TTN27 -no_ss -input MNI152_T1_2009c+tlrc.~
+
+type = string-attribute
+name = NOTE_DATE_001
+count = 25
+'Wed Sep 17 17:49:23 2014~

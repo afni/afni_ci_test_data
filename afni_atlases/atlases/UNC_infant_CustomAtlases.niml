@@ -1,0 +1,146 @@
+# Rename this file to be CustomAtlases.niml, put in a specified directory (e.g. UNC_Infant_Atlases)
+
+# Set AFNI to use this supplemental atlas directory with this (removing the #) :
+# @AfniEnv -set AFNI_SUPP_ATLAS_DIR ~/UNC_Infant_Atlases
+# @AfniEnv -set AFNI_ATLAS_COLORS=infant-1yr-aal
+# @AfniEnv -set AFNI_TEMPLATE_SPACE_LIST=unc_infant_neo,unc_infant_1yr,unc_infant_2yr
+# @AfniEnv -set AFNI_ATLAS_LIST=ALL
+
+<TEMPLATE_SPACE
+  space_name="unc_infant_neo"
+  generic_space="unc_infant_neo"
+  comment="UNC infant neonate, Feng Shi, 2011" 
+></TEMPLATE>
+
+<TEMPLATE_SPACE
+  space_name="unc_infant_1yr"
+  generic_space="unc_infant_1yr"
+ comment="UNC infant neonate, Feng Shi, 2011" 
+></TEMPLATE>
+
+<TEMPLATE_SPACE
+  space_name="unc_infant_2yr"
+  generic_space="unc_infant_2yr"
+  comment="UNC infant neonate, Feng Shi, 2011" 
+></TEMPLATE>
+
+<ATLAS
+  atlas_name="infant-neo-aal"
+  dset_name="infant-neo-aal.nii.gz"
+  template_space="unc_infant_neo"
+  description="UNC Infant Neonate Atlas"
+  comment="Please cite:
+     Feng Shi, Pew-Thian Yap, Guorong Wu, Hongjun Jia, John H. Gilmore, Weili Lin, Dinggang Shen,
+     Infant Brain Atlases from Neonates to 1- and 2-year-olds, PLoS ONE, 6(4): e18746, Apr. 2011.
+     doi:10.1371/journal.pone.0018746" 
+></ATLAS>
+
+<ATLAS
+  atlas_name="infant-1yr-aal"
+  dset_name="infant-1yr-aal.nii.gz"
+  template_space="unc_infant_1yr"
+  description="UNC Infant 1 Year Old Atlas"
+  comment="Please cite:
+     Feng Shi, Pew-Thian Yap, Guorong Wu, Hongjun Jia, John H. Gilmore, Weili Lin, Dinggang Shen,
+     Infant Brain Atlases from Neonates to 1- and 2-year-olds, PLoS ONE, 6(4): e18746, Apr. 2011.
+     doi:10.1371/journal.pone.0018746" 
+></ATLAS>
+
+<ATLAS
+  atlas_name="infant-2yr-aal"
+  dset_name="infant-2yr-aal.nii.gz"
+  template_space="unc_infant_2yr"
+  description="UNC Infant 2 Year Old Atlas"
+  comment="Please cite:
+     Feng Shi, Pew-Thian Yap, Guorong Wu, Hongjun Jia, John H. Gilmore, Weili Lin, Dinggang Shen,
+     Infant Brain Atlases from Neonates to 1- and 2-year-olds, PLoS ONE, 6(4): e18746, Apr. 2011.
+     doi:10.1371/journal.pone.0018746" 
+></ATLAS>
+
+<ATLAS
+  atlas_name="infant-neo-pmaps"
+  dset_name="infant-neo-pmaps+tlrc"
+  template_space="unc_infant_neo"
+  description="UNC Infant Neonate Atlas - probability maps"
+  comment="Please cite:
+     Feng Shi, Pew-Thian Yap, Guorong Wu, Hongjun Jia, John H. Gilmore, Weili Lin, Dinggang Shen,
+     Infant Brain Atlases from Neonates to 1- and 2-year-olds, PLoS ONE, 6(4): e18746, Apr. 2011.
+     doi:10.1371/journal.pone.0018746" 
+></ATLAS>
+
+<ATLAS
+  atlas_name="infant-1yr-pmaps"
+  dset_name="infant-1yr-pmaps+tlrc"
+  template_space="unc_infant_1yr"
+  description="UNC Infant 1 Year Old Atlas - probability maps"
+  comment="Please cite:
+     Feng Shi, Pew-Thian Yap, Guorong Wu, Hongjun Jia, John H. Gilmore, Weili Lin, Dinggang Shen,
+     Infant Brain Atlases from Neonates to 1- and 2-year-olds, PLoS ONE, 6(4): e18746, Apr. 2011.
+     doi:10.1371/journal.pone.0018746" 
+></ATLAS>
+
+<ATLAS
+  atlas_name="infant-2yr-pmaps"
+  dset_name="infant-2yr-pmaps+tlrc"
+  template_space="unc_infant_2yr"
+  description="UNC Infant 2 Year Old Atlas - probability maps"
+  comment="Please cite:
+     Feng Shi, Pew-Thian Yap, Guorong Wu, Hongjun Jia, John H. Gilmore, Weili Lin, Dinggang Shen,
+     Infant Brain Atlases from Neonates to 1- and 2-year-olds, PLoS ONE, 6(4): e18746, Apr. 2011.
+     doi:10.1371/journal.pone.0018746" 
+></ATLAS>
+
+
+<TEMPLATE
+   template_name="infant-neo.nii.gz"
+   template_space="unc_infant_neo"
+   comment="UNC infant neo template" 
+></TEMPLATE>
+
+<TEMPLATE
+   template_name="infant-1yr.nii.gz"
+   template_space="unc_infant_1yr"
+   comment="UNC infant 1yr template" 
+></TEMPLATE>
+
+<TEMPLATE
+   template_name="infant-2yr.nii.gz"
+   template_space="unc_infant_2yr"
+   comment="UNC infant 2yr template" 
+></TEMPLATE>
+
+<TEMPLATE
+   template_name="infant-neo-withCerebellum.nii.gz"
+   template_space="unc_infant_neo"
+   comment="UNC infant neo with cerebellum template" 
+></TEMPLATE>
+
+<TEMPLATE
+   template_name="infant-1yr-withCerebellum.nii.gz"
+   template_space="unc_infant_1yr"
+   comment="UNC infant 1yr with cerebellum template" 
+></TEMPLATE>
+
+<TEMPLATE
+   template_name="infant-2yr-withCerebellum.nii.gz"
+   template_space="unc_infant_2yr"
+   comment="UNC infant 2yr with cerebellum template" 
+></TEMPLATE>
+
+<TEMPLATE
+   template_name="infant-neo-withSkull.nii.gz"
+   template_space="unc_infant_neo"
+   comment="UNC infant neo with skull template" 
+></TEMPLATE>
+
+<TEMPLATE
+   template_name="infant-1yr-withSkull.nii.gz"
+   template_space="unc_infant_1yr"
+   comment="UNC infant 1yr with skull template" 
+></TEMPLATE>
+
+<TEMPLATE
+   template_name="infant-2yr-withSkull.nii.gz"
+   template_space="unc_infant_2yr"
+   comment="UNC infant 2yr with skull template" 
+></TEMPLATE>
