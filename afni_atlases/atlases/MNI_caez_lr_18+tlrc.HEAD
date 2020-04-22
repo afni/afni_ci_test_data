@@ -1,0 +1,153 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 678
+'Cytoarchitectonic - Eickhoff, Zilles, Version 1.8\n[dglen@gollum.nimh.nih.gov: Tue Sep  4 15:22:40 2012] 3drefit -atrstring ATLAS_LABEL_TABLE file:lr.niml caez_lr_18+tlrc\n[dglen@gollum.nimh.nih.gov: Tue Apr 16 16:18:19 2013] 3dcopy /Users/dglen/abin/MNIa_caez_lr_18+tlrc MNI_caez_lr_18\n[dglen@gollum.nimh.nih.gov: Tue Apr 16 16:18:19 2013] 3drefit -dxorigin 0.000000 -dyorigin -4.000000 -dzorigin -5.000000 MNI_caez_lr_18+tlrc\n[dglen@gollum.nimh.nih.gov: Tue Apr 16 16:18:19 2013] 3drefit -space MNI MNI_caez_lr_18+tlrc\n[dglen@gollum.nimh.nih.gov: Tue Apr 16 16:18:19 2013] @Shift_Volume -MNI_Anat_to_MNI -dset /Users/dglen/abin/MNIa_caez_lr_18+tlrc. -prefix MNI_caez_lr_18~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_cWROxSpf2uCFuaLXpclogg~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Tue Apr 16 16:18:19 2013~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 0 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 16
+'caez_lr_18+tlrc~
+
+type = string-attribute
+name = LABEL_2
+count = 7
+'Viggo!~
+
+type = string-attribute
+name = DATASET_NAME
+count = 18
+'./caez_lr_18+tlrc~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 1 2 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+             75            111            -68
+
+type  = float-attribute
+name  = DELTA
+count = 3
+             -1             -1              1
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+             -1              0              0             75              0
+             -1              0            111              0              0
+              1            -68
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+             -1              0              0             75              0
+             -1              0            111              0              0
+              1            -68
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0              2
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 151 188 154 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 0
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 4
+'MNI~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 1
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~
+
+type = string-attribute
+name = BRICK_LABS
+count = 3
+'#0~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = integer-attribute
+name = ATLAS_PROB_MAP
+count = 1
+ 0
+
+type = string-attribute
+name = ATLAS_LABEL_TABLE
+count = 458
+'# -----------     LeftRight    ---------------------
+# ----------- Based on: /Volumes/Data/atlas/eickhoff/anatomy_May_02_2011/Anatomy/lr.niml --------------
+<atlas_point_list
+ ni_form="ni_group" >
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Right Brain"
+  VAL="1"
+  OKEY="1"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Left Brain"
+  VAL="2"
+  OKEY="2"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+</atlas_point_list>~

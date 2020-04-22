@@ -1,0 +1,1121 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 3996
+'[glend@MH02001832MACDT: Fri Jul 13 14:46:03 2018] {AFNI_18.1.10:macosx_10.7_local} 3drefit -cmap INT_CMAP Anatomy/Anatomy_v22c.nii\n[glend@MH02001832MACDT: Fri Jul 13 14:47:24 2018] {AFNI_18.1.10:macosx_10.7_local} 3drefit -copytables /Users/glend/abin/MNIa_caez_mpm_18+tlrc. Anatomy/Anatomy_v22c.nii\n[dglen@elwing: Wed Mar 20 22:41:03 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3dcopy ../Anatomy/Anatomy_v22c.nii temp_MNIa_caez_mpm_22\n[dglen@elwing: Wed Mar 20 22:41:03 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3dcalc -a temp_MNIa_caez_mpm_22+tlrc -expr 'a*step(a-101)' -prefix MNIa_caez_mpm_22\n[dglen@elwing: Wed Mar 20 22:41:05 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3drefit -space MNI_ANAT MNIa_caez_mpm_22+tlrc\n[dglen@elwing: Wed Mar 20 22:41:14 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3drefit -atrstring ATLAS_LABEL_TABLE file:keys_AFN_tR244PjJGfQvi1BEgwQbYA_.niml.alt MNIa_caez_mpm_22+tlrc\n[dglen@elwing: Wed Mar 20 22:41:14 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3drefit -cmap INT_CMAP MNIa_caez_mpm_22+tlrc\n[dglen@elwing: Wed Mar 20 22:41:32 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3dcopy ./MNIa_caez_mpm_22+tlrc MNI_caez_mpm_22\n[dglen@elwing: Wed Mar 20 22:41:32 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3drefit -dxorigin 0.000000 -dyorigin -4.000000 -dzorigin -5.000000 MNI_caez_mpm_22+tlrc\n[dglen@elwing: Wed Mar 20 22:41:32 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3drefit -space MNI MNI_caez_mpm_22+tlrc\n[dglen@elwing: Wed Mar 20 22:41:32 2019] @Shift_Volume -MNI_Anat_to_MNI -prefix MNI_caez_mpm_22 -dset MNIa_caez_mpm_22+tlrc\n[dglen@elwing: Wed Mar 20 22:41:33 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3drefit -space MNI MNI_caez_mpm_22+tlrc\n[dglen@elwing: Wed Mar 20 22:41:42 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3drefit -atrstring ATLAS_LABEL_TABLE file:keys_AFN_P86kCKIJQANBoAD_5HqRjQ_.niml.alt MNI_caez_mpm_22+tlrc\n[dglen@elwing: Wed Mar 20 22:41:42 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3drefit -cmap INT_CMAP MNI_caez_mpm_22+tlrc\n[dglen@elwing: Wed Mar 20 22:43:22 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3drefit -space MNI MNI_caez_mpm_22+tlrc\n[dglen@elwing: Wed Mar 20 22:43:32 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3drefit -atrstring ATLAS_LABEL_TABLE file:keys_AFN_x74I_Kmn1M0RIRiOe0Lllg_.niml.alt MNI_caez_mpm_22+tlrc\n[dglen@elwing: Wed Mar 20 22:43:32 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3drefit -cmap INT_CMAP MNI_caez_mpm_22+tlrc\n[dglen@elwing: Wed Mar 20 22:43:32 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3dcopy MNI_caez_mpm_22+tlrc /home/dglen/Eickhoff-Zilles2.2/afni/caez_2.2_dist/MNI_caez_mpm_22+tlrc\n[dglen@elwing: Wed Mar 20 22:44:16 2019] {AFNI_19.0.25:linux_ubuntu_16_64} 3drefit -copytables /home/dglen/Eickhoff-Zilles2.2/afni/caez_2.2_dist/MNI_caez_mpm_22_right+tlrc /home/dglen/Eickhoff-Zilles2.2/afni/caez_2.2_dist/MNI_caez_mpm_22+tlrc\n[dglen@elwing: Sun Apr  7 18:46:36 2019] {AFNI_19.1.00:linux_ubuntu_16_64} 3drefit -atrstring ATLAS_LABEL_TABLE file:MNI_mpm_22_nospace.niml MNI_caez_mpm_22+tlrc.HEAD\n[dglen@elwing: Tue Jul 30 11:22:59 2019] {AFNI_19.1.00:linux_ubuntu_16_64} 3drefit -space MNI MNI_caez_mpm_22+tlrc\n[dglen@elwing: Tue Jul 30 11:23:11 2019] {AFNI_19.1.00:linux_ubuntu_16_64} 3drefit -atrstring ATLAS_LABEL_TABLE file:keys_AFN_Iv65UFQNbe1e5IW3aKtEBw_.niml.alt MNI_caez_mpm_22+tlrc\n[dglen@elwing: Tue Jul 30 11:23:11 2019] {AFNI_19.1.00:linux_ubuntu_16_64} 3drefit -cmap INT_CMAP MNI_caez_mpm_22+tlrc\n[dglen@elwing: Tue Jul 30 11:23:34 2019] {AFNI_19.1.00:linux_ubuntu_16_64} adwarp.c -force -resam NN -apar /home/dglen/abin/TT_N27+tlrc -force -dpar MNI_caez_mpm_22+tlrc -prefix TT_caez_mpm_22\n[dglen@elwing: Tue Jul 30 11:23:35 2019] {AFNI_19.1.00:linux_ubuntu_16_64} 3drefit -space TT_N27 TT_caez_mpm_22+tlrc\n[dglen@elwing: Tue Jul 30 11:23:45 2019] {AFNI_19.1.00:linux_ubuntu_16_64} 3drefit -atrstring ATLAS_LABEL_TABLE file:keys_AFN_x1SSIdlICJd0GhRmMDGtIA_.niml.alt TT_caez_mpm_22+tlrc\n[dglen@elwing: Tue Jul 30 11:23:45 2019] {AFNI_19.1.00:linux_ubuntu_16_64} 3drefit -cmap INT_CMAP TT_caez_mpm_22+tlrc~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_Yf8LRMuU2ZJ6WRcEbuWwRA~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Tue Jul 30 11:23:34 2019~
+
+type = string-attribute
+name = IDCODE_ANAT_PARENT
+count = 27
+'XYZ_8RjUZA_-GBen3pQPl0DbbA~
+
+type = string-attribute
+name = IDCODE_WARP_PARENT
+count = 27
+'AFN_hzGaqLjZUDdoiNUvsh3gKg~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 2 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 20
+'zyxt@Talairach View~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 3 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+            -80            -80            -65
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              1              1              1
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              1              0              0            -80              0
+              1              0            -80              0              0
+              1            -65
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              1              0              0            -80              0
+              1              0            -80              0              0
+              1            -65
+
+type = integer-attribute
+name = WARP_TYPE
+count = 8
+ 1 0 -999 -999 -999
+ -999 -999 -999
+
+type  = float-attribute
+name  = WARP_DATA
+count = 360
+      0.9444444              0              0              0      0.9976303
+     0.06880209              0    -0.05989829      0.8685252       1.058824
+             -0              0              0      0.9976304    -0.07902943
+             -0      0.0688021       1.145927              0      -3.405704
+      -4.103033             -0       3.073373       4.936095          -9999
+          -9999              0              0              0         9999.9
+      0.9315069              0              0              0      0.9976303
+     0.06880209              0    -0.05989829      0.8685252       1.073529
+             -0              0              0      0.9976304    -0.07902943
+             -0      0.0688021       1.145927              0      -3.405704
+      -4.103033             -0       3.073373       4.936095              0
+          -9999              0         9999.9              0         9999.9
+      0.9444444              0              0              0      0.8154033
+     0.05623471              0    -0.05989829      0.8685252       1.058824
+             -0              0              0       1.220582    -0.07902944
+             -0     0.08417805       1.145927              0      -2.783618
+      -4.103033             -0       3.073373       4.936095          -9999
+              0              0              0             23         9999.9
+      0.9315069              0              0              0      0.8154033
+     0.05623471              0    -0.05989829      0.8685252       1.073529
+             -0              0              0       1.220582    -0.07902943
+             -0     0.08417805       1.145927              0      -2.783618
+      -4.103033             -0       3.073373       4.936095              0
+              0              0         9999.9             23         9999.9
+      0.9444444              0              0              0      0.9511568
+     0.06559702              0    -0.05989829      0.8685252       1.058824
+             -0              0              0       1.046375    -0.07902944
+             -0     0.07216377       1.145927              0      0.5821307
+      -4.103033             -0     -0.9333872       4.659767          -9999
+             23              0              0           9999         9999.9
+      0.9315069              0              0              0      0.9511568
+     0.06559702              0    -0.05989829      0.8685252       1.073529
+             -0              0              0       1.046375    -0.07902943
+             -0     0.07216376       1.145927              0      0.5821307
+      -4.103033             -0     -0.9333871       4.659766              0
+             23              0         9999.9           9999         9999.9
+      0.9444444              0              0              0      0.9976303
+     0.06880209              0    -0.06148272      0.8914994       1.058824
+             -0              0              0      0.9976304    -0.07699282
+             -0      0.0688021       1.116396              0      -3.405704
+      -4.211566             -0       3.073374       4.936095          -9999
+          -9999          -9999              0              0              0
+      0.9315069              0              0              0      0.9976303
+     0.06880209              0    -0.06148272      0.8914994       1.073529
+             -0              0              0      0.9976304    -0.07699282
+             -0      0.0688021       1.116396              0      -3.405704
+      -4.211566             -0       3.073374       4.936094              0
+          -9999          -9999         9999.9              0              0
+      0.9444444              0              0              0      0.8154033
+     0.05623471              0    -0.06148272      0.8914994       1.058823
+             -0              0              0       1.220582    -0.07699282
+             -0     0.08417805       1.116396              0      -2.783618
+      -4.211566             -0       3.073372       4.936094          -9999
+              0          -9999              0             23              0
+      0.9315069              0              0              0      0.8154033
+     0.05623471              0    -0.06148272      0.8914994       1.073529
+             -0              0              0       1.220582    -0.07699282
+             -0     0.08417805       1.116396              0      -2.783618
+      -4.211566             -0       3.073372       4.936094              0
+              0          -9999         9999.9             23              0
+      0.9444444              0              0              0      0.9511568
+     0.06559702              0    -0.06148272      0.8914994       1.058824
+             -0              0              0       1.046375    -0.07699282
+             -0     0.07216377       1.116396              0      0.5821307
+      -4.211566             -0      -0.933387       4.659766          -9999
+             23          -9999              0           9999              0
+      0.9315069              0              0              0      0.9511568
+     0.06559702              0    -0.06148272      0.8914994       1.073529
+             -0              0              0       1.046375    -0.07699282
+             -0     0.07216377       1.116396              0      0.5821307
+      -4.211566             -0     -0.9333872       4.659766              0
+             23          -9999         9999.9           9999              0
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0            255
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 161 191 151 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 0
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 3
+'#0~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 7
+'TT_N27~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 1
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~
+
+type = string-attribute
+name = ATLAS_LABEL_TABLE
+count = 13420
+'<atlas_point_list
+ ni_form="ni_group">
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Interposed_Nucleus "
+ VAL="111"
+ OKEY="111"
+ GYoAR="0"
+ COG="1.22655 50.952 -27.1785"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Amygdala_(AStr) "
+ VAL="193"
+ OKEY="193"
+ GYoAR="0"
+ COG="7.09605 7.54237 -10.3785"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Amygdala_(CM) "
+ VAL="133"
+ OKEY="133"
+ GYoAR="0"
+ COG="0.680099 6.75819 -8.81612"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Amygdala_(LB) "
+ VAL="202"
+ OKEY="202"
+ GYoAR="0"
+ COG="0.178276 2.84401 -17.725"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Amygdala_(SF) "
+ VAL="151"
+ OKEY="151"
+ GYoAR="0"
+ COG="-3.01616 5.43031 -12.8101"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_FG3 "
+ VAL="117"
+ OKEY="117"
+ GYoAR="0"
+ COG="2.05611 42.3366 -12.7304"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_1 "
+ VAL="106"
+ OKEY="106"
+ GYoAR="0"
+ COG="-4.9009 30.5691 50.7853"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_2 "
+ VAL="243"
+ OKEY="243"
+ GYoAR="0"
+ COG="-1.62901 37.0638 46.6797"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_25 "
+ VAL="178"
+ OKEY="178"
+ GYoAR="0"
+ COG="-0.242043 -9.55682 -6.11705"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_33 "
+ VAL="119"
+ OKEY="119"
+ GYoAR="0"
+ COG="-0.632538 -11.8202 14.844"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_3a "
+ VAL="250"
+ OKEY="250"
+ GYoAR="0"
+ COG="2.40646 25.4377 37.924"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_3b "
+ VAL="187"
+ OKEY="187"
+ GYoAR="0"
+ COG="-0.503792 25.842 42.312"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_44 "
+ VAL="246"
+ OKEY="246"
+ GYoAR="0"
+ COG="7.96392 -6.56496 17.3135"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_45 "
+ VAL="129"
+ OKEY="129"
+ GYoAR="0"
+ COG="-11.8823 -20.9598 16.3103"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_4a "
+ VAL="160"
+ OKEY="160"
+ GYoAR="0"
+ COG="0.420448 33.7017 60.0683"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_4p "
+ VAL="191"
+ OKEY="191"
+ GYoAR="0"
+ COG="-2.05251 24.3357 43.0921"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_5Ci_(SPL) "
+ VAL="185"
+ OKEY="185"
+ GYoAR="0"
+ COG="-0.739311 37.3678 41.2881"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_5L_(SPL) "
+ VAL="159"
+ OKEY="159"
+ GYoAR="0"
+ COG="1.75408 51.5032 60.1643"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_5M_(SPL) "
+ VAL="241"
+ OKEY="241"
+ GYoAR="0"
+ COG="2.08675 44.5867 51.5126"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_7A_(SPL) "
+ VAL="165"
+ OKEY="165"
+ GYoAR="0"
+ COG="3.87172 63.7828 52.8164"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_7M_(SPL) "
+ VAL="120"
+ OKEY="120"
+ GYoAR="0"
+ COG="-1.59196 75.7794 30.7907"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_7P_(SPL) "
+ VAL="224"
+ OKEY="224"
+ GYoAR="0"
+ COG="-4.97145 75.5346 45.4805"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_7PC_(SPL) "
+ VAL="167"
+ OKEY="167"
+ GYoAR="0"
+ COG="-12.5908 51.1205 53.6711"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_FG1 "
+ VAL="148"
+ OKEY="148"
+ GYoAR="0"
+ COG="-1.32597 61.8781 -11.6665"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_FG2 "
+ VAL="171"
+ OKEY="171"
+ GYoAR="0"
+ COG="8.41161 60.2586 -16.0075"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_FG4 "
+ VAL="123"
+ OKEY="123"
+ GYoAR="0"
+ COG="4.69802 40.8405 -18.2149"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_Fo1 "
+ VAL="170"
+ OKEY="170"
+ GYoAR="0"
+ COG="-1.24581 -38.455 -14.1008"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_Fo2 "
+ VAL="109"
+ OKEY="109"
+ GYoAR="0"
+ COG="0.0904617 -18.3186 -13.0774"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_Fo3 "
+ VAL="145"
+ OKEY="145"
+ GYoAR="0"
+ COG="-1.11452 -30.0243 -12.648"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_Fp1 "
+ VAL="219"
+ OKEY="219"
+ GYoAR="0"
+ COG="-0.600693 -59.088 6.89368"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_Fp2 "
+ VAL="230"
+ OKEY="230"
+ GYoAR="0"
+ COG="-0.957504 -53.6697 6.15791"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_Id1 "
+ VAL="126"
+ OKEY="126"
+ GYoAR="0"
+ COG="-5.71355 11.1704 -6.07647"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_Ig1 "
+ VAL="236"
+ OKEY="236"
+ GYoAR="0"
+ COG="-2.76231 22.4668 8.92734"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_Ig2 "
+ VAL="204"
+ OKEY="204"
+ GYoAR="0"
+ COG="-5.45022 16.6411 7.62904"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_OP1_(SII) "
+ VAL="122"
+ OKEY="122"
+ GYoAR="0"
+ COG="-1.23158 22.6215 16.6752"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_OP2_(PIVC) "
+ VAL="139"
+ OKEY="139"
+ GYoAR="0"
+ COG="-8.97929 22.7174 17.6224"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_OP3_(VS) "
+ VAL="147"
+ OKEY="147"
+ GYoAR="0"
+ COG="-9.15939 13.5299 16.4577"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_OP4_(PV) "
+ VAL="173"
+ OKEY="173"
+ GYoAR="0"
+ COG="1.29997 12.0486 14.5678"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_PF_(IPL) "
+ VAL="136"
+ OKEY="136"
+ GYoAR="0"
+ COG="-9.14508 36.2706 30.2859"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_PFcm_(IPL) "
+ VAL="153"
+ OKEY="153"
+ GYoAR="0"
+ COG="-1.75269 34.375 20.4116"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_PFm_(IPL) "
+ VAL="128"
+ OKEY="128"
+ GYoAR="0"
+ COG="-5.47462 48.9116 34.1387"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_PFop_(IPL) "
+ VAL="125"
+ OKEY="125"
+ GYoAR="0"
+ COG="1.59464 23.6309 23.4394"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_PFt_(IPL) "
+ VAL="240"
+ OKEY="240"
+ GYoAR="0"
+ COG="8.01702 27.9592 35.1125"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_PGa_(IPL) "
+ VAL="201"
+ OKEY="201"
+ GYoAR="0"
+ COG="-6.81586 57.4366 29.3552"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_PGp_(IPL) "
+ VAL="198"
+ OKEY="198"
+ GYoAR="0"
+ COG="-5.69865 70.3583 25.0502"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_TE_1.0 "
+ VAL="210"
+ OKEY="210"
+ GYoAR="0"
+ COG="-7.65979 15.719 7.84821"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_TE_1.1 "
+ VAL="213"
+ OKEY="213"
+ GYoAR="0"
+ COG="-4.99953 26.1248 11.2856"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_TE_1.2 "
+ VAL="218"
+ OKEY="218"
+ GYoAR="0"
+ COG="3.58586 6.57187 3.96659"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_TE_3 "
+ VAL="181"
+ OKEY="181"
+ GYoAR="0"
+ COG="-7.3046 11.8351 1.89066"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_hIP1_(IPS) "
+ VAL="131"
+ OKEY="131"
+ GYoAR="0"
+ COG="2.33727 49.3295 35.3029"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_hIP2_(IPS) "
+ VAL="226"
+ OKEY="226"
+ GYoAR="0"
+ COG="2.59366 42.1228 39.08"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_hIP3_(IPS) "
+ VAL="157"
+ OKEY="157"
+ GYoAR="0"
+ COG="-1.731 53.3108 42.1545"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_hOc1_(V1) "
+ VAL="249"
+ OKEY="249"
+ GYoAR="0"
+ COG="-3.25554 79.1132 -0.510399"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_hOc2_(V2) "
+ VAL="252"
+ OKEY="252"
+ GYoAR="0"
+ COG="-3.0019 82.1135 1.78447"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_hOc3d_(V3d) "
+ VAL="199"
+ OKEY="199"
+ GYoAR="0"
+ COG="1.54682 87.036 17.0853"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_hOc3v_(V3v) "
+ VAL="108"
+ OKEY="108"
+ GYoAR="0"
+ COG="-1.85989 79.2755 -10.6263"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_hOc4d_(V3A) "
+ VAL="143"
+ OKEY="143"
+ GYoAR="0"
+ COG="0.63092 84.7382 23.3928"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_hOc4la "
+ VAL="162"
+ OKEY="162"
+ GYoAR="0"
+ COG="-4.10581 71.2044 -1.8527"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_hOc4lp "
+ VAL="233"
+ OKEY="233"
+ GYoAR="0"
+ COG="3.7036 84.507 3.29562"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_hOc4v_(V4(v)) "
+ VAL="103"
+ OKEY="103"
+ GYoAR="0"
+ COG="-1.28883 73.3379 -12.4847"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_hOc5_(V5/MT) "
+ VAL="105"
+ OKEY="105"
+ GYoAR="0"
+ COG="6.36433 65.4147 1.65865"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_s24 "
+ VAL="253"
+ OKEY="253"
+ GYoAR="0"
+ COG="-0.125946 -20.6519 -3.56319"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Area_s32 "
+ VAL="102"
+ OKEY="102"
+ GYoAR="0"
+ COG="1.33553 -31.8732 -4.98899"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="BF_(Ch_1-3) "
+ VAL="114"
+ OKEY="114"
+ GYoAR="0"
+ COG="-0.345863 -1.34336 -3.88221"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="BF_(Ch_4) "
+ VAL="142"
+ OKEY="142"
+ GYoAR="0"
+ COG="-0.238548 3.98473 -6.89313"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="CA1_(Hippocampus) "
+ VAL="238"
+ OKEY="238"
+ GYoAR="0"
+ COG="-5.90536 19.4227 -12.5634"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="CA2_(Hippocampus) "
+ VAL="116"
+ OKEY="116"
+ GYoAR="0"
+ COG="-4.15434 19.9148 -9.12058"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="CA3_(Hippocampus) "
+ VAL="168"
+ OKEY="168"
+ GYoAR="0"
+ COG="-5.30651 18.682 -10.7452"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="DG_(Hippocampus) "
+ VAL="150"
+ OKEY="150"
+ GYoAR="0"
+ COG="3.43089 25.6247 -7.95788"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Dorsal_Dentate_Nucleus "
+ VAL="235"
+ OKEY="235"
+ GYoAR="0"
+ COG="2.40201 52.4216 -32.2462"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Entorhinal_Cortex "
+ VAL="229"
+ OKEY="229"
+ GYoAR="0"
+ COG="-2.90654 5.10134 -26.4909"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Fastigii_Nucleus "
+ VAL="255"
+ OKEY="255"
+ GYoAR="0"
+ COG="0.232384 49.6514 -25.1181"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="HATA_Region "
+ VAL="174"
+ OKEY="174"
+ GYoAR="0"
+ COG="-0.254829 10.278 -13.7606"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_I_IV_(Hem) "
+ VAL="215"
+ OKEY="215"
+ GYoAR="0"
+ COG="-2.14565 36.0285 -14.0881"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_IX_(Hem) "
+ VAL="134"
+ OKEY="134"
+ GYoAR="0"
+ COG="-0.431297 48.4247 -44.4242"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_IX_(Verm) "
+ VAL="209"
+ OKEY="209"
+ GYoAR="0"
+ COG="-0.385498 50.0108 -34.374"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_V_(Hem) "
+ VAL="247"
+ OKEY="247"
+ GYoAR="0"
+ COG="-0.888763 42.9094 -15.0316"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_VI_(Hem) "
+ VAL="222"
+ OKEY="222"
+ GYoAR="0"
+ COG="-0.672707 51.7705 -22.0419"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_VI_(Verm) "
+ VAL="112"
+ OKEY="112"
+ GYoAR="0"
+ COG="-1.18434 67.1154 -18.0258"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_VIIIa_(Hem) "
+ VAL="207"
+ OKEY="207"
+ GYoAR="0"
+ COG="2.40344 49.9264 -48.3686"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_VIIIa_(Verm) "
+ VAL="182"
+ OKEY="182"
+ GYoAR="0"
+ COG="-1.41878 63.3391 -34.7485"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_VIIIb_(Hem) "
+ VAL="196"
+ OKEY="196"
+ GYoAR="0"
+ COG="-0.946823 43.2994 -49.4002"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_VIIIb_(Verm) "
+ VAL="154"
+ OKEY="154"
+ GYoAR="0"
+ COG="-0.771477 59.8307 -39.8532"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_VIIa_crusI_(Hem) "
+ VAL="212"
+ OKEY="212"
+ GYoAR="0"
+ COG="-2.37458 62.9067 -30.7912"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_VIIa_crusI_(Verm) "
+ VAL="137"
+ OKEY="137"
+ GYoAR="0"
+ COG="1.30434 78.7391 -25.6957"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_VIIa_crusII_(Hem) "
+ VAL="216"
+ OKEY="216"
+ GYoAR="0"
+ COG="4.90579 69.3205 -40.1135"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_VIIa_crusII_(Verm) "
+ VAL="140"
+ OKEY="140"
+ GYoAR="0"
+ COG="-1.50204 74.2177 -30.9619"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_VIIb_(Hem) "
+ VAL="164"
+ OKEY="164"
+ GYoAR="0"
+ COG="3.39792 58.7227 -47.0732"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_VIIb_(Verm) "
+ VAL="205"
+ OKEY="205"
+ GYoAR="0"
+ COG="-0.997795 67.0264 -28.2841"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_X_(Hem) "
+ VAL="221"
+ OKEY="221"
+ GYoAR="0"
+ COG="-1.68418 30.0221 -40.5321"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Lobule_X_(Verm) "
+ VAL="184"
+ OKEY="184"
+ GYoAR="0"
+ COG="-1.00263 40.3263 -30.4605"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Subiculum "
+ VAL="244"
+ OKEY="244"
+ GYoAR="0"
+ COG="-1.05622 21.1786 -14.1521"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Thal:_Motor "
+ VAL="176"
+ OKEY="176"
+ GYoAR="0"
+ COG="-1.72459 18.1848 7.62292"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Thal:_Parietal "
+ VAL="179"
+ OKEY="179"
+ GYoAR="0"
+ COG="-0.956017 23.2846 5.58002"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Thal:_Prefrontal "
+ VAL="156"
+ OKEY="156"
+ GYoAR="0"
+ COG="0.543205 13.8206 8.00471"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Thal:_Premotor "
+ VAL="188"
+ OKEY="188"
+ GYoAR="0"
+ COG="-1.59497 15.4686 7.60606"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Thal:_Somatosensory "
+ VAL="190"
+ OKEY="190"
+ GYoAR="0"
+ COG="-9.07462 19.4677 5.14096"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Thal:_Temporal "
+ VAL="232"
+ OKEY="232"
+ GYoAR="0"
+ COG="-0.180862 20.2117 10.7348"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Thal:_Visual "
+ VAL="227"
+ OKEY="227"
+ GYoAR="0"
+ COG="5.94154 26.8097 3.40174"
+/>
+
+<ATLAS_POINT
+ data_type="atlas_point"
+ STRUCT="Ventral_Dentate_Nucleus "
+ VAL="195"
+ OKEY="195"
+ GYoAR="0"
+ COG="1.82287 52.1256 -27.6103"
+/>
+
+</atlas_point_list>~

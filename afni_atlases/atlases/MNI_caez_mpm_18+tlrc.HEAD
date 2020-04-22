@@ -1,0 +1,810 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 839
+'Cytoarchitectonic - Eickhoff, Zilles, Version 1.8\n[dglen@gollum.nimh.nih.gov: Tue Sep  4 15:22:40 2012] 3drefit -atrstring ATLAS_LABEL_TABLE file:mpm.niml caez_mpm_18+tlrc\n[dglen@gollum.nimh.nih.gov: Tue Apr 16 14:47:51 2013] 3dcopy /Users/dglen/abin/MNIa_caez_mpm_18+tlrc MNI_caez_mpm_18\n[dglen@gollum.nimh.nih.gov: Tue Apr 16 14:47:51 2013] 3drefit -dxorigin 0.000000 -dyorigin -4.000000 -dzorigin -5.000000 MNI_caez_mpm_18+tlrc\n[dglen@gollum.nimh.nih.gov: Tue Apr 16 14:47:51 2013] 3drefit -space MNI MNI_caez_mpm_18+tlrc\n[dglen@gollum.nimh.nih.gov: Tue Apr 16 14:47:52 2013] @Shift_Volume -MNI_Anat_to_MNI -dset /Users/dglen/abin/MNIa_caez_mpm_18+tlrc. -prefix MNI_caez_mpm_18\n[dglen@gollum.nimh.nih.gov: Tue Apr 16 16:14:40 2013] 3drefit -space MNI MNI_caez_ml_18+tlrc.HEAD MNI_caez_mpm_18+tlrc.HEAD MNI_caez_pmaps_18+tlrc.HEAD~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_k4GEeNj9nTojoukAAfiiHA~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Tue Apr 16 14:47:51 2013~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 2 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 1 2 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+             75            111            -68
+
+type  = float-attribute
+name  = DELTA
+count = 3
+             -1             -1              1
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+             -1              0              0             75              0
+             -1              0            111              0              0
+              1            -68
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+             -1              0              0             75              0
+             -1              0            111              0              0
+              1            -68
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0            254
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 151 188 154 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 0
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 3
+'#0~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 4
+'MNI~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 1
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~
+
+type = integer-attribute
+name = ATLAS_PROB_MAP
+count = 1
+ 0
+
+type = string-attribute
+name = ATLAS_LABEL_TABLE
+count = 9584
+'# -----------     MPM      ---------------------
+# ----------- Based on: /Volumes/Data/atlas/eickhoff/anatomy_May_02_2011/Anatomy/AllAreas_v18_MPM.mat --------------
+<atlas_point_list
+ ni_form="ni_group" >
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="hIP1"
+  VAL="103"
+  OKEY="103"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="SPL (7M)"
+  VAL="105"
+  OKEY="105"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule X (Hem)"
+  VAL="107"
+  OKEY="107"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule V"
+  VAL="109"
+  OKEY="109"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Th-Parietal"
+  VAL="111"
+  OKEY="111"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Hipp (FD)"
+  VAL="113"
+  OKEY="113"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Amyg (SF)"
+  VAL="115"
+  OKEY="115"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="TE 1.1"
+  VAL="117"
+  OKEY="117"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Area 4p"
+  VAL="119"
+  OKEY="119"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Insula (Id1)"
+  VAL="121"
+  OKEY="121"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Hipp (CA)"
+  VAL="123"
+  OKEY="123"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="hOC3v (V3v)"
+  VAL="125"
+  OKEY="125"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="IPC (PGa)"
+  VAL="127"
+  OKEY="127"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="TE 1.2"
+  VAL="129"
+  OKEY="129"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Area 44"
+  VAL="131"
+  OKEY="131"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Area 45"
+  VAL="133"
+  OKEY="133"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Area 4a"
+  VAL="135"
+  OKEY="135"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Amyg (LB)"
+  VAL="137"
+  OKEY="137"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Insula (Ig1)"
+  VAL="140"
+  OKEY="140"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule IX (Vermis)"
+  VAL="142"
+  OKEY="142"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="SPL (5L)"
+  VAL="144"
+  OKEY="144"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Th-Premotor"
+  VAL="146"
+  OKEY="146"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Insula (Ig2)"
+  VAL="148"
+  OKEY="148"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobules I-IV (Hem)"
+  VAL="150"
+  OKEY="150"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="SPL (7A)"
+  VAL="152"
+  OKEY="152"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="TE 1.0"
+  VAL="154"
+  OKEY="154"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Area 2"
+  VAL="156"
+  OKEY="156"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule VIIa Crus I (Vermis)"
+  VAL="158"
+  OKEY="158"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Amyg (CM)"
+  VAL="160"
+  OKEY="160"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="hOC4v (V4)"
+  VAL="162"
+  OKEY="162"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule IX (Hem)"
+  VAL="164"
+  OKEY="164"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Th-Temporal"
+  VAL="166"
+  OKEY="166"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule VIIIb (Hem)"
+  VAL="168"
+  OKEY="168"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule VI (Hem)"
+  VAL="170"
+  OKEY="170"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Hipp (HATA)"
+  VAL="172"
+  OKEY="172"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Th-Prefrontal"
+  VAL="174"
+  OKEY="174"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Area 6"
+  VAL="176"
+  OKEY="176"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="TE 3"
+  VAL="179"
+  OKEY="179"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Area 17"
+  VAL="181"
+  OKEY="181"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="OP 2"
+  VAL="183"
+  OKEY="183"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule VIIIa (Vermis)"
+  VAL="185"
+  OKEY="185"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Th-Somatosensory"
+  VAL="187"
+  OKEY="187"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="IPC (PFm)"
+  VAL="189"
+  OKEY="189"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule X (Vermis)"
+  VAL="191"
+  OKEY="191"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="hOC5 (V5)"
+  VAL="193"
+  OKEY="193"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule VIIa Crus II (Vermis)"
+  VAL="195"
+  OKEY="195"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Hipp (SUB)"
+  VAL="197"
+  OKEY="197"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule VI (Vermis)"
+  VAL="199"
+  OKEY="199"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="OP 1"
+  VAL="201"
+  OKEY="201"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="SPL (5Ci)"
+  VAL="203"
+  OKEY="203"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule VIIa Crus II (Hem)"
+  VAL="205"
+  OKEY="205"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="hIP3"
+  VAL="207"
+  OKEY="207"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule VIIIa (Hem)"
+  VAL="209"
+  OKEY="209"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Th-Visual"
+  VAL="211"
+  OKEY="211"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Hipp (EC)"
+  VAL="213"
+  OKEY="213"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="IPC (PFt)"
+  VAL="215"
+  OKEY="215"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Area 3b"
+  VAL="218"
+  OKEY="218"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule VIIb (Vermis)"
+  VAL="220"
+  OKEY="220"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule VIIb (Hem)"
+  VAL="222"
+  OKEY="222"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="IPC (PFcm)"
+  VAL="224"
+  OKEY="224"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="IPC (PF)"
+  VAL="226"
+  OKEY="226"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="hIP2"
+  VAL="228"
+  OKEY="228"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="SPL (7P)"
+  VAL="230"
+  OKEY="230"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="SPL (5M)"
+  VAL="232"
+  OKEY="232"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="IPC (PGp)"
+  VAL="234"
+  OKEY="234"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule VIIIb (Vermis)"
+  VAL="236"
+  OKEY="236"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Th-Motor"
+  VAL="238"
+  OKEY="238"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Area 18"
+  VAL="240"
+  OKEY="240"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="OP 4"
+  VAL="242"
+  OKEY="242"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="IPC (PFop)"
+  VAL="244"
+  OKEY="244"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="OP 3"
+  VAL="246"
+  OKEY="246"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Lobule VIIa Crus I (Hem)"
+  VAL="248"
+  OKEY="248"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Area 3a"
+  VAL="250"
+  OKEY="250"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="Area 1"
+  VAL="252"
+  OKEY="252"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+<ATLAS_POINT
+  data_type="atlas_point"
+  STRUCT="SPL (7PC)"
+  VAL="254"
+  OKEY="254"
+  GYoAR="0"
+  COG="0.0 0.0 0.0"
+  />
+
+</atlas_point_list>~

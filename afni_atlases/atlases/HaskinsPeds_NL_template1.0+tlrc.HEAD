@@ -1,0 +1,121 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 7842
+'[pete@Dalamar.local: Tue Oct 14 10:04:53 2014] ===================================\n[pete@Dalamar.local: Tue Oct 14 10:04:53 2014] === History of inputs to 3dcalc ===\n[pete@Dalamar.local: Tue Oct 14 10:04:53 2014] === Input a:\n[pete@Dalamar.local: Tue Oct 14 10:04:53 2014] [pete@Dalamar.local: Tue Oct 14 10:04:05 2014] ===================================\n[pete@Dalamar.local: Tue Oct 14 10:04:05 2014] === History of inputs to 3dcalc ===\n[pete@Dalamar.local: Tue Oct 14 10:04:05 2014] === Input a:\n[pete@Dalamar.local: Tue Oct 14 10:04:05 2014] [pete@sinatra.haskins.lab: Mon Aug 18 13:17:04 2014] 3dcopy /Volumes/MRIData/Atlas/atlas_final_sample_nonlinear/all/final_nonlinear_Qwarper/Qwarp_meanE+tlrc.HEAD HaskinsPedsNL_Template\n[pete@sinatra.haskins.lab: Mon Aug 18 13:17:12 2014] 3drefit -space HaskinsPeds HaskinsPedsNL_Template+tlrc.\n[pete@sinatra.haskins.lab: Mon Aug 18 13:24:06 2014] 3dcopy /Volumes/MRIData/Atlas/atlas_final_sample_nonlinear/qwarper/HaskinsPedsNL_Template+tlrc.HEAD HaskinsPedsNL_Template\n[pete@sinatra.haskins.lab: Mon Aug 18 14:13:01 2014] 3dcopy HaskinsPedsNL_Template+tlrc. tmpTemplate\n[pete@sinatra.haskins.lab: Mon Aug 18 14:13:01 2014] 3dresample -master AtlasNew+tlrc. -inset tmpTemplate+tlrc -prefix HaskinsPedsNL_Template\n[pete@Dalamar.local: Wed Oct  8 15:15:56 2014] 3drefit -dxorigin 1 -dyorigin 0 -dzorigin 3 HaskinsPeds_NL_Template+tlrc. HaskinsPeds_NL_MPM+tlrc HaskinsPeds_NL_Atlas+tlrc.\n[pete@Dalamar.local: Tue Oct 14 10:04:03 2014] 3dresample -rmode Cu -master __ats_tmp__ref_HaskinsPeds_Template_40pad+tlrc -inset HaskinsPeds_NL_Template+tlrc -prefix ./__ats_tmp__resamp_edge_art\n[pete@Dalamar.local: Tue Oct 14 10:04:05 2014] === Input b:\n[pete@Dalamar.local: Tue Oct 14 10:04:05 2014] [pete@sinatra.haskins.lab: Mon Aug 18 13:17:04 2014] 3dcopy /Volumes/MRIData/Atlas/atlas_final_sample_nonlinear/all/final_nonlinear_Qwarper/Qwarp_meanE+tlrc.HEAD HaskinsPedsNL_Template\n[pete@sinatra.haskins.lab: Mon Aug 18 13:17:12 2014] 3drefit -space HaskinsPeds HaskinsPedsNL_Template+tlrc.\n[pete@sinatra.haskins.lab: Mon Aug 18 13:24:06 2014] 3dcopy /Volumes/MRIData/Atlas/atlas_final_sample_nonlinear/qwarper/HaskinsPedsNL_Template+tlrc.HEAD HaskinsPedsNL_Template\n[pete@sinatra.haskins.lab: Mon Aug 18 14:13:01 2014] 3dcopy HaskinsPedsNL_Template+tlrc. tmpTemplate\n[pete@sinatra.haskins.lab: Mon Aug 18 14:13:01 2014] 3dresample -master AtlasNew+tlrc. -inset tmpTemplate+tlrc -prefix HaskinsPedsNL_Template\n[pete@Dalamar.local: Wed Oct  8 15:15:56 2014] 3drefit -dxorigin 1 -dyorigin 0 -dzorigin 3 HaskinsPeds_NL_Template+tlrc. HaskinsPeds_NL_MPM+tlrc HaskinsPeds_NL_Atlas+tlrc.\n[pete@Dalamar.local: Tue Oct 14 10:04:04 2014] 3dcalc -a HaskinsPeds_NL_Template+tlrc -expr 'step(a)*10000' -prefix ./__ats_tmp__resamp_step\n[pete@Dalamar.local: Tue Oct 14 10:04:05 2014] 3dresample -rmode Linear -master __ats_tmp__ref_HaskinsPeds_Template_40pad+tlrc -inset __ats_tmp__resamp_step+tlrc -prefix ./__ats_tmp__resamp_NN\n[pete@Dalamar.local: Tue Oct 14 10:04:05 2014] ===================================\n[pete@Dalamar.local: Tue Oct 14 10:04:05 2014] 3dcalc -a __ats_tmp__resamp_edge_art+tlrc. -b __ats_tmp__resamp_NN+tlrc. -expr 'a*step(b-5000)' -prefix ./__ats_tmp__resamp\n[pete@Dalamar.local: Tue Oct 14 10:04:07 2014] 3dcalc -a __ats_tmp__resamp+tlrc -expr 'a*step(a--0.000100)*step(2031.990100-a) + 0*step(0-a) + 2031.99*step(a-2031.99)' -prefix __ats_tmp___rs_HaskinsPeds_NL_Template\n[pete@Dalamar.local: Tue Oct 14 10:04:50 2014] 3dcalc -a __ats_tmp___rs_HaskinsPeds_NL_Template+tlrc -expr 'step(a)*10000' -prefix ./__ats_tmp__reg_braintlrcstep\n[pete@Dalamar.local: Tue Oct 14 10:04:52 2014] 3dWarp -matparent __ats_tmp__reg_warpdriveout+tlrc -gridset __ats_tmp___pad40_HaskinsPeds_NL_Template_nlaff+tlrc -linear -prefix ./__ats_tmp__reg_braintlrcmask __ats_tmp__reg_braintlrcstep+tlrc\n[pete@Dalamar.local: Tue Oct 14 10:04:53 2014] === Input b:\n[pete@Dalamar.local: Tue Oct 14 10:04:53 2014] [pete@sinatra.haskins.lab: Mon Aug 18 13:17:04 2014] 3dcopy /Volumes/MRIData/Atlas/atlas_final_sample_nonlinear/all/final_nonlinear_Qwarper/Qwarp_meanE+tlrc.HEAD HaskinsPedsNL_Template\n[pete@sinatra.haskins.lab: Mon Aug 18 13:17:12 2014] 3drefit -space HaskinsPeds HaskinsPedsNL_Template+tlrc.\n[pete@sinatra.haskins.lab: Mon Aug 18 13:24:06 2014] 3dcopy /Volumes/MRIData/Atlas/atlas_final_sample_nonlinear/qwarper/HaskinsPedsNL_Template+tlrc.HEAD HaskinsPedsNL_Template\n[pete@sinatra.haskins.lab: Mon Aug 18 14:13:01 2014] 3dcopy HaskinsPedsNL_Template+tlrc. tmpTemplate\n[pete@sinatra.haskins.lab: Mon Aug 18 14:13:01 2014] 3dresample -master AtlasNew+tlrc. -inset tmpTemplate+tlrc -prefix HaskinsPedsNL_Template\n[pete@Dalamar.local: Wed Oct  8 15:15:56 2014] 3drefit -dxorigin 1 -dyorigin 0 -dzorigin 3 HaskinsPeds_NL_Template+tlrc. HaskinsPeds_NL_MPM+tlrc HaskinsPeds_NL_Atlas+tlrc.\n[pete@Dalamar.local: Tue Oct 14 10:04:49 2014] 3dWarp -matvec_out2in HaskinsPeds_NL_Template_nlaff.Xat.1D -linear -prefix ./__ats_tmp___pad40_HaskinsPeds_NL_Template_nlaff -gridset __ats_tmp__gridout+tlrc HaskinsPeds_NL_Template+tlrc\n[pete@Dalamar.local: Tue Oct 14 10:04:53 2014] ===================================\n[pete@Dalamar.local: Tue Oct 14 10:04:53 2014] 3dcalc -a __ats_tmp__reg_braintlrcmask+tlrc -b __ats_tmp___pad40_HaskinsPeds_NL_Template_nlaff.skl+tlrc -expr 'step(a-5000)*b' -prefix ./__ats_tmp___pad40_HaskinsPeds_NL_Template_nlaff+tlrc\n[pete@Dalamar.local: Tue Oct 14 10:04:54 2014] 3drefit -atrcopy __ats_tmp___pad40_HaskinsPeds_NL_Template_nlaff.skl+tlrc WARPDRIVE_MATVEC_FOR_000000 __ats_tmp___pad40_HaskinsPeds_NL_Template_nlaff+tlrc\n[pete@Dalamar.local: Tue Oct 14 10:04:54 2014] 3drefit -atrcopy __ats_tmp___pad40_HaskinsPeds_NL_Template_nlaff.skl+tlrc WARPDRIVE_MATVEC_FOR_000000 __ats_tmp___pad40_HaskinsPeds_NL_Template_nlaff+tlrc\n[pete@Dalamar.local: Tue Oct 14 10:04:54 2014] 3drefit -atrcopy __ats_tmp___pad40_HaskinsPeds_NL_Template_nlaff.skl+tlrc WARPDRIVE_MATVEC_INV_000000 __ats_tmp___pad40_HaskinsPeds_NL_Template_nlaff+tlrc\n[pete@Dalamar.local: Tue Oct 14 10:04:54 2014] 3dZeropad -I -40 -S -40 -A -40 -P -40 -L -40 -R -40 -mm -prefix ./__ats_tmp___upad40_HaskinsPeds_NL_Template_nlaff __ats_tmp___pad40_HaskinsPeds_NL_Template_nlaff+tlrc\n[pete@Dalamar.local: Tue Oct 14 10:04:54 2014] 3drefit -atrcopy __ats_tmp___pad40_HaskinsPeds_NL_Template_nlaff+tlrc WARPDRIVE_MATVEC_FOR_000000 __ats_tmp___upad40_HaskinsPeds_NL_Template_nlaff+tlrc\n[pete@Dalamar.local: Tue Oct 14 10:04:54 2014] 3drefit -atrcopy __ats_tmp___pad40_HaskinsPeds_NL_Template_nlaff+tlrc WARPDRIVE_MATVEC_FOR_000000 __ats_tmp___upad40_HaskinsPeds_NL_Template_nlaff+tlrc\n[pete@Dalamar.local: Tue Oct 14 10:04:54 2014] 3drefit -atrcopy __ats_tmp___pad40_HaskinsPeds_NL_Template_nlaff+tlrc WARPDRIVE_MATVEC_INV_000000 __ats_tmp___upad40_HaskinsPeds_NL_Template_nlaff+tlrc\n[pete@Dalamar.local: Tue Oct 14 10:04:54 2014] 3drefit -space HaskinsPeds __ats_tmp___upad40_HaskinsPeds_NL_Template_nlaff+tlrc\n[pete@Dalamar.local: Tue Oct 14 10:04:54 2014] Dataset created via: @auto_tlrc -suffix _nlaff -no_ss -base HaskinsPeds_Template+tlrc -input HaskinsPeds_NL_Template+tlrc\n[pete@Dalamar.local: Tue Oct 14 10:27:42 2014] 3dAutomask -apply_prefix HaskinsNL_Template1 Haskins_Nonlinear_1.0/HaskinsPeds_NL_Template_nlaff+tlrc.\n[pete@Dalamar.local: Tue Oct 14 10:27:43 2014] 3dcalc -a HaskinsNL_Template1+tlrc -expr 'a*255/2042.26' -nscale -datum byte -prefix HaskinsPeds_NL_template\n[dglen@gollum.local: Mon Oct 20 17:36:50 2014] 3dresample -prefix HaskinsPeds_NL_template_lpi -orient LPI -inset HaskinsPeds_NL_template+tlrc.\n[dglen@gollum.local: Mon Oct 20 18:24:54 2014] 3dZeropad -L -3 -prefix HaskinsPeds_NL_template_cen HaskinsPeds_NL_template+tlrc\n[dglen@gollum.local: Mon Oct 20 18:24:54 2014] 3drefit -copytables HaskinsPeds_NL_template+tlrc HaskinsPeds_NL_template_cen+tlrc~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_PkNLi3AkFuA2vc4so-5Dsg~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Mon Oct 20 18:24:54 2014~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 2 2 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 1 2 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+             89            126            -69
+
+type  = float-attribute
+name  = DELTA
+count = 3
+             -1             -1              1
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+             -1              0              0             89              0
+             -1              0            126              0              0
+              1            -69
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+             -1              0              0             89              0
+             -1              0            126              0              0
+              1            -69
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0            248
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 179 218 182 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 0
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 3
+'#0~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 12
+'HaskinsPeds~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 0
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~
