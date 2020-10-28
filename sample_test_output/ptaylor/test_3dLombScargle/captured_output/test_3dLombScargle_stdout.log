@@ -1,0 +1,4 @@
+
++++ Command Echo:
+   3dLombScargle -nifti -inset ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/mini_REST_proc_unfilt.nii.gz -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dLombScargle/o.3dLombScargle -censor_str [0..3,5,6..18,22..34,36..47,49,51..60,63..84,86..88,90,92..$] 
+

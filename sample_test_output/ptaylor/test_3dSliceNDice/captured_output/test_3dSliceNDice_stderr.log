@@ -1,1 +1,7 @@
-../../../../.git/annex/objects/Qz/04/MD5E-s445--d425e2e55a4b8a3e721d54218f186e06.log/MD5E-s445--d425e2e55a4b8a3e721d54218f186e06.log
+++ 3dcalc: AFNI version=AFNI_20.3.00 (Oct 20 2020) [64-bit]
+++ Authored by: A cast of thousands
+++ Output dataset ./output_of_tests/output_2020_10_28_205556/ptaylor/test_3dSliceNDice/o.3dSliceNDice_preA.nii.gz
+++ 3dcalc: AFNI version=AFNI_20.3.00 (Oct 20 2020) [64-bit]
+++ Authored by: A cast of thousands
+++ Output dataset ./output_of_tests/output_2020_10_28_205556/ptaylor/test_3dSliceNDice/o.3dSliceNDice_preB.nii.gz
+++ Max dimension is: 128

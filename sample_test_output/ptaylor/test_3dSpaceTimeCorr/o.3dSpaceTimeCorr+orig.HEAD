@@ -1,1 +1,111 @@
-../../../.git/annex/objects/9z/4p/MD5E-s2326--3a60f95bf93f8896732e51949a07829d.HEAD/MD5E-s2326--3a60f95bf93f8896732e51949a07829d.HEAD
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 436
+'[afni_user@edda28aaa4a9: Wed Oct 28 20:56:05 2020] {AFNI_20.3.00:Linux_cmake} 3dSpaceTimeCorr -insetA './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/REST_in_DWI.nii.gz[5..15]' -insetB './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/REST_in_DWI.nii.gz[25..35]' -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/mask_minisphere_dwi.nii.gz -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dSpaceTimeCorr/o.3dSpaceTimeCorr~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'XYZ_G2PqC9qpEivMXHaSO779xw~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Wed Oct 28 20:56:05 2020~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 0 2 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 2 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+      -129.0411       95.20151      -104.7115
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              2             -2              2
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              2              0              0      -129.0411              0
+             -2              0       95.20151              0              0
+              2      -104.7115
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              2              0              0      -129.0411              0
+             -2              0       95.20151              0              0
+              2      -104.7115
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+     -0.5871059      0.6318295
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 128 128 70 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 3
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 5
+'ORIG~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 0
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~

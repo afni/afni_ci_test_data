@@ -1,1 +1,111 @@
-../../../.git/annex/objects/zm/Mv/MD5E-s2156--eb6b4ff1611a0c5a04a0270cc516eff3.HEAD/MD5E-s2156--eb6b4ff1611a0c5a04a0270cc516eff3.HEAD
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 268
+'[afni_user@edda28aaa4a9: Wed Oct 28 20:56:01 2020] {AFNI_20.3.00:Linux_cmake} 3dRSFC -input ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/mini_REST_proc_unfilt.nii.gz -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dRSFC/o.3dRSFC -band 0.01 0.1~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'XYZ_a1xB6hh47_TY5QjgRjTUkQ~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Wed Oct 28 20:56:01 2020~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 0 2 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 2 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+       -41.1809        22.7001       -37.7257
+
+type  = float-attribute
+name  = DELTA
+count = 3
+         3.4375        -3.4375            3.4
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+         3.4375              0              0       -41.1809              0
+        -3.4375              0        22.7001              0              0
+            3.4       -37.7257
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+         3.4375              0              0       -41.1809              0
+        -3.4375              0        22.7001              0              0
+            3.4       -37.7257
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+      0.3420069      0.6699276
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 24 24 13 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 3
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 5
+'ORIG~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 0
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~

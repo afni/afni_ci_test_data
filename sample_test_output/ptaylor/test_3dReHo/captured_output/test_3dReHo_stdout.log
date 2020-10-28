@@ -1,0 +1,4 @@
+
++++ Command Echo:
+   3dReHo -inset ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/mini_REST_proc_unfilt.nii.gz[0..45] -nneigh 7 -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dReHo/o.3dReHo 
+

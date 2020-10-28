@@ -1,1 +1,66 @@
-../../../.git/annex/objects/1V/g8/MD5E-s2282--11f650f2d4b36cf06d69efeb5c9984e0.niml.dset/MD5E-s2282--11f650f2d4b36cf06d69efeb5c9984e0.niml.dset
+<AFNI_dataset
+  dset_type="Graph_Bucket"
+  self_idcode="XYZ_LOKJ_L1Sl9gUEarGxVUl9g"
+  domain_parent_idcode
+  geometry_parent_idcode
+  filename="output_of_tests/output_2020_10_28_205556/ptaylor/test_3dTrackID_DET/o.3dTrackID_DET_000.niml.dset"
+  label="SUMA_FloatVec_to_..."
+  ni_form="ni_group" >
+<SPARSE_DATA
+  ni_type="15*float"
+  ni_dimen="1"
+  data_type="Graph_Bucket_data"
+  matrix_size=" 1 1"
+  matrix_shape="full" >
+ 25738 0.9526242 376104 7.9302e+09 47013 57.92879 25.90265 0.4476702 0.1584617 0.7115965 0.1943893 1.07972 0.291986 0.5275308 0.1929304
+</SPARSE_DATA>
+
+<AFNI_atr
+  ni_type="String"
+  ni_dimen="1"
+  atr_name="COLMS_RANGE"
+  alloc_max="8244" >
+ "25738.000000 25738.000000 0 0;0.952624 0.952624 0 0;376104.000000 376104.000000 0 0;7930200064.000000 7930200064.000000 0 0;47013.000000 47013.000000 0 0;57.928791 57.928791 0 0;25.902649 25.902649 0 0;0.447670 0.447670 0 0;0.158462 0.158462 0 0;0.711597 0.711597 0 0;0.194389 0.194389 0 0;1.079720 1.079720 0 0;0.291986 0.291986 0 0;0.527531 0.527531 0 0;0.192930 0.192930 0 0"
+</AFNI_atr>
+
+<AFNI_atr
+  ni_type="String"
+  ni_dimen="1"
+  atr_name="COLMS_LABS"
+  alloc_max="8199" >
+ "NT;fNT;PV;fNV;NV;BL;sBL;FA;sFA;MD;sMD;L1;sL1;RD;sRD"
+</AFNI_atr>
+
+<AFNI_atr
+  ni_type="String"
+  ni_dimen="1"
+  atr_name="COLMS_TYPE"
+  alloc_max="8220" >
+ "Generic_Float;Generic_Float;Generic_Float;Generic_Float;Generic_Float;Generic_Float;Generic_Float;Generic_Float;Generic_Float;Generic_Float;Generic_Float;Generic_Float;Generic_Float;Generic_Float;Generic_Float"
+</AFNI_atr>
+
+<AFNI_atr
+  ni_type="String"
+  ni_dimen="1"
+  atr_name="COLMS_STATSYM"
+  alloc_max="8202" >
+ "none;none;none;none;none;none;none;none;none;none;none;none;none;none;none"
+</AFNI_atr>
+
+<INDEX_LIST
+  data_type="Graph_Bucket_edge_indices" />
+<NODE_COORDS
+  ni_type="int,3*float,String"
+  ni_dimen="1"
+  data_type="Graph_Bucket_node_coordinates"
+  COLMS_RANGE="0 0 0 0;-2.721527 -2.721527 0 0;-12.011887 -12.011887 0 0;-21.541519 -21.541519 0 0;;"
+  COLMS_LABS="Gnode Index;Gnode X;Gnode Y;Gnode Z;Gnode Label;"
+  COLMS_TYPE="GNode_Index;X_coord;Y_coord;Z_coord;Node_String_Label;" >
+ 0 -2.721527 -12.01189 -21.54152 "001"
+</NODE_COORDS>
+
+<network_link
+  network_file="o.3dTrackID_DET_000.niml.tract"
+  ni_form="ni_group" >
+</network_link>
+</AFNI_dataset>

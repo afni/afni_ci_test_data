@@ -1,0 +1,4 @@
+
++++ Command Echo:
+   3dSpaceTimeCorr -insetA ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/REST_in_DWI.nii.gz[5..15] -insetB ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/REST_in_DWI.nii.gz[25..35] -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/mask_minisphere_dwi.nii.gz -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dSpaceTimeCorr/o.3dSpaceTimeCorr 
+

@@ -1,1 +1,18 @@
-../../../../.git/annex/objects/qX/WG/MD5E-s1558--05eb72d042e77d65e37532bbb771ccf7.log/MD5E-s1558--05eb72d042e77d65e37532bbb771ccf7.log
+++ 3dDWItoDT: AFNI version=AFNI_20.3.00 (Oct 20 2020) [64-bit]
+++ Authored by: Daniel Glen
+++ Implementing user-selected scaling of diffusion values by 1000
+++ The maximum magnitude of the bmatrix appears to be: 1.00
+++ -> and, by scale, the 'CSF value' (e.g., MD) for any unfit voxels will be: 0.99999976
+++ Voxels with MD>99.999977 will be deemed unfit for fitting and given 'CSF' status
+++ --- Output dataset output_of_tests/output_2020_10_28_205556/ptaylor/test_3dDWItoDT/3dDWItoDT_DT+orig.BRIK
+++ --- Output dataset output_of_tests/output_2020_10_28_205556/ptaylor/test_3dDWItoDT/3dDWItoDT_L1+orig.BRIK
+++ --- Output dataset output_of_tests/output_2020_10_28_205556/ptaylor/test_3dDWItoDT/3dDWItoDT_L2+orig.BRIK
+++ --- Output dataset output_of_tests/output_2020_10_28_205556/ptaylor/test_3dDWItoDT/3dDWItoDT_L3+orig.BRIK
+++ --- Output dataset output_of_tests/output_2020_10_28_205556/ptaylor/test_3dDWItoDT/3dDWItoDT_V1+orig.BRIK
+++ --- Output dataset output_of_tests/output_2020_10_28_205556/ptaylor/test_3dDWItoDT/3dDWItoDT_V2+orig.BRIK
+++ --- Output dataset output_of_tests/output_2020_10_28_205556/ptaylor/test_3dDWItoDT/3dDWItoDT_V3+orig.BRIK
+++ --- Output dataset output_of_tests/output_2020_10_28_205556/ptaylor/test_3dDWItoDT/3dDWItoDT_FA+orig.BRIK
+++ --- Output dataset output_of_tests/output_2020_10_28_205556/ptaylor/test_3dDWItoDT/3dDWItoDT_MD+orig.BRIK
+++ --- Output dataset output_of_tests/output_2020_10_28_205556/ptaylor/test_3dDWItoDT/3dDWItoDT_RD+orig.BRIK
+++ Finished main tensor+parameter calcs.
+++ Finished with all calcs: cleanup.

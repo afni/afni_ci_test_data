@@ -1,1 +1,136 @@
-../../../.git/annex/objects/4J/5f/MD5E-s2961--ee8f5975eb11bb2e31ca2cbba62c3548.niml.dset/MD5E-s2961--ee8f5975eb11bb2e31ca2cbba62c3548.niml.dset
+<AFNI_dataset
+  dset_type="Graph_Bucket"
+  self_idcode="XYZ_wa9xYm_UWmin9fImPIYdCQ"
+  domain_parent_idcode
+  geometry_parent_idcode
+  filename="output_of_tests/output_2020_10_28_205556/ptaylor/test_3dNetCorr/o.3dNetCorr_003.niml.dset"
+  label="SUMA_FloatVec_to_..."
+  ni_form="ni_group" >
+<SPARSE_DATA
+  ni_type="2*float"
+  ni_dimen="64"
+  data_type="Graph_Bucket_data"
+  matrix_size=" 8 8"
+  matrix_shape="full" >
+ 1 4
+ 0.6843432 0.8372377
+ 0.5586187 0.630823
+ 0.8876827 1.410889
+ 0.8879853 1.412318
+ 0.7950596 1.085037
+ 0.403192 0.4274548
+ 0.7379943 0.9460604
+ 0.6843432 0.8372377
+ 1 4
+ 0.8197591 1.156083
+ 0.5249121 0.583096
+ 0.7116518 0.8905227
+ 0.7937589 1.081511
+ 0.6801376 0.82937
+ 0.4112695 0.4371382
+ 0.5586187 0.630823
+ 0.8197591 1.156083
+ 1 4
+ 0.2813612 0.2891596
+ 0.5295926 0.5895789
+ 0.7791332 1.043161
+ 0.6630989 0.7983242
+ 0.2349701 0.2394436
+ 0.8876827 1.410889
+ 0.5249121 0.583096
+ 0.2813612 0.2891596
+ 1 4
+ 0.8209808 1.159819
+ 0.6758785 0.8214872
+ 0.2277272 0.2317911
+ 0.8082395 1.121931
+ 0.8879853 1.412318
+ 0.7116518 0.8905227
+ 0.5295926 0.5895789
+ 0.8209808 1.159819
+ 1 4
+ 0.7329696 0.9351146
+ 0.4576626 0.4943506
+ 0.7728115 1.027271
+ 0.7950596 1.085037
+ 0.7937589 1.081511
+ 0.7791332 1.043161
+ 0.6758785 0.8214872
+ 0.7329696 0.9351146
+ 1 4
+ 0.5697796 0.6471965
+ 0.5887509 0.6757522
+ 0.403192 0.4274548
+ 0.6801376 0.82937
+ 0.6630989 0.7983242
+ 0.2277272 0.2317911
+ 0.4576626 0.4943506
+ 0.5697796 0.6471965
+ 1 4
+ 0.4368764 0.4683638
+ 0.7379943 0.9460604
+ 0.4112695 0.4371382
+ 0.2349701 0.2394436
+ 0.8082395 1.121931
+ 0.7728115 1.027271
+ 0.5887509 0.6757522
+ 0.4368764 0.4683638
+ 1 4
+</SPARSE_DATA>
+
+<AFNI_atr
+  ni_type="String"
+  ni_dimen="1"
+  atr_name="COLMS_RANGE"
+  alloc_max="8238" >
+ "0.227727 1.000000 30 0;0.231791 4.000000 30 0"
+</AFNI_atr>
+
+<AFNI_atr
+  ni_type="String"
+  ni_dimen="1"
+  atr_name="COLMS_LABS"
+  alloc_max="8198" >
+ "CC;FZ"
+</AFNI_atr>
+
+<AFNI_atr
+  ni_type="String"
+  ni_dimen="1"
+  atr_name="COLMS_TYPE"
+  alloc_max="8220" >
+ "Generic_Float;Generic_Float"
+</AFNI_atr>
+
+<AFNI_atr
+  ni_type="String"
+  ni_dimen="1"
+  atr_name="COLMS_STATSYM"
+  alloc_max="8202" >
+ "none;none"
+</AFNI_atr>
+
+<INDEX_LIST
+  data_type="Graph_Bucket_edge_indices" />
+<NODE_COORDS
+  ni_type="int,3*float,String"
+  ni_dimen="8"
+  data_type="Graph_Bucket_node_coordinates"
+  COLMS_RANGE="0 7 0 7;-52.859291 54.894379 3 6;-62.646881 7.364403 12 15;-44.984230 8.243553 3 21;;"
+  COLMS_LABS="Gnode Index;Gnode X;Gnode Y;Gnode Z;Gnode Label;"
+  COLMS_TYPE="GNode_Index;X_coord;Y_coord;Z_coord;Node_String_Label;" >
+ 0 36.02095 -53.15674 -30.55071 "001"
+ 1 -52.85929 -8.048492 -44.98423 "002"
+ 2 54.89438 -20.25011 -43.39967 "003"
+ 3 -46.96143 -52.02927 -29.88733 "004"
+ 4 -1.922592 -62.64688 3.071968 "005"
+ 5 52.21681 7.364403 -20.7115 "006"
+ 6 38.01152 -31.27802 4.405457 "007"
+ 7 -45.96246 -27.37153 8.243553 "008"
+</NODE_COORDS>
+
+<network_link
+  network_file="o.3dNetCorr_003.niml.tract"
+  ni_form="ni_group" >
+</network_link>
+</AFNI_dataset>

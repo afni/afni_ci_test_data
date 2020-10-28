@@ -1,1 +1,129 @@
-../../../.git/annex/objects/36/8P/MD5E-s2800--400bfe19845641654cb1c3f0d5c7a465.HEAD/MD5E-s2800--400bfe19845641654cb1c3f0d5c7a465.HEAD
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 424
+'[afni_user@edda28aaa4a9: Wed Oct 28 20:56:01 2020] {AFNI_20.3.00:Linux_cmake} 3dVecRGB_to_HSL -in_vec ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_V1+orig.BRIK.gz -in_scal ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_FA+orig.BRIK.gz -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dVecRGB_to_HSL/o.3dVecRGB_to_HSL~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_FUNC~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'XYZ_oUaXx0kkr9yD_MG-f6HQLQ~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Wed Oct 28 20:56:01 2020~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 0 11 1 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 2 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+      -129.0411       95.20151      -104.7115
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              2             -2              2
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              2              0              0      -129.0411              0
+             -2              0       95.20151              0              0
+              2      -104.7115
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              2              0              0      -129.0411              0
+             -2              0       95.20151              0              0
+              2      -104.7115
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 8
+              0              1              0              1              0
+      0.6123278              0              1
+
+type = integer-attribute
+name = TAXIS_NUMS
+count = 8
+ 4 0 0 -999 -999
+ -999 -999 -999
+
+type  = float-attribute
+name  = TAXIS_FLOATS
+count = 8
+              0              0              0              0              0
+        -999999        -999999        -999999
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 4 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 128 128 70 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 4
+ 3 3 3 3
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 4
+              0              0              0              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 22
+'Hue~Sat~Lum~Bri_extra~
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 5
+'ORIG~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 0
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~

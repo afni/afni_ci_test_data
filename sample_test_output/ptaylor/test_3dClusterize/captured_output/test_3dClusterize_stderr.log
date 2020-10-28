@@ -1,1 +1,15 @@
-../../../../.git/annex/objects/Wv/K4/MD5E-s761--904c48727316ec6be379f205ed3b6db3.log/MD5E-s761--904c48727316ec6be379f205ed3b6db3.log
+++ User input stat threshold: -3
+++ User input stat threshold: 3
+++ Neighborhood definition (NN=2) accepted
+++ Data volume:      [0] '#3'
+++ Threshold volume: [0] '#3'
+++ How many sides to this stat? 0
+++ Looks like clustering is *not* being performed on a stat value; won't worry about sidedness, then.
+++ Opt code: bisided,-3,3,clust_nvox,200,NN2
+++ Reading in user's mask
+++ Threshold volume [0] does *not* appear to be a stat!
+++ Sorting clusters by size.
+++ Writing out dataset masked by clusters.
+++ Output dataset output_of_tests/output_2020_10_28_205556/ptaylor/test_3dClusterize/o.3dClusterize_DAT.nii.gz
+++ Writing out map of cluster ROIs.
+++ Output dataset output_of_tests/output_2020_10_28_205556/ptaylor/test_3dClusterize/o.3dClusterize_MAP.nii.gz

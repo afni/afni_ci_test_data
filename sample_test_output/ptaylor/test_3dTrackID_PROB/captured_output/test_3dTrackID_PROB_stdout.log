@@ -1,0 +1,5 @@
+
++++ Command Echo:
+   3dTrackID -mode PROB -choose_seed 5 -no_indipair_out -nifti -dti_in ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT -uncert ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/o.UNCERT+orig.BRIK.gz -netrois ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/ROI_ICMAP_GMI+orig.BRIK.gz -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -alg_Thresh_Frac 0.2 -alg_Nseed_Vox 5 -alg_Nmonte 5 -dump_rois AFNI -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dTrackID_PROB/o.3dTrackID_PROB 
+
+

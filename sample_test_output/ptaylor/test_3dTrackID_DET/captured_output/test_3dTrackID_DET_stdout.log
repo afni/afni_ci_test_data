@@ -1,0 +1,5 @@
+
++++ Command Echo:
+   3dTrackID -mode DET -dti_in ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT -netrois ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/mask_eroded_dwi.nii.gz -logic OR -alg_Thresh_Len 30 -alg_Nseed_X 1 -alg_Nseed_Y 1 -alg_Nseed_Z 1 -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dTrackID_DET/o.3dTrackID_DET 
+
+

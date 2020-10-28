@@ -1,1 +1,35 @@
-../../../.git/annex/objects/Gg/0F/MD5E-s383--e85a94e2888b58cd63385414c659dec5.grid/MD5E-s383--e85a94e2888b58cd63385414c659dec5.grid
+# 1  # Number of network ROIs
+# 15  # Number of grid matrices
+# WITH_ROI_LABELS
+         001
+           1
+# NT
+       25738
+# fNT
+9.526242e-01
+# PV
+3.761040e+05
+# fNV
+2.787095e-01
+# NV
+4.701300e+04
+# BL
+5.792879e+01
+# sBL
+2.590265e+01
+# FA
+4.476702e-01
+# sFA
+1.584617e-01
+# MD
+7.115965e-01
+# sMD
+1.943893e-01
+# L1
+1.079720e+00
+# sL1
+2.919860e-01
+# RD
+5.275308e-01
+# sRD
+1.929304e-01

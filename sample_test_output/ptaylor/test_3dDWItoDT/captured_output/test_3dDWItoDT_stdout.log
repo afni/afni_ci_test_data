@@ -1,0 +1,4 @@
+
++++ Command Echo:
+   3dDWItoDT -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dDWItoDT/3dDWItoDT -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -eigs -scale_out_1000 -sep_dsets -linear -bmatrix_FULL ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/grad_BMAT.txt ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/AVEB0_DWI.nii.gz 
+

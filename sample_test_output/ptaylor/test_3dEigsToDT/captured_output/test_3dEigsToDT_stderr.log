@@ -1,1 +1,9 @@
-../../../../.git/annex/objects/Qv/1X/MD5E-s785--8ece9fd9ca052ae87eba9e4762fd7cc9.log/MD5E-s785--8ece9fd9ca052ae87eba9e4762fd7cc9.log
+++ SEARCHING for files with prefix './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_L*'
+++ Loaded L1 file: './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_L1+orig.BRIK.gz'
+++ Loaded L2 file: './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_L2+orig.BRIK.gz'
+++ Loaded L3 file: './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_L3+orig.BRIK.gz'
+++ SEARCHING for files with prefix './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_V*'
+++ Loaded V1 file: './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_V1+orig.BRIK.gz'
+++ Loaded V2 file: './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_V2+orig.BRIK.gz'
+++ Loaded V3 file: './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_V3+orig.BRIK.gz'
+++ Calculate sum of dyads.

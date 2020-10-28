@@ -1,1 +1,5 @@
-../../../../.git/annex/objects/Mf/3w/MD5E-s237--3013165d815980180ca4193631435bb6.log/MD5E-s237--3013165d815980180ca4193631435bb6.log
+++ You have chosen an SNR0 of approximately 20.00 for DWIs
+++ You have noiseless (i.e., infinite SNR) reference B0.
+++ Have surmised there are 30 total grads; output file will have 31 bricks
+++ Calculating the DWIs.
+++ Writing the DWIs.

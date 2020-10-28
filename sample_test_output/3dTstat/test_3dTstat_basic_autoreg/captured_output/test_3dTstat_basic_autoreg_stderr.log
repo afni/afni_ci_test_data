@@ -1,1 +1,4 @@
-../../../../.git/annex/objects/0p/G0/MD5E-s224--f0165126a3d4b3cdbdcae24f780d0d9e.log/MD5E-s224--f0165126a3d4b3cdbdcae24f780d0d9e.log
+++ 3dTstat: AFNI version=AFNI_20.3.00 (Oct 20 2020) [64-bit]
+++ Authored by: KR Hammett & RW Cox
+++ FFT length = 304
+++ Output dataset output_of_tests/output_2020_10_28_205556/3dTstat/test_3dTstat_basic_autoreg/stat.nii.gz

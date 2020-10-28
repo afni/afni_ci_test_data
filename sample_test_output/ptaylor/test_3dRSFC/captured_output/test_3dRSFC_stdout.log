@@ -1,0 +1,4 @@
+
++++ Command Echo:
+   3dRSFC -input ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/mini_REST_proc_unfilt.nii.gz -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dRSFC/o.3dRSFC -band 0.01 0.1 
+

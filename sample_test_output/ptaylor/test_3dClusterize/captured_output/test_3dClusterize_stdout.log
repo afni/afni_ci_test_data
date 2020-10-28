@@ -1,0 +1,33 @@
+
++++ Command Echo:
+   3dClusterize -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -inset ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/SOME_ICA_NETS_in_DWI+orig.BRIK.gz -ithr 0 -idat 0 -bisided -3 3 -NN 2 -clust_nvox 200 -pref_map output_of_tests/output_2020_10_28_205556/ptaylor/test_3dClusterize/o.3dClusterize_MAP.nii.gz -pref_dat output_of_tests/output_2020_10_28_205556/ptaylor/test_3dClusterize/o.3dClusterize_DAT.nii.gz 
+
+#
+#  Cluster report 
+#[ Dataset prefix      = SOME_ICA_NETS_in_DWI ]
+#[ Threshold vol       = [0] '#3' ]
+#[ Supplement dat vol  = [0] '#3' ]
+#[ Option summary      = bisided,-3,3,clust_nvox,200,NN2 ]
+#[ Threshold value(s)  = left-tail thr=-3.000000;  right-tail thr=3.000000 ]
+#[ Aux. stat. info.    = not a stat! ]
+#[ Nvoxel threshold    = 200;  Volume threshold = 1600.000 ]
+#[ Single voxel volume = 8.000 (microliters) ]
+#[ Neighbor type, NN   = 2 ]
+#[ Voxel datum type    = float ]
+#[ Voxel dimensions    = 2.000 mm X 2.000 mm X 2.000 mm ]
+#[ Coordinates Order   = RAI ]
+#[ Mask                = ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz ]
+# Mean and SEM based on absolute value of voxel intensities ]
+#
+#Volume  CM RL  CM AP  CM IS  minRL  maxRL  minAP  maxAP  minIS  maxIS    Mean     SEM    Max Int  MI RL  MI AP  MI IS
+#------  -----  -----  -----  -----  -----  -----  -----  -----  -----  -------  -------  -------  -----  -----  -----
+   3630   -5.3   18.3  -11.4  -33.0   13.0  -28.8   43.2  -32.7   11.3   5.4529   0.0313    12.05   -9.0   21.2  -16.7 
+   3180   -6.9  -71.2  -24.4  -35.0    9.0  -90.8  -44.8  -48.7   13.3   4.9248   0.0267   10.318   -5.0  -76.8  -32.7 
+    687   45.0   24.2  -15.4   35.0   57.0   13.2   39.2  -30.7   -2.7   4.4082   0.0428   7.8935   49.0   25.2  -12.7 
+    575  -54.7   25.8  -13.5  -67.0  -39.0   17.2   37.2  -32.7    1.3   3.8468   0.0244   5.4649  -53.0   21.2  -10.7 
+    358   32.9  -54.4  -44.9   21.0   45.0  -62.8  -46.8  -62.7  -36.7    3.799   0.0364   6.1097   35.0  -54.8  -42.7 
+    353  -55.9  -38.6  -52.9  -69.0  -43.0  -56.8  -20.8  -64.7  -42.7   4.1111    0.046   6.7354  -57.0  -32.8  -48.7 
+    345   51.2  -37.0  -53.5   43.0   63.0  -50.8  -24.8  -60.7  -44.7   4.3358   0.0687   9.1059   49.0  -36.8  -54.7 
+    308   13.3  -59.7    5.1    3.0   23.0  -72.8  -44.8   -4.7   17.3   3.8102   0.0365   5.6534   15.0  -52.8    1.3 
+#------  -----  -----  -----  -----  -----  -----  -----  -----  -----  -------  -------  -------  -----  -----  -----
+#  9436   -3.1  -19.0  -19.4                                             4.8936   0.0169                             

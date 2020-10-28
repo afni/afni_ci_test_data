@@ -1,0 +1,4 @@
+
++++ Command Echo:
+   3dDTtoNoisyDWI -grads ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/grad_cvec_n-1.txt -choose_seed 7 -dt_in ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_DT+orig.BRIK.gz -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/mask_minisphere_dwi.nii.gz -noise_DWI 0.05 -noise_B0 0 -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dDTtoNoisyDWI/o.3dDTtoNoisyDWI 
+

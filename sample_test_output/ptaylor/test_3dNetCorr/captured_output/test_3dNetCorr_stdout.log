@@ -1,0 +1,4 @@
+
++++ Command Echo:
+   3dNetCorr -inset ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/REST_in_DWI.nii.gz[5..50] -in_rois ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/ROI_ICMAP_GM+orig.BRIK.gz -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dNetCorr/o.3dNetCorr -fish_z -ts_wb_Z -nifti -ts_out 
+
