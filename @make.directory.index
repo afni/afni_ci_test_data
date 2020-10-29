@@ -1,0 +1,299 @@
+#!/bin/tcsh
+
+# usage: script [dir1 dir2 ...]
+
+# make an index.html file out of the files in the current
+# directory, or all directories on the command line
+
+# trees to avoid:
+#    pub/dist/HOWTO/howto
+#    pub/dist/doc/program_help
+
+set backup = 1          # make a backup of any current copy
+set clean = 0           # nuke old files
+set curdir = 1          # include current directory
+set dir = $cwd:t
+set hfile = index.html
+set htmp = .tmp.index.html
+set date_form = '+%Y_%m_%d_%H%M'
+set date = `date $date_form`
+set show_date = 1       # include timestamp in web page
+set dirs = 0            # run this within directories
+set nested = 0          # nest this for directories
+set testing = 0         # just running a test
+set verb = 1            # verbose level (0=quiet, 1=default, 2=verbose)
+set warn = 1            # warn about non-overwrite files
+set indent = 0          # indent for printing (to show nesting depth)
+
+set prog = `basename $0`
+
+# look for a very specific string, to test for old generation by this script
+set match_string = '^.center. .h2.contents of directory: '
+
+# ======================================================================
+# skipping directories is no longer needed, as we check for $match_string
+# ======================================================================
+# 
+# skip particular directories (looks like or tail is)
+# if ( $dir =~ '*_files' || $dir =~ '*_doxy'     || $dir =~ *tutorial  || \
+#      $dir == howto     || $dir == program_help || $dir == html.nifti || \
+#      $dir == AFNI_MatlabLib || $dir == cvs     || $dir == CVS        || \
+#      $dir == afni_src ) then
+#     echo "-- skipping $cwd"
+#     exit
+# endif
+ 
+# if no file names are specified, all files will be applied
+# else, all files will be used
+
+set files = ( )         # init to empty list
+set pass_opts = ()      # options to pass for recur
+set narg = 1
+while ( $narg <= $#argv )
+   if ( "$argv[$narg]" == "-help" ) then
+      echo "usage: $prog [-dirs/-nested] file file ..."
+      echo ""
+      echo "examples:"
+      echo ""
+      echo "   1. just make a file in the current directory"
+      echo ""
+      echo "      @make.directory.index"
+      echo ""
+      echo "   2. specify which files to include"
+      echo ""
+      echo "      @make.directory.index *.txt some other files"
+      echo ""
+      echo "   3. run on a specific list of directory trees"
+      echo ""
+      echo "      @make.directory.index -dirs dir1 dir2 /some/dir3"
+      echo ""
+      echo "   4. recursively fill a tree; nuke old copies index.html files"
+      echo ""
+      echo "      @make.directory.index -nested -clean -dirs ."
+      echo ""
+      echo "   5. and if not in PATH"
+      echo ""
+      echo "      ./@make.directory.index -nested -clean -use_path -dirs ."
+      echo ""
+      echo ""
+      echo "With no options, all files/dirs are included."
+      echo "Else, specify a list of files/dirs."
+      echo ""
+      echo "  -clean      : delete old index.html files"
+      echo "  -date Y/N   : specify whether to use the date in output [Y]"
+      echo "  -indent N   : spaces to indent text"
+      echo "  -dirs       : argumets are directories to enter and run on"
+      echo "  -nested     : nest command to get entire directory trees"
+      echo "  -quiet      : try to be quiet"
+      echo "  -test       : just show what would be done"
+      echo "  -use_path   : if not in PATH, include path to prog on recur"
+      echo "  -verb       : be more verbose (can use multiple options)"
+      echo ""
+      exit
+   else if ( "$argv[$narg]" == "-clean" ) then
+      set clean = 1
+      set backup = 0
+      set pass_opts = ( $pass_opts "$argv[$narg]" )
+   else if ( "$argv[$narg]" == "-indent" ) then
+      @ narg ++
+      if ( $narg > $#argv ) then
+         echo "** need NUM_SPACES after -indent"
+         exit
+      endif
+      set indent = $argv[$narg]
+   else if ( "$argv[$narg]" == "-date" ) then
+      @ narg ++
+      if ( $narg > $#argv ) then
+         echo "** need Y/N after -date"
+         exit
+      endif
+      if ( "$argv[$narg]" == "N" || "$argv[$narg]" == "n" ) then
+         set show_date = 0
+      else if ( "$argv[$narg]" == "Y" || "$argv[$narg]" == "y" ) then
+         set show_date = 1
+      else 
+         echo "** -date takes y or n as parameter, have $argv[$narg]"
+         exit
+      endif
+      set pass_opts = ( $pass_opts -date $argv[$narg] ) 
+   else if ( "$argv[$narg]" == "-dirs" ) then
+      if ( $narg > $#argv ) then
+         echo "** need dirs after -enter_dirs"
+         exit
+      endif
+      set dirs = 1
+   else if ( "$argv[$narg]" == "-nested" ) then
+      set nested = 1
+      set pass_opts = ( $pass_opts "$argv[$narg]" )
+   else if ( "$argv[$narg]" == "-quiet" ) then
+      set verb = 0
+      set pass_opts = ( $pass_opts "$argv[$narg]" )
+   else if ( "$argv[$narg]" == "-test" ) then
+      set testing = 1
+      set pass_opts = ( $pass_opts "$argv[$narg]" )
+   else if ( "$argv[$narg]" == "-use_path" ) then
+      # use path to prog, if not in PATH
+      set prog = $0
+      set pass_opts = ( $pass_opts "$argv[$narg]" )
+   else if ( "$argv[$narg]" == "-verb" ) then
+      @ verb += 1
+      set pass_opts = ( $pass_opts "$argv[$narg]" )
+   else 
+      # otherwise, assume as have a list of files
+      set files = ( $argv[$narg-] )
+      break
+   endif
+   @ narg ++
+end
+
+# convert indent level to spaces string and prepare for recursion
+set spaces = "`printf '%*s' $indent ''`"
+@ indent += 3
+set pass_opts = ( $pass_opts -indent $indent )
+
+# if we do not yet have files, get some
+if ( $#files == 0 ) then
+   if ( $dirs ) then
+      echo "** error: need directory list with -dirs"
+      exit
+   endif
+   set files = ( `\ls -1 | grep -v $hfile` )
+endif
+
+# ------------------------------------------------------------
+# show where we are
+if ( $verb ) then
+   echo "${spaces}dir: `pwd`"
+endif
+
+# ------------------------------------------------------------
+# do we make one in the current directory
+set make_one_here = 1
+if ( -f $hfile ) then
+   grep -q "$match_string" index.html
+   if ( $status ) then
+      if ( $warn ) echo "NO: skip `pwd`/$hfile"
+      set make_one_here = 0
+   endif
+endif
+
+# ------------------------------------------------------------
+# initialize html file
+
+if ( $make_one_here && ! $testing && ! $dirs ) then
+
+   echo -n "" > $htmp
+
+   echo "<html>" >> $htmp
+   echo "<head> <title>$dir</title> </head>" >> $htmp
+   echo "<body>" >> $htmp
+
+   # this should be matchable by $match_string
+   echo "<!-- autogenerated by @make.directory.index -->" >> $htmp
+   echo "<center> <h2>contents of directory: $dir</h2> </center>" >> $htmp
+
+   echo "" >> $htmp
+   echo "<pre>" >> $htmp
+   echo "" >> $htmp
+
+   # ------------------------------------------------------------
+   # create a header row
+   if ( $show_date ) then
+      set hstr = "    type         date         name"
+      set dstr = "    ----    ---------------   ------------------------"
+   else
+      set hstr = "    type    name"
+      set dstr = "    ----    ------------------------"
+   endif
+
+   echo "$hstr" >> $htmp
+   echo "$dstr" >> $htmp
+   echo "" >> $htmp
+endif
+
+# ------------------------------------------------------------
+# add contents and/or recur
+foreach file ( $files )
+   if ( "$file" =~ "$hfile*" ) continue
+
+   if ( -f $file ) then
+      set ftype = "file"
+   else if ( -d $file ) then
+      set ftype = "dir "
+
+      if ( $file != .. ) then
+       
+         # maybe do some more work here
+         if ( $dirs ) then
+            # echo "$spaces++ processing directory $file ..."
+            cd $file
+            $prog $pass_opts
+            cd -
+            continue    # nothing else to do
+         else if ( $nested ) then
+            cd $file
+            # echo "$spaces++ processing nested directory `pwd`"
+            $prog $pass_opts
+            cd -
+         endif
+      endif
+   else
+      set ftype = "    "
+   endif
+
+   if ( $make_one_here && ! $testing ) then
+      if ( $show_date ) then
+          set fdate = `\ls -ld --time-style=$date_form $file | awk '{print $6}'`
+          set dstr = "`echo $fdate | sed 's/_/./g'`   "
+      else
+          set dstr = ''
+      endif
+      echo "    $ftype    $dstr<a href=$file>$file</a>" >> $htmp
+   endif
+end
+
+# if -dirs, those were just starting points, so we are done
+if ( $dirs ) exit
+
+# if testing, just mention what is here
+if ( $testing ) then
+   echo "${spaces}have $#files files under $dir"
+   exit
+endif
+
+# if we are not making a new file, we are done
+if ( ! $make_one_here ) exit
+
+
+# ------------ finalize result (temp file) and make index ------------
+
+echo "" >> $htmp
+echo "</pre>" >> $htmp
+echo "</body>" >> $htmp
+echo "</html>" >> $htmp
+
+# --- decide what to do with the new and old files
+
+# if cleaning, do that first
+if ( -f $hfile && $clean ) then
+   # nuke any old stuff and overwrite
+   echo "$spaces   == nuking old $hfile* under $dir ..."
+   \rm -f $hfile*
+endif
+
+# note whether there is any change to make
+set changed = 1
+if ( -f $hfile ) then
+   cmp -s $htmp $hfile
+   set changed = $status
+endif
+
+# if there is a change to make, do so
+if ( $changed ) then
+   echo "$spaces   -- saving results in $dir"   # nothing to do
+   if ( -f $hfile && $backup ) \mv -f $hfile $hfile.$date # maybe make backup
+   mv $htmp $hfile                              # the main step
+else
+   echo "$spaces   -- no change for $dir"       # nothing to do
+endif
+
