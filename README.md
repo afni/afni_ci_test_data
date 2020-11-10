@@ -23,7 +23,7 @@ Examples of adding data to the repository can be seen in the setup script in thi
 When new tests are added, or the expected output of a particular test changes you will need to add some more data to this repository. Follow these instructions to do this...
 
 
-Be very careful that the behavior from your tested function and the test is what you want. This will create the new "correct" output. It is best to run all of the test commands inside the development container. This will reduce confusing results on circleci. The best way to start a container is to follow the instructions emitted when you attempt to run container testing in debug mode i.e. `run_afni_tests.py -d container`
+Be very careful that the behavior from your tested function and the test is what you want. This will create the new "correct" output. It is best to run all of the test commands inside the development container. This will reduce confusing results on circleci (variation in the output due to differences in environment). The best way to start a container is to follow the instructions emitted when you attempt to run container testing in debug mode i.e. `run_afni_tests.py -d container`
 
 
 1. Run all tests (they should all pass except the ones you wish to create data for)
@@ -51,7 +51,7 @@ cd /opt/afni/src/tests;                        \
     local
 ```
 
-3. Copy the sample data into the test data tree (you will need to modify the directory path below, be careful with trailing slashes):
+3. Copy the sample data into the test data tree. You will need to modify the directory path that contains a datestamp below and be careful with trailing slashes:
 
 
 ```
@@ -75,7 +75,7 @@ datalad save -m 'update sample output data'
 datalad publish --transfer-data=all --to=origin
 ```
 
-Note: the afni server has to container the binary blobs and have the binary blobs globaly accessible. The git repository doesn't need to look up to data, so for example it is fine to have an old version of master checked-out. The data will look out of data but it will be providing the appropriate files for download to datalad/git-annex.
+Note: the afni server stores all the binary blobs (the actual data). These files need to be globally accessible. The git repository doesn't need to look up to date, so for example it is fine to have an old version of master checked-out. The data will look out of date but it will be providing the appropriate files for download when requested.
 
 6. Fix permissions on the server... I can't find a work around for this right now.
 
@@ -104,7 +104,7 @@ If the above doesn't work start working through the trouble-shooting tips below.
 
 
 ```
-cd ~/afni # where ever you keep your afni source code
+cd ~/afni # or the path to your afni source code
 git add tests/afni_ci_tests_data
 git commit -m 'update data for tests'
 ```
@@ -125,7 +125,7 @@ The file ./git/config file in the afni_ci_test_data repository does not contain 
     annex-uuid = c1ce38d5-c2ef-48c6-a1f2-e207215d0717
 ```
 
-Specifically, you should have a pushurl configured. If you do not, `datalad publish` will try and fail to write via https.
+Specifically, you should have a pushurl configured. If you do not, `datalad publish` will try and fail to write via https. Also in the annex section the version should likely be 7 not 8.
 
 ### Consulting the ghosts of the past
 
@@ -133,24 +133,13 @@ Check commits logs in the afni_ci_test_data repo, these provide an excellent gui
 
 ### Fixing browser access
 
-Due to NIH server configuration constraint the files need to be indexed if you wish to access them directly via a browser. This could be implemented as a git hook that is executed on push if that is desirable. Overall I think having browser access is not required though (script stored in repository if you need it, add it to your path):
+Due to NIH server configuration constraint the files need to be indexed if you wish to access them directly via a browser. This could be implemented as a git hook that is executed on push if that is desirable. Overall I think having browser access is not required though. It can make things confusing to try to support this functionality. The @make.directory.index script is stored in repository if you need it, add it to your path:
 
 
 ```
 @make.directory.index -nested -dirs /fraid/pub/dist/data/afni_ci_test_data
 ```
 
-
-### Permission fix attempt
-
-Executed the following (oct 2020) to see if that lead to a better situation (I do not think it does sadly):
-
-
-```
-chgrp -R $(id -g) afni_ci_test_data
-chmod -R g+swX afni_ci_test_data
-chmod -R o+srX afni_ci_test_data
-```
 
 ### annex remote accessibility
 
@@ -159,5 +148,5 @@ Sometimes when the remote is not accessible the annex remote will be disabled. T
 
 ### Potential quick fix
 
-Sometimes the quick and easy fix is to run datalad update
+Sometimes the quick and easy fix is to run datalad update (usually in combination with permissions fixes and version changes).
 
