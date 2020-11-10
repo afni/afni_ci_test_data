@@ -1,1 +1,21 @@
-{"host": "edda28aaa4a9", "user": "afni_user", "workdir": "/opt/afni/src/tests", "cmd": "bash /tmp/tmpimm9pz1v", "add_env_vars": "{'OMP_NUM_THREADS': '1'}", "rootdir": "/opt/afni/src/tests", "module_outdir": "/opt/afni/src/tests/output_of_tests/output_2020_10_28_205556/1d_tool", "logger": "<Logger test_1d_tool (DEBUG)>", "current_test_module": "/opt/afni/src/tests/scripts/test_1d_tool.py", "outdir": "/opt/afni/src/tests/output_of_tests/output_2020_10_28_205556/1d_tool/test_1d_tool", "sampdir": "/opt/afni/src/tests/sample_output_of_tests/sample_output_2020_10_28_205556/1d_tool/test_1d_tool", "logdir": "/opt/afni/src/tests/output_of_tests/output_2020_10_28_205556/1d_tool/test_1d_tool/captured_output", "comparison_dir": "/opt/afni/src/tests/afni_ci_test_data/sample_test_output/1d_tool/test_1d_tool", "base_comparison_dir": "/opt/afni/src/tests/afni_ci_test_data/sample_test_output", "base_outdir": "/opt/afni/src/tests/output_of_tests/output_2020_10_28_205556", "tests_data_dir": "/opt/afni/src/tests/afni_ci_test_data", "test_name": "test_1d_tool", "create_sample_output": "True", "save_sample_output": "False"}
+{
+"host": "b6103b7afcfc",
+"user": "afni_user",
+"workdir": "/opt/afni/src/tests",
+"cmd": "bash /tmp/tmpfuvace8q",
+"add_env_vars": "{'OMP_NUM_THREADS': '1'}",
+"rootdir": "/opt/afni/src/tests",
+"module_outdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_10_182413/1d_tool",
+"logger": "<Logger test_1d_tool (WARNING)>",
+"current_test_module": "/opt/afni/src/tests/scripts/test_1d_tool.py",
+"outdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_10_182413/1d_tool/test_1d_tool",
+"sampdir": "/opt/afni/src/tests/sample_output_of_tests/sample_output_2020_11_10_182413/1d_tool/test_1d_tool",
+"logdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_10_182413/1d_tool/test_1d_tool/captured_output",
+"comparison_dir": "/opt/afni/src/tests/afni_ci_test_data/sample_test_output/1d_tool/test_1d_tool",
+"base_comparison_dir": "/opt/afni/src/tests/afni_ci_test_data/sample_test_output",
+"base_outdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_10_182413",
+"tests_data_dir": "/opt/afni/src/tests/afni_ci_test_data",
+"test_name": "test_1d_tool",
+"create_sample_output": "True",
+"save_sample_output": "False"
+}

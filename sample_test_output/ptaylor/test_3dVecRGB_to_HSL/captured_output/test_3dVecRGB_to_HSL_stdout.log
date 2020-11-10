@@ -1,4 +1,4 @@
 
 +++ Command Echo:
-   3dVecRGB_to_HSL -in_vec ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_V1+orig.BRIK.gz -in_scal ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_FA+orig.BRIK.gz -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dVecRGB_to_HSL/o.3dVecRGB_to_HSL 
+   3dVecRGB_to_HSL -in_vec ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_V1+orig.BRIK.gz -in_scal ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_FA+orig.BRIK.gz -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -prefix output_of_tests/output_2020_11_10_182413/ptaylor/test_3dVecRGB_to_HSL/o.3dVecRGB_to_HSL 
 

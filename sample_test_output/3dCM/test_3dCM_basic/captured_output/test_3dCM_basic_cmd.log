@@ -1,1 +1,22 @@
-../../../../.git/annex/objects/xf/Fw/MD5E-s1016--5a307eab808f340d5908535d4e8605e6.log/MD5E-s1016--5a307eab808f340d5908535d4e8605e6.log
+{
+"host": "b6103b7afcfc",
+"user": "afni_user",
+"workdir": "/opt/afni/src/tests",
+"cmd": "3dCM ./afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz",
+"add_env_vars": "{'OMP_NUM_THREADS': '1'}",
+"rootdir": "/opt/afni/src/tests",
+"anat": "/opt/afni/src/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz",
+"module_outdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_10_182413/3dCM",
+"logger": "<Logger test_3dCM_basic (WARNING)>",
+"current_test_module": "/opt/afni/src/tests/scripts/test_3dCM.py",
+"outdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_10_182413/3dCM/test_3dCM_basic",
+"sampdir": "/opt/afni/src/tests/sample_output_of_tests/sample_output_2020_11_10_182413/3dCM/test_3dCM_basic",
+"logdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_10_182413/3dCM/test_3dCM_basic/captured_output",
+"comparison_dir": "/opt/afni/src/tests/afni_ci_test_data/sample_test_output/3dCM/test_3dCM_basic",
+"base_comparison_dir": "/opt/afni/src/tests/afni_ci_test_data/sample_test_output",
+"base_outdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_10_182413",
+"tests_data_dir": "/opt/afni/src/tests/afni_ci_test_data",
+"test_name": "test_3dCM_basic",
+"create_sample_output": "True",
+"save_sample_output": "False"
+}
