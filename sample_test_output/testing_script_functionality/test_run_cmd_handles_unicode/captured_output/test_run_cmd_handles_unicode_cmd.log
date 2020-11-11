@@ -1,0 +1,22 @@
+{
+"host": "20084b81f0fe",
+"user": "afni_user",
+"workdir": "/opt/afni/src/tests",
+"cmd": "cat ./afni_ci_test_data/mini_data/unicode_text.txt",
+"add_env_vars": "{'OMP_NUM_THREADS': '1'}",
+"rootdir": "/opt/afni/src/tests",
+"uni_text": "/opt/afni/src/tests/afni_ci_test_data/mini_data/unicode_text.txt",
+"module_outdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_11_020339/testing_script_functionality",
+"logger": "<Logger test_run_cmd_handles_unicode (WARNING)>",
+"current_test_module": "/opt/afni/src/tests/scripts/test_testing_script_functionality.py",
+"outdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_11_020339/testing_script_functionality/test_run_cmd_handles_unicode",
+"sampdir": "/opt/afni/src/tests/sample_output_of_tests/sample_output_2020_11_11_020339/testing_script_functionality/test_run_cmd_handles_unicode",
+"logdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_11_020339/testing_script_functionality/test_run_cmd_handles_unicode/captured_output",
+"comparison_dir": "/opt/afni/src/tests/afni_ci_test_data/sample_test_output/testing_script_functionality/test_run_cmd_handles_unicode",
+"base_comparison_dir": "/opt/afni/src/tests/afni_ci_test_data/sample_test_output",
+"base_outdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_11_020339",
+"tests_data_dir": "/opt/afni/src/tests/afni_ci_test_data",
+"test_name": "test_run_cmd_handles_unicode",
+"create_sample_output": "True",
+"save_sample_output": "False"
+}
