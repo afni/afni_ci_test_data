@@ -1,0 +1,88 @@
+++ 3dcopy: AFNI version=AFNI_20.3.01 (Nov 10 2020) [64-bit]
+++ 3dTshift: AFNI version=AFNI_20.3.01 (Nov 10 2020) [64-bit]
+++ 3dbucket: AFNI version=AFNI_20.3.01 (Nov 10 2020) [64-bit]
+++ 3dcalc: AFNI version=AFNI_20.3.01 (Nov 10 2020) [64-bit]
+++ Authored by: A cast of thousands
+++ Output dataset ././__tt_small_epi_tsh_ts_rs_ns_wt+orig.BRIK
+++ 3dAllineate: AFNI version=AFNI_20.3.01 (Nov 10 2020) [64-bit]
+++ Authored by: Zhark the Registrator
+++ Source dataset: ./__tt_anat_3mm_no_skull_ns+orig.HEAD
+++ Base dataset:   ./__tt_small_epi_tsh_ts_rs_ns+orig.HEAD
+++ Loading datasets into memory
+++ 90912 voxels in -source_automask+4
+++ Zero-pad: xbot=8 xtop=8
+++ Zero-pad: ybot=7 ytop=0
+++ Zero-pad: zbot=7 ztop=8
+++ 57382 voxels [21.9%] in weight mask
+++ Output dataset ./__tt_anat_3mm_no_skull_ns_aligned_wtal+orig.BRIK
+++ Number of points for matching = 57382
+++ Local correlation: blok type = 'RHDD(11.07)'
+++ base center of mass = 38.841 24.654 30.924 (index)
+ + source center of mass = 32.311 21.356 23.385 (index)
+ + source-target CM = 1.616 4.411 -11.104 (xyz)
+[7m*+ WARNING:[0m center of mass shifts (-cmass) are turned off, but would be large
+[7m*+ WARNING:[0m   - at least one is more than 20% of search range
+ +        -cmass x y z shifts =    1.616    4.411  -11.104
+ +  shift search range is +/- =   59.706   73.188   51.039
+ +                                  2.7%     6.0%    21.8%
+ + Range param#4 [z-angle] = -6.000000 .. 6.000000  center = 0.000000
+ + Range param#5 [x-angle] = -6.000000 .. 6.000000  center = 0.000000
+ + Range param#6 [y-angle] = -6.000000 .. 6.000000  center = 0.000000
+ + Range param#1 [x-shift] = -10.000000 .. 10.000000  center = 0.000000
+ + Range param#2 [y-shift] = -10.000000 .. 10.000000  center = 0.000000
+ + Range param#3 [z-shift] = -10.000000 .. 10.000000  center = 0.000000
+ + 12 free parameters
+++ Normalized convergence radius = 0.0000407
+++ Final parameter search ranges:
+ +       x-shift =  -10.000 ..   10.000
+ +       y-shift =  -10.000 ..   10.000
+ +       z-shift =  -10.000 ..   10.000
+ +       z-angle =   -6.000 ..    6.000
+ +       x-angle =   -6.000 ..    6.000
+ +       y-angle =   -6.000 ..    6.000
+ +       x-scale =    0.833 ..    1.200
+ +       y-scale =    0.833 ..    1.200
+ +       z-scale =    0.833 ..    1.200
+ +     y/x-shear =   -0.111 ..    0.111
+ +     z/x-shear =   -0.111 ..    0.111
+ +     z/y-shear =   -0.111 ..    0.111
+++ OpenMP thread count = 1
+++ ======= Allineation of 1 sub-bricks using Local Pearson Correlation Signed =======
+++ ========== sub-brick #0 ========== [total CPU to here=0.0 s]
+++ *** Fine pass begins ***
+ + * Enter alignment setup routine
+ + - copying base image
+ + - copying source image
+ + - copying weight image
+ + - using 57382 points from base image [use_all=0]
+ + * Exit alignment setup routine
+ + 50959 total points stored in 529 'RHDD(11.1105)' bloks
+ + - Initial  cost = -0.082827
+ + - Initial fine Parameters = 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 1.0000 1.0000 1.0000 0.0000 0.0000 0.0000
+***********************************************************************************************************************************************************************************************************************
+ + - Finalish cost = -0.469074 ; 747 funcs
+ + - ini Finalish Parameters = 1.9593 -1.1966 4.4934 -0.1839 6.0000 0.1531 1.0030 0.9856 0.9385 0.0225 0.0035 0.0716
+ + - Final    cost = -0.469074 ; 156 funcs
+ + Final fine fit Parameters:
+       x-shift=  1.9593   y-shift= -1.1966   z-shift=  4.4934  ...  enorm=  5.0459 mm
+       z-angle= -0.1839   x-angle=  6.0000   y-angle=  0.1531  ...  total=  6.0045 deg
+       x-scale=  1.0030   y-scale=  0.9856   z-scale=  0.9385  ...  vol3D=  0.9276 = base bigger than source
+     y/x-shear=  0.0225 z/x-shear=  0.0035 z/y-shear=  0.0716
+ + - Fine net CPU time = 0.0 s
+++ Computing output image
+++ image warp: parameters = 1.9593 -1.1966 4.4934 -0.1839 6.0000 0.1531 1.0030 0.9856 0.9385 0.0225 0.0035 0.0716
+++ Unloading unneeded data
+++ Output dataset ./anat_3mm_no_skull_aligned+orig.BRIK
+++ Wrote -1Dmatrix_save ./anat_3mm_no_skull_aligned_mat.aff12.1D
+++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 1.3
+++ ###########################################################
+++ #   Please check results visually for alignment quality   #
+++ ###########################################################
+++ #   '-autoweight' is recommended when using -lpc or -lpa  #
+++ #   If your results are not good, please try again.       #
+++ ###########################################################
+ +  
+++ ***********************************************************
+[7m*+ WARNING:[0m -cmass was turned off, but might have been needed :(
+ +           please check your results - PLEASE PLEASE PLEASE
+++ ***********************************************************

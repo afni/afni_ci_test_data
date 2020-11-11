@@ -1,22 +1,22 @@
 
 type = string-attribute
 name = HISTORY_NOTE
-count = 933
-'[afni_user@6d8266536bba: Wed Nov 11 00:01:14 2020] {AFNI_20.3.01:Linux_cmake} 3dSkullStrip -orig_vol -input ./__tt_anat_3mm_no_skull+orig -prefix ./__tt_anat_3mm_no_skull_ns\n[afni_user@6d8266536bba: Wed Nov 11 00:02:16 2020] {AFNI_20.3.01:Linux_cmake} 3dAllineate -lpc -wtprefix ./__tt_anat_3mm_no_skull_ns_aligned_wtal -weight ./__tt_small_epi_tsh_ts_rs_ns_wt+orig -source ./__tt_anat_3mm_no_skull_ns+orig -prefix ./anat_3mm_no_skull_aligned -base ./__tt_small_epi_tsh_ts_rs_ns+orig -nocmass -1Dmatrix_save ./anat_3mm_no_skull_aligned_mat.aff12.1D -master SOURCE -weight_frac 1.0 -maxrot 6 -maxshf 10 -VERB -warp aff -source_automask+4 -onepass\n[afni_user@6d8266536bba: Wed Nov 11 00:02:17 2020] align_epi_anat.py -anat  /opt/afni/src/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz  -epi  /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig.BRIK.gz  -epi_base 0 -suffix _aligned -output_dir test_aea_subdir~
+count = 1237
+'[rickr@manwe.nimh.nih.gov: Thu Mar 18 16:53:05 2010] 3dSkullStrip -input anat+orig -prefix strip\n[rodgersleejg@MH02131978MACLT: Sun Jun  2 13:58:13 2019] {AFNI_19.0.08:macos_10.12_local} 3dAutobox -input AFNI_data6/afni/strip+orig.BRIK -prefix tmp.nii.gz\n[rodgersleejg@MH02131978MACLT: Sun Jun  2 13:58:13 2019] {AFNI_19.0.08:macos_10.12_local} 3dresample -dxyz 3 3 3 -input tmp.nii.gz -prefix mini_data/anat_3mm_no_skull.nii.gz\n[afni_user@6d8266536bba: Wed Nov 11 00:00:06 2020] {AFNI_20.3.01:Linux_cmake} 3dcopy /opt/afni/src/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz ./anat_3mm_no_skull.nii.gz_unflipped+orig\n[afni_user@6d8266536bba: Wed Nov 11 00:00:09 2020] {AFNI_20.3.01:Linux_cmake} 3dLRflip -prefix ./__tt_anat_3mm_no_skull_lr_aligned ./anat_3mm_no_skull.nii.gz_unflipped+orig\n[afni_user@6d8266536bba: Wed Nov 11 00:00:09 2020] {AFNI_20.3.01:Linux_cmake} 3dAllineate -lpc -weight ./small_epi_tsh_ts_rs_ns_wt+orig -source ./__tt_anat_3mm_no_skull_lr_aligned+orig -prefix ./anat_3mm_no_skull_flip_aligned -base ./small_epi_tsh_ts_rs_ns+orig -nocmass -1Dmatrix_save ./anat_3mm_no_skull_flip__aligned_mat.aff12.1D -master SOURCE -weight_frac 1.0 -maxrot 6 -maxshf 10 -VERB -warp aff -source_automask+4 -onepass~
 
 type  = float-attribute
 name  = ALLINEATE_MATVEC_B2S_000000
 count = 12
-       1.002944   -0.002939473   -0.002664789       1.959351     0.02575919
-      0.9800801      0.1029579      -1.196571    0.005912382    -0.02798332
-      0.9406916       4.493362
+      0.9973788    -0.03499154    -0.06444242       2.242065    -0.01712433
+      0.9322189      0.1014826       -4.14151    -0.01740009    -0.02159635
+      0.9689419       3.910942
 
 type  = float-attribute
 name  = ALLINEATE_MATVEC_S2B_000000
 count = 12
-      0.9969709    0.003061203    0.002489171      -1.960937    -0.02546529
-       1.017068     -0.1113893       1.767403   -0.007023636     0.03023609
-       1.059718      -4.711757
+       1.004394     0.03915323     0.06269954      -2.334978     0.01644674
+       1.070754     -0.1110521       4.831982     0.01840331      0.0245687
+       1.030704      -3.970535
 
 type = string-attribute
 name = ALLINEATE_WARP_TYPE
@@ -26,9 +26,9 @@ count = 15
 type  = float-attribute
 name  = ALLINEATE_PARAMS_000000
 count = 12
-       1.959333      -1.196555       4.493374     -0.1839247       5.999994
-      0.1530704       1.002952      0.9855504      0.9384741     0.02254643
-    0.003484696     0.07155184
+        2.24206      -4.141493       3.910934       -2.39817       5.999993
+       3.714956       1.000071      0.9361953      0.9628679    -0.05623104
+    -0.07902855     0.08448938
 
 type = string-attribute
 name = TYPESTRING
@@ -38,12 +38,12 @@ count = 15
 type = string-attribute
 name = IDCODE_STRING
 count = 27
-'XYZ_pZ6giFmqtCo4MfKrlphKYQ~
+'XYZ_QGHslllxxlPcVRYfwoJhuA~
 
 type = string-attribute
 name = IDCODE_DATE
 count = 25
-'Wed Nov 11 00:02:16 2020~
+'Wed Nov 11 00:00:09 2020~
 
 type = integer-attribute
 name = SCENE_DATA
@@ -98,7 +98,7 @@ count = 12
 type  = float-attribute
 name  = BRICK_STATS
 count = 2
-              0           5406
+              0           5013
 
 type = integer-attribute
 name = DATASET_RANK

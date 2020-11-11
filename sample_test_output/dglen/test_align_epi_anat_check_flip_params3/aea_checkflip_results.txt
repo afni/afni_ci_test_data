@@ -1,0 +1,7 @@
+flip_cost_orig : -0.495000
+flip_cost_flipped : -0.235979
+flip_cost_func : lpc
+flip_base: small_epi_tsh_ts_rs_ns+orig
+flip_dset_orig : anat_3mm_no_skull_aligned+orig
+flip_dset_flipped : anat_3mm_no_skull_flip_aligned+orig
+flip_guess : NO_FLIP
