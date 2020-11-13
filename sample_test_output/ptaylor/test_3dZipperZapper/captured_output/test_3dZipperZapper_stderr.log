@@ -5,15 +5,15 @@
 ++ Nvolgood:      11
 ++ Nvolbad :       0
 ++ Calcs done: to the writing cave!
-++ --> Wrote text file:    output_of_tests/output_2020_10_28_205556/ptaylor/test_3dZipperZapper/o.3dZipperZapper_sli.1D
-++ --> Wrote text file:    output_of_tests/output_2020_10_28_205556/ptaylor/test_3dZipperZapper/o.3dZipperZapper_param.1D
-++ --> Wrote text file:    output_of_tests/output_2020_10_28_205556/ptaylor/test_3dZipperZapper/o.3dZipperZapper_parcorr.1D
-++ --> Wrote dataset:    output_of_tests/output_2020_10_28_205556/ptaylor/test_3dZipperZapper/o.3dZipperZapper_param+orig.BRIK
+++ --> Wrote text file:    output_of_tests/output_2020_11_12_222237/ptaylor/test_3dZipperZapper/o.3dZipperZapper_sli.1D
+++ --> Wrote text file:    output_of_tests/output_2020_11_12_222237/ptaylor/test_3dZipperZapper/o.3dZipperZapper_param.1D
+++ --> Wrote text file:    output_of_tests/output_2020_11_12_222237/ptaylor/test_3dZipperZapper/o.3dZipperZapper_parcorr.1D
+++ --> Wrote dataset:    output_of_tests/output_2020_11_12_222237/ptaylor/test_3dZipperZapper/o.3dZipperZapper_param+orig.BRIK
 ++ String selector for 11 good vols:
    0..10
-++ Wrote text file of good vol string selector:    output_of_tests/output_2020_10_28_205556/ptaylor/test_3dZipperZapper/o.3dZipperZapper_goodstri.txt
+++ Wrote text file of good vol string selector:    output_of_tests/output_2020_11_12_222237/ptaylor/test_3dZipperZapper/o.3dZipperZapper_goodstri.txt
 ++ The following 0 vols were identified as bad:
        Bad vols    N bad slices
         (None!)        (zilch!)
-++ Wrote text file listing bads:    output_of_tests/output_2020_10_28_205556/ptaylor/test_3dZipperZapper/o.3dZipperZapper_badlist.txt
+++ Wrote text file listing bads:    output_of_tests/output_2020_11_12_222237/ptaylor/test_3dZipperZapper/o.3dZipperZapper_badlist.txt
 ++ Done with calcs, just cleaning up.

@@ -1,0 +1,22 @@
+{
+"host": "d14e6c5dfc17",
+"user": "afni_user",
+"workdir": "/opt/afni/src/tests",
+"cmd": "echo some output with a path... output_of_tests/output_2020_11_12_224118/testing_script_functionality/test_rewrite_paths_in_logs/sample.txt",
+"add_env_vars": "{'OMP_NUM_THREADS': '1'}",
+"rootdir": "/opt/afni/src/tests",
+"uni_text": "/opt/afni/src/tests/afni_ci_test_data/mini_data/unicode_text.txt",
+"module_outdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_12_224118/testing_script_functionality",
+"logger": "<Logger test_rewrite_paths_in_logs (WARNING)>",
+"current_test_module": "/opt/afni/src/tests/scripts/test_testing_script_functionality.py",
+"outdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_12_224118/testing_script_functionality/test_rewrite_paths_in_logs",
+"sampdir": "/opt/afni/src/tests/sample_output_of_tests/sample_output_2020_11_12_224118/testing_script_functionality/test_rewrite_paths_in_logs",
+"logdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_12_224118/testing_script_functionality/test_rewrite_paths_in_logs/captured_output",
+"comparison_dir": "/opt/afni/src/tests/afni_ci_test_data/sample_test_output/testing_script_functionality/test_rewrite_paths_in_logs",
+"base_comparison_dir": "/opt/afni/src/tests/afni_ci_test_data/sample_test_output",
+"base_outdir": "/opt/afni/src/tests/output_of_tests/output_2020_11_12_224118",
+"tests_data_dir": "/opt/afni/src/tests/afni_ci_test_data",
+"test_name": "test_rewrite_paths_in_logs",
+"create_sample_output": "True",
+"save_sample_output": "False"
+}

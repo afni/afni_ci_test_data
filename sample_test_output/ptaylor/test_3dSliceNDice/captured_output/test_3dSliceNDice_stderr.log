@@ -1,7 +1,7 @@
-++ 3dcalc: AFNI version=AFNI_20.3.00 (Oct 20 2020) [64-bit]
+++ 3dcalc: AFNI version=AFNI_20.3.01 (Nov 11 2020) [64-bit]
 ++ Authored by: A cast of thousands
-++ Output dataset ./output_of_tests/output_2020_10_28_205556/ptaylor/test_3dSliceNDice/o.3dSliceNDice_preA.nii.gz
-++ 3dcalc: AFNI version=AFNI_20.3.00 (Oct 20 2020) [64-bit]
+++ Output dataset ./output_of_tests/output_2020_11_12_222237/ptaylor/test_3dSliceNDice/o.3dSliceNDice_preA.nii.gz
+++ 3dcalc: AFNI version=AFNI_20.3.01 (Nov 11 2020) [64-bit]
 ++ Authored by: A cast of thousands
-++ Output dataset ./output_of_tests/output_2020_10_28_205556/ptaylor/test_3dSliceNDice/o.3dSliceNDice_preB.nii.gz
+++ Output dataset ./output_of_tests/output_2020_11_12_222237/ptaylor/test_3dSliceNDice/o.3dSliceNDice_preB.nii.gz
 ++ Max dimension is: 128

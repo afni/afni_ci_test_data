@@ -1,4 +1,4 @@
 
 +++ Command Echo:
-   3ddot_beta -input ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/SOME_ICA_NETS_in_DWI+orig.BRIK.gz -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -doeta2 -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3ddot_beta/o.3ddot_beta 
+   3ddot_beta -input ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/SOME_ICA_NETS_in_DWI+orig.BRIK.gz -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -doeta2 -prefix output_of_tests/output_2020_11_12_222237/ptaylor/test_3ddot_beta/o.3ddot_beta 
 

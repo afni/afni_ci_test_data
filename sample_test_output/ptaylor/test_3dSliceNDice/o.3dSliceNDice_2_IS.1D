@@ -1,4 +1,4 @@
-# 3dSliceNDice -out_domain all -insetA output_of_tests/output_2020_10_28_205556/ptaylor/test_3dSliceNDice/o.3dSliceNDice_preA.nii.gz -insetB output_of_tests/output_2020_10_28_205556/ptaylor/test_3dSliceNDice/o.3dSliceNDice_preB.nii.gz -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dSliceNDice/o.3dSliceNDice
+# 3dSliceNDice -out_domain all -insetA output_of_tests/output_2020_11_12_222237/ptaylor/test_3dSliceNDice/o.3dSliceNDice_preA.nii.gz -insetB output_of_tests/output_2020_11_12_222237/ptaylor/test_3dSliceNDice/o.3dSliceNDice_preB.nii.gz -prefix output_of_tests/output_2020_11_12_222237/ptaylor/test_3dSliceNDice/o.3dSliceNDice
     0   -104.71150            0            0      0.00000 
     1   -102.71150            0            0      0.00000 
     2   -100.71150            0            0      0.00000 

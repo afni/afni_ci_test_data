@@ -1,6 +1,6 @@
 
 +++ Command Echo:
-   3dClusterize -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -inset ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/SOME_ICA_NETS_in_DWI+orig.BRIK.gz -ithr 0 -idat 0 -bisided -3 3 -NN 2 -clust_nvox 200 -pref_map output_of_tests/output_2020_10_28_205556/ptaylor/test_3dClusterize/o.3dClusterize_MAP.nii.gz -pref_dat output_of_tests/output_2020_10_28_205556/ptaylor/test_3dClusterize/o.3dClusterize_DAT.nii.gz 
+   3dClusterize -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -inset ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/SOME_ICA_NETS_in_DWI+orig.BRIK.gz -ithr 0 -idat 0 -bisided -3 3 -NN 2 -clust_nvox 200 -pref_map output_of_tests/output_2020_11_12_222237/ptaylor/test_3dClusterize/o.3dClusterize_MAP.nii.gz -pref_dat output_of_tests/output_2020_11_12_222237/ptaylor/test_3dClusterize/o.3dClusterize_DAT.nii.gz 
 
 #
 #  Cluster report 

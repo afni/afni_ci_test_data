@@ -1,4 +1,4 @@
 
 +++ Command Echo:
-   1dDW_Grad_o_Mat++ -in_row_vec ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/bvec[3..32] -flip_y -out_col_vec output_of_tests/output_2020_10_28_205556/ptaylor/test_1dDW_Grad_o_Mat_plus_plus_colvec/o.1dDW_Grad_o_Mat++_cvec_n-1.txt 
+   1dDW_Grad_o_Mat++ -in_row_vec ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/bvec[3..32] -flip_y -out_col_vec output_of_tests/output_2020_11_12_222237/ptaylor/test_1dDW_Grad_o_Mat_plus_plus_colvec/o.1dDW_Grad_o_Mat++_cvec_n-1.txt 
 

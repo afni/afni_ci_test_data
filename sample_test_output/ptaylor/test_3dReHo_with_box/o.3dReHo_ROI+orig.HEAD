@@ -2,7 +2,7 @@
 type = string-attribute
 name = HISTORY_NOTE
 count = 441
-'[afni_user@edda28aaa4a9: Wed Oct 28 20:56:05 2020] {AFNI_20.3.00:Linux_cmake} 3dReHo -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -inset './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/REST_in_DWI.nii.gz[5..50]' -box_X 2 -box_Y 2 -box_Z 3 -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dReHo_with_box/o.3dReHo_ROI -in_rois ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/ROI_ICMAP_GM+orig.BRIK.gz~
+'[afni_user@14eb5f450f73: Thu Nov 12 22:23:06 2020] {AFNI_20.3.01:Linux_cmake} 3dReHo -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -inset './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/REST_in_DWI.nii.gz[5..50]' -box_X 2 -box_Y 2 -box_Z 3 -prefix output_of_tests/output_2020_11_12_222237/ptaylor/test_3dReHo_with_box/o.3dReHo_ROI -in_rois ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/ROI_ICMAP_GM+orig.BRIK.gz~
 
 type = string-attribute
 name = TYPESTRING
@@ -12,12 +12,12 @@ count = 15
 type = string-attribute
 name = IDCODE_STRING
 count = 27
-'XYZ_XdzbghV_jB2lg7E-ud93YQ~
+'XYZ_6GmQ6bmZpirIBhB-ceDIag~
 
 type = string-attribute
 name = IDCODE_DATE
 count = 25
-'Wed Oct 28 20:56:05 2020~
+'Thu Nov 12 22:23:06 2020~
 
 type = integer-attribute
 name = SCENE_DATA

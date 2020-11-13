@@ -1,4 +1,4 @@
 
 +++ Command Echo:
-   3dTORTOISEtoHere -dt_tort ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_TORTOISE_PREP.nii.gz -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dTORTOISEtoHere/o.3dTORTOISEtoHere 
+   3dTORTOISEtoHere -dt_tort ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_TORTOISE_PREP.nii.gz -prefix output_of_tests/output_2020_11_12_222237/ptaylor/test_3dTORTOISEtoHere/o.3dTORTOISEtoHere 
 

@@ -41,5 +41,5 @@
    Number of diffusion weighted  vec/mats: 30
 ++ Keeping all vec/mats.
 ++ Output dims to be: 31 x 6
-++ DONE with grad/matr. Check output file 'output_of_tests/output_2020_10_28_205556/ptaylor/test_1dDW_Grad_o_Mat_plus_plus_colmat/o.1dDW_Grad_o_Mat++_BMAT.txt'
+++ DONE with grad/matr. Check output file 'output_of_tests/output_2020_11_12_222237/ptaylor/test_1dDW_Grad_o_Mat_plus_plus_colmat/o.1dDW_Grad_o_Mat++_BMAT.txt'
 

@@ -4,7 +4,7 @@
 ++ Single window.
 ++ Translating censor string: [0..3,5,6..18,22..34,36..47,49,51..60,63..84,86..88,90,92..$]
 ++ --> Keeping 84 volumes
-++ Done writing (float) time points 1D file: output_of_tests/output_2020_10_28_205556/ptaylor/test_3dLombScargle/o.3dLombScargle_time.1D
+++ Done writing (float) time points 1D file: output_of_tests/output_2020_11_12_222237/ptaylor/test_3dLombScargle/o.3dLombScargle_time.1D
 ++ Done masking.
 ++ Effective Nyquist multiplicative factor for upper frequency is 1.1429
 ++ Total Ntpts=96,  TR=2.5000, my_ofac=1.0000
@@ -17,7 +17,7 @@
 ++ Total number of points = 84
 	 -> goes to 84 when assigning windows
 ++ Done Lomb-Scargling.
-++ Done writing frequency 1D file: output_of_tests/output_2020_10_28_205556/ptaylor/test_3dLombScargle/o.3dLombScargle_freq.1D
-++ Done writing spectral vol file: output_of_tests/output_2020_10_28_205556/ptaylor/test_3dLombScargle/o.3dLombScargle_amp.nii.gz
+++ Done writing frequency 1D file: output_of_tests/output_2020_11_12_222237/ptaylor/test_3dLombScargle/o.3dLombScargle_freq.1D
+++ Done writing spectral vol file: output_of_tests/output_2020_11_12_222237/ptaylor/test_3dLombScargle/o.3dLombScargle_amp.nii.gz
 ++ Freeing...
 ++ ...Done

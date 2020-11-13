@@ -2,7 +2,7 @@
 type = string-attribute
 name = HISTORY_NOTE
 count = 468
-'[user@Users-MacBook-Pro.local: Thu Jan 23 11:35:32 2014] 3dcopy AVEB0_DWI+orig. AVEB0_DWI.nii.gz\n[afni_user@edda28aaa4a9: Wed Oct 28 20:56:01 2020] {AFNI_20.3.00:Linux_cmake} 3dZipperZapper -input './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/AVEB0_DWI.nii.gz[0..10]' -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/mask_minisphere_dwi.nii.gz -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dZipperZapper/o.3dZipperZapper -do_out_slice_param~
+'[user@Users-MacBook-Pro.local: Thu Jan 23 11:35:32 2014] 3dcopy AVEB0_DWI+orig. AVEB0_DWI.nii.gz\n[afni_user@14eb5f450f73: Thu Nov 12 22:23:14 2020] {AFNI_20.3.01:Linux_cmake} 3dZipperZapper -input './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/AVEB0_DWI.nii.gz[0..10]' -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/mask_minisphere_dwi.nii.gz -prefix output_of_tests/output_2020_11_12_222237/ptaylor/test_3dZipperZapper/o.3dZipperZapper -do_out_slice_param~
 
 type = string-attribute
 name = TYPESTRING
@@ -12,12 +12,12 @@ count = 15
 type = string-attribute
 name = IDCODE_STRING
 count = 27
-'XYZ_FVwO6YLXA-lE7LC7CBoRxQ~
+'XYZ_w0410aEwuvXjdf8gTZymdA~
 
 type = string-attribute
 name = IDCODE_DATE
 count = 25
-'Wed Oct 28 20:56:01 2020~
+'Thu Nov 12 22:23:13 2020~
 
 type = integer-attribute
 name = SCENE_DATA

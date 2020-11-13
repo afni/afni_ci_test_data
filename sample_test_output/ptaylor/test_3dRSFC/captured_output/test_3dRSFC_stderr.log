@@ -1,4 +1,4 @@
-++ 3dRSFC (from 3dBandpass by RW Cox): version THETA: AFNI version=AFNI_20.3.00 (Oct 20 2020) [64-bit]
+++ 3dRSFC (from 3dBandpass by RW Cox): version THETA: AFNI version=AFNI_20.3.01 (Nov 11 2020) [64-bit]
 ++ Authored by: PA Taylor
 ++ Data length = 96  FFT length = 96
  + bandpass: ntime=96 nFFT=96 dt=2.5 dFreq=0.00416667 Nyquist=0.2 passband indexes=2..24

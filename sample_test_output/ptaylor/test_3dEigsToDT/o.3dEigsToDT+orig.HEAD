@@ -2,7 +2,7 @@
 type = string-attribute
 name = HISTORY_NOTE
 count = 319
-'[afni_user@edda28aaa4a9: Wed Oct 28 20:56:01 2020] {AFNI_20.3.00:Linux_cmake} 3dEigsToDT -eig_vals './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_L*' -eig_vecs './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_V*' -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dEigsToDT/o.3dEigsToDT~
+'[afni_user@14eb5f450f73: Thu Nov 12 22:22:47 2020] {AFNI_20.3.01:Linux_cmake} 3dEigsToDT -eig_vals './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_L*' -eig_vecs './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_V*' -prefix output_of_tests/output_2020_11_12_222237/ptaylor/test_3dEigsToDT/o.3dEigsToDT~
 
 type = string-attribute
 name = TYPESTRING
@@ -12,12 +12,12 @@ count = 15
 type = string-attribute
 name = IDCODE_STRING
 count = 27
-'XYZ_Lpk2Pdt2xkLEEAKOLCnOtQ~
+'XYZ_6AWJNefrGLs4ACOqa87L2A~
 
 type = string-attribute
 name = IDCODE_DATE
 count = 25
-'Wed Oct 28 20:56:01 2020~
+'Thu Nov 12 22:22:47 2020~
 
 type = integer-attribute
 name = SCENE_DATA

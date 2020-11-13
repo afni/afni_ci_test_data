@@ -4,9 +4,9 @@
 ++ Done masking.
 ++ Start calculating spectral parameters
 ++ Done calculating parameters.
-++  writing: output_of_tests/output_2020_10_28_205556/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_10_28_205556/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_ALFF.nii.gz
-++  writing: output_of_tests/output_2020_10_28_205556/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_10_28_205556/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_MALFF.nii.gz
-++  writing: output_of_tests/output_2020_10_28_205556/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_10_28_205556/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_FALFF.nii.gz
-++  writing: output_of_tests/output_2020_10_28_205556/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_10_28_205556/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_RSFA.nii.gz
-++  writing: output_of_tests/output_2020_10_28_205556/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_10_28_205556/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_MRSFA.nii.gz
-++  writing: output_of_tests/output_2020_10_28_205556/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_10_28_205556/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_FRSFA.nii.gz
+++  writing: output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_ALFF.nii.gz
+++  writing: output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_MALFF.nii.gz
+++  writing: output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_FALFF.nii.gz
+++  writing: output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_RSFA.nii.gz
+++  writing: output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_MRSFA.nii.gz
+++  writing: output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_FRSFA.nii.gz
