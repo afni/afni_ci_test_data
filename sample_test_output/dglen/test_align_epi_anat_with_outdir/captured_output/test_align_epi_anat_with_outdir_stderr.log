@@ -1,30 +1,30 @@
-++ 3dcopy: AFNI version=AFNI_20.3.01 (Nov 10 2020) [64-bit]
-++ 3dTshift: AFNI version=AFNI_20.3.01 (Nov 10 2020) [64-bit]
-++ 3dbucket: AFNI version=AFNI_20.3.01 (Nov 10 2020) [64-bit]
-++ 3dcalc: AFNI version=AFNI_20.3.01 (Nov 10 2020) [64-bit]
+++ 3dcopy: AFNI version=AFNI_20.3.02 (Nov 12 2020) [64-bit]
+++ 3dTshift: AFNI version=AFNI_20.3.02 (Nov 12 2020) [64-bit]
+++ 3dbucket: AFNI version=AFNI_20.3.02 (Nov 12 2020) [64-bit]
+++ 3dcalc: AFNI version=AFNI_20.3.02 (Nov 12 2020) [64-bit]
 ++ Authored by: A cast of thousands
 ++ Output dataset ././__tt_small_epi_tsh_ts_rs_ns_wt+orig.BRIK
-++ 3dAllineate: AFNI version=AFNI_20.3.01 (Nov 10 2020) [64-bit]
+++ 3dAllineate: AFNI version=AFNI_20.3.02 (Nov 12 2020) [64-bit]
 ++ Authored by: Zhark the Registrator
 ++ Source dataset: ./__tt_anat_3mm_no_skull_ns+orig.HEAD
 ++ Base dataset:   ./__tt_small_epi_tsh_ts_rs_ns+orig.HEAD
 ++ Loading datasets into memory
-++ 90912 voxels in -source_automask+4
+++ 90759 voxels in -source_automask+4
 ++ Zero-pad: xbot=8 xtop=8
 ++ Zero-pad: ybot=7 ytop=0
 ++ Zero-pad: zbot=7 ztop=8
-++ 57382 voxels [21.9%] in weight mask
+++ 56899 voxels [21.7%] in weight mask
 ++ Output dataset ./__tt_anat_3mm_no_skull_ns_aligned_wtal+orig.BRIK
-++ Number of points for matching = 57382
+++ Number of points for matching = 56899
 ++ Local correlation: blok type = 'RHDD(11.07)'
-++ base center of mass = 38.841 24.654 30.924 (index)
- + source center of mass = 32.311 21.356 23.385 (index)
- + source-target CM = 1.616 4.411 -11.104 (xyz)
+++ base center of mass = 38.874 24.627 30.889 (index)
+ + source center of mass = 32.348 21.348 23.365 (index)
+ + source-target CM = 1.573 4.421 -11.165 (xyz)
 [7m*+ WARNING:[0m center of mass shifts (-cmass) are turned off, but would be large
 [7m*+ WARNING:[0m   - at least one is more than 20% of search range
- +        -cmass x y z shifts =    1.616    4.411  -11.104
+ +        -cmass x y z shifts =    1.573    4.421  -11.165
  +  shift search range is +/- =   59.706   73.188   51.039
- +                                  2.7%     6.0%    21.8%
+ +                                  2.6%     6.0%    21.9%
  + Range param#4 [z-angle] = -6.000000 .. 6.000000  center = 0.000000
  + Range param#5 [x-angle] = -6.000000 .. 6.000000  center = 0.000000
  + Range param#6 [y-angle] = -6.000000 .. 6.000000  center = 0.000000
@@ -54,27 +54,28 @@
  + - copying base image
  + - copying source image
  + - copying weight image
- + - using 57382 points from base image [use_all=0]
+ + - using 56899 points from base image [use_all=0]
  + * Exit alignment setup routine
- + 50959 total points stored in 529 'RHDD(11.1105)' bloks
- + - Initial  cost = -0.082827
+ + 50459 total points stored in 524 'RHDD(11.1105)' bloks
+ + - Initial  cost = -0.087233
  + - Initial fine Parameters = 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 1.0000 1.0000 1.0000 0.0000 0.0000 0.0000
-***********************************************************************************************************************************************************************************************************************
- + - Finalish cost = -0.469074 ; 747 funcs
- + - ini Finalish Parameters = 1.9593 -1.1966 4.4934 -0.1839 6.0000 0.1531 1.0030 0.9856 0.9385 0.0225 0.0035 0.0716
- + - Final    cost = -0.469074 ; 156 funcs
+****************************************************************************************************************************************************************************************************************************************************************************************************
+ + - Finalish cost = -0.475626 ; 688 funcs
+ + - ini Finalish Parameters = 1.9173 -1.1805 4.1809 -0.1836 6.0000 0.0874 1.0033 0.9848 0.9470 0.0183 0.0030 0.0719
+**************************************
+ + - Final    cost = -0.476093 ; 315 funcs
  + Final fine fit Parameters:
-       x-shift=  1.9593   y-shift= -1.1966   z-shift=  4.4934  ...  enorm=  5.0459 mm
-       z-angle= -0.1839   x-angle=  6.0000   y-angle=  0.1531  ...  total=  6.0045 deg
-       x-scale=  1.0030   y-scale=  0.9856   z-scale=  0.9385  ...  vol3D=  0.9276 = base bigger than source
-     y/x-shear=  0.0225 z/x-shear=  0.0035 z/y-shear=  0.0716
+       x-shift=  1.9180   y-shift= -1.2057   z-shift=  4.2143  ...  enorm=  4.7846 mm
+       z-angle= -0.1775   x-angle=  6.0000   y-angle=  0.0858  ...  total=  6.0031 deg
+       x-scale=  1.0035   y-scale=  0.9862   z-scale=  0.9462  ...  vol3D=  0.9364 = base bigger than source
+     y/x-shear=  0.0217 z/x-shear=  0.0042 z/y-shear=  0.0723
  + - Fine net CPU time = 0.0 s
 ++ Computing output image
-++ image warp: parameters = 1.9593 -1.1966 4.4934 -0.1839 6.0000 0.1531 1.0030 0.9856 0.9385 0.0225 0.0035 0.0716
+++ image warp: parameters = 1.9180 -1.2057 4.2143 -0.1775 6.0000 0.0858 1.0035 0.9862 0.9462 0.0217 0.0042 0.0723
 ++ Unloading unneeded data
 ++ Output dataset ./anat_3mm_no_skull_aligned+orig.BRIK
 ++ Wrote -1Dmatrix_save ./anat_3mm_no_skull_aligned_mat.aff12.1D
-++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 1.3
+++ 3dAllineate: total CPU time = 0.0 sec  Elapsed = 1.5
 ++ ###########################################################
 ++ #   Please check results visually for alignment quality   #
 ++ ###########################################################

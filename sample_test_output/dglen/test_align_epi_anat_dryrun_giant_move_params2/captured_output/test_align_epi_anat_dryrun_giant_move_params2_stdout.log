@@ -1,10 +1,10 @@
 #++ align_epi_anat version: 1.62
 #Would be running:
-  3dAttribute DELTA /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig
+  3dAttribute DELTA /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig
 #Would be running:
-  3dAttribute DELTA /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig
+  3dAttribute DELTA /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig
 #Would be running:
-  3dAttribute DELTA /opt/afni/src/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz
+  3dAttribute DELTA /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz
 #++ Multi-cost is lpc
 #++ Removing all the temporary files
 #Would be running:
@@ -12,7 +12,7 @@
 #Would be running:
   \rm -f ./__tt_anat_3mm_no_skull*
 #Would be running (command trimmed):
-  3dcopy /opt/afni/src/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz ./__tt_anat_3mm_no_skull+orig
+  3dcopy /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz ./__tt_anat_3mm_no_skull+orig
 #++ Removing skull from anat data
 #Would be running (command trimmed):
   3dSkullStrip -orig_vol -input ./__tt_anat_3mm_no_skull+orig -prefix ./__tt_anat_3mm_no_skull_ns
@@ -23,12 +23,12 @@
 #++ Spacing for anat to oblique epi alignment is 1.234567
 #++ Matching obliquity of anat to epi
 #Would be running (command trimmed):
-  3dWarp -verb -card2oblique /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig -prefix ./__tt_anat_3mm_no_skull_ns_ob -newgrid 1.234567 ./__tt_anat_3mm_no_skull_ns+orig | \grep -A 4 '# mat44 Obliquity Transformation ::' > ./__tt_anat_3mm_no_skull_ns_obla2e_mat.1D
+  3dWarp -verb -card2oblique /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig -prefix ./__tt_anat_3mm_no_skull_ns_ob -newgrid 1.234567 ./__tt_anat_3mm_no_skull_ns+orig | \grep -A 4 '# mat44 Obliquity Transformation ::' > ./__tt_anat_3mm_no_skull_ns_obla2e_mat.1D
 #Would be running:
-  3dAttribute TAXIS_OFFSETS /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig
+  3dAttribute TAXIS_OFFSETS /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig
 #++ Correcting for slice timing
 #Would be running (command trimmed):
-  3dTshift -prefix ./__tt_small_epi_tsh -cubic /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig 
+  3dTshift -prefix ./__tt_small_epi_tsh -cubic /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig 
 #++ Creating representative epi sub-brick
 #Would be running (command trimmed):
   3dbucket -prefix ./__tt_small_epi_tsh_ts ./__tt_small_epi_tsh+orig'[0]'
@@ -54,9 +54,9 @@
 #++ Saving history
 #Would be running (command trimmed):
   3dNotes -h "align_epi_anat.py -anat \
- /opt/afni/src/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz \
+ /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz \
  -epi \
- /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig.BRIK.gz \
+ /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig.BRIK.gz \
  -epi_base 0 -suffix _aligned -ex_mode dry_run -giant_move" \
  ./anat_3mm_no_skull_aligned+orig
 

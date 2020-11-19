@@ -1,10 +1,10 @@
 #++ align_epi_anat version: 1.62
 #Script is running:
-  3dAttribute DELTA /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig
+  3dAttribute DELTA /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig
 #Script is running:
-  3dAttribute DELTA /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig
+  3dAttribute DELTA /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig
 #Script is running:
-  3dAttribute DELTA /opt/afni/src/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz
+  3dAttribute DELTA /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz
 #++ Multi-cost is lpc
 #++ Removing all the temporary files
 #Script is running:
@@ -12,18 +12,18 @@
 #Script is running:
   \rm -f ./__tt_anat_3mm_no_skull*
 #Script is running (command trimmed):
-  3dcopy /opt/afni/src/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz ./__tt_anat_3mm_no_skull+orig
+  3dcopy /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz ./__tt_anat_3mm_no_skull+orig
 #Script is running (command trimmed):
   3dinfo ./__tt_anat_3mm_no_skull+orig | \grep 'Data Axes Tilt:'|\grep 'Oblique'
-#++ Dataset /opt/afni/src/tests/output_of_tests/output_2020_11_10_235933/dglen/test_align_epi_anat_rigid_equiv_params4/__tt_anat_3mm_no_skull+orig is not oblique
+#++ Dataset /home/dglen/git_afni/AFNI/tests/output_of_tests/output_2020_11_18_135610/dglen/test_align_epi_anat_rigid_equiv_params4/__tt_anat_3mm_no_skull+orig is not oblique
 #Script is running:
-  3dinfo /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig | \grep 'Data Axes Tilt:'|\grep 'Oblique'
-#++ Dataset /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig is not oblique
+  3dinfo /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig | \grep 'Data Axes Tilt:'|\grep 'Oblique'
+#++ Dataset /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig is not oblique
 #Script is running:
-  3dAttribute TAXIS_OFFSETS /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig
+  3dAttribute TAXIS_OFFSETS /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig
 #++ Correcting for slice timing
 #Script is running (command trimmed):
-  3dTshift -prefix ./__tt_small_epi_tsh -cubic /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig 
+  3dTshift -prefix ./__tt_small_epi_tsh -cubic /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig 
 #++ Creating representative epi sub-brick
 #Script is running (command trimmed):
   3dbucket -prefix ./__tt_small_epi_tsh_ts ./__tt_small_epi_tsh+orig'[0]'
@@ -36,7 +36,7 @@
 #++ Computing weight mask
 #Script is running (command trimmed):
   3dBrickStat -automask -percentile 90.000000 1 90.000000 ./__tt_small_epi_tsh_ts_rs_ns+orig
-#++ Applying threshold of 1910.000000 on /opt/afni/src/tests/output_of_tests/output_2020_11_10_235933/dglen/test_align_epi_anat_rigid_equiv_params4/__tt_small_epi_tsh_ts_rs_ns+orig
+#++ Applying threshold of 1910.000000 on /home/dglen/git_afni/AFNI/tests/output_of_tests/output_2020_11_18_135610/dglen/test_align_epi_anat_rigid_equiv_params4/__tt_small_epi_tsh_ts_rs_ns+orig
 #Script is running (command trimmed):
   3dcalc -datum float -prefix ./__tt_small_epi_tsh_ts_rs_ns_wt -a ./__tt_small_epi_tsh_ts_rs_ns+orig -expr 'min(1,(a/1910.000000))'
 #++ Aligning anat data to epi data
@@ -50,9 +50,9 @@
 #++ Saving history
 #Script is running (command trimmed):
   3dNotes -h "align_epi_anat.py -anat \
- /opt/afni/src/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz \
+ /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz \
  -epi \
- /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig.BRIK.gz \
+ /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig.BRIK.gz \
  -epi_base 0 -epi_strip 3dAutomask -anat_has_skull no -suffix _aligned \
  -rigid_equiv" \
  ./anat_3mm_no_skull_aligned+orig
