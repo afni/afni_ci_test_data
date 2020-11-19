@@ -1,0 +1,147 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 1240
+'[rickr@manwe.nimh.nih.gov: Thu Mar 18 16:53:05 2010] 3dSkullStrip -input anat+orig -prefix strip\n[rodgersleejg@MH02131978MACLT: Sun Jun  2 13:58:13 2019] {AFNI_19.0.08:macos_10.12_local} 3dAutobox -input AFNI_data6/afni/strip+orig.BRIK -prefix tmp.nii.gz\n[rodgersleejg@MH02131978MACLT: Sun Jun  2 13:58:13 2019] {AFNI_19.0.08:macos_10.12_local} 3dresample -dxyz 3 3 3 -input tmp.nii.gz -prefix mini_data/anat_3mm_no_skull.nii.gz\n[dglen@elwing: Wed Nov 18 13:56:18 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dcopy /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz ./anat_3mm_no_skull.nii.gz_unflipped+orig\n[dglen@elwing: Wed Nov 18 13:56:20 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dLRflip -prefix ./__tt_anat_3mm_no_skull_lr_aligned ./anat_3mm_no_skull.nii.gz_unflipped+orig\n[dglen@elwing: Wed Nov 18 13:56:20 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dAllineate -lpc -weight ./small_epi_tsh_ts_rs_ns_wt+orig -source ./__tt_anat_3mm_no_skull_lr_aligned+orig -prefix ./anat_3mm_no_skull_flip_aligned -base ./small_epi_tsh_ts_rs_ns+orig -nocmass -1Dmatrix_save ./anat_3mm_no_skull_flip__aligned_mat.aff12.1D -master SOURCE -weight_frac 1.0 -maxrot 6 -maxshf 10 -VERB -warp aff -source_automask+4 -onepass~
+
+type  = float-attribute
+name  = ALLINEATE_MATVEC_B2S_000000
+count = 12
+      0.9973788    -0.03499154    -0.06444242       2.242065    -0.01712433
+      0.9322189      0.1014826       -4.14151    -0.01740009    -0.02159635
+      0.9689419       3.910942
+
+type  = float-attribute
+name  = ALLINEATE_MATVEC_S2B_000000
+count = 12
+       1.004394     0.03915323     0.06269954      -2.334978     0.01644674
+       1.070754     -0.1110521       4.831982     0.01840331      0.0245687
+       1.030704      -3.970535
+
+type = string-attribute
+name = ALLINEATE_WARP_TYPE
+count = 15
+'affine_general~
+
+type  = float-attribute
+name  = ALLINEATE_PARAMS_000000
+count = 12
+        2.24206      -4.141493       3.910934       -2.39817       5.999993
+       3.714956       1.000071      0.9361953      0.9628679    -0.05623104
+    -0.07902855     0.08448938
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_57kfBDZ5q-xyE41T1ox_4w~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Wed Nov 18 13:56:20 2020~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 0 11 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 3 5 1
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+       -93.9133       82.21155           66.5
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              3             -3             -3
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              0              0             -3           66.5              3
+              0              0       -93.9133              0             -3
+              0       82.21155
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              0              0             -3           66.5              3
+              0              0       -93.9133              0             -3
+              0       82.21155
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0           5013
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 61 47 48 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 1
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 3
+'#0~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 5
+'ORIG~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 0
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~

@@ -1,0 +1,147 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 1445
+'[rickr@manwe.nimh.nih.gov: Thu Mar 18 16:53:05 2010] 3dSkullStrip -input anat+orig -prefix strip\n[rodgersleejg@MH02131978MACLT: Sun Jun  2 13:58:13 2019] {AFNI_19.0.08:macos_10.12_local} 3dAutobox -input AFNI_data6/afni/strip+orig.BRIK -prefix tmp.nii.gz\n[rodgersleejg@MH02131978MACLT: Sun Jun  2 13:58:13 2019] {AFNI_19.0.08:macos_10.12_local} 3dresample -dxyz 3 3 3 -input tmp.nii.gz -prefix mini_data/anat_3mm_no_skull.nii.gz\n[dglen@elwing: Wed Nov 18 13:56:18 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dcopy /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz ./anat_3mm_no_skull.nii.gz_unflipped+orig\n[dglen@elwing: Wed Nov 18 13:56:19 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dAllineate -lpc -wtprefix ./anat_3mm_no_skull.nii.gz_unflipped_aligned_wtal -weight ./small_epi_tsh_ts_rs_ns_wt+orig -source ./anat_3mm_no_skull.nii.gz_unflipped+orig -prefix ./anat_3mm_no_skull_aligned -base ./small_epi_tsh_ts_rs_ns+orig -nocmass -1Dmatrix_save ./anat_3mm_no_skull_aligned_mat.aff12.1D -master SOURCE -weight_frac 1.0 -maxrot 6 -maxshf 10 -VERB -warp aff -source_automask+4 -onepass\n[dglen@elwing: Wed Nov 18 13:56:23 2020] align_epi_anat.py -anat  /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz  -epi  /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig.BRIK.gz  -epi_base 0 -epi_strip 3dAutomask -anat_has_skull no -suffix _aligned  -check_flip~
+
+type  = float-attribute
+name  = ALLINEATE_MATVEC_B2S_000000
+count = 12
+        1.00505   -0.002812156     0.00142469       1.811401     0.02190978
+      0.9805295      0.1030912      -1.225266     0.00518331    -0.02677391
+      0.9477054       4.216286
+
+type  = float-attribute
+name  = ALLINEATE_MATVEC_S2B_000000
+count = 12
+      0.9949231    0.002804267    -0.00180072      -1.791177    -0.02159515
+       1.016776     -0.1105722       1.751142    -0.00605165      0.0287099
+       1.052066      -4.389673
+
+type = string-attribute
+name = ALLINEATE_WARP_TYPE
+count = 15
+'affine_general~
+
+type  = float-attribute
+name  = ALLINEATE_PARAMS_000000
+count = 12
+       1.811413      -1.225263       4.216279     -0.1517782       5.999998
+    -0.08166552       1.005055      0.9859883      0.9453025     0.01921514
+    0.006568387     0.07347824
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_aKh003Pvh3XtOBLH9I7fcw~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Wed Nov 18 13:56:19 2020~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 0 11 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 3 5 1
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+       -93.9133       82.21155           66.5
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              3             -3             -3
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              0              0             -3           66.5              3
+              0              0       -93.9133              0             -3
+              0       82.21155
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              0              0             -3           66.5              3
+              0              0       -93.9133              0             -3
+              0       82.21155
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0           5406
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 61 47 48 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 1
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 3
+'#0~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 5
+'ORIG~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 0
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~

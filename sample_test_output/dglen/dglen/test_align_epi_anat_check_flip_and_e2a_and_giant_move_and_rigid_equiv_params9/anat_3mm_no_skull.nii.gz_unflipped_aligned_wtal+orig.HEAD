@@ -1,0 +1,116 @@
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_XTdND_ZxRFnC-U6d5zIMMQ~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Wed Nov 18 13:58:33 2020~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 0 11 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 0 3 4
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+      -112.6622      -122.7787      -17.65058
+
+type  = float-attribute
+name  = DELTA
+count = 3
+           2.75           2.75              3
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+           2.75              0              0      -112.6622              0
+           2.75              0      -122.7787              0              0
+              3      -17.65058
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+           2.75              0              0      -112.6622              0
+           2.75              0      -122.7787              0              0
+              3      -17.65058
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0              1
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 80 80 33 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 3
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 3
+'#0~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 5
+'ORIG~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 0
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~

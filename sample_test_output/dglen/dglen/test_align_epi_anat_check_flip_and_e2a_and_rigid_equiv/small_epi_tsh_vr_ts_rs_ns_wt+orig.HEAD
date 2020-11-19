@@ -1,0 +1,121 @@
+
+type = string-attribute
+name = HISTORY_NOTE
+count = 1352
+'[rodgersleejg@MH02131978MACLT: Mon Nov  2 17:00:48 2020] {AFNI_20.2.19:macos_10.12_local} 3dTcat -prefix mini_data/small_epi 'AFNI_data6/afni/epi_r1+orig.BRIK[0-9]'\n[dglen@elwing: Wed Nov 18 13:57:25 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dTshift -prefix ./__tt_small_epi_tsh -cubic /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig\n[dglen@elwing: Wed Nov 18 13:57:26 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dvolreg -1Dfile ./small_epi_tsh_vr_motion.1D -1Dmatrix_save ./__tt_small_epi_tsh_vr_mat.aff12.1D -prefix ./__tt_small_epi_tsh_vr -base 0 -cubic ./__tt_small_epi_tsh+orig\n[dglen@elwing: Wed Nov 18 13:57:27 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dbucket -prefix ./__tt_small_epi_tsh_vr_ts './__tt_small_epi_tsh_vr+orig[0]'\n[dglen@elwing: Wed Nov 18 13:57:27 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dresample -master ./anat_3mm_no_skull.nii.gz_unflipped+orig -prefix ./__tt_small_epi_tsh_vr_ts_rs -inset ./__tt_small_epi_tsh_vr_ts+orig -rmode Cu\n[dglen@elwing: Wed Nov 18 13:57:27 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dAutomask -apply_prefix ./small_epi_tsh_vr_ts_rs_ns ./__tt_small_epi_tsh_vr_ts_rs+orig\n[dglen@elwing: Wed Nov 18 13:57:27 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dcalc -datum float -prefix ./small_epi_tsh_vr_ts_rs_ns_wt -a ./small_epi_tsh_vr_ts_rs_ns+orig -expr 'min(1,(a/1910.000000))'~
+
+type = string-attribute
+name = TYPESTRING
+count = 15
+'3DIM_HEAD_ANAT~
+
+type = string-attribute
+name = IDCODE_STRING
+count = 27
+'AFN_UvhZyn51WlMwY-KY3MNCpg~
+
+type = string-attribute
+name = IDCODE_DATE
+count = 25
+'Wed Nov 18 13:57:27 2020~
+
+type = integer-attribute
+name = SCENE_DATA
+count = 8
+ 0 2 0 -999 -999
+ -999 -999 -999
+
+type = string-attribute
+name = LABEL_1
+count = 5
+'zyxt~
+
+type = string-attribute
+name = LABEL_2
+count = 5
+'zyxt~
+
+type = string-attribute
+name = DATASET_NAME
+count = 5
+'zyxt~
+
+type = integer-attribute
+name = ORIENT_SPECIFIC
+count = 3
+ 3 5 1
+
+type  = float-attribute
+name  = ORIGIN
+count = 3
+       -93.9133       82.21155           66.5
+
+type  = float-attribute
+name  = DELTA
+count = 3
+              3             -3             -3
+
+type  = float-attribute
+name  = IJK_TO_DICOM
+count = 12
+              0              0             -3           66.5              3
+              0              0       -93.9133              0             -3
+              0       82.21155
+
+type  = float-attribute
+name  = IJK_TO_DICOM_REAL
+count = 12
+              0              0             -3           66.5              3
+              0              0       -93.9133              0             -3
+              0       82.21155
+
+type  = float-attribute
+name  = BRICK_STATS
+count = 2
+              0              1
+
+type = integer-attribute
+name = DATASET_RANK
+count = 8
+ 3 1 0 0 0
+ 0 0 0
+
+type = integer-attribute
+name = DATASET_DIMENSIONS
+count = 5
+ 61 47 48 0 0
+
+type = integer-attribute
+name = BRICK_TYPES
+count = 1
+ 3
+
+type  = float-attribute
+name  = BRICK_FLOAT_FACS
+count = 1
+              0
+
+type = string-attribute
+name = BRICK_LABS
+count = 3
+'#0~
+
+type = string-attribute
+name = BRICK_KEYWORDS
+count = 1
+'~
+
+type = string-attribute
+name = TEMPLATE_SPACE
+count = 5
+'ORIG~
+
+type = integer-attribute
+name = INT_CMAP
+count = 1
+ 0
+
+type = string-attribute
+name = BYTEORDER_STRING
+count = 10
+'LSB_FIRST~
