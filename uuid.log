@@ -5,12 +5,12 @@
 33cba634-0e41-4486-9c6f-3e9931af7a50 rodgersleejg@afni:~/afni_ci_test_data timestamp=1587153937.533335s
 426b512c-f060-43d6-834d-b018a038b296 afni_user@bcf8dab82991:/opt/afni/src/tests/afni_ci_test_data timestamp=1594993950.090033171s
 493d8f17-eac9-439c-ba89-d10535fdc6bb rodgersleejg@MH02131978MACLT:/saved/afni/tests/afni_ci_test_data timestamp=1601914631.047392s
-51b87199-5e6e-44c2-b989-9b2a0f92d19e rmarkello@ross-ubuntu1604:~/gitrepos/afni/tests/afni_ci_test_data timestamp=1559899472.974585s
 51b87199-5e6e-44c2-b989-9b2a0f92d19e rodgersleejg@afni:~/temp/afni_ci_test_data timestamp=1560001187.120248s
 554bc508-3860-4818-b4c2-a6d71d601d4f rodgersleejg@promethium.nimh.nih.gov:/tmp/afni_ci_test_data timestamp=1587572056.66398s
 5e39f29e-0f85-4c21-af88-a01dd1a39a66 dglen@elwing:~/git_afni/AFNI/tests/afni_ci_test_data timestamp=1603306161.273837s
 65a6ed72-b97d-444f-9ce9-e094cdcd9341 rodgersleejg@MH02131978MACLT:~/Downloads/temp/afni_codebase/tests/afni_ci_test_data timestamp=1572546059.506254s
 70355d98-94ef-47be-a073-f8fd73d27773 rodgersleejg@MH02131978MACLT:~/Documents/nih/code/afni_codebase/tests/afni_ci_test_data timestamp=1561394563.511973s
+77c2f7ba-55ce-483d-9856-bbb1ad2de248 rodgersleejg@MH02131978MACLT:/saved/afni/tests/afni_ci_test_data timestamp=1605834244.64196s
 84487724-8314-4440-ad5d-dfc79f44cbd3 ptaylor@eomer:~/AFNI/afni/tests/afni_ci_test_data timestamp=1561570628.918886s
 870d0222-d84d-4df8-92d0-929505b35a32 root@d071dd81dfff:/opt/afni/tests/afni_ci_test_data timestamp=1576611825.584268148s
 8977926e-5ad5-4499-902f-d40c98f25120 rodgersleejg@promethium.nimh.nih.gov:/tmp/afni_ci_test_data timestamp=1587577320.472881s
@@ -23,6 +23,4 @@ b190dace-5077-4996-9e5b-e61f97d883b7 rodgersleejg@promethium.nimh.nih.gov:/tmp/t
 b45c894b-1fd6-4755-8b0b-35fd1000927c rodgersleejg@MH02131978MACLT:~/Documents/nih/code/afni_codebase/tests/afni_ci_test_data timestamp=1559490729.070893s
 b63ca06b-cbad-4f68-85e3-4a62b5dd9f23 rodgersleejg@promethium.nimh.nih.gov:/store/data/rodgersleejg/afni_ci_test_data timestamp=1584971796.052727555s
 c1ce38d5-c2ef-48c6-a1f2-e207215d0717 AFNI server for storing data for cheap. Not always available and requires ssh key to upload though. timestamp=1561640944.107355s
-c1ce38d5-c2ef-48c6-a1f2-e207215d0717 afni_ci_test_data timestamp=1559491237.489454s
-c1ce38d5-c2ef-48c6-a1f2-e207215d0717 https://afni.nimh.nih.gov/pub/dist/data/afni_ci_test_data/.git timestamp=1559491233.491538s
 d59196e6-1a91-4da3-9c40-b961adf87c58 cloud timestamp=1561589473.324676s
