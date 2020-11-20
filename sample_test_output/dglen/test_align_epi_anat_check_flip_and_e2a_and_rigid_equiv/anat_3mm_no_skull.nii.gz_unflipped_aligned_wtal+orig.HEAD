@@ -7,12 +7,12 @@ count = 15
 type = string-attribute
 name = IDCODE_STRING
 count = 27
-'AFN_yrCuUJOKZ2k-TXAwz2_N2w~
+'XYZ_2z0k9gMIPcH6G0JOMdn7Ww~
 
 type = string-attribute
 name = IDCODE_DATE
 count = 25
-'Wed Nov 18 13:57:27 2020~
+'Fri Nov 20 02:18:18 2020~
 
 type = integer-attribute
 name = SCENE_DATA

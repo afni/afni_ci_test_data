@@ -1,8 +1,8 @@
 
 type = string-attribute
 name = HISTORY_NOTE
-count = 1240
-'[rickr@manwe.nimh.nih.gov: Thu Mar 18 16:53:05 2010] 3dSkullStrip -input anat+orig -prefix strip\n[rodgersleejg@MH02131978MACLT: Sun Jun  2 13:58:13 2019] {AFNI_19.0.08:macos_10.12_local} 3dAutobox -input AFNI_data6/afni/strip+orig.BRIK -prefix tmp.nii.gz\n[rodgersleejg@MH02131978MACLT: Sun Jun  2 13:58:13 2019] {AFNI_19.0.08:macos_10.12_local} 3dresample -dxyz 3 3 3 -input tmp.nii.gz -prefix mini_data/anat_3mm_no_skull.nii.gz\n[dglen@elwing: Wed Nov 18 13:56:18 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dcopy /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz ./anat_3mm_no_skull.nii.gz_unflipped+orig\n[dglen@elwing: Wed Nov 18 13:56:20 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dLRflip -prefix ./__tt_anat_3mm_no_skull_lr_aligned ./anat_3mm_no_skull.nii.gz_unflipped+orig\n[dglen@elwing: Wed Nov 18 13:56:20 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dAllineate -lpc -weight ./small_epi_tsh_ts_rs_ns_wt+orig -source ./__tt_anat_3mm_no_skull_lr_aligned+orig -prefix ./anat_3mm_no_skull_flip_aligned -base ./small_epi_tsh_ts_rs_ns+orig -nocmass -1Dmatrix_save ./anat_3mm_no_skull_flip__aligned_mat.aff12.1D -master SOURCE -weight_frac 1.0 -maxrot 6 -maxshf 10 -VERB -warp aff -source_automask+4 -onepass~
+count = 2069
+'[rickr@manwe.nimh.nih.gov: Thu Mar 18 16:53:05 2010] 3dSkullStrip -input anat+orig -prefix strip\n[rodgersleejg@MH02131978MACLT: Sun Jun  2 13:58:13 2019] {AFNI_19.0.08:macos_10.12_local} 3dAutobox -input AFNI_data6/afni/strip+orig.BRIK -prefix tmp.nii.gz\n[rodgersleejg@MH02131978MACLT: Sun Jun  2 13:58:13 2019] {AFNI_19.0.08:macos_10.12_local} 3dresample -dxyz 3 3 3 -input tmp.nii.gz -prefix mini_data/anat_3mm_no_skull.nii.gz\n[afni_user@6822ffe068ea: Fri Nov 20 02:17:02 2020] {AFNI_20.3.01:Linux_cmake} 3dcopy /opt/afni/src/tests/afni_ci_test_data/mini_data/anat_3mm_no_skull.nii.gz /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/anat_3mm_no_skull.nii.gz_unflipped+orig\n[afni_user@6822ffe068ea: Fri Nov 20 02:17:05 2020] {AFNI_20.3.01:Linux_cmake} 3dLRflip -prefix /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/__tt_anat_3mm_no_skull_lr_aligned /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/anat_3mm_no_skull.nii.gz_unflipped+orig\n[afni_user@6822ffe068ea: Fri Nov 20 02:17:05 2020] {AFNI_20.3.01:Linux_cmake} 3dAllineate -lpc -weight /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/small_epi_tsh_ts_rs_ns_wt+orig -source /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/__tt_anat_3mm_no_skull_lr_aligned+orig -prefix /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/anat_3mm_no_skull_flip_aligned -base /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/small_epi_tsh_ts_rs_ns+orig -nocmass -1Dmatrix_save /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/anat_3mm_no_skull_flip__aligned_mat.aff12.1D -master SOURCE -weight_frac 1.0 -maxrot 6 -maxshf 10 -VERB -warp aff -source_automask+4 -onepass~
 
 type  = float-attribute
 name  = ALLINEATE_MATVEC_B2S_000000
@@ -38,12 +38,12 @@ count = 15
 type = string-attribute
 name = IDCODE_STRING
 count = 27
-'AFN_57kfBDZ5q-xyE41T1ox_4w~
+'XYZ_q6sdc5EQFlJUWtkF1EWPBA~
 
 type = string-attribute
 name = IDCODE_DATE
 count = 25
-'Wed Nov 18 13:56:20 2020~
+'Fri Nov 20 02:17:05 2020~
 
 type = integer-attribute
 name = SCENE_DATA

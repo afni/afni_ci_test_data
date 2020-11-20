@@ -1,8 +1,8 @@
 
 type = string-attribute
 name = HISTORY_NOTE
-count = 885
-'[rodgersleejg@MH02131978MACLT: Mon Nov  2 17:00:48 2020] {AFNI_20.2.19:macos_10.12_local} 3dTcat -prefix mini_data/small_epi 'AFNI_data6/afni/epi_r1+orig.BRIK[0-9]'\n[dglen@elwing: Wed Nov 18 13:56:18 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dTshift -prefix ./__tt_small_epi_tsh -cubic /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig\n[dglen@elwing: Wed Nov 18 13:56:19 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dbucket -prefix ./__tt_small_epi_tsh_ts './__tt_small_epi_tsh+orig[0]'\n[dglen@elwing: Wed Nov 18 13:56:19 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dresample -master ./anat_3mm_no_skull.nii.gz_unflipped+orig -prefix ./__tt_small_epi_tsh_ts_rs -inset ./__tt_small_epi_tsh_ts+orig -rmode Cu\n[dglen@elwing: Wed Nov 18 13:56:19 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dAutomask -apply_prefix ./small_epi_tsh_ts_rs_ns ./__tt_small_epi_tsh_ts_rs+orig~
+count = 1717
+'[rodgersleejg@MH02131978MACLT: Mon Nov  2 17:00:48 2020] {AFNI_20.2.19:macos_10.12_local} 3dTcat -prefix mini_data/small_epi 'AFNI_data6/afni/epi_r1+orig.BRIK[0-9]'\n[afni_user@6822ffe068ea: Fri Nov 20 02:17:02 2020] {AFNI_20.3.01:Linux_cmake} 3dTshift -prefix /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/__tt_small_epi_tsh -cubic /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig\n[afni_user@6822ffe068ea: Fri Nov 20 02:17:04 2020] {AFNI_20.3.01:Linux_cmake} 3dbucket -prefix /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/__tt_small_epi_tsh_ts '/opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/__tt_small_epi_tsh+orig[0]'\n[afni_user@6822ffe068ea: Fri Nov 20 02:17:04 2020] {AFNI_20.3.01:Linux_cmake} 3dresample -master /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/anat_3mm_no_skull.nii.gz_unflipped+orig -prefix /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/__tt_small_epi_tsh_ts_rs -inset /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/__tt_small_epi_tsh_ts+orig -rmode Cu\n[afni_user@6822ffe068ea: Fri Nov 20 02:17:04 2020] {AFNI_20.3.01:Linux_cmake} 3dAutomask -apply_prefix /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/small_epi_tsh_ts_rs_ns /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_params1/__tt_small_epi_tsh_ts_rs+orig~
 
 type = string-attribute
 name = TYPESTRING
@@ -12,12 +12,12 @@ count = 15
 type = string-attribute
 name = IDCODE_STRING
 count = 27
-'AFN_DPyc2UUj-11jCwhYXiC8-Q~
+'XYZ_E_1AsAtKh5uJ03HWeHJzlw~
 
 type = string-attribute
 name = IDCODE_DATE
 count = 25
-'Wed Nov 18 13:56:19 2020~
+'Fri Nov 20 02:17:04 2020~
 
 type = integer-attribute
 name = SCENE_DATA
@@ -27,8 +27,8 @@ count = 8
 
 type = string-attribute
 name = LABEL_1
-count = 25
-'./small_epi_tsh_ts_rs_ns~
+count = 38
+'/opt/afni/src/tests/output_of_tests/o~
 
 type = string-attribute
 name = LABEL_2

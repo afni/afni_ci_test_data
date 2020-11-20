@@ -1,8 +1,8 @@
 
 type = string-attribute
 name = HISTORY_NOTE
-count = 1116
-'[rodgersleejg@MH02131978MACLT: Mon Nov  2 17:00:48 2020] {AFNI_20.2.19:macos_10.12_local} 3dTcat -prefix mini_data/small_epi 'AFNI_data6/afni/epi_r1+orig.BRIK[0-9]'\n[dglen@elwing: Wed Nov 18 13:58:32 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dTshift -prefix ./__tt_small_epi_tsh -cubic /home/dglen/git_afni/AFNI/tests/afni_ci_test_data/mini_data/small_epi+orig\n[dglen@elwing: Wed Nov 18 13:58:33 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dvolreg -1Dfile ./small_epi_tsh_vr_motion.1D -1Dmatrix_save ./__tt_small_epi_tsh_vr_mat.aff12.1D -prefix ./__tt_small_epi_tsh_vr -base 0 -cubic ./__tt_small_epi_tsh+orig\n[dglen@elwing: Wed Nov 18 13:58:33 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dbucket -prefix ./__tt_small_epi_tsh_vr_ts './__tt_small_epi_tsh_vr+orig[0]'\n[dglen@elwing: Wed Nov 18 13:58:33 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dAutomask -apply_prefix ./small_epi_tsh_vr_ts_ns ./__tt_small_epi_tsh_vr_ts+orig\n[dglen@elwing: Wed Nov 18 13:58:33 2020] {AFNI_20.3.02:linux_ubuntu_16_64} 3dcalc -datum float -prefix ./small_epi_tsh_vr_ts_ns_wt -a ./small_epi_tsh_vr_ts_ns+orig -expr 'min(1,(a/1927.000000))'~
+count = 2549
+'[rodgersleejg@MH02131978MACLT: Mon Nov  2 17:00:48 2020] {AFNI_20.2.19:macos_10.12_local} 3dTcat -prefix mini_data/small_epi 'AFNI_data6/afni/epi_r1+orig.BRIK[0-9]'\n[afni_user@6822ffe068ea: Fri Nov 20 02:19:25 2020] {AFNI_20.3.01:Linux_cmake} 3dTshift -prefix /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_and_e2a_and_giant_move_and_rigid_equiv_params9/__tt_small_epi_tsh -cubic /opt/afni/src/tests/afni_ci_test_data/mini_data/small_epi+orig\n[afni_user@6822ffe068ea: Fri Nov 20 02:19:26 2020] {AFNI_20.3.01:Linux_cmake} 3dvolreg -1Dfile ./small_epi_tsh_vr_motion.1D -1Dmatrix_save /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_and_e2a_and_giant_move_and_rigid_equiv_params9/__tt_small_epi_tsh_vr_mat.aff12.1D -prefix /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_and_e2a_and_giant_move_and_rigid_equiv_params9/__tt_small_epi_tsh_vr -base 0 -cubic /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_and_e2a_and_giant_move_and_rigid_equiv_params9/__tt_small_epi_tsh+orig\n[afni_user@6822ffe068ea: Fri Nov 20 02:19:27 2020] {AFNI_20.3.01:Linux_cmake} 3dbucket -prefix /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_and_e2a_and_giant_move_and_rigid_equiv_params9/__tt_small_epi_tsh_vr_ts '/opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_and_e2a_and_giant_move_and_rigid_equiv_params9/__tt_small_epi_tsh_vr+orig[0]'\n[afni_user@6822ffe068ea: Fri Nov 20 02:19:27 2020] {AFNI_20.3.01:Linux_cmake} 3dAutomask -apply_prefix /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_and_e2a_and_giant_move_and_rigid_equiv_params9/small_epi_tsh_vr_ts_ns /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_and_e2a_and_giant_move_and_rigid_equiv_params9/__tt_small_epi_tsh_vr_ts+orig\n[afni_user@6822ffe068ea: Fri Nov 20 02:19:27 2020] {AFNI_20.3.01:Linux_cmake} 3dcalc -datum float -prefix /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_and_e2a_and_giant_move_and_rigid_equiv_params9/small_epi_tsh_vr_ts_ns_wt -a /opt/afni/src/tests/output_of_tests/output_2020_11_20_021653/dglen/test_align_epi_anat_check_flip_and_e2a_and_giant_move_and_rigid_equiv_params9/small_epi_tsh_vr_ts_ns+orig -expr 'min(1,(a/1927.000000))'~
 
 type = string-attribute
 name = TYPESTRING
@@ -12,12 +12,12 @@ count = 15
 type = string-attribute
 name = IDCODE_STRING
 count = 27
-'AFN_5elie7mEmPvqfxtNffBNmQ~
+'XYZ_Hr7GdUwRtB1KwM8ljOxi5g~
 
 type = string-attribute
 name = IDCODE_DATE
 count = 25
-'Wed Nov 18 13:58:33 2020~
+'Fri Nov 20 02:19:27 2020~
 
 type = integer-attribute
 name = SCENE_DATA
