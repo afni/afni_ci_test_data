@@ -1,6 +1,6 @@
 
 +++ Command Echo:
-   3dClusterize -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -inset ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/SOME_ICA_NETS_in_DWI+orig.BRIK.gz -ithr 0 -idat 0 -bisided -3 3 -NN 2 -clust_nvox 200 -pref_map output_of_tests/output_2020_11_12_222237/ptaylor/test_3dClusterize/o.3dClusterize_MAP.nii.gz -pref_dat output_of_tests/output_2020_11_12_222237/ptaylor/test_3dClusterize/o.3dClusterize_DAT.nii.gz 
+   3dClusterize -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -inset ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/SOME_ICA_NETS_in_DWI+orig.BRIK.gz -ithr 0 -idat 0 -bisided -3 3 -NN 2 -clust_nvox 200 -pref_map output_of_tests/output_2021_05_04_193619/ptaylor/test_3dClusterize/o.3dClusterize_MAP.nii.gz -pref_dat output_of_tests/output_2021_05_04_193619/ptaylor/test_3dClusterize/o.3dClusterize_DAT.nii.gz 
 
 #
 #  Cluster report 
@@ -17,7 +17,7 @@
 #[ Voxel dimensions    = 2.000 mm X 2.000 mm X 2.000 mm ]
 #[ Coordinates Order   = RAI ]
 #[ Mask                = ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz ]
-# Mean and SEM based on absolute value of voxel intensities ]
+#[ Mean and SEM based on signed voxel intensities ]
 #
 #Volume  CM RL  CM AP  CM IS  minRL  maxRL  minAP  maxAP  minIS  maxIS    Mean     SEM    Max Int  MI RL  MI AP  MI IS
 #------  -----  -----  -----  -----  -----  -----  -----  -----  -----  -------  -------  -------  -----  -----  -----
