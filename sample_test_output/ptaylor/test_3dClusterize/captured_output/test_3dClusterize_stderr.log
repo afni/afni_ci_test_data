@@ -10,6 +10,6 @@
 ++ Threshold volume [0] does *not* appear to be a stat!
 ++ Sorting clusters by size.
 ++ Writing out dataset masked by clusters.
-++ Output dataset output_of_tests/output_2020_11_12_222237/ptaylor/test_3dClusterize/o.3dClusterize_DAT.nii.gz
+++ Output dataset output_of_tests/output_2021_06_01_182256/ptaylor/test_3dClusterize/o.3dClusterize_DAT.nii.gz
 ++ Writing out map of cluster ROIs.
-++ Output dataset output_of_tests/output_2020_11_12_222237/ptaylor/test_3dClusterize/o.3dClusterize_MAP.nii.gz
+++ Output dataset output_of_tests/output_2021_06_01_182256/ptaylor/test_3dClusterize/o.3dClusterize_MAP.nii.gz
