@@ -45,7 +45,7 @@ cd /opt/afni/src/tests;                        \
 ./run_afni_tests.py                            \
     --build-dir /opt/afni/build                \
     -u                                         \
-    -e='--runveryslow --create_sample_output'  \
+    -e='--runveryslow --create-sample-output'  \
     --lf                                       \
     -v verbose                                 \
     local
@@ -56,8 +56,8 @@ cd /opt/afni/src/tests;                        \
 
 ```
 rsync -aP                                                               \
-    tests/sample_output_of_tests/sample_output_2020_10_28_180130/       \
-    afni_ci_test_data/sample_test_output/sample_test_output/
+    sample_output_of_tests/sample_output_2020_10_28_180130/             \
+    afni_ci_test_data/sample_test_output/
 ```
 
 4. Add them to the datalad repo
