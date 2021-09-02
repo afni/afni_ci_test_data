@@ -1,1 +1,4 @@
-../../../../.git/annex/objects/81/Jx/MD5E-s269--e1480d0910cfd9fe8d6738b27fa60381.log/MD5E-s269--e1480d0910cfd9fe8d6738b27fa60381.log
+++ 3dTstat: AFNI version=AFNI_21.2.06 (Sep  1 2021) [64-bit]
+++ Authored by: KR Hammett & RW Cox
+++ Warning: 10593 bad floats computed in MAKER_4D_to_typed_fbuc
+++ Output dataset output_of_tests/output_2021_09_02_122518/3dTstat/test_3dTstat_basic_centroid/stat.nii.gz

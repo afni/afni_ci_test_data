@@ -1,1 +1,22 @@
-../../../../.git/annex/objects/1k/11/MD5E-s1168--ff0d0fc778e7b67229125af623db5ecf.log/MD5E-s1168--ff0d0fc778e7b67229125af623db5ecf.log
+{
+"host": "safni",
+"user": "afniHQ",
+"workdir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests",
+"cmd": "3dTstat -prefix output_of_tests/output_2021_09_02_122518/3dTstat/test_3dTstat_basic_mean/stat.nii.gz -mean ./afni_ci_test_data/AFNI_data6/afni/epi_r1+orig.HEAD",
+"add_env_vars": "{'OMP_NUM_THREADS': '1'}",
+"rootdir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests",
+"epi": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/afni_ci_test_data/AFNI_data6/afni/epi_r1+orig.HEAD",
+"module_outdir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/output_of_tests/output_2021_09_02_122518/3dTstat",
+"logger": "<Logger test_3dTstat_basic_mean (INFO)>",
+"current_test_module": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/scripts/test_3dTstat.py",
+"outdir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/output_of_tests/output_2021_09_02_122518/3dTstat/test_3dTstat_basic_mean",
+"sampdir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/sample_output_of_tests/sample_output_2021_09_02_122518/3dTstat/test_3dTstat_basic_mean",
+"logdir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/output_of_tests/output_2021_09_02_122518/3dTstat/test_3dTstat_basic_mean/captured_output",
+"comparison_dir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/afni_ci_test_data/sample_test_output/3dTstat/test_3dTstat_basic_mean",
+"base_comparison_dir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/afni_ci_test_data/sample_test_output",
+"base_outdir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/output_of_tests/output_2021_09_02_122518",
+"tests_data_dir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/afni_ci_test_data",
+"test_name": "test_3dTstat_basic_mean",
+"create_sample_output": "True",
+"save_sample_output": "False"
+}

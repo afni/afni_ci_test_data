@@ -1,4 +1,4 @@
-++ 3dTstat: AFNI version=AFNI_20.3.00 (Oct 20 2020) [64-bit]
+++ 3dTstat: AFNI version=AFNI_21.2.06 (Sep  1 2021) [64-bit]
 ++ Authored by: KR Hammett & RW Cox
 ++ FFT length = 304
-++ Output dataset output_of_tests/output_2020_10_28_205556/3dTstat/test_3dTstat_basic_autoreg/stat.nii.gz
+++ Output dataset output_of_tests/output_2021_09_02_122518/3dTstat/test_3dTstat_basic_autoreg/stat.nii.gz

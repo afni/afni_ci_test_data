@@ -1,1 +1,22 @@
-{"host": "edda28aaa4a9", "user": "afni_user", "workdir": "/opt/afni/src/tests", "cmd": "3dTstat -prefix output_of_tests/output_2020_10_28_205556/3dTstat/test_3dTstat_basic_autoreg/stat.nii.gz -autoreg 1 ./afni_ci_test_data/AFNI_data6/afni/epi_r1+orig.HEAD", "add_env_vars": "{'OMP_NUM_THREADS': '1'}", "rootdir": "/opt/afni/src/tests", "epi": "/opt/afni/src/tests/afni_ci_test_data/AFNI_data6/afni/epi_r1+orig.HEAD", "module_outdir": "/opt/afni/src/tests/output_of_tests/output_2020_10_28_205556/3dTstat", "logger": "<Logger test_3dTstat_basic_autoreg (DEBUG)>", "current_test_module": "/opt/afni/src/tests/scripts/test_3dTstat.py", "outdir": "/opt/afni/src/tests/output_of_tests/output_2020_10_28_205556/3dTstat/test_3dTstat_basic_autoreg", "sampdir": "/opt/afni/src/tests/sample_output_of_tests/sample_output_2020_10_28_205556/3dTstat/test_3dTstat_basic_autoreg", "logdir": "/opt/afni/src/tests/output_of_tests/output_2020_10_28_205556/3dTstat/test_3dTstat_basic_autoreg/captured_output", "comparison_dir": "/opt/afni/src/tests/afni_ci_test_data/sample_test_output/3dTstat/test_3dTstat_basic_autoreg", "base_comparison_dir": "/opt/afni/src/tests/afni_ci_test_data/sample_test_output", "base_outdir": "/opt/afni/src/tests/output_of_tests/output_2020_10_28_205556", "tests_data_dir": "/opt/afni/src/tests/afni_ci_test_data", "test_name": "test_3dTstat_basic_autoreg", "create_sample_output": "True", "save_sample_output": "False"}
+{
+"host": "safni",
+"user": "afniHQ",
+"workdir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests",
+"cmd": "3dTstat -prefix output_of_tests/output_2021_09_02_122518/3dTstat/test_3dTstat_basic_autoreg/stat.nii.gz -autoreg 1 ./afni_ci_test_data/AFNI_data6/afni/epi_r1+orig.HEAD",
+"add_env_vars": "{'OMP_NUM_THREADS': '1'}",
+"rootdir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests",
+"epi": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/afni_ci_test_data/AFNI_data6/afni/epi_r1+orig.HEAD",
+"module_outdir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/output_of_tests/output_2021_09_02_122518/3dTstat",
+"logger": "<Logger test_3dTstat_basic_autoreg (INFO)>",
+"current_test_module": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/scripts/test_3dTstat.py",
+"outdir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/output_of_tests/output_2021_09_02_122518/3dTstat/test_3dTstat_basic_autoreg",
+"sampdir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/sample_output_of_tests/sample_output_2021_09_02_122518/3dTstat/test_3dTstat_basic_autoreg",
+"logdir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/output_of_tests/output_2021_09_02_122518/3dTstat/test_3dTstat_basic_autoreg/captured_output",
+"comparison_dir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/afni_ci_test_data/sample_test_output/3dTstat/test_3dTstat_basic_autoreg",
+"base_comparison_dir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/afni_ci_test_data/sample_test_output",
+"base_outdir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/output_of_tests/output_2021_09_02_122518",
+"tests_data_dir": "/home/afniHQ/FOR_TEST_AFNI/afni/tests/afni_ci_test_data",
+"test_name": "test_3dTstat_basic_autoreg",
+"create_sample_output": "True",
+"save_sample_output": "False"
+}
