@@ -68,15 +68,14 @@ cd afni_ci_test_data
 datalad save -m 'update sample output data'
 ```
 
-5. Publish to the github and afni server. There is a way to configure the repository so that the following is a single command. I could not get it to work robustly across repository installations though:
+5. Publish to both the github and afni server, via the "push" command:
 
 
 ```
-datalad publish --transfer-data=all --to=origin
-datalad publish --transfer-data=all --to=afni_ci_test_data
+datalad push
 ```
 
-Note: the afni server stores all the binary blobs (the actual data). These files need to be globally accessible. The git repository doesn't need to look up to date, so for example it is fine to have an old version of master checked-out. The data will look out of date but it will be providing the appropriate files for download when requested.
+Note: the afni server stores all the binary blobs (the actual data). These files need to be globally accessible. The git repository doesn't need to look up to date, so for example it is fine to have an old version of master checked-out. The data will look out of date but it will be providing the appropriate files for download when requested.  [Note from Dec 8, 2021: this file permission change might/should no longer be necessary:]
 
 6. Fix permissions on the server... I can't find a work around for this right now.
 
