@@ -89,7 +89,7 @@ except that it could then be used in ``cd`` or ``ls`` commands.
    still just some text, but happens to be the name of a directory.
 
    The ``ls`` command shows the contents of that directory.  The shell
-   expands ``$ddir`` before the ``ls`` command is envoked.
+   expands ``$ddir`` before the ``ls`` command is invoked.
 
 maybe we made a mistake
 -----------------------
