@@ -74,7 +74,7 @@ The proc.FT script:
 
    Providing 3dDeconvolve with 3 datasets tells the program that there are 3
    runs, with the number of TRs in each run contained in that input dataset.
-   If we had contatenated them into one dataset, we would need to add the
+   If we had concatenated them into one dataset, we would need to add the
    -concat option to tell 3dDeconvolve where the run breaks occur.
 
     ---

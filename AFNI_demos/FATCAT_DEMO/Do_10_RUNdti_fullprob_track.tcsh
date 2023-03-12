@@ -125,7 +125,7 @@ time 3dTrackID -mode PROB                \
 
 # For fun, you can compare the relative 'volumes' of outputs from DET,
 # MINIP and PROB mode, for the AND-logic connections. Even with just
-# 200 probabilistic iterations (and a pretty low treshold of having
+# 200 probabilistic iterations (and a pretty low threshold of having
 # just a few tracts pass through a voxel to include it in an ROI),
 # this shows some of the difference between deterministic and
 # probabilistic tractography.  Most likely, a comparison will provide

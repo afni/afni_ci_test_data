@@ -64,7 +64,7 @@ in AFNI and vice versa.\n\
 Display the surfaces in SUMA press '[' and ']' - they were hidden at the\n\
 start.\n\
 Setup AFNI's instacorr using dataset errts.anaticor.FATCAT+orig, blur by 4\n\
-turn off flitering - it's been done already -, set seed radius to 6\n\
+turn off filtering - it's been done already -, set seed radius to 6\n\
 and then press Setup+Keep.\n\
 In SUMA, shift+ctl+right click somewhere to move the masking ball AND tell\n\
 AFNI to set the instacorr seed. AFNI will compute the resting state \n\

@@ -8,7 +8,7 @@
 ##
 ## This script runs ROI2dataset to convert the tuna ROI into a
 ## surface dataset (NIML), and then runs 3dSurf2Vol to project
-## that into the volume domain, filling the volxels between the
+## that into the volume domain, filling the voxels between the
 ## smooth WM and pial surfaces.
 ##
 ## Afterwards, one could view the volume ROI in afni, 'talk' to

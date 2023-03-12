@@ -35,7 +35,7 @@ treating directional uncertainty.
 ***********************************************************************
 
 To run a script, one should simply be able to type, for example, the
-followin in a commandline:
+following in a commandline:
 $ tcsh Do_01_RUNdti_convert_grads.tcsh
 or
 $ ./Do_01_RUNdti_convert_grads.tcsh

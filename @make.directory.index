@@ -82,7 +82,7 @@ while ( $narg <= $#argv )
       echo "  -clean      : delete old index.html files"
       echo "  -date Y/N   : specify whether to use the date in output [Y]"
       echo "  -indent N   : spaces to indent text"
-      echo "  -dirs       : argumets are directories to enter and run on"
+      echo "  -dirs       : arguments are directories to enter and run on"
       echo "  -nested     : nest command to get entire directory trees"
       echo "  -quiet      : try to be quiet"
       echo "  -test       : just show what would be done"

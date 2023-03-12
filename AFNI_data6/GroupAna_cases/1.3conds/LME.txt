@@ -1,6 +1,6 @@
 # 1 group with 17 subjects
 # 3 conditions: Baseline, Ket, Placebo
-# Mising data with some subject
+# Missing data with some subject
 #       Baseline Ket Placebo
 #  S101        1   1       0
 #  S102        1   1       1

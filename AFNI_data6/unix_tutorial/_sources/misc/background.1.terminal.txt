@@ -21,7 +21,7 @@ Linux Systems
 OS X Terminals
 --------------
 
-XQuartz may be the prefered application to start, but new systems do not necesarrily come with it.  In such a case, trying to start :command:`afni` from a (non-XQuartz) terminal will result in the user being prompted to install XQuartz.  That may be the most simple way to install it.
+XQuartz may be the preferred application to start, but new systems do not necessarily come with it.  In such a case, trying to start :command:`afni` from a (non-XQuartz) terminal will result in the user being prompted to install XQuartz.  That may be the most simple way to install it.
 
 Otherwise (and to find the non-XQuartz Terminal application):
 

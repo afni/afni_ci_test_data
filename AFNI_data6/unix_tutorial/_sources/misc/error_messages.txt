@@ -53,7 +53,7 @@ does not know of a command or program by the given name.
            -stim_times: Command not found.
 
       Note that spaces or tabs after any final ``\`` would also break the
-      line coninuation interpretation, but they are difficult to see.
+      line continuation interpretation, but they are difficult to see.
 
       Also, non-Unix newline characters can be problematic.
 

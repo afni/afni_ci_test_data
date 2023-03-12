@@ -34,8 +34,8 @@ View the script with an editor or with the Unix less program, for example:
         G        : 'go' to the end
         h        : show the 'help' menu (running 'less' on the help text)
         /        : search for some string
-        n        : find 'next' occurence of search string, down
-        N        : find 'next' occurence of search string, up
+        n        : find 'next' occurrence of search string, down
+        N        : find 'next' occurrence of search string, up
         q        : 'quit' from less (or from the 'help' menu)
 
 A. General comments about the script
@@ -83,7 +83,7 @@ B. Commands at the top of the script.
 C. First processing block: setup
 
    This automatic processing block is used for basic operation before the EPI
-   data is touched.  The AFNI package is varified as being recent enough to
+   data is touched.  The AFNI package is verified as being recent enough to
    execute this script, variables are assigned, output directories are created,
    the results directory is created and basic data files are copied over.
 

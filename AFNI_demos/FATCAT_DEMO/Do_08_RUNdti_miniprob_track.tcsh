@@ -1,6 +1,6 @@
 #!/bin/tcsh -f
 
-# Mini-probabilistic tracking example: this method uses determinstic
+# Mini-probabilistic tracking example: this method uses deterministic
 # tractography + a simple extension of including few Monte Carlo
 # iterations of perturbed tensor values (via uncertainty estimations).
 # This can be useful to get a broader (more robust?) sense of tract

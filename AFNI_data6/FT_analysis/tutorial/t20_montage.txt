@@ -64,7 +64,7 @@ View the results in the afni GUI.
 
         - axial image: right-click on "Sav1.ppm"
         - change from Save.ppm to Save.jpg (for JPEG) (and Set)
-        - axial iamge: left-click on Sav1.jpg
+        - axial image: left-click on Sav1.jpg
         - specify the prefix: axial_montage (and Set)
 
       There should have been a message on afni's terminal window about writing

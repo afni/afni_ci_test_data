@@ -42,7 +42,7 @@ displayed. To move the sphere right-double click on it to place SUMA\n\
 in 'Mask Manipulation Mode' which is indicated by displaying the ball\n\
 in mesh mode (see help in SUMA, (ctrl+h), for details.).\n\
 Selecting a location on the tracts, the slices, or surfaces, will make\n\
-the ball jump to that location. The mask should also be visibile in AFNI\n\
+the ball jump to that location. The mask should also be visible in AFNI\n\
 and clicking in AFNI will make the mask move in SUMA also.\n\n\
 To turn off 'Mask Manipulation Mode' right-double click in open air, or on\n\
 the ball itself.\n\
