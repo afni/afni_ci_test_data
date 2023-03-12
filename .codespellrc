@@ -1,5 +1,5 @@
 [codespell]
-skip = .git,*.pdf,*.svg,*.1D,*.css,*.log,*.BRIK,*.HEAD,*.dat,results.*
+skip = .git,*.pdf,*.svg,*.1D,*.css,*.log,*.BRIK,*.HEAD,*.dat,results.*,*.niml.dset
 # Ket - used in 1.3cond
 # TE - neuroimaging
 ignore-words-list = ket,te
