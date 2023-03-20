@@ -1,4 +1,18 @@
-
 * annex.backend=MD5E
 **/.git* annex.largefiles=nothing
 * annex.largefiles=((mimeencoding=binary)and(largerthan=0))
+# machine generated text files better remain in annex
+*.1D annex.largefiles=anything
+*.1D.* annex.largefiles=anything
+*.gii annex.largefiles=anything
+*.gii.* annex.largefiles=anything
+*.grid annex.largefiles=anything
+*.HEAD annex.largefiles=anything
+*.log annex.largefiles=anything
+*.niml annex.largefiles=anything
+*.niml.* annex.largefiles=anything
+*.ply annex.largefiles=anything
+# Since .dotfile, requires use of   -c annex.dotfiles=true  while using git annex directly.
+# Use  datalad save instead  or invoke as git annex add  -c annex.dotfiles=true
+.*.swo annex.largefiles=anything
+*_tstats.txt annex.largefiles=anything
