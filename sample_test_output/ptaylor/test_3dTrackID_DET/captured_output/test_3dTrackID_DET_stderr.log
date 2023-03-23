@@ -1,15 +1,1 @@
-++ ROI logic type is: OR
-++ Tracking mode: DET
-++ Number of ROIs in netw[0] = 1
-++ No refset labeltable for naming things.
-++ SEARCHING for vector files with prefix './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT*':
-	FINDING:	 'V1'  'V2'  'V3' 
-++ SEARCHING for scalar files with prefix './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT*':
-	FINDING:	 not:'DT'  'FA'  'L1'  not:'L2'  not:'L3'  'MD'  'RD'  not:'TORTOISE_PREP' 
-++ Done with scalar search, found: 4 parameters
-	--> so will have 15 output data matrices.
-++ With '-logic OR', the '-cut_at_rois' option will be automically turned off (-> have '-uncut_at_rois').
-++ Tracking progress count: start ...
-++ Done tracking, tidying up outputs...
-++ From tracking, net[0] has 25738 tracks.
-++ Writing output (RPI, same as your input): output_of_tests/output_2020_10_28_205556/ptaylor/test_3dTrackID_DET/o.3dTrackID_DET ...
+../../../../.git/annex/objects/gz/5Q/MD5E-s897--224cb68ed4bad224dc81c14842f76960.log/MD5E-s897--224cb68ed4bad224dc81c14842f76960.log

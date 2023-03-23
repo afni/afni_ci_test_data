@@ -1,4 +1,1 @@
-
-+++ Command Echo:
-   3dEigsToDT -eig_vals ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_L* -eig_vecs ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_V* -prefix output_of_tests/output_2020_11_12_222237/ptaylor/test_3dEigsToDT/o.3dEigsToDT 
-
+../../../../.git/annex/objects/MM/g0/MD5E-s261--599c617f03e4ddcfe3b98ff9c79a3bbc.log/MD5E-s261--599c617f03e4ddcfe3b98ff9c79a3bbc.log

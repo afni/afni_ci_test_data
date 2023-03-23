@@ -1,4 +1,1 @@
-
-+++ Command Echo:
-   3dDWUncert -inset ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/AVEB0_DWI.nii.gz -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -pt_choose_seed 5 -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dDWUncert/o.3dDWUncert -input ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT -bmatrix_FULL ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/grad_BMAT.txt -iters 10 
-
+../../../../.git/annex/objects/39/vQ/MD5E-s433--ad25cb5517d1f2b8f87bc03908178b72.log/MD5E-s433--ad25cb5517d1f2b8f87bc03908178b72.log

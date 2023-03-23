@@ -1,4 +1,1 @@
-
-+++ Command Echo:
-   3dNetCorr -inset ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/REST_in_DWI.nii.gz[5..50] -in_rois ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/ROI_ICMAP_GM+orig.BRIK.gz -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dNetCorr/o.3dNetCorr -fish_z -ts_wb_Z -nifti -ts_out 
-
+../../../../.git/annex/objects/j5/Pf/MD5E-s315--ab3e0034d9c570739370f69bd2399d62.log/MD5E-s315--ab3e0034d9c570739370f69bd2399d62.log

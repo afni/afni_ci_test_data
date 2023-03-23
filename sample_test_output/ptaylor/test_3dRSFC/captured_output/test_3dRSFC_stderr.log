@@ -1,16 +1,1 @@
-++ 3dRSFC (from 3dBandpass by RW Cox): version THETA: AFNI version=AFNI_20.3.01 (Nov 11 2020) [64-bit]
-++ Authored by: PA Taylor
-++ Data length = 96  FFT length = 96
- + bandpass: ntime=96 nFFT=96 dt=2.5 dFreq=0.00416667 Nyquist=0.2 passband indexes=2..24
-++ Loading input dataset time series
-++ No mask ==> processing all 7488 voxels
-++ Checking dataset for initial transients [use '-notrans' to skip this test]
- + No widespread initial positive transient detected :-)
-++ Bandpassing data time series
- +   -- quadratic detrend
- +   -- FFTs
-++ Creating output dataset in memory, then writing it
-++ Bandpassing data time series
- +   -- quadratic detrend
-++ Creating output dataset 2 in memory
-++ Starting the (f)ALaFFel calcs
+../../../../.git/annex/objects/Vj/PP/MD5E-s724--db1096ee2bcebdee35e72384258e84fb.log/MD5E-s724--db1096ee2bcebdee35e72384258e84fb.log

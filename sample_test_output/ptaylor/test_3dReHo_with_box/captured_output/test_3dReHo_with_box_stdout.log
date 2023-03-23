@@ -1,4 +1,1 @@
-
-+++ Command Echo:
-   3dReHo -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -inset ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/REST_in_DWI.nii.gz[5..50] -box_X 2 -box_Y 2 -box_Z 3 -prefix output_of_tests/output_2020_11_12_222237/ptaylor/test_3dReHo_with_box/o.3dReHo_ROI -in_rois ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/ROI_ICMAP_GM+orig.BRIK.gz 
-
+../../../../.git/annex/objects/zX/6f/MD5E-s385--6fe5fd1fd56631c29e5ab254c3d1ee39.log/MD5E-s385--6fe5fd1fd56631c29e5ab254c3d1ee39.log

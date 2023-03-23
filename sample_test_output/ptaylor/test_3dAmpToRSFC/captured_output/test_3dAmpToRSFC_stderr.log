@@ -1,12 +1,1 @@
-++ Original time series:  96 points before censoring, and 84 after
-++ Actual BP range: indices [2, 22] -> freqs [0.0125, 0.0958]
-++ Full freq range: indices [0, 47] -> freqs [0.0042, 0.2000]
-++ Done masking.
-++ Start calculating spectral parameters
-++ Done calculating parameters.
-++  writing: output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_ALFF.nii.gz
-++  writing: output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_MALFF.nii.gz
-++  writing: output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_FALFF.nii.gz
-++  writing: output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_RSFA.nii.gz
-++  writing: output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_MRSFA.nii.gz
-++  writing: output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC output_of_tests/output_2020_11_12_222237/ptaylor/test_3dAmpToRSFC/o.3dAmpToRSFC_FRSFA.nii.gz
+../../../../.git/annex/objects/mg/6K/MD5E-s1395--0e6bdaadaae88587146a61d8a535914d.log/MD5E-s1395--0e6bdaadaae88587146a61d8a535914d.log

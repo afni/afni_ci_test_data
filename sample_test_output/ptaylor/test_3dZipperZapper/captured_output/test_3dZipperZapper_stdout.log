@@ -1,4 +1,1 @@
-
-+++ Command Echo:
-   3dZipperZapper -input ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/AVEB0_DWI.nii.gz[0..10] -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/mask_minisphere_dwi.nii.gz -prefix output_of_tests/output_2020_11_12_222237/ptaylor/test_3dZipperZapper/o.3dZipperZapper -do_out_slice_param 
-
+../../../../.git/annex/objects/11/KM/MD5E-s314--d9f3c30e7524b4860adfaf45e3ddbab1.log/MD5E-s314--d9f3c30e7524b4860adfaf45e3ddbab1.log

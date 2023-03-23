@@ -1,11 +1,1 @@
-++ Loading data.
-++ Setting up arrays.
-++ Correlating.
-++ Final counting and writing.
-++ DONE.  You can now check your outputs as follows:
-++ output_of_tests/output_2020_10_28_205556/ptaylor/test_3dMatch/o.3dMatch_IN is a reorganized form of the refset -> best match per inset brick.
-	 Overlay on the inset './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/SOME_ICA_NETS_in_DWI+orig.BRIK.gz' to check matches visually.
-	 The associated correlation & Dice quantities are in 'output_of_tests/output_2020_10_28_205556/ptaylor/test_3dMatch/o.3dMatch_IN_coeff.vals'.
-++ output_of_tests/output_2020_10_28_205556/ptaylor/test_3dMatch/o.3dMatch_REF is a reorganized form of the inset -> best match per refset brick.
-	 Overlay on the refset './afni_ci_test_data/AFNI_demos/FATCAT_DEMO/MULTISITE_in_DWI+orig.BRIK' to check matches visually.
-	 The associated correlation & Dice quantities are in 'output_of_tests/output_2020_10_28_205556/ptaylor/test_3dMatch/o.3dMatch_REF_coeff.vals'.
+../../../../.git/annex/objects/G3/6Q/MD5E-s969--3304f2dfccbaa5c719a945f5736639a5.log/MD5E-s969--3304f2dfccbaa5c719a945f5736639a5.log

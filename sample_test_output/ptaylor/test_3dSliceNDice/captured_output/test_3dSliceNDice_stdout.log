@@ -1,12 +1,1 @@
-
-+++ Command Echo:
-   3dcalc -a ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/SOME_ICA_NETS_in_DWI+orig.BRIK.gz[0] -b ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -expr step(b)*(step(a-3)+step(-3-a)) -prefix output_of_tests/output_2020_11_12_222237/ptaylor/test_3dSliceNDice/o.3dSliceNDice_preA.nii.gz 
-
-
-+++ Command Echo:
-   3dcalc -a ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/SOME_ICA_NETS_in_DWI+orig.BRIK.gz[1] -b ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -expr step(b)*(step(a-3)+step(-3-a)) -prefix output_of_tests/output_2020_11_12_222237/ptaylor/test_3dSliceNDice/o.3dSliceNDice_preB.nii.gz 
-
-
-+++ Command Echo:
-   3dSliceNDice -out_domain all -insetA output_of_tests/output_2020_11_12_222237/ptaylor/test_3dSliceNDice/o.3dSliceNDice_preA.nii.gz -insetB output_of_tests/output_2020_11_12_222237/ptaylor/test_3dSliceNDice/o.3dSliceNDice_preB.nii.gz -prefix output_of_tests/output_2020_11_12_222237/ptaylor/test_3dSliceNDice/o.3dSliceNDice 
-
+../../../../.git/annex/objects/Kf/P9/MD5E-s989--b7f0766fffdde4e2ee53317263a6d5e2.log/MD5E-s989--b7f0766fffdde4e2ee53317263a6d5e2.log

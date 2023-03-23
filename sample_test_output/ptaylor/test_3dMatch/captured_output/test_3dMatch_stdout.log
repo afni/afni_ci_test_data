@@ -1,4 +1,1 @@
-
-+++ Command Echo:
-   3dMatch -only_dice_thr -inset ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/SOME_ICA_NETS_in_DWI+orig.BRIK.gz -refset ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/MULTISITE_in_DWI+orig.BRIK -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -in_min 1.0 -ref_min 3 -prefix output_of_tests/output_2020_10_28_205556/ptaylor/test_3dMatch/o.3dMatch 
-
+../../../../.git/annex/objects/1f/kZ/MD5E-s383--bde9d719c1af37e6e5dc14c89f2553be.log/MD5E-s383--bde9d719c1af37e6e5dc14c89f2553be.log

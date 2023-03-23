@@ -1,4 +1,1 @@
-
-+++ Command Echo:
-   3dROIMaker -nifti -inset ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/SOME_ICA_NETS_in_DWI+orig.BRIK.gz -thresh 3.0 -volthr 130 -inflate 2 -wm_skel ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/test_extra/DT_FA+orig.BRIK.gz -skel_thr 0.2 -skel_stop -mask ./afni_ci_test_data/AFNI_demos/FATCAT_DEMO/mask_DWI+orig.BRIK.gz -prefix output_of_tests/output_2020_11_12_222237/ptaylor/test_3dROIMaker/o.3dROIMaker -overwrite 
-
+../../../../.git/annex/objects/Xj/WQ/MD5E-s436--8151583bdf3922debe21600ec446c95e.log/MD5E-s436--8151583bdf3922debe21600ec446c95e.log
